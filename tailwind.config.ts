@@ -57,6 +57,15 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        desktop: {
+          blue: "#5656E9",
+          azure: "#78B8F1",
+          orange: "#F2B973",
+          orangeDark: "#E68C4F",
+          rose: "#F168AA",
+          roseDark: "#EB2682",
+          azureDark: "#5088BA",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
