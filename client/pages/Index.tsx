@@ -124,7 +124,7 @@ function MediumArticleEmbed() {
           }}
         />
 
-        <div className="mt-8">
+        <div className="mt-2">
           <a
             href={articleContent.link}
             target="_blank"
@@ -570,11 +570,11 @@ export default function Index() {
           </div>
 
           {/* Case Study Content - Simplified */}
-          <div className="max-w-4xl mx-auto px-6 py-4">
+          <div className="max-w-4xl mx-auto px-6 py-2">
             <MediumArticleEmbed />
 
             {/* Back to Works */}
-            <div className="text-center mt-4">
+            <div className="text-center mt-2">
               <button
                 onClick={() => {
                   setCurrentCaseStudy(null);
