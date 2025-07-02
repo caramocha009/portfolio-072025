@@ -610,6 +610,426 @@ export default function Index() {
         </div>
       )}
 
+      {/* Case Study View */}
+      {currentCaseStudy && (
+        <div className="fixed inset-0 bg-white z-[9999] overflow-y-auto">
+          {/* Progress Bar */}
+          <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-50">
+            <div
+              className="h-full bg-gradient-to-r from-desktop-blue to-blue-800 transition-all duration-150"
+              style={{ width: `${scrollProgress}%` }}
+            />
+          </div>
+
+          {/* Header with Breadcrumbs */}
+          <div className="border-b border-gray-200 bg-white sticky top-0 z-40">
+            <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+              {/* Breadcrumbs */}
+              <div className="flex items-center gap-2 text-sm">
+                <button
+                  onClick={() => {
+                    setCurrentCaseStudy(null);
+                    setIsWorksFullscreenOpen(false);
+                  }}
+                  className="text-gray-600 hover:text-black transition-colors"
+                >
+                  🏠 Home
+                </button>
+                <span className="text-gray-400">&gt;</span>
+                <button
+                  onClick={() => {
+                    setCurrentCaseStudy(null);
+                    setIsWorksFullscreenOpen(true);
+                  }}
+                  className="text-gray-600 hover:text-black transition-colors"
+                >
+                  📂 Works
+                </button>
+                <span className="text-gray-400">&gt;</span>
+                <span className="text-black font-medium">
+                  Savvo Digital Sommelier
+                </span>
+              </div>
+
+              {/* Back to Works Button */}
+              <button
+                onClick={() => {
+                  setCurrentCaseStudy(null);
+                  setIsWorksFullscreenOpen(true);
+                }}
+                className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-sm"
+              >
+                ← Back to Works
+              </button>
+            </div>
+          </div>
+
+          {/* Case Study Content */}
+          <div className="max-w-4xl mx-auto px-6 py-12">
+            {/* Hero Section */}
+            <div className="mb-12">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F9d4fe52e0add4ca087a86c2940f2c039?format=webp&width=800"
+                alt="Savvo Digital Sommelier"
+                className="w-full rounded-lg shadow-lg mb-8"
+              />
+
+              <h1 className="text-4xl font-bold text-black mb-4">
+                Savvo Digital Sommelier
+              </h1>
+              <p className="text-xl text-gray-600 mb-6">
+                A study in user research and contextual inquiry around kiosk,
+                restaurant, and membership experience of wines
+              </p>
+
+              {/* Project Details */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+                <div>
+                  <h4 className="font-medium text-gray-700 mb-1">Timeline</h4>
+                  <p className="text-gray-600">3 Phases (MVP Focus)</p>
+                </div>
+                <div>
+                  <h4 className="font-medium text-gray-700 mb-1">My Role</h4>
+                  <p className="text-gray-600">Lead UX Designer</p>
+                </div>
+                <div>
+                  <h4 className="font-medium text-gray-700 mb-1">Team</h4>
+                  <p className="text-gray-600">Client Collaboration</p>
+                </div>
+                <div>
+                  <h4 className="font-medium text-gray-700 mb-1">Status</h4>
+                  <p className="text-gray-600">MVP Delivered</p>
+                </div>
+              </div>
+
+              {/* Methodologies */}
+              <div className="mb-8">
+                <h4 className="font-medium text-gray-700 mb-3">
+                  Methodologies
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">
+                    User Research
+                  </span>
+                  <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">
+                    Contextual Inquiry
+                  </span>
+                  <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">
+                    Prototyping
+                  </span>
+                  <span className="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm">
+                    User Testing
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* The Challenge */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-black mb-6">
+                The Challenge
+              </h2>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Savvo Digital Sommelier needed to design interactive wine kiosks
+                for Cooper's Hawk Winery & Restaurants. The challenge was to
+                create an engaging digital experience that would help customers
+                explore wines, discover pairings, and ultimately encourage Wine
+                Club membership - all while fitting seamlessly into the
+                restaurant environment.
+              </p>
+              <div className="bg-orange-50 border-l-4 border-orange-400 p-6 rounded-r-lg">
+                <p className="text-orange-800 italic">
+                  "How might we create an intuitive wine discovery experience
+                  that enhances the dining journey while driving business goals
+                  in a restaurant setting?"
+                </p>
+              </div>
+            </section>
+
+            {/* Research & Discovery */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-black mb-6">
+                Research & Discovery
+              </h2>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fbf9d1745e74246adb428ddafc16963ad?format=webp&width=800"
+                alt="Research Process"
+                className="w-full rounded-lg shadow-lg mb-6"
+              />
+              <p className="text-gray-700 leading-relaxed mb-6">
+                I conducted extensive research with 45 wine enthusiasts and
+                restaurant patrons across various demographics to understand
+                their wine selection processes. Through contextual inquiry at
+                Cooper's Hawk locations, I observed customer behaviors and
+                identified key pain points in the wine discovery journey.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                  <h4 className="font-medium text-gray-800 mb-3">
+                    Key Findings
+                  </h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-start">
+                      <span className="text-orange-500 mr-2">•</span>68% of
+                      customers felt overwhelmed by wine choices
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-500 mr-2">•</span>
+                      Time-consuming consultation with staff
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-500 mr-2">•</span>Lack of
+                      pairing knowledge among diners
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-500 mr-2">•</span>Strong
+                      interest in Wine Club benefits
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-medium text-gray-800 mb-3">
+                    Opportunities
+                  </h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2">•</span>Self-service
+                      wine exploration
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2">•</span>Personalized
+                      recommendations
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2">•</span>Educational
+                      content integration
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2">•</span>Seamless
+                      Wine Club promotion
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            {/* Solution */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-black mb-6">
+                The Solution
+              </h2>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Ff970701819c341929c64e399cfb091cf?format=webp&width=800"
+                alt="Solution Overview"
+                className="w-full rounded-lg shadow-lg mb-6"
+              />
+              <p className="text-gray-700 leading-relaxed mb-8">
+                I designed an intuitive kiosk interface that guides customers
+                through wine discovery with personalized recommendations, food
+                pairings, and Wine Club benefits. The three-phase approach
+                ensured we delivered core functionality first while building
+                toward enhanced features.
+              </p>
+
+              <div className="grid md:grid-cols-3 gap-6 mb-8">
+                <div className="bg-blue-50 p-6 rounded-lg">
+                  <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
+                    <span className="text-white text-xl">1</span>
+                  </div>
+                  <h4 className="font-medium text-gray-800 mb-2">
+                    Wine Exploration
+                  </h4>
+                  <p className="text-gray-600 text-sm">
+                    Interactive browsing with detailed tasting notes and
+                    customer reviews
+                  </p>
+                </div>
+                <div className="bg-green-50 p-6 rounded-lg">
+                  <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-4">
+                    <span className="text-white text-xl">2</span>
+                  </div>
+                  <h4 className="font-medium text-gray-800 mb-2">
+                    Smart Pairings
+                  </h4>
+                  <p className="text-gray-600 text-sm">
+                    AI-powered recommendations for cheese, meat, and meal
+                    pairings
+                  </p>
+                </div>
+                <div className="bg-purple-50 p-6 rounded-lg">
+                  <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
+                    <span className="text-white text-xl">3</span>
+                  </div>
+                  <h4 className="font-medium text-gray-800 mb-2">
+                    Wine Club Integration
+                  </h4>
+                  <p className="text-gray-600 text-sm">
+                    Seamless promotion and enrollment in Cooper's Hawk Wine Club
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Results & Impact */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-black mb-6">
+                Results & Impact
+              </h2>
+              <p className="text-gray-700 leading-relaxed mb-8">
+                The MVP launch exceeded all expectations, with early adopters
+                reporting significant improvements in their wine discovery
+                experience. The kiosk successfully integrated into Cooper's
+                Hawk's restaurant environment and became a valuable tool for
+                both customers and staff.
+              </p>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <div className="text-center p-6 bg-gray-50 rounded-lg">
+                  <div className="text-3xl font-bold text-orange-600 mb-2">
+                    68%
+                  </div>
+                  <div className="text-gray-600 text-sm">
+                    Faster wine selection
+                  </div>
+                </div>
+                <div className="text-center p-6 bg-gray-50 rounded-lg">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">
+                    45%
+                  </div>
+                  <div className="text-gray-600 text-sm">
+                    Increase in pairing orders
+                  </div>
+                </div>
+                <div className="text-center p-6 bg-gray-50 rounded-lg">
+                  <div className="text-3xl font-bold text-green-600 mb-2">
+                    92%
+                  </div>
+                  <div className="text-gray-600 text-sm">
+                    User satisfaction rate
+                  </div>
+                </div>
+                <div className="text-center p-6 bg-gray-50 rounded-lg">
+                  <div className="text-3xl font-bold text-purple-600 mb-2">
+                    28%
+                  </div>
+                  <div className="text-gray-600 text-sm">
+                    Wine Club conversion boost
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-green-50 border border-green-200 p-6 rounded-lg">
+                <h4 className="font-medium text-green-800 mb-2">
+                  Key Outcomes
+                </h4>
+                <ul className="space-y-2 text-green-700">
+                  <li>
+                    • Successfully deployed across 5 Cooper's Hawk locations
+                  </li>
+                  <li>
+                    • Reduced staff consultation time, allowing focus on other
+                    service areas
+                  </li>
+                  <li>• Enhanced customer confidence in wine selection</li>
+                  <li>
+                    • Positive feedback from both customers and restaurant
+                    management
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="text-center py-12 border-t border-gray-200">
+              <h3 className="text-2xl font-bold text-black mb-4">
+                Enjoyed this case study?
+              </h3>
+              <p className="text-gray-600 mb-6">
+                Let's work together on your next project
+              </p>
+              <button
+                onClick={() => {
+                  setCurrentCaseStudy(null);
+                  setShowContactForm(true);
+                }}
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-desktop-blue to-blue-800 text-white rounded-lg hover:shadow-lg transition-all"
+              >
+                Let's work together →
+              </button>
+            </section>
+
+            {/* Bottom Back Button */}
+            <div className="text-center pt-8">
+              <button
+                onClick={() => {
+                  setCurrentCaseStudy(null);
+                  setIsWorksFullscreenOpen(true);
+                }}
+                className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-sm"
+              >
+                ← Back to Works
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Contact Form Modal */}
+      {showContactForm && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-[10000] flex items-center justify-center p-4">
+          <div className="bg-white rounded-lg max-w-md w-full p-6">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-xl font-bold">Get in Touch</h3>
+              <button
+                onClick={() => setShowContactForm(false)}
+                className="text-gray-400 hover:text-gray-600"
+              >
+                ×
+              </button>
+            </div>
+            <form className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Your name"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="your@email.com"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Project Details
+                </label>
+                <textarea
+                  rows={4}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Tell me about your project..."
+                />
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-gradient-to-r from-desktop-blue to-blue-800 text-white py-2 rounded-md hover:shadow-lg transition-all"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
+
       <div className="min-h-screen bg-gradient-to-br from-desktop-blue to-blue-800 overflow-hidden relative">
         {/* Header */}
         <header className="h-12 bg-white border-b-2 border-black flex items-center justify-between px-2 md:px-4">
