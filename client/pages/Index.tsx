@@ -95,33 +95,124 @@ function MediumArticleEmbed() {
   }
 
   return (
-    <article className="bg-white text-black">
-      <h1 className="text-3xl font-bold mb-6 font-mono">
-        {articleContent.title}
-      </h1>
+    <>
+      <article className="text-black max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold mb-4 leading-tight" style={{ fontFamily: 'Georgia, Charter, "Times New Roman", serif' }}>
+          {articleContent.title}
+        </h1>
 
-      <div className="mb-6 text-sm font-mono text-gray-600">
-        Published: {new Date(articleContent.pubDate).toLocaleDateString()}
-      </div>
+        <div className="mb-8 text-sm text-gray-600" style={{ fontFamily: 'Georgia, Charter, "Times New Roman", serif' }}>
+          Published: {new Date(articleContent.pubDate).toLocaleDateString()}
+        </div>
 
-      <div
-        className="prose prose-lg max-w-none font-mono leading-relaxed"
-        dangerouslySetInnerHTML={{
-          __html: articleContent.content || articleContent.description,
-        }}
-      />
+        <div
+          className="medium-article-content"
+          style={{
+            fontFamily: 'Georgia, Charter, "Times New Roman", serif',
+            fontSize: '21px',
+            lineHeight: '1.58',
+            color: '#292929'
+          }}
+          dangerouslySetInnerHTML={{ __html: articleContent.content || articleContent.description }}
+        />
 
-      <div className="mt-8 pt-4 border-t border-gray-300">
-        <a
-          href={articleContent.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block px-6 py-3 bg-orange-400 text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all font-mono text-base font-bold"
-        >
-          📖 Read Full Article on Medium →
-        </a>
-      </div>
-    </article>
+        <div className="mt-12 pt-6">
+          <a
+            href={articleContent.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-3 bg-orange-400 text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all font-mono text-base font-bold"
+          >
+            📖 Read Full Article on Medium →
+          </a>
+        </div>
+      </article>
+
+      <style jsx>{`
+        .medium-article-content h1 {
+          font-size: 2.25rem;
+          font-weight: 700;
+          line-height: 1.25;
+          margin: 2rem 0 1rem 0;
+          font-family: Georgia, Charter, "Times New Roman", serif;
+        }
+
+        .medium-article-content h2 {
+          font-size: 1.875rem;
+          font-weight: 700;
+          line-height: 1.3;
+          margin: 1.75rem 0 0.75rem 0;
+          font-family: Georgia, Charter, "Times New Roman", serif;
+        }
+
+        .medium-article-content h3 {
+          font-size: 1.5rem;
+          font-weight: 700;
+          line-height: 1.35;
+          margin: 1.5rem 0 0.5rem 0;
+          font-family: Georgia, Charter, "Times New Roman", serif;
+        }
+
+        .medium-article-content p {
+          margin: 1.5rem 0;
+          line-height: 1.58;
+          font-size: 21px;
+          font-family: Georgia, Charter, "Times New Roman", serif;
+        }
+
+        .medium-article-content em {
+          font-style: italic;
+          font-family: Georgia, Charter, "Times New Roman", serif;
+        }
+
+        .medium-article-content strong {
+          font-weight: 700;
+          font-family: Georgia, Charter, "Times New Roman", serif;
+        }
+
+        .medium-article-content blockquote {
+          border-left: 3px solid #292929;
+          padding-left: 1.5rem;
+          margin: 2rem 0;
+          font-style: italic;
+          font-size: 1.25rem;
+          line-height: 1.6;
+          color: #6b6b6b;
+          font-family: Georgia, Charter, "Times New Roman", serif;
+        }
+
+        .medium-article-content img {
+          width: 100%;
+          height: auto;
+          margin: 2rem 0;
+          border-radius: 4px;
+        }
+
+        .medium-article-content figure {
+          margin: 2rem 0;
+        }
+
+        .medium-article-content figcaption {
+          text-align: center;
+          font-size: 0.875rem;
+          color: #6b6b6b;
+          margin-top: 0.5rem;
+          font-family: Georgia, Charter, "Times New Roman", serif;
+        }
+
+        .medium-article-content ul, .medium-article-content ol {
+          margin: 1.5rem 0;
+          padding-left: 2rem;
+          font-family: Georgia, Charter, "Times New Roman", serif;
+        }
+
+        .medium-article-content li {
+          margin: 0.5rem 0;
+          line-height: 1.58;
+          font-family: Georgia, Charter, "Times New Roman", serif;
+        }
+      `}</style>
+    </>)
   );
 }
 
