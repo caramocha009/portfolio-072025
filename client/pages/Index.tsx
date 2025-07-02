@@ -10,15 +10,20 @@ import {
   RecyclingIcon,
 } from "@/components/ui/folder-icons";
 
-// RSS Parser for Medium articles
-import Parser from "rss-parser";
-
 interface MediumArticle {
   title: string;
   link: string;
   pubDate: string;
-  contentSnippet: string;
-  content: string;
+  description: string;
+}
+
+interface RSSResponse {
+  status: string;
+  feed: {
+    title: string;
+    description: string;
+  };
+  items: MediumArticle[];
 }
 
 // Medium Article Embed Component
@@ -30,18 +35,18 @@ function MediumArticleEmbed() {
   useEffect(() => {
     const fetchMediumArticles = async () => {
       try {
-        const parser = new Parser({
-          customFields: {
-            item: ["contentSnippet", "content"],
-          },
-        });
-
-        // Use a CORS proxy to fetch Medium RSS feed
-        const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
+        // Use RSS2JSON service to convert RSS to JSON
         const RSS_URL = "https://medium.com/feed/@caramocha";
+        const API_URL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(RSS_URL)}&count=3`;
 
-        const feed = await parser.parseURL(CORS_PROXY + RSS_URL);
-        setArticles(feed.items.slice(0, 3)); // Get first 3 articles
+        const response = await fetch(API_URL);
+        const data: RSSResponse = await response.json();
+
+        if (data.status === "ok") {
+          setArticles(data.items);
+        } else {
+          throw new Error("RSS feed not available");
+        }
         setLoading(false);
       } catch (err) {
         console.error("Error fetching RSS feed:", err);
