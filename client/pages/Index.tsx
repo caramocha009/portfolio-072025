@@ -211,7 +211,9 @@ export default function Index() {
         </div>
       );
     } else {
-        <div className="fixed inset-0 bg-white z-[9999] flex">
+      bgColor = "#FFFFFF";
+      headerColor = "#FFFFFF";
+      windowContent = (
           {/* Left Panel - Projects List */}
           <div className="w-1/2 bg-white border-r-2 border-gray-200 overflow-y-auto">
             {/* Window Header */}
