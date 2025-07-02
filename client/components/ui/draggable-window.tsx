@@ -177,7 +177,11 @@ export function DraggableWindow({
         {onClose && (
           <div className="absolute right-2 top-1/2 transform -translate-y-1/2">
             <button
-              onClick={onClose}
+              onClick={(e) => {
+                e.stopPropagation();
+                e.preventDefault();
+                onClose();
+              }}
               className="w-6 h-6 flex items-center justify-center hover:bg-black hover:bg-opacity-10 bg-opacity-90 rounded-sm"
               style={{ backgroundColor: headerColor }}
             >
