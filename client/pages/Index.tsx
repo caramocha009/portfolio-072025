@@ -615,7 +615,7 @@ export default function Index() {
           <div
             className="absolute z-20"
             style={{
-              top: "calc(24px + 1vw + 134px)",
+              top: "calc(24px + 1vw + 142px)",
               left: "calc(24px + 1vw)",
             }}
           >
@@ -631,7 +631,7 @@ export default function Index() {
           <div
             className="absolute z-20"
             style={{
-              top: "calc(24px + 1vw + 268px)",
+              top: "calc(24px + 1vw + 284px)",
               left: "calc(24px + 1vw)",
             }}
           >
@@ -647,7 +647,7 @@ export default function Index() {
           <div
             className="absolute z-20"
             style={{
-              top: "calc(24px + 1vw + 402px)",
+              top: "calc(24px + 1vw + 426px)",
               left: "calc(24px + 1vw)",
             }}
           >
