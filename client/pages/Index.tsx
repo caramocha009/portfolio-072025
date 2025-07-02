@@ -424,83 +424,12 @@ export default function Index() {
             </div>
           </div>
 
-          {/* Case Study Content */}
+          {/* Case Study Content - Simplified */}
           <div className="max-w-4xl mx-auto px-6 py-12">
-            {/* Medium Article Embed */}
-            <div className="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
-              <h1 className="text-3xl font-bold text-black mb-6 chicago-font-xl">
-                Savvo Digital Sommelier
-              </h1>
-              <p className="text-black mb-6 chicago-font-md">
-                A study in user research and contextual inquiry around kiosk,
-                restaurant, and membership experience of wines
-              </p>
-
-              {/* Medium RSS Feed */}
-              <div className="border-4 border-black bg-gray-100 p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                <div className="bg-white border-2 border-black p-4">
-                  <h3 className="chicago-font-md font-bold text-black mb-4">
-                    Latest Articles from Medium
-                  </h3>
-
-                  {/* RSS Feed via RSS2JSON */}
-                  <div className="space-y-4">
-                    <iframe
-                      src="https://rss2json.com/api.json?rss_url=https://medium.com/feed/@caramocha&count=5&api_key=YOUR_API_KEY"
-                      style={{ display: "none" }}
-                    />
-
-                    {/* Fallback: Direct article link */}
-                    <div className="border-2 border-orange-400 bg-orange-50 p-4 rounded">
-                      <h4 className="chicago-font-md font-bold text-black mb-2">
-                        🍷 Savvo Digital Sommelier Case Study
-                      </h4>
-                      <p className="text-black text-sm mb-3 leading-relaxed">
-                        A comprehensive UX case study exploring user research
-                        and contextual inquiry for wine kiosk interfaces in
-                        restaurant environments at Cooper's Hawk Winery.
-                      </p>
-                      <div className="flex gap-2">
-                        <a
-                          href="https://medium.com/@caramocha/ux-case-study-savvo-digital-sommelier-c2da6957105d"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-block px-4 py-2 bg-orange-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:bg-orange-300 chicago-font-sm font-bold"
-                        >
-                          📖 Read on Medium
-                        </a>
-                        <button
-                          onClick={() =>
-                            window.open(
-                              "https://medium.com/@caramocha/ux-case-study-savvo-digital-sommelier-c2da6957105d",
-                              "_blank",
-                            )
-                          }
-                          className="px-4 py-2 bg-blue-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:bg-blue-300 chicago-font-sm font-bold"
-                        >
-                          🔗 Open Article
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* External Link */}
-              <div className="mt-6 text-center">
-                <a
-                  href="https://medium.com/@caramocha/ux-case-study-savvo-digital-sommelier-c2da6957105d"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 bg-orange-400 text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all chicago-font-md font-bold"
-                >
-                  📖 Read Full Article on Medium →
-                </a>
-              </div>
-            </div>
+            <MediumArticleEmbed />
 
             {/* Back to Works */}
-            <div className="text-center">
+            <div className="text-center mt-8">
               <button
                 onClick={() => {
                   setCurrentCaseStudy(null);
