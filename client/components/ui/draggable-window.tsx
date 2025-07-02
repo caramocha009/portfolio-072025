@@ -280,7 +280,12 @@ export function DraggableWindow({
       </div>
 
       {/* Window Content */}
-      <div className="flex-1 p-6 overflow-auto">{children}</div>
+      <div
+        className="overflow-auto p-6"
+        style={{ height: `calc(100% - 32px)` }}
+      >
+        {children}
+      </div>
 
       {/* Resize Handle - only for resizable windows */}
       {resizable && (
