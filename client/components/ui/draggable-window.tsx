@@ -84,21 +84,38 @@ export function DraggableWindow({
     };
 
     const handleTouchMove = (e: TouchEvent) => {
-      if (!isDragging) return;
       e.preventDefault();
-
       const touch = e.touches[0];
-      const newX = touch.clientX - dragStart.x;
-      const newY = touch.clientY - dragStart.y;
 
-      // Keep window within viewport bounds
-      const maxX = window.innerWidth - width;
-      const maxY = window.innerHeight - height;
+      if (isDragging) {
+        const newX = touch.clientX - dragStart.x;
+        const newY = touch.clientY - dragStart.y;
 
-      setPosition({
-        x: Math.max(0, Math.min(newX, maxX)),
-        y: Math.max(0, Math.min(newY, maxY)),
-      });
+        // Keep window within viewport bounds
+        const maxX = window.innerWidth - size.width;
+        const maxY = window.innerHeight - size.height;
+
+        setPosition({
+          x: Math.max(0, Math.min(newX, maxX)),
+          y: Math.max(0, Math.min(newY, maxY)),
+        });
+      }
+
+      if (isResizing) {
+        const deltaX = touch.clientX - resizeStart.x;
+        const deltaY = touch.clientY - resizeStart.y;
+
+        const newWidth = Math.max(
+          minWidth,
+          Math.min(maxWidth, resizeStart.width + deltaX),
+        );
+        const newHeight = Math.max(
+          minHeight,
+          Math.min(maxHeight, resizeStart.height + deltaY),
+        );
+
+        setSize({ width: newWidth, height: newHeight });
+      }
     };
 
     const handleMouseUp = () => {
