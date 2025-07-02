@@ -767,13 +767,13 @@ export default function Index() {
                     🍷 The Mission
                   </h3>
                   <p className="text-black leading-relaxed chicago-font-md">
-                    Savvo Digital Sommelier operates wine kiosks in select
-                    retail stores in the Greater Chicago area. The kiosks assist
-                    users in browsing wine selections and suggest pairings with
-                    cheese and meats. Our team was tasked with enhancing the
-                    kiosk's interface to better integrate with Cooper's Hawk
-                    Restaurant and Winery, creating a prototype that would
-                    impress Cooper's Hawk's CEO.
+                    Savvo Digital Sommelier operates wine kiosks in select retail
+                    stores in the Greater Chicago area. The kiosks assist users in
+                    browsing wine selections and suggest pairings with cheese and
+                    meats. Our team was tasked with enhancing the kiosk's
+                    interface to better integrate with Cooper's Hawk Restaurant
+                    and Winery, creating a prototype that would impress Cooper's
+                    Hawk's CEO.
                   </p>
                 </div>
               </div>
@@ -793,69 +793,70 @@ export default function Index() {
                 <p className="text-black leading-relaxed mb-6 chicago-font-md">
                   Before designing new features, we conducted a thorough
                   evaluation of the existing kiosk system. Through user testing
-                  and heuristic analysis, we identified several critical
-                  usability issues.
+                  and heuristic analysis, we identified several critical usability
+                  issues.
                 </p>
 
                 {/* Problem Highlight Block */}
-                <div className="border-4 border-red-600 bg-red-100 p-6 shadow-[8px_8px_0px_0px_rgba(220,38,38,1)] mb-8">
-                  <h3 className="font-bold text-red-800 mb-4 chicago-font flex items-center">
-                    <span className="mr-2">⚠️</span> Key Problems Identified
-                  </h3>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <ul className="space-y-3 text-red-800">
-                      <li className="flex items-start">
-                        <span className="text-red-600 mr-2 font-bold">•</span>
-                        The "+" sign used to indicate pairings was mistaken for
-                        a clickable button
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-red-600 mr-2 font-bold">•</span>
-                        Users had to scroll to view full wine descriptions
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-red-600 mr-2 font-bold">•</span>
-                        Unclear rating systems and confusing pricing information
-                      </li>
-                    </ul>
-                    <ul className="space-y-3 text-red-800">
-                      <li className="flex items-start">
-                        <span className="text-red-600 mr-2 font-bold">•</span>
-                        Lack of intuitive navigation - difficult to return to
-                        previous pages
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-red-600 mr-2 font-bold">•</span>
-                        Insufficient help and documentation for users
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-red-600 mr-2 font-bold">•</span>
-                        Poor visual hierarchy causing user confusion
-                      </li>
-                    </ul>
-                  </div>
+              <div className="border-4 border-red-600 bg-red-100 p-6 shadow-[8px_8px_0px_0px_rgba(220,38,38,1)] mb-8">
+                <h3 className="font-bold text-red-800 mb-4 chicago-font flex items-center">
+                  <span className="mr-2">⚠️</span> Key Problems Identified
+                </h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <ul className="space-y-3 text-red-800">
+                    <li className="flex items-start">
+                      <span className="text-red-600 mr-2 font-bold">•</span>
+                      The "+" sign used to indicate pairings was mistaken for a
+                      clickable button
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-600 mr-2 font-bold">•</span>
+                      Users had to scroll to view full wine descriptions
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-600 mr-2 font-bold">•</span>
+                      Unclear rating systems and confusing pricing information
+                    </li>
+                  </ul>
+                  <ul className="space-y-3 text-red-800">
+                    <li className="flex items-start">
+                      <span className="text-red-600 mr-2 font-bold">•</span>
+                      Lack of intuitive navigation - difficult to return to
+                      previous pages
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-600 mr-2 font-bold">•</span>
+                      Insufficient help and documentation for users
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-600 mr-2 font-bold">•</span>
+                      Poor visual hierarchy causing user confusion
+                    </li>
+                  </ul>
                 </div>
+              </div>
               </div>
             </section>
 
             {/* Research & Discovery */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-6 chicago-font">
-                Research & Discovery
-              </h2>
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fbf9d1745e74246adb428ddafc16963ad?format=webp&width=800"
-                alt="Research Process"
-                className="w-full rounded-lg shadow-lg mb-6 border-4 border-black"
-              />
+              <div className="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                <h2 className="text-2xl font-bold text-black mb-6 chicago-font-xl">
+                  Research & Discovery
+                </h2>
+                <img
+                  src="https://images.pexels.com/photos/9870240/pexels-photo-9870240.jpeg"
+                  alt="User research and contextual inquiry process"
+                  className="w-full border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mb-6"
+                />
 
-              <p className="text-gray-700 leading-relaxed mb-6">
-                Our research approach combined competitive analysis with direct
-                user observation. We studied successful wine kiosks and services
-                like Vivino to understand best practices, while conducting
-                contextual inquiry at Cooper's Hawk locations to observe real
-                customer behaviors.
-              </p>
+                <p className="text-black leading-relaxed mb-6 chicago-font-md">
+                  Our research approach combined competitive analysis with direct
+                  user observation. We studied successful wine kiosks and services
+                  like Vivino to understand best practices, while conducting
+                  contextual inquiry at Cooper's Hawk locations to observe real
+                  customer behaviors.
+                </p>
 
               {/* Insight Highlight Block */}
               <div className="border-4 border-blue-600 bg-blue-100 p-6 shadow-[8px_8px_0px_0px_rgba(37,99,235,1)] mb-8">
