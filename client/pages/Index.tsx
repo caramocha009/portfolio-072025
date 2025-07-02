@@ -300,7 +300,10 @@ export default function Index() {
         </div>
 
         {/* Recycling Icon - Lower Right */}
-        <div className="absolute bottom-4 right-2 md:right-14 z-20">
+        <div
+          className="absolute z-20"
+          style={{ bottom: "calc(16px + 2vw)", right: "calc(8px + 2vw)" }}
+        >
           <DesktopIcon
             icon={<RecyclingIcon />}
             label="Recycling"
