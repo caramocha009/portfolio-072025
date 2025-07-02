@@ -15,7 +15,7 @@ export default {
     extend: {
       fontFamily: {
         chicago: [
-          '"Chicago"',
+          '"Orbitron"',
           '"Courier New"',
           '"Monaco"',
           '"Lucida Console"',
