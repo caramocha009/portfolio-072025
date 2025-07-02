@@ -610,7 +610,7 @@ export default function Index() {
               icon={<AboutIcon />}
               label="About"
               onClick={() => openNewWindow("About")}
-              className="scale-75 md:scale-100"
+              className="scale-50 md:scale-[0.8]"
             />
           </div>
 
