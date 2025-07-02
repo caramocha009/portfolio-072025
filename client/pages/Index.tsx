@@ -273,6 +273,12 @@ export default function Index() {
               onClick={() => openNewWindow("About")}
               className="scale-75 md:scale-100"
             />
+            <DesktopIcon
+              icon={<PlaylistIcon />}
+              label="Playlist"
+              onClick={() => openNewWindow("Playlist")}
+              className="scale-75 md:scale-100"
+            />
           </div>
         </div>
 
