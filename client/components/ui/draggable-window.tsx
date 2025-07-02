@@ -316,7 +316,9 @@ export function DraggableWindow({
             backgroundRepeat: "repeat",
           }}
           onMouseDown={handleResizeMouseDown}
+          onMouseUp={handleResizeMouseUp}
           onTouchStart={handleResizeTouchStart}
+          onTouchEnd={handleResizeTouchEnd}
         />
       )}
     </div>
