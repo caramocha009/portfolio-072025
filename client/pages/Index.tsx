@@ -410,8 +410,8 @@ export default function Index() {
         >
           <DesktopIcon
             icon={<RecyclingIcon />}
-            label="Recycling"
-            onClick={() => openNewWindow("Recycling")}
+            label="Recycling Bin"
+            onClick={() => openNewWindow("Recycling Bin")}
             className="scale-75 md:scale-100"
           />
         </div>
