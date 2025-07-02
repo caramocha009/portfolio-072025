@@ -572,7 +572,7 @@ export default function Index() {
           {/* Works Icon - Top of first column */}
           <div
             className="absolute z-20"
-            style={{ top: "calc(8px + 1vw)", left: "calc(8px + 2vw)" }}
+            style={{ top: "calc(16px + 1vw)", left: "calc(16px + 2vw)" }}
           >
             <DesktopIcon
               icon={<WorksIcon />}
@@ -585,7 +585,10 @@ export default function Index() {
           {/* Read Icon - Second in first column */}
           <div
             className="absolute z-20"
-            style={{ top: "calc(8px + 1vw + 100px)", left: "calc(8px + 2vw)" }}
+            style={{
+              top: "calc(16px + 1vw + 120px)",
+              left: "calc(16px + 2vw)",
+            }}
           >
             <DesktopIcon
               icon={<ArticlesIcon />}
@@ -598,7 +601,10 @@ export default function Index() {
           {/* About Icon - Third in first column */}
           <div
             className="absolute z-20"
-            style={{ top: "calc(8px + 1vw + 200px)", left: "calc(8px + 2vw)" }}
+            style={{
+              top: "calc(16px + 1vw + 240px)",
+              left: "calc(16px + 2vw)",
+            }}
           >
             <DesktopIcon
               icon={<AboutIcon />}
@@ -613,8 +619,8 @@ export default function Index() {
           <div
             className="absolute z-20"
             style={{
-              top: "calc(8px + 1vw + 200px)",
-              left: "calc(8px + 2vw + 120px)",
+              top: "calc(16px + 1vw + 240px)",
+              left: "calc(16px + 2vw + 160px)",
             }}
           >
             <DesktopIcon
@@ -630,7 +636,7 @@ export default function Index() {
             className="absolute z-20"
             style={{
               bottom: "calc(16px + 2vw)",
-              right: "calc(8px + 2vw + 120px)",
+              right: "calc(16px + 2vw + 160px)",
             }}
           >
             <DesktopIcon
