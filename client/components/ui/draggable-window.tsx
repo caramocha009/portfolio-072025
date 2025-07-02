@@ -13,6 +13,8 @@ interface DraggableWindowProps {
   minHeight?: number;
   maxWidth?: number;
   maxHeight?: number;
+  zIndex?: number;
+  onBringToFront?: () => void;
 }
 
 export function DraggableWindow({
