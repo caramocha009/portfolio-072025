@@ -28,8 +28,8 @@ export default function Index() {
       id: "sticky1",
       backgroundColor: "#F2B973",
       headerColor: "#E68C4F",
-      initialX: 490,
-      initialY: 187,
+      initialX: 400,
+      initialY: 250,
       zIndex: 10,
       content: (
         <div className="space-y-5">
