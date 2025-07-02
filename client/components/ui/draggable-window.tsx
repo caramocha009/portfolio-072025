@@ -225,10 +225,6 @@ export function DraggableWindow({
         top: position.y,
         width: `${size.width}px`,
         height: `${size.height}px`,
-        minWidth: `${minWidth}px`,
-        minHeight: `${minHeight}px`,
-        maxWidth: `${maxWidth}px`,
-        maxHeight: `${maxHeight}px`,
         backgroundColor,
         zIndex,
       }}
