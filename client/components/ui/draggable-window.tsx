@@ -70,14 +70,8 @@ export function DraggableWindow({
         const deltaX = e.clientX - resizeStart.x;
         const deltaY = e.clientY - resizeStart.y;
 
-        const newWidth = Math.max(
-          minWidth,
-          Math.min(maxWidth, resizeStart.width + deltaX),
-        );
-        const newHeight = Math.max(
-          minHeight,
-          Math.min(maxHeight, resizeStart.height + deltaY),
-        );
+        const newWidth = Math.max(50, resizeStart.width + deltaX);
+        const newHeight = Math.max(50, resizeStart.height + deltaY);
 
         setSize({ width: newWidth, height: newHeight });
       }
