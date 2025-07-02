@@ -401,6 +401,7 @@ export default function Index() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+  const [showNavigation, setShowNavigation] = useState(false);
 
   useEffect(() => {
     if (currentCaseStudy) {
@@ -411,11 +412,16 @@ export default function Index() {
           const scrollHeight = container.scrollHeight - container.clientHeight;
           const progress = (scrollTop / scrollHeight) * 100;
           setScrollProgress(Math.min(100, Math.max(0, progress)));
+
+          // Show navigation when scrolled past the title section (approximately 300px)
+          setShowNavigation(scrollTop > 300);
         };
 
         container.addEventListener("scroll", handleScroll);
         return () => container.removeEventListener("scroll", handleScroll);
       }
+    } else {
+      setShowNavigation(false);
     }
   }, [currentCaseStudy]);
 
