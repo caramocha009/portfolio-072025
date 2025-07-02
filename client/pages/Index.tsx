@@ -124,37 +124,37 @@ function MediumArticleEmbed({
   return (
     <>
       <article className="text-black max-w-4xl mx-auto">
-        <div
-          className="medium-article-content"
+        <h1
           style={{
-            color: "#242424",
-            letterSpacing: "-0.192px",
-            maxWidth: "782px",
-            margin: "0 auto",
-            padding: "64px 0 24px",
             fontFamily: 'sohne, "Helvetica Neue", Helvetica, Arial, sans-serif',
-            fontSize: "48px",
-            lineHeight: "57.6px",
-            fontWeight: "400",
+            fontSize: "42px",
+            fontWeight: "800",
+            lineHeight: "1.15",
+            letterSpacing: "-0.02em",
+            color: "#242424",
+            maxWidth: "782px",
+            margin: "48px auto 24px auto",
+            textAlign: "left",
           }}
         >
           Savvo Digital Sommelier
-        </div>
+        </h1>
 
-        <div
-          className="mb-8 text-lg text-gray-600"
+        <h2
           style={{
             fontFamily: 'sohne, "Helvetica Neue", Helvetica, Arial, sans-serif',
+            fontSize: "22px",
+            fontWeight: "400",
+            lineHeight: "1.4",
+            letterSpacing: "-0.01em",
+            color: "#6B6B6B",
             maxWidth: "782px",
-            margin: "0 auto 32px auto",
-            fontSize: "24px",
-            fontWeight: "600",
-            lineHeight: "1.35",
-            color: "#242424",
+            margin: "0 auto 48px auto",
+            textAlign: "left",
           }}
         >
           A study in user research and contextual inquiry.
-        </div>
+        </h2>
 
         <div
           className="medium-article-content"
