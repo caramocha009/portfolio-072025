@@ -98,18 +98,11 @@ function MediumArticleEmbed() {
     <>
       <article className="text-black max-w-4xl mx-auto">
         <h1
-          className="text-4xl font-bold mb-4 leading-tight"
+          className="text-4xl font-bold mb-8 leading-tight text-left"
           style={{ fontFamily: 'Georgia, Charter, "Times New Roman", serif' }}
         >
           Savvo Digital Sommelier
         </h1>
-
-        <div
-          className="mb-8 text-lg text-gray-600"
-          style={{ fontFamily: 'Georgia, Charter, "Times New Roman", serif' }}
-        >
-          A study in user research and contextual inquiry.
-        </div>
 
         <div
           className="medium-article-content"
@@ -144,7 +137,10 @@ function MediumArticleEmbed() {
 
               let processedContent = parts
                 .join("")
-                .replace(/<h1[^>]*>.*?<\/h1>/i, "") // Remove first h1 tag (redundant title)
+                .replace(
+                  /<h1[^>]*>.*?<\/h1>/i,
+                  '<h1 style="font-size: 36px; font-weight: 700; line-height: 1.25; margin: 0 0 24px 0; color: #242424; text-align: left;">A study in user research and contextual inquiry.</h1>',
+                ) // Replace title with tagline
                 .replace(/\s*<\/p>\s*$/, "</p>") // Clean up trailing whitespace
                 .replace(/(<\/[^>]+>)\s*(<\/[^>]+>)/g, "$1$2"); // Remove spaces between closing tags
 
