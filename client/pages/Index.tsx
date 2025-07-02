@@ -572,7 +572,7 @@ export default function Index() {
           {/* Works Icon - Top of first column */}
           <div
             className="absolute z-20"
-            style={{ top: "calc(32px + 1vw)", left: "calc(32px + 2vw)" }}
+            style={{ top: "calc(16px + 1vw)", left: "calc(16px + 1vw)" }}
           >
             <DesktopIcon
               icon={
@@ -590,8 +590,8 @@ export default function Index() {
           <div
             className="absolute z-20"
             style={{
-              top: "calc(32px + 1vw + 160px)",
-              left: "calc(32px + 2vw)",
+              top: "calc(16px + 1vw + 110px)",
+              left: "calc(16px + 1vw)",
             }}
           >
             <DesktopIcon
@@ -610,8 +610,8 @@ export default function Index() {
           <div
             className="absolute z-20"
             style={{
-              top: "calc(32px + 1vw + 320px)",
-              left: "calc(32px + 2vw)",
+              top: "calc(16px + 1vw + 220px)",
+              left: "calc(16px + 1vw)",
             }}
           >
             <DesktopIcon
@@ -630,8 +630,8 @@ export default function Index() {
           <div
             className="absolute z-20"
             style={{
-              top: "calc(32px + 1vw + 480px)",
-              left: "calc(32px + 2vw)",
+              top: "calc(16px + 1vw + 330px)",
+              left: "calc(16px + 1vw)",
             }}
           >
             <DesktopIcon
@@ -646,10 +646,10 @@ export default function Index() {
             />
           </div>
 
-          {/* Listen Icon - Same row as Works, same column as Recycling Bin */}
+          {/* Listen Icon - Top right */}
           <div
             className="absolute z-20"
-            style={{ top: "calc(32px + 1vw)", right: "calc(32px + 2vw)" }}
+            style={{ top: "calc(16px + 1vw)", right: "calc(16px + 1vw)" }}
           >
             <DesktopIcon
               icon={
@@ -663,13 +663,10 @@ export default function Index() {
             />
           </div>
 
-          {/* Recycling Icon - Aligned with Listen */}
+          {/* Recycling Icon - Bottom right, aligned with Listen column */}
           <div
             className="absolute z-20"
-            style={{
-              top: "calc(32px + 1vw + 160px)",
-              right: "calc(32px + 2vw)",
-            }}
+            style={{ bottom: "calc(16px + 1vw)", right: "calc(16px + 1vw)" }}
           >
             <DesktopIcon
               icon={
