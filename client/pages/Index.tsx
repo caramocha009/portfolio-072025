@@ -452,7 +452,9 @@ export default function Index() {
                 >
                   🏠 Home
                 </button>
-                <span className="text-black chicago-font-sm font-bold">→</span>
+                <span className="text-black font-mono text-sm font-bold">
+                  →
+                </span>
                 <button
                   onClick={() => {
                     setCurrentCaseStudy(null);
