@@ -621,43 +621,52 @@ export default function Index() {
       {/* Case Study View */}
       {currentCaseStudy && (
         <div
-          className="fixed inset-0 bg-white z-[9999] overflow-y-auto"
+          className="fixed inset-0 bg-gray-100 z-[9999] overflow-y-auto"
           data-case-study-container
+          style={{
+            backgroundImage: `repeating-linear-gradient(
+              45deg,
+              transparent,
+              transparent 2px,
+              rgba(0,0,0,0.02) 2px,
+              rgba(0,0,0,0.02) 4px
+            )`,
+          }}
         >
           {/* Progress Bar */}
-          <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-[10001]">
+          <div className="fixed top-0 left-0 w-full h-2 bg-black border-b-2 border-black z-[10001]">
             <div
-              className="h-full bg-gradient-to-r from-desktop-blue to-blue-800 transition-all duration-150"
+              className="h-full bg-gradient-to-r from-yellow-400 to-orange-500 transition-all duration-150"
               style={{ width: `${scrollProgress}%` }}
             />
           </div>
 
-          {/* Header with Breadcrumbs */}
-          <div className="border-b border-gray-200 bg-white sticky top-1 z-[10000]">
+          {/* Header with Breadcrumbs - Retro Style */}
+          <div className="border-b-4 border-black bg-white sticky top-2 z-[10000] shadow-[0_4px_0px_0px_rgba(0,0,0,1)]">
             <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
               {/* Breadcrumbs */}
-              <div className="flex items-center gap-2 text-sm">
+              <div className="flex items-center gap-2">
                 <button
                   onClick={() => {
                     setCurrentCaseStudy(null);
                     setIsWorksFullscreenOpen(false);
                   }}
-                  className="text-gray-600 hover:text-black transition-colors"
+                  className="px-3 py-1 bg-blue-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:bg-blue-300 transition-colors chicago-font-sm font-bold"
                 >
                   🏠 Home
                 </button>
-                <span className="text-gray-400">&gt;</span>
+                <span className="text-black chicago-font-sm font-bold">→</span>
                 <button
                   onClick={() => {
                     setCurrentCaseStudy(null);
                     setIsWorksFullscreenOpen(true);
                   }}
-                  className="text-gray-600 hover:text-black transition-colors"
+                  className="px-3 py-1 bg-green-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:bg-green-300 transition-colors chicago-font-sm font-bold"
                 >
                   📂 Works
                 </button>
-                <span className="text-gray-400">&gt;</span>
-                <span className="text-black font-medium">
+                <span className="text-black chicago-font-sm font-bold">→</span>
+                <span className="px-3 py-1 bg-yellow-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] chicago-font-sm font-bold">
                   Savvo Digital Sommelier
                 </span>
               </div>
@@ -668,7 +677,7 @@ export default function Index() {
                   setCurrentCaseStudy(null);
                   setIsWorksFullscreenOpen(true);
                 }}
-                className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-sm"
+                className="px-4 py-2 bg-red-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:bg-red-300 transition-colors chicago-font-sm font-bold"
               >
                 ← Back to Works
               </button>
