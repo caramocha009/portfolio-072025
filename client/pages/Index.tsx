@@ -285,6 +285,15 @@ export default function Index() {
           />
         </div>
 
+        {/* Lower Right Image */}
+        <div className="absolute bottom-4 right-4 z-10">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F62217c76826f4869a1b7e9969b51077e?format=webp&width=800"
+            alt=""
+            className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 object-contain"
+          />
+        </div>
+
         {/* Draggable Windows */}
         {openWindows.map((window) => (
           <DraggableWindow
