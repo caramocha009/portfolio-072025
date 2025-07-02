@@ -238,55 +238,11 @@ export function ShopIcon() {
 
 export function WorksIcon() {
   return (
-    <svg
-      width="96"
-      height="96"
-      viewBox="0 0 96 96"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      {/* Base folder structure */}
-      <rect
-        x="20"
-        y="16"
-        width="56"
-        height="8"
-        fill="#E68C4F"
-        stroke="#000"
-        strokeWidth="2"
-      />
-      <rect
-        x="18"
-        y="24"
-        width="60"
-        height="48"
-        fill="#F2B973"
-        stroke="#000"
-        strokeWidth="2"
-      />
-      <rect
-        x="18"
-        y="24"
-        width="60"
-        height="8"
-        fill="#E68C4F"
-        stroke="#000"
-        strokeWidth="2"
-      />
-
-      {/* Tool icons inside folder */}
-      <rect x="28" y="36" width="8" height="2" fill="#000" />
-      <rect x="30" y="34" width="4" height="6" fill="#000" />
-      <rect x="32" y="32" width="2" height="2" fill="#000" />
-
-      <rect x="42" y="36" width="8" height="2" fill="#000" />
-      <rect x="44" y="34" width="4" height="6" fill="#000" />
-      <circle cx="46" cy="38" r="3" fill="none" stroke="#000" strokeWidth="2" />
-
-      <rect x="56" y="36" width="8" height="2" fill="#000" />
-      <rect x="58" y="34" width="4" height="6" fill="#000" />
-      <rect x="60" y="32" width="2" height="8" fill="#000" />
-    </svg>
+    <img
+      src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F49762b6e55b14bc7b267b30bc86bb3ee?format=webp&width=800"
+      alt="Works"
+      className="w-24 h-24"
+    />
   );
 }
 
