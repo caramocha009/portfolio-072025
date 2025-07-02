@@ -196,7 +196,12 @@ function MediumArticleEmbed({
                 .replace(
                   /<img([^>]*?)src="([^"]*)"([^>]*?)>/g,
                   '<img$1src="$2"$3 onclick="window.openLightbox(\'$2\')" style="cursor: pointer;">',
-                ); // Make images clickable
+                ) // Make images clickable
+                .replace(
+                  /Project Brief/gi,
+                  '<h3 style="font-size: 28px; font-weight: 700; line-height: 1.3; margin: 40px 0 16px 0; color: #242424; font-family: sohne, Helvetica Neue, Helvetica, Arial, sans-serif;">Project Brief</h3>',
+                ) // Style Project Brief like The Challenge
+                .replace(/<h[23][^>]*>[^<]*challenge[^<]*<\/h[23]>/gi, ""); // Remove The Challenge headings
 
               return processedContent;
             })(),
