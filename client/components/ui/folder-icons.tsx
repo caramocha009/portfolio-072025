@@ -68,8 +68,8 @@ export function InvestmentsIcon() {
 export function ContactIcon() {
   return (
     <img
-      src="https://cdn.builder.io/api/v1/image/assets/TEMP/4f7ebb0a8c5d1244f02baab9b74a5a27258fe2d0?width=192"
-      alt="Contact Me folder"
+      src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F0d032c0b56d749f293841798140431ab?format=webp&width=800"
+      alt="Contact Me"
       className="w-24 h-24"
     />
   );
