@@ -436,50 +436,17 @@ export default function Index() {
                 restaurant, and membership experience of wines
               </p>
 
-              {/* Medium Embed */}
+              {/* Medium Article Embed */}
               <div className="border-4 border-black bg-gray-100 p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                <div className="bg-white border-2 border-black p-4">
-                  <div
-                    id="retainable-rss-embed"
-                    data-rss="https://medium.com/feed/@caramocha"
-                    data-maxcols="1"
-                    data-layout="grid"
-                    data-poststyle="inline"
-                    data-readmore="Read the rest"
-                    data-buttonclass="px-4 py-2 bg-orange-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:bg-orange-300 chicago-font-sm font-bold"
-                    data-offset="-100"
-                  />
-                </div>
-                <script
-                  src="https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js"
-                  async
+                <iframe
+                  src="https://medium.com/@caramocha/ux-case-study-savvo-digital-sommelier-c2da6957105d"
+                  width="100%"
+                  height="600"
+                  className="border-2 border-black"
+                  title="Savvo Digital Sommelier Case Study"
+                  frameBorder="0"
+                  allowFullScreen
                 />
-                {/* Fallback if RSS doesn't load */}
-                <div className="mt-4 p-4 border-2 border-orange-400 bg-orange-100">
-                  <h3 className="chicago-font-md font-bold text-black mb-2">
-                    Savvo Digital Sommelier Case Study
-                  </h3>
-                  <p className="text-black text-sm mb-3">
-                    A comprehensive UX case study exploring user research and
-                    contextual inquiry for wine kiosk interfaces in restaurant
-                    environments.
-                  </p>
-                  <iframe
-                    src="https://medium.com/media/embed?url=https://medium.com/@caramocha/ux-case-study-savvo-digital-sommelier-c2da6957105d"
-                    width="100%"
-                    height="400"
-                    className="border-2 border-black mb-3"
-                    title="Savvo Digital Sommelier Case Study"
-                  />
-                  <a
-                    href="https://medium.com/@caramocha/ux-case-study-savvo-digital-sommelier-c2da6957105d"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block px-4 py-2 bg-orange-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:bg-orange-300 chicago-font-sm font-bold"
-                  >
-                    📖 Read Full Article on Medium
-                  </a>
-                </div>
               </div>
 
               {/* External Link */}
