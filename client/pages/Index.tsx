@@ -572,17 +572,13 @@ export default function Index() {
           {/* Works Icon - Top of first column */}
           <div
             className="absolute z-20"
-            style={{ top: "calc(16px + 1vw)", left: "calc(16px + 1vw)" }}
+            style={{ top: "calc(24px + 1vw)", left: "calc(24px + 1vw)" }}
           >
             <DesktopIcon
-              icon={
-                <div className="scale-50 md:scale-[0.8]">
-                  <WorksIcon />
-                </div>
-              }
+              icon={<WorksIcon />}
               label="Works"
               onClick={() => openNewWindow("Works")}
-              className=""
+              className="scale-75 md:scale-90"
             />
           </div>
 
@@ -590,19 +586,15 @@ export default function Index() {
           <div
             className="absolute z-20"
             style={{
-              top: "calc(16px + 1vw + 110px)",
-              left: "calc(16px + 1vw)",
+              top: "calc(24px + 1vw + 134px)",
+              left: "calc(24px + 1vw)",
             }}
           >
             <DesktopIcon
-              icon={
-                <div className="scale-50 md:scale-[0.8]">
-                  <ArticlesIcon />
-                </div>
-              }
+              icon={<ArticlesIcon />}
               label="Read"
               onClick={() => openNewWindow("Articles")}
-              className=""
+              className="scale-75 md:scale-90"
             />
           </div>
 
@@ -610,19 +602,15 @@ export default function Index() {
           <div
             className="absolute z-20"
             style={{
-              top: "calc(16px + 1vw + 220px)",
-              left: "calc(16px + 1vw)",
+              top: "calc(24px + 1vw + 268px)",
+              left: "calc(24px + 1vw)",
             }}
           >
             <DesktopIcon
-              icon={
-                <div className="scale-50 md:scale-[0.8]">
-                  <AboutIcon />
-                </div>
-              }
+              icon={<AboutIcon />}
               label="About"
               onClick={() => openNewWindow("About")}
-              className=""
+              className="scale-75 md:scale-90"
             />
           </div>
 
@@ -630,53 +618,41 @@ export default function Index() {
           <div
             className="absolute z-20"
             style={{
-              top: "calc(16px + 1vw + 330px)",
-              left: "calc(16px + 1vw)",
+              top: "calc(24px + 1vw + 402px)",
+              left: "calc(24px + 1vw)",
             }}
           >
             <DesktopIcon
-              icon={
-                <div className="scale-50 md:scale-[0.8]">
-                  <ContactIcon />
-                </div>
-              }
+              icon={<ContactIcon />}
               label="Contact Me"
               onClick={() => openNewWindow("Contact")}
-              className=""
+              className="scale-75 md:scale-90"
             />
           </div>
 
           {/* Listen Icon - Top right */}
           <div
             className="absolute z-20"
-            style={{ top: "calc(16px + 1vw)", right: "calc(16px + 1vw)" }}
+            style={{ top: "calc(24px + 1vw)", right: "calc(24px + 1vw)" }}
           >
             <DesktopIcon
-              icon={
-                <div className="scale-50 md:scale-[0.8]">
-                  <PlaylistIcon />
-                </div>
-              }
+              icon={<PlaylistIcon />}
               label="Listen"
               onClick={() => openNewWindow("Playlist")}
-              className=""
+              className="scale-75 md:scale-90"
             />
           </div>
 
           {/* Recycling Icon - Bottom right, aligned with Listen column */}
           <div
             className="absolute z-20"
-            style={{ bottom: "calc(16px + 1vw)", right: "calc(16px + 1vw)" }}
+            style={{ bottom: "calc(24px + 1vw)", right: "calc(24px + 1vw)" }}
           >
             <DesktopIcon
-              icon={
-                <div className="scale-50 md:scale-[0.8]">
-                  <RecyclingIcon />
-                </div>
-              }
+              icon={<RecyclingIcon />}
               label="Recycling Bin"
               onClick={() => openNewWindow("Recycling Bin")}
-              className=""
+              className="scale-75 md:scale-90"
             />
           </div>
 
