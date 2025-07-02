@@ -173,6 +173,37 @@ interface WindowConfig {
   zIndex: number;
 }
 
+// Lightbox Component
+function Lightbox({
+  imageSrc,
+  onClose,
+}: {
+  imageSrc: string;
+  onClose: () => void;
+}) {
+  return (
+    <div
+      className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-[10000] cursor-pointer"
+      onClick={onClose}
+    >
+      <div className="relative max-w-[90vw] max-h-[90vh]">
+        <img
+          src={imageSrc}
+          alt="Enlarged image"
+          className="max-w-full max-h-full object-contain"
+          onClick={(e) => e.stopPropagation()}
+        />
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-white text-2xl font-bold bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-70"
+        >
+          ×
+        </button>
+      </div>
+    </div>
+  );
+}
+
 export default function Index() {
   const [openWindows, setOpenWindows] = useState<WindowConfig[]>([
     {
@@ -237,6 +268,7 @@ export default function Index() {
   const [currentCaseStudy, setCurrentCaseStudy] = useState<string | null>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
   useEffect(() => {
     if (currentCaseStudy) {
