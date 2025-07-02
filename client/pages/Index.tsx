@@ -301,8 +301,8 @@ export default function Index() {
       headerColor: headerColor,
       initialX: Math.random() * 200 + 100,
       initialY: Math.random() * 200 + 100,
-      width: type === "Articles" ? 500 : 300,
-      height: type === "Articles" ? 400 : 300,
+      width: type === "Articles" || type === "Works" ? 500 : 300,
+      height: type === "Articles" || type === "Works" ? 400 : 300,
       zIndex: nextZIndex,
       content: windowContent,
     };
