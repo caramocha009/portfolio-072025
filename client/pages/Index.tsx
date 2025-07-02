@@ -154,23 +154,6 @@ function MediumArticleEmbed() {
           style={{ marginTop: "32px" }}
           className="flex items-center justify-between gap-8"
         >
-          <a
-            href={articleContent.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center bg-black text-white py-2 px-3 transition-opacity hover:opacity-80"
-            style={{
-              fontFamily: '"JetBrains Mono", monospace',
-              fontSize: "8px",
-              fontWeight: "400",
-            }}
-          >
-            <div className="w-3 h-3 bg-white rounded-full flex items-center justify-center mr-2">
-              <div className="w-1.5 h-1.5 bg-black rounded-full"></div>
-            </div>
-            This article was originally published on Medium.
-          </a>
-
           <button
             onClick={() => {
               setCurrentCaseStudy(null);
@@ -180,6 +163,23 @@ function MediumArticleEmbed() {
           >
             ← Back to Works
           </button>
+
+          <a
+            href={articleContent.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center bg-black text-white py-2 px-3 transition-opacity hover:opacity-80"
+            style={{
+              fontFamily: '"JetBrains Mono", monospace',
+              fontSize: "16px",
+              fontWeight: "400",
+            }}
+          >
+            <div className="w-3 h-3 bg-white rounded-full flex items-center justify-center mr-2">
+              <div className="w-1.5 h-1.5 bg-black rounded-full"></div>
+            </div>
+            This article was originally published on Medium.
+          </a>
         </div>
       </article>
     </>
