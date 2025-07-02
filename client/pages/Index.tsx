@@ -652,10 +652,14 @@ export default function Index() {
             style={{ top: "calc(32px + 1vw)", right: "calc(32px + 2vw)" }}
           >
             <DesktopIcon
-              icon={<PlaylistIcon />}
+              icon={
+                <div className="scale-50 md:scale-[0.8]">
+                  <PlaylistIcon />
+                </div>
+              }
               label="Listen"
               onClick={() => openNewWindow("Playlist")}
-              className="scale-50 md:scale-[0.8]"
+              className=""
             />
           </div>
 
