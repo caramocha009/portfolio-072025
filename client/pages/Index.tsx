@@ -78,6 +78,11 @@ function MediumArticleEmbed({
     fetchMediumArticle();
   }, [refetchKey]);
 
+  // Trigger immediate refetch on component mount
+  useEffect(() => {
+    refetchArticle();
+  }, []);
+
   useEffect(() => {
     // Set up global lightbox handler
     (window as any).openLightbox = (src: string) => {
