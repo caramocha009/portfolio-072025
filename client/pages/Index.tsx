@@ -635,10 +635,14 @@ export default function Index() {
             }}
           >
             <DesktopIcon
-              icon={<ContactIcon />}
+              icon={
+                <div className="scale-50 md:scale-[0.8]">
+                  <ContactIcon />
+                </div>
+              }
               label="Contact Me"
               onClick={() => openNewWindow("Contact")}
-              className="scale-50 md:scale-[0.8]"
+              className=""
             />
           </div>
 
