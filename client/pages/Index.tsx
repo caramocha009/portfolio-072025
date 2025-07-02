@@ -150,13 +150,14 @@ function MediumArticleEmbed() {
 
               // Add project info after first image
               const projectInfo = `
-                <div style="background-color: #f8f9fa; padding: 24px; margin: 32px 0; border-left: 4px solid #242424; font-family: charter, Georgia, serif;">
-                  <h4 style="font-size: 18px; font-weight: 600; margin: 0 0 16px 0; color: #242424;">Project Details</h4>
-                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; font-size: 16px;">
-                    <div><strong>Timeline:</strong> 3 Phases (MVP Focus)</div>
-                    <div><strong>Status:</strong> MVP Delivered</div>
-                    <div><strong>My Role:</strong> Lead UX Designer</div>
-                    <div><strong>Client:</strong> Savvo & Cooper's Hawk Winery</div>
+                <div style="background-color: #f8f9fa; padding: 32px; margin: 48px 0; font-family: charter, Georgia, serif;">
+                  <h2 style="font-size: 36px; font-weight: 700; margin: 0 0 16px 0; color: #242424; line-height: 1.25;">Savvo Digital Sommelier</h2>
+                  <p style="font-size: 18px; font-weight: 400; line-height: 1.5; margin: 0 0 32px 0; color: #666;">A study in user research and contextual inquiry around kiosk, restaurant, and membership experience of wines</p>
+                  <div style="font-size: 16px; line-height: 1.6; color: #242424;">
+                    <div style="margin-bottom: 12px;"><strong>Timeline:</strong> 3 Phases (MVP Focus)</div>
+                    <div style="margin-bottom: 12px;"><strong>Status:</strong> MVP Delivered</div>
+                    <div style="margin-bottom: 12px;"><strong>My Role:</strong> Lead UX Designer</div>
+                    <div style="margin-bottom: 12px;"><strong>Client:</strong> Savvo & Cooper's Hawk Winery</div>
                   </div>
                 </div>
               `;
