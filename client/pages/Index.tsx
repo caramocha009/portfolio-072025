@@ -271,25 +271,40 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
         '#project-brief, [id^="section-"]',
       );
       let current = "";
-      let minDistance = Infinity;
+      const containerRect = container.getBoundingClientRect();
+      const scrollTop = container.scrollTop;
 
-      allSections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        const containerRect = container.getBoundingClientRect();
-        const distance = Math.abs(rect.top - containerRect.top - 150);
-
-        if (rect.top <= 200 && distance < minDistance) {
-          minDistance = distance;
-          current = section.getAttribute("id") || "";
-        }
-      });
-
-      // Default to project-brief if we're at the top
-      if (!current && container.scrollTop < 200) {
+      // If we're at the very top, default to project-brief
+      if (scrollTop < 100) {
         current = "project-brief";
+      } else {
+        // Find the section that's currently in view (closest to top of viewport)
+        let closestSection = null;
+        let closestDistance = Infinity;
+
+        allSections.forEach((section) => {
+          const rect = section.getBoundingClientRect();
+          const relativeTop = rect.top - containerRect.top;
+
+          // Section is in view if it's within the top portion of the viewport
+          if (relativeTop <= 200 && relativeTop >= -200) {
+            const distance = Math.abs(relativeTop - 100); // Target 100px from top
+            if (distance < closestDistance) {
+              closestDistance = distance;
+              closestSection = section;
+            }
+          }
+        });
+
+        if (closestSection) {
+          current = closestSection.getAttribute("id") || "";
+        }
       }
 
-      setActiveSection(current);
+      if (current && current !== activeSection) {
+        console.log("Active section changed to:", current); // Debug log
+        setActiveSection(current);
+      }
     };
 
     // Add delay to ensure content is loaded
