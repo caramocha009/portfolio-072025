@@ -144,6 +144,7 @@ function MediumArticleEmbed() {
 
               return parts
                 .join("")
+                .replace(/<h1[^>]*>.*?<\/h1>/i, "") // Remove first h1 tag (redundant title)
                 .replace(/\s*<\/p>\s*$/, "</p>") // Clean up trailing whitespace
                 .replace(/(<\/[^>]+>)\s*(<\/[^>]+>)/g, "$1$2"); // Remove spaces between closing tags
             })(),
