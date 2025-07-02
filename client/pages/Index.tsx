@@ -72,6 +72,17 @@ function MediumArticleEmbed({
     fetchMediumArticle();
   }, []);
 
+  useEffect(() => {
+    // Set up global lightbox handler
+    (window as any).openLightbox = (src: string) => {
+      onImageClick(src);
+    };
+
+    return () => {
+      delete (window as any).openLightbox;
+    };
+  }, [onImageClick]);
+
   if (loading) {
     return (
       <div className="text-center py-8">
