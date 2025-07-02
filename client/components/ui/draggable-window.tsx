@@ -30,6 +30,8 @@ export function DraggableWindow({
   minHeight = 200,
   maxWidth = 600,
   maxHeight = 600,
+  zIndex = 10,
+  onBringToFront,
 }: DraggableWindowProps) {
   const [position, setPosition] = useState({ x: initialX, y: initialY });
   const [isDragging, setIsDragging] = useState(false);
