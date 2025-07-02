@@ -28,42 +28,100 @@ interface RSSResponse {
 
 // Medium Article Embed Component
 function MediumArticleEmbed() {
-  return (
-    <div className="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
-      <h1 className="text-3xl font-bold text-black mb-6 chicago-font-xl">
-        Savvo Digital Sommelier
-      </h1>
-      <p className="text-black mb-6 chicago-font-md">
-        A study in user research and contextual inquiry around kiosk,
-        restaurant, and membership experience of wines
-      </p>
+  const [articleContent, setArticleContent] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-      {/* Embedded Medium Article */}
-      <div className="border-4 border-black bg-gray-100 p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mb-6">
-        <iframe
-          src="https://medium.com/@caramocha/ux-case-study-savvo-digital-sommelier-c2da6957105d"
-          width="100%"
-          height="800"
-          className="border-2 border-black bg-white"
-          title="Savvo Digital Sommelier Case Study"
-          frameBorder="0"
-          allowFullScreen
-          sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
-        />
+  useEffect(() => {
+    const fetchMediumArticle = async () => {
+      try {
+        // Using RSS2JSON to fetch the specific article
+        const response = await fetch(
+          "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@caramocha",
+        );
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch article");
+        }
+
+        const data = await response.json();
+
+        // Find the specific Savvo Digital Sommelier article
+        const savvoArticle = data.items.find(
+          (item: any) =>
+            item.title.toLowerCase().includes("savvo") ||
+            item.title.toLowerCase().includes("digital sommelier"),
+        );
+
+        if (savvoArticle) {
+          setArticleContent(savvoArticle);
+        } else {
+          throw new Error("Savvo article not found");
+        }
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "Unknown error");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchMediumArticle();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="text-center py-8">
+        <p className="text-black font-mono">Loading article...</p>
       </div>
+    );
+  }
 
-      {/* External Link for backup */}
-      <div className="text-center">
+  if (error || !articleContent) {
+    return (
+      <div className="text-center py-8">
+        <p className="text-black font-mono mb-4">
+          Unable to load article content
+        </p>
         <a
           href="https://medium.com/@caramocha/ux-case-study-savvo-digital-sommelier-c2da6957105d"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-6 py-3 bg-orange-400 text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all font-mono text-base font-bold"
         >
-          📖 Open in New Tab →
+          📖 Read on Medium →
         </a>
       </div>
-    </div>
+    );
+  }
+
+  return (
+    <article className="bg-white text-black">
+      <h1 className="text-3xl font-bold mb-6 font-mono">
+        {articleContent.title}
+      </h1>
+
+      <div className="mb-6 text-sm font-mono text-gray-600">
+        Published: {new Date(articleContent.pubDate).toLocaleDateString()}
+      </div>
+
+      <div
+        className="prose prose-lg max-w-none font-mono leading-relaxed"
+        dangerouslySetInnerHTML={{
+          __html: articleContent.content || articleContent.description,
+        }}
+      />
+
+      <div className="mt-8 pt-4 border-t border-gray-300">
+        <a
+          href={articleContent.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-6 py-3 bg-orange-400 text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all font-mono text-base font-bold"
+        >
+          📖 Read Full Article on Medium →
+        </a>
+      </div>
+    </article>
   );
 }
 
