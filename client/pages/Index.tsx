@@ -234,40 +234,60 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
       const sectionList: Array<{ id: string; title: string }> = [];
 
       // Add Project Brief as first section (points to title area)
-      const titleElement = document.querySelector(".medium-article-content h1");
-      if (titleElement) {
+      const titleElement = document.querySelector(
+        'h1[style*="font-size: 42px"]',
+      );
+      if (titleElement && !titleElement.id) {
         titleElement.setAttribute("id", "project-brief");
+      }
+      if (titleElement) {
         sectionList.push({ id: "project-brief", title: "Project Brief" });
       }
 
-      // Add other sections from headings
+      // Add other sections from headings in the content
       const headings = document.querySelectorAll(
         ".medium-article-content h2, .medium-article-content h3",
       );
 
       headings.forEach((heading, index) => {
-        const text = heading.textContent || "";
-        const id = `section-${index + 1}`;
-        heading.setAttribute("id", id);
-        sectionList.push({ id, title: text });
+        const text = heading.textContent?.trim() || "";
+        if (text && text !== "Project Brief") {
+          const id = `section-${index + 1}`;
+          heading.setAttribute("id", id);
+          sectionList.push({ id, title: text });
+        }
       });
 
+      console.log("Extracted sections:", sectionList); // Debug log
       setSections(sectionList);
     };
 
     // Track active section based on scroll position
     const handleScroll = () => {
+      const container = document.querySelector("[data-case-study-container]");
+      if (!container) return;
+
       const allSections = document.querySelectorAll(
-        '[id^="project-brief"], [id^="section-"]',
+        '#project-brief, [id^="section-"]',
       );
       let current = "";
+      let minDistance = Infinity;
 
       allSections.forEach((section) => {
         const rect = section.getBoundingClientRect();
-        if (rect.top <= 150) {
+        const containerRect = container.getBoundingClientRect();
+        const distance = Math.abs(rect.top - containerRect.top - 150);
+
+        if (rect.top <= 200 && distance < minDistance) {
+          minDistance = distance;
           current = section.getAttribute("id") || "";
         }
       });
+
+      // Default to project-brief if we're at the top
+      if (!current && container.scrollTop < 200) {
+        current = "project-brief";
+      }
 
       setActiveSection(current);
     };
