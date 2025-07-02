@@ -861,6 +861,14 @@ export default function Index() {
           ))}
         </main>
       </div>
+
+      {/* Lightbox */}
+      {lightboxImage && (
+        <Lightbox
+          imageSrc={lightboxImage}
+          onClose={() => setLightboxImage(null)}
+        />
+      )}
     </>
   );
 }
