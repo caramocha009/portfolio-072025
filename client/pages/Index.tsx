@@ -145,19 +145,32 @@ export default function Index() {
       <header className="h-12 bg-white border-b-2 border-black flex items-center justify-between px-2 md:px-4">
         {/* Logo and Brand */}
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 md:w-8 md:h-8 bg-black rounded-sm flex items-center justify-center">
+          <div className="w-6 h-6 md:w-8 md:h-8 bg-green-600 rounded-sm flex items-center justify-center">
             <svg
-              width="24"
-              height="24"
-              viewBox="0 0 32 32"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
               fill="none"
-              className="md:w-8 md:h-8"
+              className="md:w-6 md:h-6"
             >
               <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M16.4754 2.29829V2.59657H15.2857V3.19314H14.6903V3.79086H14.0994V4.97943H13.5051V4.38286H11.128V4.98057H10.5337V5.57714H9.94286V7.96H10.5337V8.552H11.128V9.14971H12.3189L12.3177 9.44686L12.3166 9.744H12.0194L11.7234 9.74629V11.5326H11.1291V13.9154H11.7234V15.104L12.0206 15.1063H12.3166L12.3177 15.7029L12.3189 16.2983H12.9097V16.8949H11.128V16.2983H9.93829V15.7017H8.752V15.1051H8.15771V14.512H7.56571L7.56457 13.9166L7.56343 13.3211L7.26629 13.32L6.96914 13.3189V12.7269H6.37486V13.3189H6.07771L5.78171 13.3211V14.2126L5.77943 15.104H5.18971V19.2731H5.77943V19.8697H5.18971V20.4674H4.59429V21.6617H4V24.0389H4.59429V25.2343H5.18971V26.4229H5.78057V27.0194H6.376V27.616H6.97029V28.2091H8.15657V28.8057H9.34857V29.4023H11.1291V30H20.0389V29.4034H21.8194V28.8069H23.0091V28.2091H24.1954V27.6171H24.7909V27.0194H25.3863V26.4229H25.9771V25.2343H26.5714V24.04H27.1669V21.6617H26.5726V20.4674H25.9771V19.8709H25.3863V19.2789H24.792V18.6811H23.6V18.0846H21.8171V17.488H22.4126V16.2994H24.7897V15.7017H25.384V14.5131H24.7897V13.3189H25.384V12.1303H24.7897V11.5326H24.1943V10.9349H23.5989V9.74629H24.1931V9.14971H24.7886V8.55314H25.384V7.96H25.9749V5.57714H25.384V4.98057H24.7897V4.384H23.0069V4.98057H21.8183V3.792L21.5211 3.78971L21.224 3.78857V3.49143L21.2217 3.19429H20.632V2.59657H20.0366V2H16.4743L16.4754 2.29829Z"
+                d="M12 2C8.5 2 6 4.5 6 8c0 1.5.5 3 1.5 4l-1.5 4c0 1.5 1 2.5 2.5 2.5h1v1.5c0 1 1 2 2 2h3c1 0 2-1 2-2V18h1c1.5 0 2.5-1 2.5-2.5l-1.5-4c1-1 1.5-2.5 1.5-4 0-3.5-2.5-6-6-6z"
                 fill="white"
+              />
+              <circle cx="10" cy="7" r="1" fill="black" />
+              <circle cx="14" cy="7" r="1" fill="black" />
+              <path
+                d="M8 10c0 2 1.5 3.5 4 3.5s4-1.5 4-3.5"
+                stroke="black"
+                strokeWidth="1"
+                fill="none"
+              />
+              <ellipse cx="12" cy="16" rx="4" ry="2" fill="white" />
+              <path
+                d="M8 16c0-1 1.5-2 4-2s4 1 4 2"
+                stroke="green"
+                strokeWidth="1"
+                fill="none"
               />
             </svg>
           </div>
