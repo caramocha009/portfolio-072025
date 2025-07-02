@@ -150,25 +150,36 @@ function MediumArticleEmbed() {
           }}
         />
 
-        <div style={{ marginTop: "32px" }}>
+        <div
+          style={{ marginTop: "32px" }}
+          className="flex items-center justify-between gap-8"
+        >
           <a
             href={articleContent.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-full bg-black text-white py-4 px-6 text-center transition-opacity hover:opacity-80"
+            className="inline-flex items-center bg-black text-white py-2 px-3 transition-opacity hover:opacity-80"
             style={{
               fontFamily: '"JetBrains Mono", monospace',
-              fontSize: "16px",
+              fontSize: "8px",
               fontWeight: "400",
             }}
           >
-            <span className="inline-flex items-center gap-3">
-              <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-                <div className="w-3 h-3 bg-black rounded-full"></div>
-              </div>
-              This article was originally published on Medium.
-            </span>
+            <div className="w-3 h-3 bg-white rounded-full flex items-center justify-center mr-2">
+              <div className="w-1.5 h-1.5 bg-black rounded-full"></div>
+            </div>
+            This article was originally published on Medium.
           </a>
+
+          <button
+            onClick={() => {
+              setCurrentCaseStudy(null);
+              setIsWorksFullscreenOpen(true);
+            }}
+            className="inline-flex items-center px-4 py-2 bg-gray-300 text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-gray-200 transition-colors font-mono text-sm"
+          >
+            ← Back to Works
+          </button>
         </div>
       </article>
     </>
@@ -541,15 +552,15 @@ export default function Index() {
           }}
         >
           {/* Progress Bar */}
-          <div className="fixed top-0 left-0 w-full h-2 bg-black border-b-2 border-black z-[10001]">
+          <div className="fixed top-0 left-0 w-full h-2 bg-white border-b-2 border-black z-[10001]">
             <div
-              className="h-full bg-gradient-to-r from-desktop-blue to-blue-800 transition-all duration-150"
+              className="h-full bg-gradient-to-r from-desktop-blue via-blue-600 to-pink-500 transition-all duration-150"
               style={{ width: `${scrollProgress}%` }}
             />
           </div>
 
           {/* Header with Breadcrumbs - Retro Style */}
-          <div className="border-b-4 border-black bg-white sticky top-2 z-[10000] shadow-[0_4px_0px_0px_rgba(0,0,0,1)]">
+          <div className="border-b-2 border-black bg-white sticky top-2 z-[10000] shadow-[0_4px_0px_0px_rgba(0,0,0,1)]">
             <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
               {/* Breadcrumbs */}
               <div className="flex items-center gap-2">
@@ -594,19 +605,6 @@ export default function Index() {
           {/* Case Study Content - Simplified */}
           <div className="max-w-4xl mx-auto px-6 py-2">
             <MediumArticleEmbed />
-
-            {/* Back to Works */}
-            <div className="text-center mt-2">
-              <button
-                onClick={() => {
-                  setCurrentCaseStudy(null);
-                  setIsWorksFullscreenOpen(true);
-                }}
-                className="inline-flex items-center px-4 py-2 bg-gray-300 text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-gray-200 transition-colors font-mono text-sm font-bold"
-              >
-                ← Back to Works
-              </button>
-            </div>
           </div>
         </div>
       )}
