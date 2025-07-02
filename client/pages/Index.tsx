@@ -168,7 +168,7 @@ export default function Index() {
           </div>
 
           {/* Article 2 */}
-          <div className="flex items-start gap-2 sm:gap-4 p-2 sm:p-4 border-b border-gray-200">
+          <div className="flex items-start gap-2 sm:gap-4 p-2 sm:p-4">
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fcaaef5fe4be442b7aafe8dfdaf76973a?format=webp&width=800"
               alt="Article thumbnail"
