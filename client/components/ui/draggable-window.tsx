@@ -147,7 +147,7 @@ export function DraggableWindow({
     >
       {/* Window Header */}
       <div
-        className="h-8 border-b-2 border-black flex items-center justify-between px-1 cursor-move"
+        className="h-8 border-b-2 border-black flex items-center justify-between px-2 cursor-move"
         style={{ backgroundColor: headerColor }}
         onMouseDown={handleMouseDown}
         onTouchStart={handleTouchStart}
@@ -155,17 +155,17 @@ export function DraggableWindow({
         <div className="flex-1" />
 
         {/* Window controls - horizontal lines */}
-        <div className="flex flex-col items-center gap-1 mx-2">
-          <div className="w-70 h-0.5 bg-black" style={{ width: "280px" }} />
-          <div className="w-70 h-0.5 bg-black" style={{ width: "280px" }} />
-          <div className="w-70 h-0.5 bg-black" style={{ width: "280px" }} />
+        <div className="flex flex-col items-center gap-1 flex-1 max-w-[200px]">
+          <div className="w-full h-0.5 bg-black" />
+          <div className="w-full h-0.5 bg-black" />
+          <div className="w-full h-0.5 bg-black" />
         </div>
 
         {/* Close button */}
         {onClose && (
           <button
             onClick={onClose}
-            className="w-8 h-7 flex items-center justify-center hover:bg-black hover:bg-opacity-10"
+            className="w-6 h-6 flex items-center justify-center hover:bg-black hover:bg-opacity-10 ml-2 flex-shrink-0"
             style={{ backgroundColor: headerColor }}
           >
             <svg width="14" height="20" viewBox="0 0 14 20" fill="none">
