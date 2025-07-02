@@ -767,13 +767,13 @@ export default function Index() {
                     🍷 The Mission
                   </h3>
                   <p className="text-black leading-relaxed chicago-font-md">
-                    Savvo Digital Sommelier operates wine kiosks in select
-                    retail stores in the Greater Chicago area. The kiosks assist
-                    users in browsing wine selections and suggest pairings with
-                    cheese and meats. Our team was tasked with enhancing the
-                    kiosk's interface to better integrate with Cooper's Hawk
-                    Restaurant and Winery, creating a prototype that would
-                    impress Cooper's Hawk's CEO.
+                    Savvo Digital Sommelier operates wine kiosks in select retail
+                    stores in the Greater Chicago area. The kiosks assist users in
+                    browsing wine selections and suggest pairings with cheese and
+                    meats. Our team was tasked with enhancing the kiosk's
+                    interface to better integrate with Cooper's Hawk Restaurant
+                    and Winery, creating a prototype that would impress Cooper's
+                    Hawk's CEO.
                   </p>
                 </div>
               </div>
@@ -781,15 +781,21 @@ export default function Index() {
 
             {/* Current Product Evaluation */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-6 chicago-font">
-                Current Product Evaluation
-              </h2>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                Before designing new features, we conducted a thorough
-                evaluation of the existing kiosk system. Through user testing
-                and heuristic analysis, we identified several critical usability
-                issues.
-              </p>
+              <div className="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                <h2 className="text-2xl font-bold text-black mb-6 chicago-font-xl">
+                  Current Product Evaluation
+                </h2>
+                <img
+                  src="https://images.pexels.com/photos/276147/pexels-photo-276147.jpeg"
+                  alt="Restaurant menu display and kiosk interface"
+                  className="w-full border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mb-6"
+                />
+                <p className="text-black leading-relaxed mb-6 chicago-font-md">
+                  Before designing new features, we conducted a thorough
+                  evaluation of the existing kiosk system. Through user testing
+                  and heuristic analysis, we identified several critical usability
+                  issues.
+                </p>
 
               {/* Problem Highlight Block */}
               <div className="border-4 border-red-600 bg-red-100 p-6 shadow-[8px_8px_0px_0px_rgba(220,38,38,1)] mb-8">
