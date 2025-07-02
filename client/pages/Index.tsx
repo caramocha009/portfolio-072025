@@ -172,8 +172,14 @@ export default function Index() {
         {/* Social Media Icons */}
         <div className="flex items-center gap-1 md:gap-3">
           {/* Twitter/X */}
-          <button className="text-desktop-blue hover:opacity-80">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <button className="text-desktop-blue hover:opacity-80 p-1">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              className="md:w-6 md:h-6"
+            >
               <path
                 d="M10.7403 14.2092L14.7084 19.5H20.5417L13.9931 10.7686L19.4424 4.5H17.234L12.9703 9.40482L9.29171 4.5H3.45837L9.71742 12.8454L3.93267 19.5H6.14102L10.7403 14.2092ZM15.5417 17.8333L6.79171 6.16667H8.45837L17.2084 17.8333H15.5417Z"
                 fill="#5656E9"
