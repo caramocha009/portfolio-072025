@@ -150,38 +150,6 @@ function MediumArticleEmbed() {
             })(),
           }}
         />
-
-        <div
-          style={{ marginTop: "32px" }}
-          className="flex items-center justify-between gap-8"
-        >
-          <button
-            onClick={() => {
-              setCurrentCaseStudy(null);
-              setIsWorksFullscreenOpen(true);
-            }}
-            className="inline-flex items-center px-4 py-2 bg-gray-300 text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-gray-200 transition-colors font-mono text-sm"
-          >
-            ← Back to Works
-          </button>
-
-          <a
-            href={articleContent.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center bg-black text-white py-2 px-3 transition-opacity hover:opacity-80"
-            style={{
-              fontFamily: '"JetBrains Mono", monospace',
-              fontSize: "16px",
-              fontWeight: "400",
-            }}
-          >
-            <div className="w-3 h-3 bg-white rounded-full flex items-center justify-center mr-2">
-              <div className="w-1.5 h-1.5 bg-black rounded-full"></div>
-            </div>
-            This article was originally published on Medium.
-          </a>
-        </div>
       </article>
     </>
   );
@@ -609,6 +577,39 @@ export default function Index() {
             style={{ marginTop: "48px", paddingBottom: "144px" }}
           >
             <MediumArticleEmbed />
+
+            {/* Buttons */}
+            <div
+              style={{ marginTop: "32px" }}
+              className="flex items-center justify-between gap-8"
+            >
+              <button
+                onClick={() => {
+                  setCurrentCaseStudy(null);
+                  setIsWorksFullscreenOpen(true);
+                }}
+                className="inline-flex items-center px-4 py-2 bg-gray-300 text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-gray-200 transition-colors font-mono text-sm"
+              >
+                ← Back to Works
+              </button>
+
+              <a
+                href="https://medium.com/@caramocha/ux-case-study-savvo-digital-sommelier-c2da6957105d"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center bg-black text-white py-2 px-3 transition-opacity hover:opacity-80"
+                style={{
+                  fontFamily: '"JetBrains Mono", monospace',
+                  fontSize: "16px",
+                  fontWeight: "400",
+                }}
+              >
+                <div className="w-3 h-3 bg-white rounded-full flex items-center justify-center mr-2">
+                  <div className="w-1.5 h-1.5 bg-black rounded-full"></div>
+                </div>
+                This article was originally published on Medium.
+              </a>
+            </div>
           </div>
         </div>
       )}
