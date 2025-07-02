@@ -179,6 +179,37 @@ export function DraggableWindow({
     }
   };
 
+  const handleResizeMouseDown = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    e.preventDefault();
+    setResizeStart({
+      x: e.clientX,
+      y: e.clientY,
+      width: size.width,
+      height: size.height,
+    });
+    setIsResizing(true);
+    if (onBringToFront) {
+      onBringToFront();
+    }
+  };
+
+  const handleResizeTouchStart = (e: React.TouchEvent) => {
+    e.stopPropagation();
+    e.preventDefault();
+    const touch = e.touches[0];
+    setResizeStart({
+      x: touch.clientX,
+      y: touch.clientY,
+      width: size.width,
+      height: size.height,
+    });
+    setIsResizing(true);
+    if (onBringToFront) {
+      onBringToFront();
+    }
+  };
+
   const handleWindowClick = () => {
     if (onBringToFront) {
       onBringToFront();
