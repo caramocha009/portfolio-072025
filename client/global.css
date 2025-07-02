@@ -114,26 +114,12 @@
     overflow: hidden;
   }
 
-  /* Chicago/Pixelated font styling */
-  .font-chicago,
-  .font-chicago * {
-    font-family:
-      "FA Sysfont C", "Courier New", "Monaco", "Lucida Console", monospace !important;
+  /* Chicago font styling - simplified */
+  .chicago-font {
+    font-family: "ChicagoFLF", "Courier New", monospace !important;
     font-weight: normal !important;
-    text-rendering: pixelated !important;
-    -webkit-font-smoothing: none !important;
-    -moz-osx-font-smoothing: none !important;
-    font-smooth: never !important;
-    letter-spacing: 0.025em !important;
-  }
-
-  /* Force font loading */
-  body:before {
-    content: "";
-    font-family: "FA Sysfont C";
-    position: absolute;
-    left: -9999px;
-    visibility: hidden;
+    font-size: 12px !important;
+    line-height: 1.2 !important;
   }
 
   /* Ensure smooth dragging */
