@@ -797,7 +797,7 @@ export default function Index() {
                   issues.
                 </p>
 
-              {/* Problem Highlight Block */}
+                {/* Problem Highlight Block */}
               <div className="border-4 border-red-600 bg-red-100 p-6 shadow-[8px_8px_0px_0px_rgba(220,38,38,1)] mb-8">
                 <h3 className="font-bold text-red-800 mb-4 chicago-font flex items-center">
                   <span className="mr-2">⚠️</span> Key Problems Identified
