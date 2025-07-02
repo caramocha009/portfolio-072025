@@ -6,6 +6,7 @@ import {
   ContactIcon,
   ArticlesIcon,
   AboutIcon,
+  PlaylistIcon,
   YourBagIcon,
 } from "@/components/ui/folder-icons";
 
