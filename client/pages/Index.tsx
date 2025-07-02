@@ -19,6 +19,7 @@ interface WindowConfig {
   initialY: number;
   width?: number;
   height?: number;
+  zIndex: number;
 }
 
 export default function Index() {
