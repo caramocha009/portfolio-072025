@@ -95,6 +95,7 @@ export default function Index() {
       headerColor: "#EB2682",
       initialX: 600,
       initialY: 201,
+      zIndex: 12,
       content: (
         <div className="space-y-0">
           <p className="text-black text-base leading-6">
