@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/folder-icons";
 
 // RSS Parser for Medium articles
-const Parser = require("rss-parser");
+import Parser from "rss-parser";
 
 interface MediumArticle {
   title: string;
