@@ -568,19 +568,6 @@ export default function Index() {
         </header>
 
         <main className="relative h-[calc(100vh-48px)]">
-          {/* Contact Me Icon - Top Right */}
-          <div
-            className="absolute z-20"
-            style={{ top: "calc(8px + 1vw)", right: "calc(8px + 2vw)" }}
-          >
-            <DesktopIcon
-              icon={<ContactIcon />}
-              label="Contact Me"
-              onClick={() => openNewWindow("Contact")}
-              className="scale-75 md:scale-100"
-            />
-          </div>
-
           {/* Works Icon - Top Left */}
           <div
             className="absolute z-20"
@@ -594,7 +581,7 @@ export default function Index() {
             />
           </div>
 
-          {/* Articles Icon - Left Side */}
+          {/* Read Icon - Second from top left */}
           <div
             className="absolute z-20"
             style={{ top: "calc(25% + 2vw)", left: "calc(8px + 2vw)" }}
@@ -607,7 +594,7 @@ export default function Index() {
             />
           </div>
 
-          {/* About Icon - Lower Left */}
+          {/* About Icon - Third from top left */}
           <div
             className="absolute z-20"
             style={{ bottom: "calc(16px + 8vw)", left: "calc(8px + 2vw)" }}
@@ -620,10 +607,23 @@ export default function Index() {
             />
           </div>
 
-          {/* Playlist Icon - Lower Left, second from bottom */}
+          {/* Contact Me Icon - Bottom left */}
           <div
             className="absolute z-20"
             style={{ bottom: "calc(16px + 2vw)", left: "calc(8px + 2vw)" }}
+          >
+            <DesktopIcon
+              icon={<ContactIcon />}
+              label="Contact Me"
+              onClick={() => openNewWindow("Contact")}
+              className="scale-75 md:scale-100"
+            />
+          </div>
+
+          {/* Listen Icon - Right side */}
+          <div
+            className="absolute z-20"
+            style={{ top: "calc(25% + 2vw)", right: "calc(8px + 2vw)" }}
           >
             <DesktopIcon
               icon={<PlaylistIcon />}
