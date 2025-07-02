@@ -119,7 +119,8 @@ function MediumArticleEmbed() {
               {article.title}
             </h3>
             <p className="text-black text-sm mb-3 leading-relaxed">
-              {article.contentSnippet?.substring(0, 200)}...
+              {article.description?.replace(/<[^>]*>/g, "").substring(0, 200)}
+              ...
             </p>
             <div className="flex justify-between items-center">
               <span className="text-gray-600 text-xs chicago-font-sm">
