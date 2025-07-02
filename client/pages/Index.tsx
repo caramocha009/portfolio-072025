@@ -686,17 +686,56 @@ export default function Index() {
 
           {/* Case Study Content */}
           <div className="max-w-4xl mx-auto px-6 py-12">
-            {/* Hero Section */}
-            <div className="mb-12 bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-              <img
-                src="https://images.pexels.com/photos/8775088/pexels-photo-8775088.jpeg"
-                alt="Wine tasting and sommelier experience"
-                className="w-full border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mb-8"
-              />
-
-              <h1 className="text-4xl font-bold text-black mb-4 chicago-font-xl">
+            {/* Medium Article Embed */}
+            <div className="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
+              <h1 className="text-3xl font-bold text-black mb-6 chicago-font-xl">
                 Savvo Digital Sommelier
               </h1>
+              <p className="text-black mb-6 chicago-font-md">
+                A study in user research and contextual inquiry around kiosk, restaurant, and membership experience of wines
+              </p>
+
+              {/* Medium Embed */}
+              <div className="border-4 border-black bg-gray-100 p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <iframe
+                  src="https://medium.com/@caramocha/ux-case-study-savvo-digital-sommelier-c2da6957105d"
+                  width="100%"
+                  height="600"
+                  className="border-2 border-black"
+                  title="Savvo Digital Sommelier Case Study"
+                />
+              </div>
+
+              {/* External Link */}
+              <div className="mt-6 text-center">
+                <a
+                  href="https://medium.com/@caramocha/ux-case-study-savvo-digital-sommelier-c2da6957105d"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-6 py-3 bg-orange-400 text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all chicago-font-md font-bold"
+                >
+                  📖 Read Full Article on Medium →
+                </a>
+              </div>
+            </div>
+
+            {/* Back to Works */}
+            <div className="text-center">
+              <button
+                onClick={() => {
+                  setCurrentCaseStudy(null);
+                  setIsWorksFullscreenOpen(true);
+                }}
+                className="inline-flex items-center px-4 py-2 bg-gray-300 text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-gray-200 transition-colors chicago-font-sm font-bold"
+              >
+                ← Back to Works
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Contact Form Modal */}
               <p className="text-xl text-black mb-6 chicago-font-md">
                 A study in user research and contextual inquiry around kiosk,
                 restaurant, and membership experience of wines
