@@ -28,53 +28,52 @@ interface RSSResponse {
 
 // Medium Article Embed Component
 function MediumArticleEmbed() {
-  const [articles, setArticles] = useState<MediumArticle[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  // Skip RSS for now and show Savvo article directly
+  return (
+    <div className="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
+      <h1 className="text-3xl font-bold text-black mb-6 chicago-font-xl">
+        Savvo Digital Sommelier
+      </h1>
+      <p className="text-black mb-6 chicago-font-md">
+        A study in user research and contextual inquiry around kiosk, restaurant, and membership experience of wines
+      </p>
 
-  useEffect(() => {
-    const fetchMediumArticles = async () => {
-      try {
-        // Use RSS2JSON service to convert RSS to JSON
-        const RSS_URL = "https://medium.com/feed/@caramocha";
-        const API_URL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(RSS_URL)}&count=3`;
-
-        const response = await fetch(API_URL, {
-          method: "GET",
-          headers: {
-            Accept: "application/json",
-          },
-        });
-
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const data: RSSResponse = await response.json();
-
-        if (data.status === "ok" && data.items) {
-          setArticles(data.items);
-        } else {
-          throw new Error("RSS feed not available or empty");
-        }
-        setLoading(false);
-      } catch (err) {
-        console.error("Error fetching RSS feed:", err);
-        setError("Failed to load articles");
-        setLoading(false);
-      }
-    };
-
-    fetchMediumArticles();
-  }, []);
+      <div className="border-2 border-orange-400 bg-orange-50 p-6 rounded">
+        <h3 className="chicago-font-md font-bold text-black mb-4">
+          🍷 UX Case Study: Savvo Digital Sommelier
+        </h3>
+        <p className="text-black text-sm mb-4 leading-relaxed">
+          A comprehensive UX case study exploring user research and contextual inquiry
+          for wine kiosk interfaces in restaurant environments at Cooper's Hawk Winery.
+          This project involved creating prototypes for interactive wine selection systems
+          that enhance the dining experience.
+        </p>
+        <div className="flex gap-3">
+          <a
+            href="https://medium.com/@caramocha/ux-case-study-savvo-digital-sommelier-c2da6957105d"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-3 bg-orange-400 text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all chicago-font-md font-bold"
+          >
+            📖 Read Full Case Study →
+          </a>
+          <button
+            onClick={() => window.open('https://medium.com/@caramocha', '_blank')}
+            className="px-4 py-2 bg-blue-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:bg-blue-300 chicago-font-sm font-bold"
+          >
+            🌐 View All Articles
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
 
   if (loading) {
     return (
       <div className="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
         <div className="text-center">
-          <div className="chicago-font-md text-black">
-            Loading Medium articles...
-          </div>
+          <div className="chicago-font-md text-black">Loading Medium articles...</div>
         </div>
       </div>
     );
@@ -87,8 +86,7 @@ function MediumArticleEmbed() {
           Savvo Digital Sommelier
         </h1>
         <p className="text-black mb-6 chicago-font-md">
-          A study in user research and contextual inquiry around kiosk,
-          restaurant, and membership experience of wines
+          A study in user research and contextual inquiry around kiosk, restaurant, and membership experience of wines
         </p>
 
         <div className="border-2 border-orange-400 bg-orange-50 p-6 rounded">
@@ -96,9 +94,8 @@ function MediumArticleEmbed() {
             🍷 UX Case Study: Savvo Digital Sommelier
           </h3>
           <p className="text-black text-sm mb-4 leading-relaxed">
-            A comprehensive UX case study exploring user research and contextual
-            inquiry for wine kiosk interfaces in restaurant environments at
-            Cooper's Hawk Winery.
+            A comprehensive UX case study exploring user research and contextual inquiry
+            for wine kiosk interfaces in restaurant environments at Cooper's Hawk Winery.
           </p>
           <a
             href="https://medium.com/@caramocha/ux-case-study-savvo-digital-sommelier-c2da6957105d"
@@ -121,16 +118,12 @@ function MediumArticleEmbed() {
 
       <div className="space-y-6">
         {articles.map((article, index) => (
-          <div
-            key={index}
-            className="border-2 border-gray-400 bg-gray-50 p-4 rounded"
-          >
+          <div key={index} className="border-2 border-gray-400 bg-gray-50 p-4 rounded">
             <h3 className="chicago-font-md font-bold text-black mb-2">
               {article.title}
             </h3>
             <p className="text-black text-sm mb-3 leading-relaxed">
-              {article.description?.replace(/<[^>]*>/g, "").substring(0, 200)}
-              ...
+              {article.description?.replace(/<[^>]*>/g, '').substring(0, 200)}...
             </p>
             <div className="flex justify-between items-center">
               <span className="text-gray-600 text-xs chicago-font-sm">
@@ -695,10 +688,7 @@ export default function Index() {
           {/* Read Icon - Second in first column */}
           <div
             className="absolute z-20"
-            style={{
-              top: "calc(24px + 1vw + 134px)",
-              left: "calc(24px + 1vw)",
-            }}
+            style={{ top: "calc(24px + 1vw + 134px)", left: "calc(24px + 1vw)" }}
           >
             <DesktopIcon
               icon={<ArticlesIcon />}
@@ -711,10 +701,7 @@ export default function Index() {
           {/* About Icon - Third in first column */}
           <div
             className="absolute z-20"
-            style={{
-              top: "calc(24px + 1vw + 268px)",
-              left: "calc(24px + 1vw)",
-            }}
+            style={{ top: "calc(24px + 1vw + 268px)", left: "calc(24px + 1vw)" }}
           >
             <DesktopIcon
               icon={<AboutIcon />}
@@ -727,10 +714,7 @@ export default function Index() {
           {/* Contact Me Icon - Fourth in first column */}
           <div
             className="absolute z-20"
-            style={{
-              top: "calc(24px + 1vw + 402px)",
-              left: "calc(24px + 1vw)",
-            }}
+            style={{ top: "calc(24px + 1vw + 402px)", left: "calc(24px + 1vw)" }}
           >
             <DesktopIcon
               icon={<ContactIcon />}
