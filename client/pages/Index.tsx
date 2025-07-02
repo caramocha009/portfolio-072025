@@ -121,7 +121,7 @@ function MediumArticleEmbed() {
           }}
           dangerouslySetInnerHTML={{
             __html: (articleContent.content || articleContent.description)
-              ?.replace(/<img[^>]*>/g, "") // Remove all img tags
+              ?.replace(/<img[^>]*>(?=\s*<\/[^>]*>\s*$)/g, "") // Remove only the last img tag at the end
               ?.replace(/\s*<\/p>\s*$/, "</p>") // Clean up trailing whitespace
               ?.replace(/(<\/[^>]+>)\s*(<\/[^>]+>)/g, "$1$2"), // Remove spaces between closing tags
           }}
