@@ -120,10 +120,12 @@ export function DraggableWindow({
 
     const handleMouseUp = () => {
       setIsDragging(false);
+      setIsResizing(false);
     };
 
     const handleTouchEnd = () => {
       setIsDragging(false);
+      setIsResizing(false);
     };
 
     if (isDragging) {
