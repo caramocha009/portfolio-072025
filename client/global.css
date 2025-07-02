@@ -119,13 +119,14 @@
   /* Chicago/Pixelated font styling */
   .font-chicago {
     font-family:
-      "Orbitron", "Courier New", "Monaco", "Lucida Console", monospace !important;
-    font-weight: 700 !important;
+      "FA Sysfont C", "Courier New", "Monaco", "Lucida Console", monospace !important;
+    font-weight: normal !important;
     text-rendering: pixelated;
     -webkit-font-smoothing: none;
     -moz-osx-font-smoothing: none;
     font-smooth: never;
     letter-spacing: 0.025em;
+    font-display: swap;
   }
 
   /* Ensure smooth dragging */
