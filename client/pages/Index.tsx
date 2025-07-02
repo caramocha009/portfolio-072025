@@ -36,41 +36,47 @@ function MediumArticleEmbed({
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    const fetchMediumArticle = async () => {
-      try {
-        // Using RSS2JSON to fetch the specific article
-        const response = await fetch(
-          "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@caramocha",
-        );
+  const fetchMediumArticle = async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      // Using RSS2JSON to fetch the specific article
+      const response = await fetch(
+        "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@caramocha",
+      );
 
-        if (!response.ok) {
-          throw new Error("Failed to fetch article");
-        }
-
-        const data = await response.json();
-
-        // Find the specific Savvo Digital Sommelier article
-        const savvoArticle = data.items.find(
-          (item: any) =>
-            item.title.toLowerCase().includes("savvo") ||
-            item.title.toLowerCase().includes("digital sommelier"),
-        );
-
-        if (savvoArticle) {
-          setArticleContent(savvoArticle);
-        } else {
-          throw new Error("Savvo article not found");
-        }
-      } catch (err) {
-        setError(err instanceof Error ? err.message : "Unknown error");
-      } finally {
-        setLoading(false);
+      if (!response.ok) {
+        throw new Error("Failed to fetch article");
       }
-    };
 
+      const data = await response.json();
+
+      // Find the specific Savvo Digital Sommelier article
+      const savvoArticle = data.items.find(
+        (item: any) =>
+          item.title.toLowerCase().includes("savvo") ||
+          item.title.toLowerCase().includes("digital sommelier"),
+      );
+
+      if (savvoArticle) {
+        setArticleContent(savvoArticle);
+      } else {
+        throw new Error("Savvo article not found");
+      }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Unknown error");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const refetchArticle = () => {
+    setRefetchKey((prev) => prev + 1);
+  };
+
+  useEffect(() => {
     fetchMediumArticle();
-  }, []);
+  }, [refetchKey]);
 
   useEffect(() => {
     // Set up global lightbox handler
