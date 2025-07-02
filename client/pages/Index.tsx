@@ -89,16 +89,24 @@ export default function Index() {
   useEffect(() => {
     if (!currentCaseStudy) return;
 
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const docHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-      const progress = (scrollTop / docHeight) * 100;
+    const handleScroll = (e: Event) => {
+      const target = e.target as HTMLElement;
+      const scrollTop = target.scrollTop;
+      const scrollHeight = target.scrollHeight;
+      const clientHeight = target.clientHeight;
+      const progress = (scrollTop / (scrollHeight - clientHeight)) * 100;
       setScrollProgress(Math.min(progress, 100));
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    // Find the case study container
+    const caseStudyContainer = document.querySelector(
+      "[data-case-study-container]",
+    );
+    if (caseStudyContainer) {
+      caseStudyContainer.addEventListener("scroll", handleScroll);
+      return () =>
+        caseStudyContainer.removeEventListener("scroll", handleScroll);
+    }
   }, [currentCaseStudy]);
 
   const bringToFront = (windowId: string) => {
