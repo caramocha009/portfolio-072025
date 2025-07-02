@@ -20,7 +20,7 @@ export function DesktopIcon({
     >
       <div className="w-20 h-20 flex items-center justify-center">{icon}</div>
       <div
-        className="bg-desktop-azure px-2 py-1 rounded text-black text-center min-w-[100px]"
+        className="bg-desktop-azure px-1 py-0.5 rounded text-black text-center min-w-[80px]"
         style={{
           fontFamily: '"JetBrains Mono", monospace',
           fontSize: "12px",
