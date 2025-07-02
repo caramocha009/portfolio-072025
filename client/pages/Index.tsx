@@ -233,14 +233,38 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
     const extractSections = () => {
       const sectionList: Array<{ id: string; title: string }> = [];
 
-      // Add Project Brief as first section (points to title area)
-      const titleElement = document.querySelector(
-        'h1[style*="font-size: 42px"]',
-      );
-      if (titleElement && !titleElement.id) {
-        titleElement.setAttribute("id", "project-brief");
-      }
-      if (titleElement) {
+      // Find and mark Project Brief section based on actual content
+      const findProjectBriefLocation = () => {
+        // Look for text containing "project brief" or similar patterns
+        const allTextElements = document.querySelectorAll(
+          ".medium-article-content *",
+        );
+        for (const element of allTextElements) {
+          const text = element.textContent?.toLowerCase() || "";
+          if (
+            text.includes("project brief") ||
+            text.includes("project overview")
+          ) {
+            // Create a marker element right before this content
+            const marker = document.createElement("div");
+            marker.id = "project-brief";
+            marker.style.position = "absolute";
+            marker.style.top = "-100px"; // Offset for better scroll positioning
+            element.parentNode?.insertBefore(marker, element);
+            return true;
+          }
+        }
+
+        // Fallback: use the subtitle if no specific "project brief" text found
+        const subtitle = document.querySelector('h2[style*="font-size: 22px"]');
+        if (subtitle && !subtitle.id) {
+          subtitle.setAttribute("id", "project-brief");
+          return true;
+        }
+        return false;
+      };
+
+      if (findProjectBriefLocation()) {
         sectionList.push({ id: "project-brief", title: "Project Brief" });
       }
 
