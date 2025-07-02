@@ -100,7 +100,7 @@ export function DraggableWindow({
         const deltaY = touch.clientY - resizeStart.y;
 
         const newWidth = Math.max(50, resizeStart.width + deltaX);
-        const newHeight = Math.max(50, resizeStart.height + deltaY);
+        const newHeight = Math.max(32, resizeStart.height + deltaY);
 
         setSize({ width: newWidth, height: newHeight });
       }
