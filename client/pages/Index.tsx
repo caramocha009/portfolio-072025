@@ -330,13 +330,13 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
           <li key={section.id}>
             <button
               onClick={() => scrollToSection(section.id)}
-              className={`text-left w-full text-sm font-mono transition-colors hover:text-black ${
+              className={`text-left w-full text-sm font-mono transition-all hover:text-black py-1 ${
                 activeSection === section.id
-                  ? "text-black font-bold border-l-2 border-black pl-2"
-                  : "text-gray-600 pl-2"
+                  ? "text-black font-bold border-l-3 border-blue-500 pl-3 bg-blue-50"
+                  : "text-gray-600 pl-2 hover:pl-3 hover:border-l-2 hover:border-gray-300"
               }`}
             >
-              {section.title.substring(0, 30)}
+              {section.title.substring(0, 35)}
               {section.title.length > 30 ? "..." : ""}
             </button>
           </li>
