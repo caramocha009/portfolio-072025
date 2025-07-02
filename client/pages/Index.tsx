@@ -204,74 +204,253 @@ export default function Index() {
         </div>
       );
     } else if (type === "Works") {
-      bgColor = "#FFFFFF";
-      headerColor = "#FFFFFF";
-      windowContent = (
-        <div className="bg-white h-full overflow-y-auto">
-          {/* Project 1 */}
-          <div className="flex items-start gap-2 sm:gap-4 p-2 sm:p-4">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded flex items-center justify-center flex-shrink-0">
-              <span className="text-white font-bold text-sm sm:text-lg">
-                🛒
-              </span>
+      // Create fullscreen Works window
+      return (
+        <div className="fixed inset-0 bg-white z-[9999] flex">
+          {/* Left Panel - Projects List */}
+          <div className="w-1/2 bg-white border-r-2 border-gray-200 overflow-y-auto">
+            {/* Window Header */}
+            <div className="h-12 bg-white border-b-2 border-black flex items-center justify-between px-4">
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+              </div>
+              <h1 className="text-black font-medium">Works</h1>
+              <button
+                onClick={() => closeWindow(`${type}-${Date.now()}`)}
+                className="w-6 h-6 flex items-center justify-center hover:bg-gray-100 rounded"
+              >
+                ×
+              </button>
             </div>
-            <div className="flex-1 min-w-0">
-              <h3 className="text-sm sm:text-lg font-normal text-black leading-tight mb-2 truncate">
-                Aisles Online Grocery Shopping Experience
-              </h3>
-              <div className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm text-gray-600">
-                <div className="w-3 h-3 sm:w-4 sm:h-4 bg-orange-500 rounded text-white text-xs flex items-center justify-center font-bold flex-shrink-0">
-                  🏪
+
+            {/* Projects List */}
+            <div className="p-6 space-y-4">
+              {/* AI-Powered Investment Analytics */}
+              <div
+                className="border-2 border-blue-200 rounded-lg p-4 hover:border-blue-400 cursor-pointer transition-colors group"
+                onMouseEnter={() => setHoveredProject("ai-platform")}
+                onMouseLeave={() => setHoveredProject(null)}
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold text-lg">AI</span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg font-medium text-black mb-1">
+                      AI-Powered Investment Analytics Platform
+                    </h3>
+                    <p className="text-sm text-gray-600 mb-2">
+                      Transforming financial decision making with machine
+                      learning
+                    </p>
+                    <div className="flex items-center gap-2 text-xs">
+                      <span className="px-2 py-1 bg-green-100 text-green-700 rounded">
+                        Machine Learning
+                      </span>
+                      <span className="text-gray-500">2024</span>
+                    </div>
+                  </div>
                 </div>
-                <span className="truncate">Retail</span>
-                <span className="flex-shrink-0">•</span>
-                <span className="truncate">2024</span>
+              </div>
+
+              {/* Early Stage Venture Capital Fund */}
+              <div
+                className="border-2 border-pink-200 rounded-lg p-4 hover:border-pink-400 cursor-pointer transition-colors"
+                onMouseEnter={() => setHoveredProject("vc-fund")}
+                onMouseLeave={() => setHoveredProject(null)}
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold text-lg">VC</span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg font-medium text-black mb-1">
+                      Early Stage Venture Capital Fund
+                    </h3>
+                    <p className="text-sm text-gray-600 mb-2">
+                      Streamlining investment workflows for VCs
+                    </p>
+                    <div className="flex items-center gap-2 text-xs">
+                      <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded">
+                        Fintech
+                      </span>
+                      <span className="text-gray-500">Active</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Decentralized Social Media Platform */}
+              <div
+                className="border-2 border-green-200 rounded-lg p-4 hover:border-green-400 cursor-pointer transition-colors"
+                onMouseEnter={() => setHoveredProject("social-platform")}
+                onMouseLeave={() => setHoveredProject(null)}
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold text-lg">🌐</span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg font-medium text-black mb-1">
+                      Decentralized Social Media Platform
+                    </h3>
+                    <p className="text-sm text-gray-600 mb-2">
+                      Web3 social networking with user ownership
+                    </p>
+                    <div className="flex items-center gap-2 text-xs">
+                      <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded">
+                        Blockchain
+                      </span>
+                      <span className="text-gray-500">Beta</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Telemedicine Platform */}
+              <div
+                className="border-2 border-cyan-200 rounded-lg p-4 hover:border-cyan-400 cursor-pointer transition-colors"
+                onMouseEnter={() => setHoveredProject("telemedicine")}
+                onMouseLeave={() => setHoveredProject(null)}
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold text-lg">+</span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg font-medium text-black mb-1">
+                      Telemedicine Platform
+                    </h3>
+                    <p className="text-sm text-gray-600 mb-2">
+                      Connecting patients with healthcare providers
+                    </p>
+                    <div className="flex items-center gap-2 text-xs">
+                      <span className="px-2 py-1 bg-red-100 text-red-700 rounded">
+                        Healthcare
+                      </span>
+                      <span className="text-gray-500">2023</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Project 2 */}
-          <div className="flex items-start gap-2 sm:gap-4 p-2 sm:p-4">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-pink-500 to-red-600 rounded flex items-center justify-center flex-shrink-0">
-              <span className="text-white font-bold text-sm sm:text-lg">
-                VC
-              </span>
-            </div>
-            <div className="flex-1 min-w-0">
-              <h3 className="text-sm sm:text-lg font-normal text-black leading-tight mb-2 truncate">
-                Early Stage Venture Capital Fund
-              </h3>
-              <div className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm text-gray-600">
-                <div className="w-3 h-3 sm:w-4 sm:h-4 bg-blue-500 rounded text-white text-xs flex items-center justify-center font-bold flex-shrink-0">
-                  $
+          {/* Right Panel - Preview */}
+          <div className="w-1/2 bg-gray-50 flex items-center justify-center">
+            {hoveredProject === "ai-platform" ? (
+              <div className="max-w-lg w-full p-8">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Ff693255c6ef24546b9a9bf1ba8e05612?format=webp&width=800"
+                  alt="AI Platform Preview"
+                  className="w-full rounded-lg shadow-lg mb-6"
+                />
+                <h2 className="text-2xl font-bold text-black mb-2">
+                  AI-Powered Investment Analytics Platform
+                </h2>
+                <p className="text-gray-600 mb-4">
+                  Transforming financial decision making with machine learning
+                </p>
+                <div className="space-y-3">
+                  <div>
+                    <span className="font-medium text-gray-700">Timeline:</span>
+                    <span className="ml-2 text-gray-600">
+                      Jan 2024 - Jun 2024
+                    </span>
+                  </div>
+                  <div>
+                    <span className="font-medium text-gray-700">Status:</span>
+                    <span className="ml-2 text-gray-600">2024</span>
+                  </div>
+                  <div>
+                    <span className="font-medium text-gray-700">My Role:</span>
+                    <span className="ml-2 text-gray-600">
+                      Lead Product Designer, UX Researcher
+                    </span>
+                  </div>
+                  <div>
+                    <span className="font-medium text-gray-700">Team:</span>
+                    <span className="ml-2 text-gray-600">
+                      2 Engineers, 1 Data Scientist, 1 PM
+                    </span>
+                  </div>
+                  <div>
+                    <span className="font-medium text-gray-700">
+                      Methodologies:
+                    </span>
+                    <div className="mt-1 space-x-2">
+                      <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded text-sm">
+                        Design Thinking
+                      </span>
+                      <span className="px-2 py-1 bg-green-100 text-green-700 rounded text-sm">
+                        Agile
+                      </span>
+                      <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded text-sm">
+                        User-Centered Design
+                      </span>
+                    </div>
+                  </div>
+                  <div>
+                    <span className="font-medium text-gray-700">Overview:</span>
+                    <p className="mt-1 text-gray-600 text-sm">
+                      Designed an AI-powered platform that helps investors make
+                      data-driven decisions through advanced analytics and
+                      machine learning algorithms.
+                    </p>
+                  </div>
                 </div>
-                <span className="truncate">Fintech</span>
-                <span className="flex-shrink-0">•</span>
-                <span className="truncate">Active</span>
               </div>
-            </div>
-          </div>
-
-          {/* Project 3 */}
-          <div className="flex items-start gap-2 sm:gap-4 p-2 sm:p-4">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded flex items-center justify-center flex-shrink-0">
-              <span className="text-white font-bold text-sm sm:text-lg">
-                🌐
-              </span>
-            </div>
-            <div className="flex-1 min-w-0">
-              <h3 className="text-sm sm:text-lg font-normal text-black leading-tight mb-2 truncate">
-                Decentralized Social Media Platform
-              </h3>
-              <div className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm text-gray-600">
-                <div className="w-3 h-3 sm:w-4 sm:h-4 bg-purple-500 rounded text-white text-xs flex items-center justify-center font-bold flex-shrink-0">
-                  ⚡
+            ) : hoveredProject === "vc-fund" ? (
+              <div className="max-w-lg w-full p-8">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Ff44dfd9b0d1b492eac28ca4274e3990b?format=webp&width=800"
+                  alt="VC Fund Preview"
+                  className="w-full rounded-lg shadow-lg mb-6"
+                />
+                <h2 className="text-2xl font-bold text-black mb-2">
+                  Early Stage Venture Capital Fund
+                </h2>
+                <p className="text-gray-600 mb-4">
+                  Streamlining investment workflows for venture capitalists
+                </p>
+                <div className="space-y-3">
+                  <div>
+                    <span className="font-medium text-gray-700">Timeline:</span>
+                    <span className="ml-2 text-gray-600">
+                      Mar 2023 - Ongoing
+                    </span>
+                  </div>
+                  <div>
+                    <span className="font-medium text-gray-700">Status:</span>
+                    <span className="ml-2 text-gray-600">Active</span>
+                  </div>
+                  <div>
+                    <span className="font-medium text-gray-700">My Role:</span>
+                    <span className="ml-2 text-gray-600">
+                      Senior UX Designer
+                    </span>
+                  </div>
+                  <div>
+                    <span className="font-medium text-gray-700">Team:</span>
+                    <span className="ml-2 text-gray-600">
+                      3 Engineers, 1 Product Manager
+                    </span>
+                  </div>
                 </div>
-                <span className="truncate">Blockchain</span>
-                <span className="flex-shrink-0">•</span>
-                <span className="truncate">Beta</span>
               </div>
-            </div>
+            ) : (
+              <div className="text-center text-gray-500 max-w-sm">
+                <div className="mb-4">
+                  <span className="text-4xl">👋</span>
+                </div>
+                <h3 className="text-lg font-medium mb-2">
+                  Hover over a project to see details
+                </h3>
+                <p className="text-sm">Click to view the full case study</p>
+              </div>
+            )}
           </div>
         </div>
       );
