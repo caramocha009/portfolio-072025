@@ -219,6 +219,92 @@ interface WindowConfig {
   zIndex: number;
 }
 
+// Case Study Navigation Component
+function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
+  const [activeSection, setActiveSection] = useState<string>("");
+  const [sections, setSections] = useState<
+    Array<{ id: string; title: string }>
+  >([]);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    // Extract sections from the article content
+    const extractSections = () => {
+      const headings = document.querySelectorAll(
+        ".medium-article-content h2, .medium-article-content h3",
+      );
+      const sectionList: Array<{ id: string; title: string }> = [];
+
+      headings.forEach((heading, index) => {
+        const text = heading.textContent || "";
+        const id = `section-${index}`;
+        heading.setAttribute("id", id);
+        sectionList.push({ id, title: text });
+      });
+
+      setSections(sectionList);
+    };
+
+    // Track active section based on scroll position
+    const handleScroll = () => {
+      const headings = document.querySelectorAll(
+        ".medium-article-content h2, .medium-article-content h3",
+      );
+      let current = "";
+
+      headings.forEach((heading) => {
+        const rect = heading.getBoundingClientRect();
+        if (rect.top <= 150) {
+          current = heading.getAttribute("id") || "";
+        }
+      });
+
+      setActiveSection(current);
+    };
+
+    extractSections();
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial check
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isVisible]);
+
+  if (!isVisible || sections.length === 0) return null;
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  return (
+    <nav className="fixed left-8 top-1/2 transform -translate-y-1/2 z-[9998] bg-white border border-gray-200 rounded-lg shadow-lg p-4 max-w-[200px]">
+      <div className="text-xs font-mono text-gray-500 mb-3">SECTIONS</div>
+      <ul className="space-y-2">
+        {sections.map((section) => (
+          <li key={section.id}>
+            <button
+              onClick={() => scrollToSection(section.id)}
+              className={`text-left w-full text-sm font-mono transition-colors hover:text-black ${
+                activeSection === section.id
+                  ? "text-black font-bold border-l-2 border-black pl-2"
+                  : "text-gray-600 pl-2"
+              }`}
+            >
+              {section.title.substring(0, 30)}
+              {section.title.length > 30 ? "..." : ""}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
+
 // Lightbox Component
 function Lightbox({
   imageSrc,
