@@ -190,7 +190,7 @@ export default function Index() {
           </div>
 
           {/* Article 3 */}
-          <div className="flex items-start gap-2 sm:gap-4 p-2 sm:p-4 border-b border-gray-200">
+          <div className="flex items-start gap-2 sm:gap-4 p-2 sm:p-4">
             <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gray-800 rounded flex items-center justify-center flex-shrink-0">
               <span className="text-white font-bold text-sm sm:text-lg">
                 VB
