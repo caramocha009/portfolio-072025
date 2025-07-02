@@ -580,92 +580,53 @@ export default function Index() {
         </header>
 
         <main className="relative h-[calc(100vh-48px)]">
-          {/* First Column - Left Side */}
-          {/* Works Icon - Top of first column */}
-          <div
-            className="absolute z-20"
-            style={{ top: "calc(24px + 1vw)", left: "calc(24px + 1vw)" }}
-          >
-            <DesktopIcon
-              icon={<WorksIcon />}
-              label="Works"
-              onClick={() => openNewWindow("Works")}
-              className="scale-75 md:scale-90"
-            />
-          </div>
+          {/* Centered Desktop Icons */}
+          <div className="absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <div className="grid grid-cols-2 gap-8 items-center justify-center">
+              {/* Left Column */}
+              <div className="flex flex-col gap-8">
+                <DesktopIcon
+                  icon={<WorksIcon />}
+                  label="Works"
+                  onClick={() => openNewWindow("Works")}
+                  className="scale-75 md:scale-90"
+                />
+                <DesktopIcon
+                  icon={<ArticlesIcon />}
+                  label="Read"
+                  onClick={() => openNewWindow("Articles")}
+                  className="scale-75 md:scale-90"
+                />
+                <DesktopIcon
+                  icon={<AboutIcon />}
+                  label="About"
+                  onClick={() => openNewWindow("About")}
+                  className="scale-75 md:scale-90"
+                />
+                <DesktopIcon
+                  icon={<ContactIcon />}
+                  label="Contact Me"
+                  onClick={() => openNewWindow("Contact")}
+                  className="scale-75 md:scale-90"
+                />
+              </div>
 
-          {/* Read Icon - Second in first column */}
-          <div
-            className="absolute z-20"
-            style={{
-              top: "calc(24px + 1vw + 142px)",
-              left: "calc(24px + 1vw)",
-            }}
-          >
-            <DesktopIcon
-              icon={<ArticlesIcon />}
-              label="Read"
-              onClick={() => openNewWindow("Articles")}
-              className="scale-75 md:scale-90"
-            />
-          </div>
-
-          {/* About Icon - Third in first column */}
-          <div
-            className="absolute z-20"
-            style={{
-              top: "calc(24px + 1vw + 284px)",
-              left: "calc(24px + 1vw)",
-            }}
-          >
-            <DesktopIcon
-              icon={<AboutIcon />}
-              label="About"
-              onClick={() => openNewWindow("About")}
-              className="scale-75 md:scale-90"
-            />
-          </div>
-
-          {/* Contact Me Icon - Fourth in first column */}
-          <div
-            className="absolute z-20"
-            style={{
-              top: "calc(24px + 1vw + 426px)",
-              left: "calc(24px + 1vw)",
-            }}
-          >
-            <DesktopIcon
-              icon={<ContactIcon />}
-              label="Contact Me"
-              onClick={() => openNewWindow("Contact")}
-              className="scale-75 md:scale-90"
-            />
-          </div>
-
-          {/* Listen Icon - Top right */}
-          <div
-            className="absolute z-20"
-            style={{ top: "calc(24px + 1vw)", right: "calc(24px + 1vw)" }}
-          >
-            <DesktopIcon
-              icon={<PlaylistIcon />}
-              label="Listen"
-              onClick={() => openNewWindow("Playlist")}
-              className="scale-75 md:scale-90"
-            />
-          </div>
-
-          {/* Recycling Icon - Bottom right, aligned with Listen column */}
-          <div
-            className="absolute z-20"
-            style={{ bottom: "calc(24px + 1vw)", right: "calc(24px + 1vw)" }}
-          >
-            <DesktopIcon
-              icon={<RecyclingIcon />}
-              label="Recycling Bin"
-              onClick={() => openNewWindow("Recycling Bin")}
-              className="scale-75 md:scale-90"
-            />
+              {/* Right Column */}
+              <div className="flex flex-col gap-8">
+                <DesktopIcon
+                  icon={<PlaylistIcon />}
+                  label="Listen"
+                  onClick={() => openNewWindow("Playlist")}
+                  className="scale-75 md:scale-90"
+                />
+                <DesktopIcon
+                  icon={<RecyclingIcon />}
+                  label="Recycling Bin"
+                  onClick={() => openNewWindow("Recycling Bin")}
+                  className="scale-75 md:scale-90"
+                />
+              </div>
+            </div>
           </div>
 
           {/* Draggable Windows */}
