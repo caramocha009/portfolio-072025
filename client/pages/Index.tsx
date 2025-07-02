@@ -248,60 +248,68 @@ export default function Index() {
 
       {/* Main Desktop Area */}
       <main className="relative h-[calc(100vh-48px)] overflow-hidden">
-        {/* Left Sidebar - Desktop Icons */}
-        <div className="absolute left-14 top-12 space-y-4 z-20">
-          <DesktopIcon
-            icon={<SubstackIcon />}
-            label="Substack"
-            onClick={() => openNewWindow("Substack")}
-          />
-          <DesktopIcon
-            icon={<InvestmentsIcon />}
-            label="Investments"
-            onClick={() => openNewWindow("Investments")}
-          />
-          <DesktopIcon
-            icon={<ContactIcon />}
-            label="Contact Me"
-            onClick={() => openNewWindow("Contact Me")}
-          />
-          <DesktopIcon
-            icon={<EnigmaIcon />}
-            label="••••••"
-            onClick={() => openNewWindow("Enigma")}
-          />
-        </div>
-
-        {/* Second Column of Icons */}
-        <div className="absolute left-[200px] top-12 space-y-4 z-20">
-          <DesktopIcon
-            icon={<ReadIcon />}
-            label="Read"
-            onClick={() => openNewWindow("Read")}
-          />
-          <DesktopIcon
-            icon={<WatchIcon />}
-            label="Watch"
-            onClick={() => openNewWindow("Watch")}
-          />
-          <DesktopIcon
-            icon={<ListenIcon />}
-            label="Listen"
-            onClick={() => openNewWindow("Listen")}
-          />
-          <DesktopIcon
-            icon={<ShopIcon />}
-            label="Shop"
-            onClick={() => openNewWindow("Shop")}
-          />
+        {/* Desktop Icons - Responsive Layout */}
+        <div className="absolute left-2 md:left-14 top-4 md:top-12 z-20">
+          {/* Mobile: Grid layout, Desktop: Column layout */}
+          <div className="grid grid-cols-4 gap-2 md:grid-cols-1 md:gap-4 lg:grid-cols-2 lg:gap-4">
+            <DesktopIcon
+              icon={<SubstackIcon />}
+              label="Substack"
+              onClick={() => openNewWindow("Substack")}
+              className="scale-75 md:scale-100"
+            />
+            <DesktopIcon
+              icon={<InvestmentsIcon />}
+              label="Investments"
+              onClick={() => openNewWindow("Investments")}
+              className="scale-75 md:scale-100"
+            />
+            <DesktopIcon
+              icon={<ContactIcon />}
+              label="Contact Me"
+              onClick={() => openNewWindow("Contact Me")}
+              className="scale-75 md:scale-100"
+            />
+            <DesktopIcon
+              icon={<EnigmaIcon />}
+              label="••••••"
+              onClick={() => openNewWindow("Enigma")}
+              className="scale-75 md:scale-100"
+            />
+            <DesktopIcon
+              icon={<ReadIcon />}
+              label="Read"
+              onClick={() => openNewWindow("Read")}
+              className="scale-75 md:scale-100"
+            />
+            <DesktopIcon
+              icon={<WatchIcon />}
+              label="Watch"
+              onClick={() => openNewWindow("Watch")}
+              className="scale-75 md:scale-100"
+            />
+            <DesktopIcon
+              icon={<ListenIcon />}
+              label="Listen"
+              onClick={() => openNewWindow("Listen")}
+              className="scale-75 md:scale-100"
+            />
+            <DesktopIcon
+              icon={<ShopIcon />}
+              label="Shop"
+              onClick={() => openNewWindow("Shop")}
+              className="scale-75 md:scale-100"
+            />
+          </div>
         </div>
 
         {/* Your Bag Icon - Top Right */}
-        <div className="absolute right-14 top-12 z-20">
+        <div className="absolute right-2 md:right-14 top-4 md:top-12 z-20">
           <DesktopIcon
             icon={<YourBagIcon />}
             label="Your Bag"
             onClick={() => openNewWindow("Your Bag")}
+            className="scale-75 md:scale-100"
           />
         </div>
 
