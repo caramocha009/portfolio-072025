@@ -1163,7 +1163,7 @@ export default function Index() {
               <DesktopIcon
                 icon={<ContactIcon />}
                 label="Contact Me"
-                onClick={() => openNewWindow("Contact Me")}
+                onClick={() => setShowContactForm(true)}
                 className="scale-75 md:scale-100"
               />
               <DesktopIcon
