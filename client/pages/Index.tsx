@@ -568,7 +568,8 @@ export default function Index() {
         </header>
 
         <main className="relative h-[calc(100vh-48px)]">
-          {/* Works Icon - Top Left */}
+          {/* First Column - Left Side */}
+          {/* Works Icon - Top of first column */}
           <div
             className="absolute z-20"
             style={{ top: "calc(8px + 1vw)", left: "calc(8px + 2vw)" }}
@@ -581,10 +582,10 @@ export default function Index() {
             />
           </div>
 
-          {/* Read Icon - Second from top left */}
+          {/* Read Icon - Second in first column */}
           <div
             className="absolute z-20"
-            style={{ top: "calc(25% + 2vw)", left: "calc(8px + 2vw)" }}
+            style={{ top: "calc(8px + 1vw + 80px)", left: "calc(8px + 2vw)" }}
           >
             <DesktopIcon
               icon={<ArticlesIcon />}
@@ -594,10 +595,10 @@ export default function Index() {
             />
           </div>
 
-          {/* About Icon - Third from top left */}
+          {/* About Icon - Third in first column */}
           <div
             className="absolute z-20"
-            style={{ bottom: "calc(16px + 8vw)", left: "calc(8px + 2vw)" }}
+            style={{ top: "calc(8px + 1vw + 160px)", left: "calc(8px + 2vw)" }}
           >
             <DesktopIcon
               icon={<AboutIcon />}
@@ -607,28 +608,32 @@ export default function Index() {
             />
           </div>
 
-          {/* Contact Me Icon - Bottom left */}
+          {/* Second Column */}
+          {/* Listen Icon - Top of second column, aligned with Works */}
           <div
             className="absolute z-20"
-            style={{ bottom: "calc(16px + 2vw)", left: "calc(8px + 2vw)" }}
-          >
-            <DesktopIcon
-              icon={<ContactIcon />}
-              label="Contact Me"
-              onClick={() => openNewWindow("Contact")}
-              className="scale-75 md:scale-100"
-            />
-          </div>
-
-          {/* Listen Icon - Right side */}
-          <div
-            className="absolute z-20"
-            style={{ top: "calc(25% + 2vw)", right: "calc(8px + 2vw)" }}
+            style={{ top: "calc(8px + 1vw)", left: "calc(8px + 2vw + 80px)" }}
           >
             <DesktopIcon
               icon={<PlaylistIcon />}
               label="Listen"
               onClick={() => openNewWindow("Playlist")}
+              className="scale-75 md:scale-100"
+            />
+          </div>
+
+          {/* Contact Me Icon - Second column, aligned with About */}
+          <div
+            className="absolute z-20"
+            style={{
+              top: "calc(8px + 1vw + 160px)",
+              left: "calc(8px + 2vw + 80px)",
+            }}
+          >
+            <DesktopIcon
+              icon={<ContactIcon />}
+              label="Contact Me"
+              onClick={() => openNewWindow("Contact")}
               className="scale-75 md:scale-100"
             />
           </div>
