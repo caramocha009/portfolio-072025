@@ -101,7 +101,7 @@ function MediumArticleEmbed() {
           className="text-4xl font-bold mb-4 leading-tight"
           style={{ fontFamily: 'Georgia, Charter, "Times New Roman", serif' }}
         >
-          {articleContent.title}
+          A study in user research and contextual inquiry
         </h1>
 
         <div
