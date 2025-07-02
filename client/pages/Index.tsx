@@ -561,7 +561,7 @@ export default function Index() {
 
           {/* Header with Breadcrumbs - Retro Style */}
           <div className="border-b-2 border-black bg-white sticky top-2 z-[10000] shadow-[0_4px_0px_0px_rgba(0,0,0,1)]">
-            <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
               {/* Breadcrumbs */}
               <div className="flex items-center gap-2">
                 <button
@@ -595,7 +595,7 @@ export default function Index() {
                   setCurrentCaseStudy(null);
                   setIsWorksFullscreenOpen(true);
                 }}
-                className="px-4 py-2 bg-gray-300 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:bg-gray-200 transition-colors font-mono text-sm"
+                className="px-3 py-1 bg-gray-300 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:bg-gray-200 transition-colors font-mono text-xs"
               >
                 ← Back to Works
               </button>
@@ -603,7 +603,10 @@ export default function Index() {
           </div>
 
           {/* Case Study Content - Simplified */}
-          <div className="max-w-4xl mx-auto px-6 py-2">
+          <div
+            className="max-w-4xl mx-auto px-6 py-2"
+            style={{ marginTop: "24px" }}
+          >
             <MediumArticleEmbed />
           </div>
         </div>
