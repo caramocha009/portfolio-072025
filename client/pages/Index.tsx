@@ -687,65 +687,69 @@ export default function Index() {
           {/* Case Study Content */}
           <div className="max-w-4xl mx-auto px-6 py-12">
             {/* Hero Section */}
-            <div className="mb-12">
+            <div className="mb-12 bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F9d4fe52e0add4ca087a86c2940f2c039?format=webp&width=800"
-                alt="Savvo Digital Sommelier"
-                className="w-full rounded-lg shadow-lg mb-8"
+                src="https://images.pexels.com/photos/8775088/pexels-photo-8775088.jpeg"
+                alt="Wine tasting and sommelier experience"
+                className="w-full border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mb-8"
               />
 
-              <h1 className="text-4xl font-bold text-black mb-4 chicago-font">
+              <h1 className="text-4xl font-bold text-black mb-4 chicago-font-xl">
                 Savvo Digital Sommelier
               </h1>
-              <p className="text-xl text-gray-600 mb-6">
+              <p className="text-xl text-black mb-6 chicago-font-md">
                 A study in user research and contextual inquiry around kiosk,
                 restaurant, and membership experience of wines
               </p>
 
               {/* Project Details - Retro Style */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                <div className="border-2 border-black bg-white p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                  <h4 className="font-bold text-black mb-1 chicago-font text-sm">
+                <div className="border-4 border-black bg-cyan-300 p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                  <h4 className="font-bold text-black mb-1 chicago-font-sm">
                     Timeline
                   </h4>
-                  <p className="text-black text-sm">3 Phases (MVP Focus)</p>
+                  <p className="text-black chicago-font-sm">
+                    3 Phases (MVP Focus)
+                  </p>
                 </div>
-                <div className="border-2 border-black bg-white p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                  <h4 className="font-bold text-black mb-1 chicago-font text-sm">
+                <div className="border-4 border-black bg-pink-300 p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                  <h4 className="font-bold text-black mb-1 chicago-font-sm">
                     My Role
                   </h4>
-                  <p className="text-black text-sm">Lead UX Designer</p>
+                  <p className="text-black chicago-font-sm">Lead UX Designer</p>
                 </div>
-                <div className="border-2 border-black bg-white p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                  <h4 className="font-bold text-black mb-1 chicago-font text-sm">
+                <div className="border-4 border-black bg-lime-300 p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                  <h4 className="font-bold text-black mb-1 chicago-font-sm">
                     Client
                   </h4>
-                  <p className="text-black text-sm">Savvo & Cooper's Hawk</p>
+                  <p className="text-black chicago-font-sm">
+                    Savvo & Cooper's Hawk
+                  </p>
                 </div>
-                <div className="border-2 border-black bg-white p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                  <h4 className="font-bold text-black mb-1 chicago-font text-sm">
+                <div className="border-4 border-black bg-orange-300 p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                  <h4 className="font-bold text-black mb-1 chicago-font-sm">
                     Status
                   </h4>
-                  <p className="text-black text-sm">MVP Delivered</p>
+                  <p className="text-black chicago-font-sm">MVP Delivered</p>
                 </div>
               </div>
 
               {/* Methodologies - Retro Tags */}
               <div className="mb-8">
-                <h4 className="font-bold text-black mb-3 chicago-font">
+                <h4 className="font-bold text-black mb-3 chicago-font-lg">
                   Methodologies
                 </h4>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-blue-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] text-sm font-bold">
+                  <span className="px-3 py-1 bg-blue-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] chicago-font-sm font-bold">
                     User Research
                   </span>
-                  <span className="px-3 py-1 bg-green-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] text-sm font-bold">
+                  <span className="px-3 py-1 bg-green-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] chicago-font-sm font-bold">
                     Contextual Inquiry
                   </span>
-                  <span className="px-3 py-1 bg-purple-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] text-sm font-bold">
+                  <span className="px-3 py-1 bg-purple-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] chicago-font-sm font-bold">
                     Prototyping
                   </span>
-                  <span className="px-3 py-1 bg-orange-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] text-sm font-bold">
+                  <span className="px-3 py-1 bg-orange-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] chicago-font-sm font-bold">
                     User Testing
                   </span>
                 </div>
