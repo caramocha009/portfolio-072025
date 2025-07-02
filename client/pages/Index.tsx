@@ -114,6 +114,7 @@ export default function Index() {
   ]);
 
   const [nextZIndex, setNextZIndex] = useState(100);
+  const [hoveredProject, setHoveredProject] = useState<string | null>(null);
 
   const bringToFront = (windowId: string) => {
     setOpenWindows((prev) =>
