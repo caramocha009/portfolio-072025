@@ -251,17 +251,11 @@ export default function Index() {
         {/* Desktop Icons - Responsive Layout */}
         <div className="absolute left-2 md:left-14 top-4 md:top-12 z-20">
           {/* Mobile: Grid layout, Desktop: Column layout */}
-          <div className="grid grid-cols-4 gap-2 md:grid-cols-1 md:gap-4 lg:grid-cols-2 lg:gap-4">
-            <DesktopIcon
-              icon={<SubstackIcon />}
-              label="Substack"
-              onClick={() => openNewWindow("Substack")}
-              className="scale-75 md:scale-100"
-            />
+          <div className="grid grid-cols-2 gap-2 md:grid-cols-1 md:gap-4">
             <DesktopIcon
               icon={<InvestmentsIcon />}
-              label="Investments"
-              onClick={() => openNewWindow("Investments")}
+              label="Works"
+              onClick={() => openNewWindow("Works")}
               className="scale-75 md:scale-100"
             />
             <DesktopIcon
@@ -271,33 +265,15 @@ export default function Index() {
               className="scale-75 md:scale-100"
             />
             <DesktopIcon
-              icon={<EnigmaIcon />}
-              label="••••••"
-              onClick={() => openNewWindow("Enigma")}
-              className="scale-75 md:scale-100"
-            />
-            <DesktopIcon
               icon={<ReadIcon />}
-              label="Read"
-              onClick={() => openNewWindow("Read")}
+              label="Articles"
+              onClick={() => openNewWindow("Articles")}
               className="scale-75 md:scale-100"
             />
             <DesktopIcon
-              icon={<WatchIcon />}
-              label="Watch"
-              onClick={() => openNewWindow("Watch")}
-              className="scale-75 md:scale-100"
-            />
-            <DesktopIcon
-              icon={<ListenIcon />}
-              label="Listen"
-              onClick={() => openNewWindow("Listen")}
-              className="scale-75 md:scale-100"
-            />
-            <DesktopIcon
-              icon={<ShopIcon />}
-              label="Shop"
-              onClick={() => openNewWindow("Shop")}
+              icon={<EnigmaIcon />}
+              label="About"
+              onClick={() => openNewWindow("About")}
               className="scale-75 md:scale-100"
             />
           </div>
