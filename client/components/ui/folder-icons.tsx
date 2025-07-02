@@ -248,60 +248,11 @@ export function WorksIcon() {
 
 export function ArticlesIcon() {
   return (
-    <svg
-      width="96"
-      height="96"
-      viewBox="0 0 96 96"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      {/* Base folder structure */}
-      <rect
-        x="20"
-        y="16"
-        width="56"
-        height="8"
-        fill="#E68C4F"
-        stroke="#000"
-        strokeWidth="2"
-      />
-      <rect
-        x="18"
-        y="24"
-        width="60"
-        height="48"
-        fill="#F2B973"
-        stroke="#000"
-        strokeWidth="2"
-      />
-      <rect
-        x="18"
-        y="24"
-        width="60"
-        height="8"
-        fill="#E68C4F"
-        stroke="#000"
-        strokeWidth="2"
-      />
-
-      {/* Document icon inside folder */}
-      <rect
-        x="28"
-        y="36"
-        width="40"
-        height="28"
-        fill="#78B8F1"
-        stroke="#000"
-        strokeWidth="2"
-      />
-
-      {/* Text lines */}
-      <rect x="32" y="40" width="32" height="2" fill="#000" />
-      <rect x="32" y="44" width="28" height="2" fill="#000" />
-      <rect x="32" y="48" width="30" height="2" fill="#000" />
-      <rect x="32" y="52" width="24" height="2" fill="#000" />
-      <rect x="32" y="56" width="26" height="2" fill="#000" />
-    </svg>
+    <img
+      src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fc9114bc7d2fc4d00b36d96df112dd27b?format=webp&width=800"
+      alt="Articles"
+      className="w-24 h-24"
+    />
   );
 }
 
