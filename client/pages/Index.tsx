@@ -2,14 +2,10 @@ import React, { useState } from "react";
 import { DraggableWindow } from "@/components/ui/draggable-window";
 import { DesktopIcon } from "@/components/ui/desktop-icon";
 import {
-  SubstackIcon,
-  InvestmentsIcon,
+  WorksIcon,
   ContactIcon,
-  EnigmaIcon,
-  ReadIcon,
-  WatchIcon,
-  ListenIcon,
-  ShopIcon,
+  ArticlesIcon,
+  AboutIcon,
   YourBagIcon,
 } from "@/components/ui/folder-icons";
 
