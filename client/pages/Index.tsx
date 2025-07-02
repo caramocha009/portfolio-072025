@@ -142,6 +142,21 @@ function MediumArticleEmbed({
         </div>
 
         <div
+          className="mb-8 text-lg text-gray-600"
+          style={{
+            fontFamily: 'sohne, "Helvetica Neue", Helvetica, Arial, sans-serif',
+            maxWidth: "782px",
+            margin: "0 auto 32px auto",
+            fontSize: "24px",
+            fontWeight: "600",
+            lineHeight: "1.35",
+            color: "#242424",
+          }}
+        >
+          A study in user research and contextual inquiry.
+        </div>
+
+        <div
           className="medium-article-content"
           style={{
             fontFamily: 'Georgia, Charter, "Times New Roman", serif',
