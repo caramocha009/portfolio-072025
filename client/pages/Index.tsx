@@ -436,17 +436,54 @@ export default function Index() {
                 restaurant, and membership experience of wines
               </p>
 
-              {/* Medium Article Embed */}
+              {/* Medium RSS Feed */}
               <div className="border-4 border-black bg-gray-100 p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                <iframe
-                  src="https://medium.com/@caramocha/ux-case-study-savvo-digital-sommelier-c2da6957105d"
-                  width="100%"
-                  height="600"
-                  className="border-2 border-black"
-                  title="Savvo Digital Sommelier Case Study"
-                  frameBorder="0"
-                  allowFullScreen
-                />
+                <div className="bg-white border-2 border-black p-4">
+                  <h3 className="chicago-font-md font-bold text-black mb-4">
+                    Latest Articles from Medium
+                  </h3>
+
+                  {/* RSS Feed via RSS2JSON */}
+                  <div className="space-y-4">
+                    <iframe
+                      src="https://rss2json.com/api.json?rss_url=https://medium.com/feed/@caramocha&count=5&api_key=YOUR_API_KEY"
+                      style={{ display: "none" }}
+                    />
+
+                    {/* Fallback: Direct article link */}
+                    <div className="border-2 border-orange-400 bg-orange-50 p-4 rounded">
+                      <h4 className="chicago-font-md font-bold text-black mb-2">
+                        🍷 Savvo Digital Sommelier Case Study
+                      </h4>
+                      <p className="text-black text-sm mb-3 leading-relaxed">
+                        A comprehensive UX case study exploring user research
+                        and contextual inquiry for wine kiosk interfaces in
+                        restaurant environments at Cooper's Hawk Winery.
+                      </p>
+                      <div className="flex gap-2">
+                        <a
+                          href="https://medium.com/@caramocha/ux-case-study-savvo-digital-sommelier-c2da6957105d"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block px-4 py-2 bg-orange-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:bg-orange-300 chicago-font-sm font-bold"
+                        >
+                          📖 Read on Medium
+                        </a>
+                        <button
+                          onClick={() =>
+                            window.open(
+                              "https://medium.com/@caramocha/ux-case-study-savvo-digital-sommelier-c2da6957105d",
+                              "_blank",
+                            )
+                          }
+                          className="px-4 py-2 bg-blue-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:bg-blue-300 chicago-font-sm font-bold"
+                        >
+                          🔗 Open Article
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* External Link */}
