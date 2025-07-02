@@ -184,95 +184,135 @@
     background: rgba(0, 0, 0, 0.5);
   }
 
-  /* Medium Article Typography Styles */
+  /* Medium Article Typography Styles - Based on actual Medium.com */
   .medium-article-content {
-    background-color: #fafafa !important;
-    padding: 2rem !important;
-    border-radius: 8px !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    max-width: 680px !important;
+    margin: 0 auto !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    text-rendering: optimizeLegibility !important;
   }
 
   .medium-article-content h1 {
-    font-size: 2.25rem !important;
+    font-family:
+      sohne, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-size: 32px !important;
     font-weight: 700 !important;
     line-height: 1.25 !important;
-    margin: 2rem 0 1rem 0 !important;
-    font-family: Georgia, Charter, "Times New Roman", serif !important;
+    margin: 56px 0 16px 0 !important;
+    letter-spacing: -0.003em !important;
+    color: #242424 !important;
   }
 
   .medium-article-content h2 {
-    font-size: 1.875rem !important;
-    font-weight: 700 !important;
-    line-height: 1.3 !important;
-    margin: 1.75rem 0 0.75rem 0 !important;
-    font-family: Georgia, Charter, "Times New Roman", serif !important;
+    font-family:
+      sohne, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    line-height: 1.35 !important;
+    margin: 40px 0 16px 0 !important;
+    letter-spacing: -0.002em !important;
+    color: #242424 !important;
   }
 
   .medium-article-content h3 {
-    font-size: 1.5rem !important;
-    font-weight: 700 !important;
-    line-height: 1.35 !important;
-    margin: 1.5rem 0 0.5rem 0 !important;
-    font-family: Georgia, Charter, "Times New Roman", serif !important;
+    font-family:
+      sohne, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    margin: 32px 0 16px 0 !important;
+    letter-spacing: -0.001em !important;
+    color: #242424 !important;
   }
 
   .medium-article-content p {
-    margin: 1.5rem 0 !important;
+    font-family:
+      charter, Georgia, Cambria, "Times New Roman", Times, serif !important;
+    font-size: 21px !important;
+    font-weight: 400 !important;
     line-height: 1.58 !important;
-    font-size: 18px !important;
-    font-weight: 300 !important;
-    font-family: Georgia, Charter, "Times New Roman", serif !important;
+    margin: 32px 0 !important;
+    letter-spacing: -0.003em !important;
+    color: #242424 !important;
+    word-break: break-word !important;
   }
 
   .medium-article-content em {
     font-style: italic !important;
-    font-family: Georgia, Charter, "Times New Roman", serif !important;
+    font-family:
+      charter, Georgia, Cambria, "Times New Roman", Times, serif !important;
   }
 
   .medium-article-content strong {
     font-weight: 700 !important;
-    font-family: Georgia, Charter, "Times New Roman", serif !important;
+    font-family:
+      charter, Georgia, Cambria, "Times New Roman", Times, serif !important;
   }
 
   .medium-article-content blockquote {
-    border-left: 3px solid #292929 !important;
-    padding-left: 1.5rem !important;
-    margin: 2rem 0 !important;
+    border-left: 3px solid #242424 !important;
+    padding-left: 20px !important;
+    margin: 32px 0 !important;
     font-style: italic !important;
-    font-size: 1.25rem !important;
-    line-height: 1.6 !important;
+    font-size: 21px !important;
+    line-height: 1.48 !important;
     color: #6b6b6b !important;
-    font-family: Georgia, Charter, "Times New Roman", serif !important;
+    font-family:
+      charter, Georgia, Cambria, "Times New Roman", Times, serif !important;
+    letter-spacing: -0.003em !important;
   }
 
   .medium-article-content img {
     width: 100% !important;
     height: auto !important;
-    margin: 2rem 0 !important;
-    border-radius: 4px !important;
+    margin: 32px 0 !important;
+    border-radius: 0 !important;
   }
 
   .medium-article-content figure {
-    margin: 2rem 0 !important;
+    margin: 32px 0 !important;
   }
 
   .medium-article-content figcaption {
     text-align: center !important;
-    font-size: 0.875rem !important;
+    font-size: 14px !important;
     color: #6b6b6b !important;
-    margin-top: 0.5rem !important;
-    font-family: Georgia, Charter, "Times New Roman", serif !important;
+    margin-top: 10px !important;
+    font-family:
+      sohne, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0 !important;
   }
 
   .medium-article-content ul,
   .medium-article-content ol {
-    margin: 1.5rem 0 !important;
-    padding-left: 2rem !important;
-    font-family: Georgia, Charter, "Times New Roman", serif !important;
+    margin: 32px 0 !important;
+    padding-left: 30px !important;
+    font-family:
+      charter, Georgia, Cambria, "Times New Roman", Times, serif !important;
   }
 
   .medium-article-content li {
-    margin: 0.5rem 0 !important;
+    font-size: 21px !important;
     line-height: 1.58 !important;
-    font-family: Georgia, Charter, "Times New Roman", serif !important;
+    margin: 16px 0 !important;
+    font-family:
+      charter, Georgia, Cambria, "Times New Roman", Times, serif !important;
+    color: #242424 !important;
+    letter-spacing: -0.003em !important;
+  }
+
+  .medium-article-content a {
+    color: inherit !important;
+    text-decoration: underline !important;
+    text-decoration-color: rgba(36, 36, 36, 0.6) !important;
+    text-underline-offset: 2px !important;
+  }
+
+  .medium-article-content a:hover {
+    text-decoration-color: rgba(36, 36, 36, 1) !important;
   }
 }
