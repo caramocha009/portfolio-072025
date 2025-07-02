@@ -620,7 +620,10 @@ export default function Index() {
 
       {/* Case Study View */}
       {currentCaseStudy && (
-        <div className="fixed inset-0 bg-white z-[9999] overflow-y-auto">
+        <div
+          className="fixed inset-0 bg-white z-[9999] overflow-y-auto"
+          data-case-study-container
+        >
           {/* Progress Bar */}
           <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-[10001]">
             <div
