@@ -292,11 +292,16 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
       setActiveSection(current);
     };
 
-    extractSections();
+    // Add delay to ensure content is loaded
+    const timer = setTimeout(() => {
+      extractSections();
+      handleScroll(); // Initial check
+    }, 500);
+
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial check
 
     return () => {
+      clearTimeout(timer);
       window.removeEventListener("scroll", handleScroll);
     };
   }, [isVisible]);
