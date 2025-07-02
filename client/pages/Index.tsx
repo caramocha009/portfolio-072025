@@ -251,8 +251,8 @@ export default function Index() {
           className="absolute z-20"
           style={{ left: "calc(8px + 2vw)", top: "calc(16px + 2vw)" }}
         >
-          {/* Mobile: Grid layout, Desktop: Column layout */}
-          <div className="grid grid-cols-2 gap-2 md:grid-cols-1 md:gap-4">
+          {/* Mobile: Grid layout optimized for 5 icons, Desktop: Column layout */}
+          <div className="grid grid-cols-2 gap-1 sm:gap-2 md:grid-cols-1 md:gap-4 max-h-[calc(100vh-120px)] overflow-y-auto">
             <DesktopIcon
               icon={<WorksIcon />}
               label="Works"
