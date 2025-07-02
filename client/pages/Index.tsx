@@ -120,10 +120,33 @@ function MediumArticleEmbed() {
             color: "#292929",
           }}
           dangerouslySetInnerHTML={{
-            __html: (articleContent.content || articleContent.description)
-              ?.replace(/<img[^>]*>(?=\s*<\/[^>]*>\s*$)/g, "") // Remove only the last img tag at the end
-              ?.replace(/\s*<\/p>\s*$/, "</p>") // Clean up trailing whitespace
-              ?.replace(/(<\/[^>]+>)\s*(<\/[^>]+>)/g, "$1$2"), // Remove spaces between closing tags
+            __html: (() => {
+              let content =
+                articleContent.content || articleContent.description;
+              if (!content) return "";
+
+              // Split into parts and remove the last img tag
+              const parts = content.split(/(<img[^>]*>)/);
+              let lastImgIndex = -1;
+
+              // Find the last img tag
+              for (let i = parts.length - 1; i >= 0; i--) {
+                if (parts[i] && parts[i].match(/<img[^>]*>/)) {
+                  lastImgIndex = i;
+                  break;
+                }
+              }
+
+              // Remove the last img tag if found
+              if (lastImgIndex !== -1) {
+                parts.splice(lastImgIndex, 1);
+              }
+
+              return parts
+                .join("")
+                .replace(/\s*<\/p>\s*$/, "</p>") // Clean up trailing whitespace
+                .replace(/(<\/[^>]+>)\s*(<\/[^>]+>)/g, "$1$2"); // Remove spaces between closing tags
+            })(),
           }}
         />
 
