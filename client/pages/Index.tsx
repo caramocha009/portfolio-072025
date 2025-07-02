@@ -747,6 +747,9 @@ export default function Index() {
             </div>
           </div>
 
+          {/* Case Study Navigation */}
+          <CaseStudyNavigation isVisible={showNavigation} />
+
           {/* Case Study Content - Simplified */}
           <div
             className="max-w-4xl mx-auto px-6 py-2"
