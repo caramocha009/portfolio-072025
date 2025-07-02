@@ -39,13 +39,23 @@ function MediumArticleEmbed() {
         const RSS_URL = "https://medium.com/feed/@caramocha";
         const API_URL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(RSS_URL)}&count=3`;
 
-        const response = await fetch(API_URL);
+        const response = await fetch(API_URL, {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
         const data: RSSResponse = await response.json();
 
-        if (data.status === "ok") {
+        if (data.status === "ok" && data.items) {
           setArticles(data.items);
         } else {
-          throw new Error("RSS feed not available");
+          throw new Error("RSS feed not available or empty");
         }
         setLoading(false);
       } catch (err) {
