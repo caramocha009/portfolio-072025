@@ -124,14 +124,24 @@ function MediumArticleEmbed() {
           }}
         />
 
-        <div className="mt-12 pt-6">
+        <div className="mt-8">
           <a
             href={articleContent.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-6 py-3 bg-orange-400 text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all font-mono text-base font-bold"
+            className="block w-full bg-black text-white py-4 px-6 text-center transition-opacity hover:opacity-80"
+            style={{
+              fontFamily: '"JetBrains Mono", monospace',
+              fontSize: "16px",
+              fontWeight: "400",
+            }}
           >
-            📖 Read Full Article on Medium →
+            <span className="inline-flex items-center gap-3">
+              <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                <div className="w-3 h-3 bg-black rounded-full"></div>
+              </div>
+              This article was originally published on Medium.
+            </span>
           </a>
         </div>
       </article>
