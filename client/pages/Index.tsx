@@ -606,7 +606,7 @@ export default function Index() {
           {/* Case Study Content - Simplified */}
           <div
             className="max-w-4xl mx-auto px-6 py-2"
-            style={{ marginTop: "48px", paddingBottom: "48px" }}
+            style={{ marginTop: "48px", paddingBottom: "144px" }}
           >
             <MediumArticleEmbed />
           </div>
