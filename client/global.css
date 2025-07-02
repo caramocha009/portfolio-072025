@@ -1,10 +1,7 @@
 @font-face {
-  font-family: "FA Sysfont C";
-  src:
-    url("https://cdn.builder.io/o/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Ff63e4b946738403ea61907d2da2c422d?alt=media&token=60a49b4f-3ee2-4ae9-8dbf-56403d1c081c&apiKey=856fd2123e2d4729ba1bfb1e222ef2c1")
-      format("woff2"),
-    url("https://cdn.builder.io/o/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F727a037ca5a94e0b84b6df782a1a4def?alt=media&token=2b18b6ef-cb4e-464f-bf61-ae2bd637f8f4&apiKey=856fd2123e2d4729ba1bfb1e222ef2c1")
-      format("woff");
+  font-family: "ChicagoFLF";
+  src: url("https://cdn.builder.io/o/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Ff63e4b946738403ea61907d2da2c422d?alt=media&token=60a49b4f-3ee2-4ae9-8dbf-56403d1c081c&apiKey=856fd2123e2d4729ba1bfb1e222ef2c1")
+    format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
