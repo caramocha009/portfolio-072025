@@ -298,11 +298,17 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
       handleScroll(); // Initial check
     }, 500);
 
-    window.addEventListener("scroll", handleScroll);
+    // Use the case study container for scroll events instead of window
+    const container = document.querySelector("[data-case-study-container]");
+    if (container) {
+      container.addEventListener("scroll", handleScroll);
+    }
 
     return () => {
       clearTimeout(timer);
-      window.removeEventListener("scroll", handleScroll);
+      if (container) {
+        container.removeEventListener("scroll", handleScroll);
+      }
     };
   }, [isVisible]);
 
