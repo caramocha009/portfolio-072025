@@ -436,15 +436,19 @@ export default function Index() {
                 restaurant, and membership experience of wines
               </p>
 
-              {/* Medium Embed */}
+              {/* Medium RSS Embed */}
               <div className="border-4 border-black bg-gray-100 p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                <iframe
-                  src="https://medium.com/@caramocha/ux-case-study-savvo-digital-sommelier-c2da6957105d"
-                  width="100%"
-                  height="600"
-                  className="border-2 border-black"
-                  title="Savvo Digital Sommelier Case Study"
+                <div
+                  id="retainable-rss-embed"
+                  data-rss="https://medium.com/feed/@caramocha"
+                  data-maxcols="1"
+                  data-layout="grid"
+                  data-poststyle="inline"
+                  data-readmore="Read the rest"
+                  data-buttonclass="btn btn-primary"
+                  data-offset="-100"
                 />
+                <script src="https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
               </div>
 
               {/* External Link */}
