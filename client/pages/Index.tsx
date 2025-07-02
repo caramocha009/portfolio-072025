@@ -249,7 +249,7 @@ export default function Index() {
           {/* Mobile: Grid layout, Desktop: Column layout */}
           <div className="grid grid-cols-2 gap-2 md:grid-cols-1 md:gap-4">
             <DesktopIcon
-              icon={<InvestmentsIcon />}
+              icon={<WorksIcon />}
               label="Works"
               onClick={() => openNewWindow("Works")}
               className="scale-75 md:scale-100"
@@ -261,13 +261,13 @@ export default function Index() {
               className="scale-75 md:scale-100"
             />
             <DesktopIcon
-              icon={<ReadIcon />}
+              icon={<ArticlesIcon />}
               label="Articles"
               onClick={() => openNewWindow("Articles")}
               className="scale-75 md:scale-100"
             />
             <DesktopIcon
-              icon={<EnigmaIcon />}
+              icon={<AboutIcon />}
               label="About"
               onClick={() => openNewWindow("About")}
               className="scale-75 md:scale-100"
