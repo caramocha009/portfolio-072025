@@ -142,11 +142,38 @@ function MediumArticleEmbed() {
                 parts.splice(lastImgIndex, 1);
               }
 
-              return parts
+              let processedContent = parts
                 .join("")
                 .replace(/<h1[^>]*>.*?<\/h1>/i, "") // Remove first h1 tag (redundant title)
                 .replace(/\s*<\/p>\s*$/, "</p>") // Clean up trailing whitespace
                 .replace(/(<\/[^>]+>)\s*(<\/[^>]+>)/g, "$1$2"); // Remove spaces between closing tags
+
+              // Add project info after first image
+              const projectInfo = `
+                <div style="background-color: #f8f9fa; padding: 24px; margin: 32px 0; border-left: 4px solid #242424; font-family: charter, Georgia, serif;">
+                  <h4 style="font-size: 18px; font-weight: 600; margin: 0 0 16px 0; color: #242424;">Project Details</h4>
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; font-size: 16px;">
+                    <div><strong>Timeline:</strong> 3 Phases (MVP Focus)</div>
+                    <div><strong>Status:</strong> MVP Delivered</div>
+                    <div><strong>My Role:</strong> Lead UX Designer</div>
+                    <div><strong>Client:</strong> Savvo & Cooper's Hawk Winery</div>
+                  </div>
+                </div>
+              `;
+
+              // Insert project info after first image
+              const firstImageMatch = processedContent.match(/(<img[^>]*>)/);
+              if (firstImageMatch) {
+                const firstImageIndex =
+                  processedContent.indexOf(firstImageMatch[0]) +
+                  firstImageMatch[0].length;
+                processedContent =
+                  processedContent.slice(0, firstImageIndex) +
+                  projectInfo +
+                  processedContent.slice(firstImageIndex);
+              }
+
+              return processedContent;
             })(),
           }}
         />
