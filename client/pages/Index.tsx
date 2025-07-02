@@ -595,10 +595,14 @@ export default function Index() {
             }}
           >
             <DesktopIcon
-              icon={<ArticlesIcon />}
+              icon={
+                <div className="scale-50 md:scale-[0.8]">
+                  <ArticlesIcon />
+                </div>
+              }
               label="Read"
               onClick={() => openNewWindow("Articles")}
-              className="scale-50 md:scale-[0.8]"
+              className=""
             />
           </div>
 
