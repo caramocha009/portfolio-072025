@@ -1,4 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap");
+@font-face {
+  font-family: "FA Sysfont C";
+  src: url("https://cdn.builder.io/o/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Ff63e4b946738403ea61907d2da2c422d?alt=media&token=60a49b4f-3ee2-4ae9-8dbf-56403d1c081c&apiKey=856fd2123e2d4729ba1bfb1e222ef2c1")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 
 @tailwind base;
 @tailwind components;
