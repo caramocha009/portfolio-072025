@@ -423,6 +423,7 @@ export default function Index() {
             width={window.width}
             height={window.height}
             zIndex={window.zIndex}
+            title={window.id.startsWith("Articles") ? "Articles" : undefined}
             onClose={() => closeWindow(window.id)}
             onBringToFront={() => bringToFront(window.id)}
           >
