@@ -154,7 +154,11 @@ function MediumArticleEmbed({
                 .replace(/<h1[^>]*>.*?<\/h1>/i, "") // Completely remove the original title
                 .replace(/<h3[^>]*>\[UX Case Study\][^<]*<\/h3>/i, "") // Remove UX Case Study heading
                 .replace(/\s*<\/p>\s*$/, "</p>") // Clean up trailing whitespace
-                .replace(/(<\/[^>]+>)\s*(<\/[^>]+>)/g, "$1$2"); // Remove spaces between closing tags
+                .replace(/(<\/[^>]+>)\s*(<\/[^>]+>)/g, "$1$2") // Remove spaces between closing tags
+                .replace(
+                  /<img([^>]*?)src="([^"]*)"([^>]*?)>/g,
+                  '<img$1src="$2"$3 onclick="window.openLightbox(\'$2\')" style="cursor: pointer;">',
+                ); // Make images clickable
 
               return processedContent;
             })(),
