@@ -505,6 +505,75 @@ export default function Index() {
                     </div>
                   </div>
                 </div>
+              ) : hoveredProject === "savvo-sommelier" ? (
+                <div className="max-w-lg w-full p-8">
+                  <div className="w-full h-48 bg-gradient-to-br from-orange-100 to-red-100 rounded-lg shadow-lg mb-6 flex items-center justify-center">
+                    <span className="text-6xl">🍷</span>
+                  </div>
+                  <h2 className="text-2xl font-bold text-black mb-2">
+                    Savvo Digital Sommelier
+                  </h2>
+                  <p className="text-gray-600 mb-4">
+                    A study in user research and contextual inquiry around
+                    kiosk, restaurant, and membership experience of wines
+                  </p>
+                  <div className="space-y-3">
+                    <div>
+                      <span className="font-medium text-gray-700">
+                        Timeline:
+                      </span>
+                      <span className="ml-2 text-gray-600">
+                        3 Phases (MVP Focus)
+                      </span>
+                    </div>
+                    <div>
+                      <span className="font-medium text-gray-700">Status:</span>
+                      <span className="ml-2 text-gray-600">MVP Delivered</span>
+                    </div>
+                    <div>
+                      <span className="font-medium text-gray-700">
+                        My Role:
+                      </span>
+                      <span className="ml-2 text-gray-600">
+                        Lead UX Designer
+                      </span>
+                    </div>
+                    <div>
+                      <span className="font-medium text-gray-700">Client:</span>
+                      <span className="ml-2 text-gray-600">
+                        Savvo & Cooper's Hawk Winery
+                      </span>
+                    </div>
+                    <div>
+                      <span className="font-medium text-gray-700">
+                        Methodologies:
+                      </span>
+                      <div className="mt-1 space-x-2">
+                        <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded text-sm">
+                          User Research
+                        </span>
+                        <span className="px-2 py-1 bg-green-100 text-green-700 rounded text-sm">
+                          Contextual Inquiry
+                        </span>
+                        <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded text-sm">
+                          Prototyping
+                        </span>
+                      </div>
+                    </div>
+                    <div>
+                      <span className="font-medium text-gray-700">
+                        Overview:
+                      </span>
+                      <p className="mt-1 text-gray-600 text-sm">
+                        Designed interactive wine kiosks for restaurants,
+                        focusing on wine exploration, pairing suggestions, and
+                        Wine Club promotion. Conducted extensive user interviews
+                        and contextual inquiry at Cooper's Hawk locations to
+                        inform design decisions.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               ) : (
                 <div className="text-center text-gray-500 max-w-sm">
                   <div className="mb-4">
