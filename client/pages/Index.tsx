@@ -570,11 +570,11 @@ export default function Index() {
           </div>
 
           {/* Case Study Content - Simplified */}
-          <div className="max-w-4xl mx-auto px-6 py-6">
+          <div className="max-w-4xl mx-auto px-6 py-4">
             <MediumArticleEmbed />
 
             {/* Back to Works */}
-            <div className="text-center mt-6">
+            <div className="text-center mt-4">
               <button
                 onClick={() => {
                   setCurrentCaseStudy(null);
