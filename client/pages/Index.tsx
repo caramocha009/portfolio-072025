@@ -131,6 +131,11 @@ export default function Index() {
   };
 
   const openNewWindow = (type: string) => {
+    if (type === "Works") {
+      setIsWorksFullscreenOpen(true);
+      return;
+    }
+
     let windowContent;
     let bgColor = "#78B8F1";
     let headerColor = "#5088BA";
