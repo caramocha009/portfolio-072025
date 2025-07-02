@@ -210,6 +210,18 @@ export function DraggableWindow({
     }
   };
 
+  const handleResizeMouseUp = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    e.preventDefault();
+    setIsResizing(false);
+  };
+
+  const handleResizeTouchEnd = (e: React.TouchEvent) => {
+    e.stopPropagation();
+    e.preventDefault();
+    setIsResizing(false);
+  };
+
   const handleWindowClick = () => {
     if (onBringToFront) {
       onBringToFront();
