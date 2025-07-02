@@ -48,41 +48,6 @@ export default function Index() {
       ),
     },
     {
-      id: "sticky2",
-      backgroundColor: "#78B8F1",
-      headerColor: "#5088BA",
-      initialX: 681,
-      initialY: 226,
-      zIndex: 11,
-      content: (
-        <div className="space-y-5">
-          <div className="space-y-1">
-            <p className="text-black text-base leading-6">I had </p>
-            <div className="space-y-1">
-              <p className="text-[#101828] font-bold text-base leading-6">
-                dice carrying necklaces
-              </p>
-              <p className="text-[#101828] font-bold text-base leading-6">
-                made for me by a jeweler.
-              </p>
-            </div>
-            <p className="text-black text-base leading-6">
-              Sometimes a roll makes the decision, and sometimes it just reveals
-              the answer you already know.
-            </p>
-          </div>
-          <div>
-            <a
-              href="#"
-              className="text-[#101828] underline text-base leading-6"
-            >
-              Check them out here!
-            </a>
-          </div>
-        </div>
-      ),
-    },
-    {
       id: "sticky3",
       backgroundColor: "#F168AA",
       headerColor: "#EB2682",
