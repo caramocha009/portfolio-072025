@@ -98,8 +98,12 @@ function MediumArticleEmbed() {
     <>
       <article className="text-black max-w-4xl mx-auto">
         <h1
-          className="text-4xl font-bold mb-8 leading-tight text-left"
-          style={{ fontFamily: 'Georgia, Charter, "Times New Roman", serif' }}
+          className="text-4xl font-bold mb-8 leading-tight"
+          style={{
+            fontFamily: 'Georgia, Charter, "Times New Roman", serif',
+            maxWidth: "782px",
+            margin: "0 auto 32px auto",
+          }}
         >
           Savvo Digital Sommelier
         </h1>
@@ -139,8 +143,8 @@ function MediumArticleEmbed() {
                 .join("")
                 .replace(
                   /<h1[^>]*>.*?<\/h1>/i,
-                  '<h1 style="font-size: 36px; font-weight: 700; line-height: 1.25; margin: 0 0 24px 0; color: #242424; text-align: left;">A study in user research and contextual inquiry.</h1>',
-                ) // Replace title with tagline
+                  '<h2 style="font-size: 24px; font-weight: 600; line-height: 1.35; margin: 40px 0 16px 0; color: #242424; font-family: sohne, Helvetica Neue, Helvetica, Arial, sans-serif;">A study in user research and contextual inquiry.</h2>',
+                ) // Replace title with styled tagline
                 .replace(/\s*<\/p>\s*$/, "</p>") // Clean up trailing whitespace
                 .replace(/(<\/[^>]+>)\s*(<\/[^>]+>)/g, "$1$2"); // Remove spaces between closing tags
 
