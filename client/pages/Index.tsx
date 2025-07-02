@@ -448,7 +448,7 @@ export default function Index() {
                     setCurrentCaseStudy(null);
                     setIsWorksFullscreenOpen(false);
                   }}
-                  className="px-3 py-1 bg-blue-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:bg-blue-300 transition-colors chicago-font-sm font-bold"
+                  className="px-3 py-1 bg-blue-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:bg-blue-300 transition-colors font-mono text-sm font-bold"
                 >
                   🏠 Home
                 </button>
