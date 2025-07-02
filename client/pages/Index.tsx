@@ -515,7 +515,13 @@ export default function Index() {
               alt="Logo"
               className="w-6 h-6 md:w-8 md:h-8 object-contain"
             />
-            <span className="hidden sm:block text-black font-normal text-[14px] md:text-[17px] leading-6">
+            <span
+              className="hidden sm:block text-black font-normal leading-6"
+              style={{
+                fontFamily: '"JetBrains Mono", monospace',
+                fontSize: "18px",
+              }}
+            >
               Cara Liu
             </span>
           </div>
