@@ -145,7 +145,7 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-desktop-blue to-blue-800 overflow-hidden relative">
       {/* Header */}
-      <header className="h-12 bg-white border-b-2 border-black flex items-center justify-between px-4">
+      <header className="h-12 bg-white border-b-2 border-black flex items-center justify-between px-2 md:px-4">
         {/* Logo and Brand */}
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 bg-black rounded-sm flex items-center justify-center">
