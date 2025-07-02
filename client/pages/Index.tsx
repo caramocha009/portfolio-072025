@@ -136,21 +136,99 @@ export default function Index() {
   };
 
   const openNewWindow = (type: string) => {
-    const newWindow: WindowConfig = {
-      id: `${type}-${Date.now()}`,
-      backgroundColor: "#78B8F1",
-      headerColor: "#5088BA",
-      initialX: Math.random() * 200 + 100,
-      initialY: Math.random() * 200 + 100,
-      zIndex: nextZIndex,
-      content: (
+    let windowContent;
+    let bgColor = "#78B8F1";
+    let headerColor = "#5088BA";
+
+    if (type === "Articles") {
+      bgColor = "#E8E8E8";
+      headerColor = "#D0D0D0";
+      windowContent = (
+        <div className="bg-white h-full overflow-y-auto">
+          {/* Article 1 */}
+          <div className="flex items-start gap-4 p-4 border-b border-gray-200">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fcaaef5fe4be442b7aafe8dfdaf76973a?format=webp&width=800"
+              alt="Article thumbnail"
+              className="w-16 h-16 object-cover rounded"
+            />
+            <div className="flex-1">
+              <h3 className="text-lg font-normal text-black leading-tight mb-2">
+                Cyan Banister — From Homeless and Broke to Top Angel Investo...
+              </h3>
+              <div className="flex items-center gap-2 text-sm text-gray-600">
+                <div className="w-4 h-4 bg-blue-500 rounded text-white text-xs flex items-center justify-center font-bold">
+                  A
+                </div>
+                <span>Tim</span>
+                <span>•</span>
+                <span>Tim Ferriss</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Article 2 */}
+          <div className="flex items-start gap-4 p-4 border-b border-gray-200">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fcaaef5fe4be442b7aafe8dfdaf76973a?format=webp&width=800"
+              alt="Article thumbnail"
+              className="w-16 h-16 object-cover rounded"
+            />
+            <div className="flex-1">
+              <h3 className="text-lg font-normal text-black leading-tight mb-2">
+                Cyan Banister, Arielle Zuckerberg Raise $181 Million to Back...
+              </h3>
+              <div className="flex items-center gap-2 text-sm text-gray-600">
+                <div className="w-4 h-4 bg-black rounded text-white text-xs flex items-center justify-center font-bold">
+                  B
+                </div>
+                <span>Bloomberg</span>
+                <span>•</span>
+                <span>Lizette Chapman</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Article 3 */}
+          <div className="flex items-start gap-4 p-4 border-b border-gray-200">
+            <div className="w-16 h-16 bg-gray-800 rounded flex items-center justify-center">
+              <span className="text-white font-bold text-lg">VB</span>
+            </div>
+            <div className="flex-1">
+              <h3 className="text-lg font-normal text-black leading-tight mb-2">
+                Zivity founder finally takes it all off
+              </h3>
+              <div className="flex items-center gap-2 text-sm text-gray-600">
+                <span className="text-red-600 font-bold">VB</span>
+                <span>VentureBeat</span>
+                <span>•</span>
+                <span>Paul Boutin</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    } else {
+      windowContent = (
         <div className="text-black">
           <h3 className="font-bold text-lg mb-4">{type}</h3>
           <p>
             This is a placeholder window for {type}. More content coming soon!
           </p>
         </div>
-      ),
+      );
+    }
+
+    const newWindow: WindowConfig = {
+      id: `${type}-${Date.now()}`,
+      backgroundColor: bgColor,
+      headerColor: headerColor,
+      initialX: Math.random() * 200 + 100,
+      initialY: Math.random() * 200 + 100,
+      width: type === "Articles" ? 500 : 300,
+      height: type === "Articles" ? 400 : 300,
+      zIndex: nextZIndex,
+      content: windowContent,
     };
     setOpenWindows((prev) => [...prev, newWindow]);
     setNextZIndex((prev) => prev + 1);
