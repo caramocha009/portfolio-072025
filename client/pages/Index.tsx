@@ -97,16 +97,33 @@ function MediumArticleEmbed() {
   return (
     <>
       <article className="text-black max-w-4xl mx-auto">
-        <h1
-          className="text-4xl font-bold mb-8 leading-tight"
-          style={{
-            fontFamily: 'Georgia, Charter, "Times New Roman", serif',
-            maxWidth: "782px",
-            margin: "0 auto 32px auto",
-          }}
-        >
-          Savvo Digital Sommelier
-        </h1>
+        <div className="medium-article-content">
+          <h1
+            style={{
+              fontFamily: 'Georgia, Charter, "Times New Roman", serif',
+              fontSize: "48px",
+              fontWeight: "800",
+              lineHeight: "1.2",
+              margin: "0 0 16px 0",
+              color: "#242424",
+            }}
+          >
+            Savvo Digital Sommelier
+          </h1>
+          <h2
+            style={{
+              fontFamily:
+                'sohne, "Helvetica Neue", Helvetica, Arial, sans-serif',
+              fontSize: "24px",
+              fontWeight: "600",
+              lineHeight: "1.35",
+              margin: "0 0 40px 0",
+              color: "#242424",
+            }}
+          >
+            A study in user research and contextual inquiry.
+          </h2>
+        </div>
 
         <div
           className="medium-article-content"
@@ -141,10 +158,7 @@ function MediumArticleEmbed() {
 
               let processedContent = parts
                 .join("")
-                .replace(
-                  /<h1[^>]*>.*?<\/h1>/i,
-                  '<h2 style="font-size: 24px; font-weight: 600; line-height: 1.35; margin: 40px 0 16px 0; color: #242424; font-family: sohne, Helvetica Neue, Helvetica, Arial, sans-serif;">A study in user research and contextual inquiry.</h2>',
-                ) // Replace title with styled tagline
+                .replace(/<h1[^>]*>.*?<\/h1>/i, "") // Completely remove the original title
                 .replace(/\s*<\/p>\s*$/, "</p>") // Clean up trailing whitespace
                 .replace(/(<\/[^>]+>)\s*(<\/[^>]+>)/g, "$1$2"); // Remove spaces between closing tags
 
