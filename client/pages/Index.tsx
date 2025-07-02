@@ -245,7 +245,10 @@ export default function Index() {
       </div>
 
       {/* Main Desktop Area */}
-      <main className="relative h-[calc(100vh-48px)] overflow-hidden">
+      <main
+        className="relative h-[calc(100vh-48px)] overflow-hidden"
+        style={{ padding: "calc(10px + 2vw)" }}
+      >
         {/* Desktop Icons - Responsive Layout */}
         <div className="absolute left-2 md:left-14 top-4 md:top-12 z-20">
           {/* Mobile: Grid layout, Desktop: Column layout */}
