@@ -97,11 +97,17 @@ function MediumArticleEmbed() {
   return (
     <>
       <article className="text-black max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-4 leading-tight" style={{ fontFamily: 'Georgia, Charter, "Times New Roman", serif' }}>
+        <h1
+          className="text-4xl font-bold mb-4 leading-tight"
+          style={{ fontFamily: 'Georgia, Charter, "Times New Roman", serif' }}
+        >
           {articleContent.title}
         </h1>
 
-        <div className="mb-8 text-sm text-gray-600" style={{ fontFamily: 'Georgia, Charter, "Times New Roman", serif' }}>
+        <div
+          className="mb-8 text-sm text-gray-600"
+          style={{ fontFamily: 'Georgia, Charter, "Times New Roman", serif' }}
+        >
           Published: {new Date(articleContent.pubDate).toLocaleDateString()}
         </div>
 
@@ -109,11 +115,13 @@ function MediumArticleEmbed() {
           className="medium-article-content"
           style={{
             fontFamily: 'Georgia, Charter, "Times New Roman", serif',
-            fontSize: '21px',
-            lineHeight: '1.58',
-            color: '#292929'
+            fontSize: "21px",
+            lineHeight: "1.58",
+            color: "#292929",
           }}
-          dangerouslySetInnerHTML={{ __html: articleContent.content || articleContent.description }}
+          dangerouslySetInnerHTML={{
+            __html: articleContent.content || articleContent.description,
+          }}
         />
 
         <div className="mt-12 pt-6">
@@ -200,7 +208,8 @@ function MediumArticleEmbed() {
           font-family: Georgia, Charter, "Times New Roman", serif;
         }
 
-        .medium-article-content ul, .medium-article-content ol {
+        .medium-article-content ul,
+        .medium-article-content ol {
           margin: 1.5rem 0;
           padding-left: 2rem;
           font-family: Georgia, Charter, "Times New Roman", serif;
@@ -212,7 +221,7 @@ function MediumArticleEmbed() {
           font-family: Georgia, Charter, "Times New Roman", serif;
         }
       `}</style>
-    </>)
+    </>
   );
 }
 
