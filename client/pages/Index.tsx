@@ -639,7 +639,7 @@ export default function Index() {
               icon={<PlaylistIcon />}
               label="Listen"
               onClick={() => openNewWindow("Playlist")}
-              className="scale-75 md:scale-100"
+              className="scale-50 md:scale-[0.8]"
             />
           </div>
 
