@@ -24,7 +24,7 @@ export function DesktopIcon({
         style={{
           fontFamily: 'ChicagoFLF, "Courier New", monospace',
           fontSize: "12px",
-          fontWeight: "normal",
+          fontWeight: "700",
         }}
       >
         {label}
