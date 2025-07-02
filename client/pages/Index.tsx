@@ -35,6 +35,7 @@ function MediumArticleEmbed({
   const [articleContent, setArticleContent] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [refetchKey, setRefetchKey] = useState(0);
 
   const fetchMediumArticle = async () => {
     setLoading(true);
