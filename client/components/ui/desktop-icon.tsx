@@ -19,7 +19,7 @@ export function DesktopIcon({
       className={`flex flex-col items-center gap-2 p-2 hover:bg-white hover:bg-opacity-10 rounded transition-colors ${className}`}
     >
       <div className="w-24 h-24 flex items-center justify-center">{icon}</div>
-      <div className="bg-desktop-azure px-2 py-1 rounded text-black text-sm font-normal text-center min-w-[100px] pixel-font">
+      <div className="font-chicago text-app bg-icon-background text-icon-foreground aria-[selected='true']:bg-icon-background-selected aria-[selected='true']:text-icon-foreground-selected flex h-[26px] items-center pt-[3px] pr-[6px] pb-[1px] pl-[8px] leading-[22px] transition-colors group-hover:brightness-[95%] group-focus-visible:brightness-[80%] group-active:brightness-[80%]">
         {label}
       </div>
     </button>
