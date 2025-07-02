@@ -161,6 +161,13 @@ export function DraggableWindow({
           <div className="w-full h-0.5 bg-black" />
         </div>
 
+        {/* Window Title */}
+        {title && (
+          <div className="text-black text-sm font-bold px-4 chicago-font">
+            {title}
+          </div>
+        )}
+
         {/* Close button */}
         {onClose && (
           <button
