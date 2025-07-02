@@ -35,10 +35,19 @@ export function DraggableWindow({
   zIndex = 10,
   onBringToFront,
   title,
+  resizable = false,
 }: DraggableWindowProps) {
   const [position, setPosition] = useState({ x: initialX, y: initialY });
+  const [size, setSize] = useState({ width, height });
   const [isDragging, setIsDragging] = useState(false);
+  const [isResizing, setIsResizing] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const [resizeStart, setResizeStart] = useState({
+    x: 0,
+    y: 0,
+    width: 0,
+    height: 0,
+  });
   const windowRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
