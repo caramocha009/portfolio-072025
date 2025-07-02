@@ -362,6 +362,34 @@ export default function Index() {
                     </div>
                   </div>
                 </div>
+
+                {/* Savvo Digital Sommelier */}
+                <div
+                  className="border-2 border-orange-200 rounded-lg p-4 hover:border-orange-400 cursor-pointer transition-colors"
+                  onMouseEnter={() => setHoveredProject("savvo-sommelier")}
+                  onMouseLeave={() => setHoveredProject(null)}
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold text-lg">🍷</span>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-lg font-medium text-black mb-1">
+                        Savvo Digital Sommelier
+                      </h3>
+                      <p className="text-sm text-gray-600 mb-2">
+                        A study in user research and contextual inquiry around
+                        kiosk, restaurant, and membership experience of wines
+                      </p>
+                      <div className="flex items-center gap-2 text-xs">
+                        <span className="px-2 py-1 bg-orange-100 text-orange-700 rounded">
+                          Retail
+                        </span>
+                        <span className="text-gray-500">2023</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
