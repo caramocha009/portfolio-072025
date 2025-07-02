@@ -614,7 +614,7 @@ export default function Index() {
       {currentCaseStudy && (
         <div className="fixed inset-0 bg-white z-[9999] overflow-y-auto">
           {/* Progress Bar */}
-          <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-50">
+          <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-[10001]">
             <div
               className="h-full bg-gradient-to-r from-desktop-blue to-blue-800 transition-all duration-150"
               style={{ width: `${scrollProgress}%` }}
@@ -622,7 +622,7 @@ export default function Index() {
           </div>
 
           {/* Header with Breadcrumbs */}
-          <div className="border-b border-gray-200 bg-white sticky top-0 z-40">
+          <div className="border-b border-gray-200 bg-white sticky top-1 z-[10000]">
             <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
               {/* Breadcrumbs */}
               <div className="flex items-center gap-2 text-sm">
