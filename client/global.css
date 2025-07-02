@@ -185,6 +185,12 @@
   }
 
   /* Medium Article Typography Styles */
+  .medium-article-content {
+    background-color: #fafafa !important;
+    padding: 2rem !important;
+    border-radius: 8px !important;
+  }
+
   .medium-article-content h1 {
     font-size: 2.25rem !important;
     font-weight: 700 !important;
@@ -212,7 +218,8 @@
   .medium-article-content p {
     margin: 1.5rem 0 !important;
     line-height: 1.58 !important;
-    font-size: 21px !important;
+    font-size: 18px !important;
+    font-weight: 300 !important;
     font-family: Georgia, Charter, "Times New Roman", serif !important;
   }
 
