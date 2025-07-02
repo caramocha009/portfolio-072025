@@ -436,19 +436,37 @@ export default function Index() {
                 restaurant, and membership experience of wines
               </p>
 
-              {/* Medium RSS Embed */}
+              {/* Medium Embed */}
               <div className="border-4 border-black bg-gray-100 p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                <div
-                  id="retainable-rss-embed"
-                  data-rss="https://medium.com/feed/@caramocha"
-                  data-maxcols="1"
-                  data-layout="grid"
-                  data-poststyle="inline"
-                  data-readmore="Read the rest"
-                  data-buttonclass="btn btn-primary"
-                  data-offset="-100"
+                <div className="bg-white border-2 border-black p-4">
+                  <div
+                    id="retainable-rss-embed"
+                    data-rss="https://medium.com/feed/@caramocha"
+                    data-maxcols="1"
+                    data-layout="grid"
+                    data-poststyle="inline"
+                    data-readmore="Read the rest"
+                    data-buttonclass="px-4 py-2 bg-orange-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:bg-orange-300 chicago-font-sm font-bold"
+                    data-offset="-100"
+                  />
+                </div>
+                <script
+                  src="https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js"
+                  async
                 />
-                <script src="https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
+                <noscript>
+                  <p className="text-black chicago-font-md">
+                    JavaScript is required to display the RSS feed.
+                    <a
+                      href="https://medium.com/@caramocha/ux-case-study-savvo-digital-sommelier-c2da6957105d"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 underline"
+                    >
+                      Read the article directly on Medium
+                    </a>
+                  </p>
+                </noscript>
               </div>
 
               {/* External Link */}
