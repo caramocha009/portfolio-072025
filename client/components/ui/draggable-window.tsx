@@ -71,7 +71,7 @@ export function DraggableWindow({
         const deltaY = e.clientY - resizeStart.y;
 
         const newWidth = Math.max(
-          48,
+          window.innerWidth * 0.2,
           Math.min(window.innerWidth, resizeStart.width + deltaX),
         );
         const newHeight = Math.max(
