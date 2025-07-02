@@ -767,13 +767,13 @@ export default function Index() {
                     🍷 The Mission
                   </h3>
                   <p className="text-black leading-relaxed chicago-font-md">
-                    Savvo Digital Sommelier operates wine kiosks in select
-                    retail stores in the Greater Chicago area. The kiosks assist
-                    users in browsing wine selections and suggest pairings with
-                    cheese and meats. Our team was tasked with enhancing the
-                    kiosk's interface to better integrate with Cooper's Hawk
-                    Restaurant and Winery, creating a prototype that would
-                    impress Cooper's Hawk's CEO.
+                    Savvo Digital Sommelier operates wine kiosks in select retail
+                    stores in the Greater Chicago area. The kiosks assist users in
+                    browsing wine selections and suggest pairings with cheese and
+                    meats. Our team was tasked with enhancing the kiosk's
+                    interface to better integrate with Cooper's Hawk Restaurant
+                    and Winery, creating a prototype that would impress Cooper's
+                    Hawk's CEO.
                   </p>
                 </div>
               </div>
@@ -793,48 +793,48 @@ export default function Index() {
                 <p className="text-black leading-relaxed mb-6 chicago-font-md">
                   Before designing new features, we conducted a thorough
                   evaluation of the existing kiosk system. Through user testing
-                  and heuristic analysis, we identified several critical
-                  usability issues.
+                  and heuristic analysis, we identified several critical usability
+                  issues.
                 </p>
 
                 {/* Problem Highlight Block */}
-                <div className="border-4 border-red-600 bg-red-100 p-6 shadow-[8px_8px_0px_0px_rgba(220,38,38,1)] mb-8">
-                  <h3 className="font-bold text-red-800 mb-4 chicago-font flex items-center">
-                    <span className="mr-2">⚠️</span> Key Problems Identified
-                  </h3>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <ul className="space-y-3 text-red-800">
-                      <li className="flex items-start">
-                        <span className="text-red-600 mr-2 font-bold">•</span>
-                        The "+" sign used to indicate pairings was mistaken for
-                        a clickable button
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-red-600 mr-2 font-bold">•</span>
-                        Users had to scroll to view full wine descriptions
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-red-600 mr-2 font-bold">•</span>
-                        Unclear rating systems and confusing pricing information
-                      </li>
-                    </ul>
-                    <ul className="space-y-3 text-red-800">
-                      <li className="flex items-start">
-                        <span className="text-red-600 mr-2 font-bold">•</span>
-                        Lack of intuitive navigation - difficult to return to
-                        previous pages
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-red-600 mr-2 font-bold">•</span>
-                        Insufficient help and documentation for users
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-red-600 mr-2 font-bold">•</span>
-                        Poor visual hierarchy causing user confusion
-                      </li>
-                    </ul>
-                  </div>
+              <div className="border-4 border-red-600 bg-red-100 p-6 shadow-[8px_8px_0px_0px_rgba(220,38,38,1)] mb-8">
+                <h3 className="font-bold text-red-800 mb-4 chicago-font flex items-center">
+                  <span className="mr-2">⚠️</span> Key Problems Identified
+                </h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <ul className="space-y-3 text-red-800">
+                    <li className="flex items-start">
+                      <span className="text-red-600 mr-2 font-bold">•</span>
+                      The "+" sign used to indicate pairings was mistaken for a
+                      clickable button
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-600 mr-2 font-bold">•</span>
+                      Users had to scroll to view full wine descriptions
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-600 mr-2 font-bold">•</span>
+                      Unclear rating systems and confusing pricing information
+                    </li>
+                  </ul>
+                  <ul className="space-y-3 text-red-800">
+                    <li className="flex items-start">
+                      <span className="text-red-600 mr-2 font-bold">•</span>
+                      Lack of intuitive navigation - difficult to return to
+                      previous pages
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-600 mr-2 font-bold">•</span>
+                      Insufficient help and documentation for users
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-600 mr-2 font-bold">•</span>
+                      Poor visual hierarchy causing user confusion
+                    </li>
+                  </ul>
                 </div>
+              </div>
               </div>
             </section>
 
@@ -851,104 +851,87 @@ export default function Index() {
                 />
 
                 <p className="text-black leading-relaxed mb-6 chicago-font-md">
-                  Our research approach combined competitive analysis with
-                  direct user observation. We studied successful wine kiosks and
-                  services like Vivino to understand best practices, while
-                  conducting contextual inquiry at Cooper's Hawk locations to
-                  observe real customer behaviors.
+                  Our research approach combined competitive analysis with direct
+                  user observation. We studied successful wine kiosks and services
+                  like Vivino to understand best practices, while conducting
+                  contextual inquiry at Cooper's Hawk locations to observe real
+                  customer behaviors.
                 </p>
 
-                {/* Insight Highlight Block */}
-                <div className="border-4 border-blue-600 bg-blue-100 p-6 shadow-[8px_8px_0px_0px_rgba(37,99,235,1)] mb-8">
-                  <h3 className="font-bold text-blue-800 mb-4 chicago-font flex items-center">
-                    <span className="mr-2">💡</span> Key Research Insights
-                  </h3>
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div>
-                      <h4 className="font-bold text-blue-800 mb-3 chicago-font">
-                        Customer Pain Points
-                      </h4>
-                      <ul className="space-y-2 text-blue-800">
-                        <li className="flex items-start">
-                          <span className="text-blue-600 mr-2 font-bold">
-                            •
-                          </span>
-                          68% of customers felt overwhelmed by wine choices
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-blue-600 mr-2 font-bold">
-                            •
-                          </span>
-                          Time-consuming consultation with busy staff
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-blue-600 mr-2 font-bold">
-                            •
-                          </span>
-                          Lack of pairing knowledge among diners
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-blue-600 mr-2 font-bold">
-                            •
-                          </span>
-                          Desire for more wine education during dining
-                        </li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-blue-800 mb-3 chicago-font">
-                        Opportunities
-                      </h4>
-                      <ul className="space-y-2 text-blue-800">
-                        <li className="flex items-start">
-                          <span className="text-blue-600 mr-2 font-bold">
-                            •
-                          </span>
-                          Self-service wine exploration
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-blue-600 mr-2 font-bold">
-                            •
-                          </span>
-                          Personalized recommendations based on preferences
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-blue-600 mr-2 font-bold">
-                            •
-                          </span>
-                          Educational content integration
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-blue-600 mr-2 font-bold">
-                            •
-                          </span>
-                          Strong interest in Wine Club benefits
-                        </li>
-                      </ul>
-                    </div>
+              {/* Insight Highlight Block */}
+              <div className="border-4 border-blue-600 bg-blue-100 p-6 shadow-[8px_8px_0px_0px_rgba(37,99,235,1)] mb-8">
+                <h3 className="font-bold text-blue-800 mb-4 chicago-font flex items-center">
+                  <span className="mr-2">💡</span> Key Research Insights
+                </h3>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h4 className="font-bold text-blue-800 mb-3 chicago-font">
+                      Customer Pain Points
+                    </h4>
+                    <ul className="space-y-2 text-blue-800">
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-2 font-bold">•</span>
+                        68% of customers felt overwhelmed by wine choices
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-2 font-bold">•</span>
+                        Time-consuming consultation with busy staff
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-2 font-bold">•</span>
+                        Lack of pairing knowledge among diners
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-2 font-bold">•</span>
+                        Desire for more wine education during dining
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-blue-800 mb-3 chicago-font">
+                      Opportunities
+                    </h4>
+                    <ul className="space-y-2 text-blue-800">
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-2 font-bold">•</span>
+                        Self-service wine exploration
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-2 font-bold">•</span>
+                        Personalized recommendations based on preferences
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-2 font-bold">•</span>
+                        Educational content integration
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-2 font-bold">•</span>
+                        Strong interest in Wine Club benefits
+                      </li>
+                    </ul>
                   </div>
                 </div>
+              </div>
 
-                {/* Competitive Analysis */}
-                <div className="border-4 border-purple-600 bg-purple-100 p-6 shadow-[8px_8px_0px_0px_rgba(147,51,234,1)]">
-                  <h3 className="font-bold text-purple-800 mb-4 chicago-font flex items-center">
-                    <span className="mr-2">🔍</span> Competitive Analysis
-                    Findings
-                  </h3>
-                  <p className="text-purple-800 mb-4">
-                    We examined other wine kiosks and related services like
-                    Vivino to identify successful features and avoid common
-                    pitfalls. This analysis informed our design decisions and
-                    helped prioritize which features would have the most impact.
+              {/* Competitive Analysis */}
+              <div className="border-4 border-purple-600 bg-purple-100 p-6 shadow-[8px_8px_0px_0px_rgba(147,51,234,1)]">
+                <h3 className="font-bold text-purple-800 mb-4 chicago-font flex items-center">
+                  <span className="mr-2">🔍</span> Competitive Analysis Findings
+                </h3>
+                <p className="text-purple-800 mb-4">
+                  We examined other wine kiosks and related services like Vivino
+                  to identify successful features and avoid common pitfalls.
+                  This analysis informed our design decisions and helped
+                  prioritize which features would have the most impact.
+                </p>
+                <div className="bg-purple-200 border-2 border-purple-800 p-4 rounded">
+                  <p className="text-purple-900 text-sm italic">
+                    "The best wine discovery platforms combine personalization
+                    with education, making the selection process feel like an
+                    engaging journey rather than an overwhelming choice."
                   </p>
-                  <div className="bg-purple-200 border-2 border-purple-800 p-4 rounded">
-                    <p className="text-purple-900 text-sm italic">
-                      "The best wine discovery platforms combine personalization
-                      with education, making the selection process feel like an
-                      engaging journey rather than an overwhelming choice."
-                    </p>
-                  </div>
                 </div>
+              </div>
               </div>
             </section>
 
@@ -959,67 +942,68 @@ export default function Index() {
                   Design Process & MVP Planning
                 </h2>
 
-                {/* MVP Phases */}
-                <div className="border-4 border-green-600 bg-green-100 p-6 shadow-[8px_8px_0px_0px_rgba(22,163,74,1)] mb-8">
-                  <h3 className="font-bold text-green-800 mb-4 chicago-font flex items-center">
-                    <span className="mr-2">🚀</span> Three-Phase MVP Roadmap
-                  </h3>
-                  <div className="grid md:grid-cols-3 gap-6">
-                    <div className="bg-green-200 border-2 border-green-800 p-4 rounded">
-                      <div className="w-8 h-8 bg-green-800 text-white rounded-full flex items-center justify-center mb-3 font-bold chicago-font">
-                        1
-                      </div>
-                      <h4 className="font-bold text-green-900 mb-2 chicago-font">
-                        Phase 1 (Light Grey)
-                      </h4>
-                      <p className="text-green-900 text-sm">
-                        Must-have features for MVP launch
-                      </p>
+              {/* MVP Phases */}
+              <div className="border-4 border-green-600 bg-green-100 p-6 shadow-[8px_8px_0px_0px_rgba(22,163,74,1)] mb-8">
+                <h3 className="font-bold text-green-800 mb-4 chicago-font flex items-center">
+                  <span className="mr-2">🚀</span> Three-Phase MVP Roadmap
+                </h3>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="bg-green-200 border-2 border-green-800 p-4 rounded">
+                    <div className="w-8 h-8 bg-green-800 text-white rounded-full flex items-center justify-center mb-3 font-bold chicago-font">
+                      1
                     </div>
-                    <div className="bg-green-200 border-2 border-green-800 p-4 rounded">
-                      <div className="w-8 h-8 bg-green-800 text-white rounded-full flex items-center justify-center mb-3 font-bold chicago-font">
-                        2
-                      </div>
-                      <h4 className="font-bold text-green-900 mb-2 chicago-font">
-                        Phase 2 (Dark Grey)
-                      </h4>
-                      <p className="text-green-900 text-sm">
-                        Additional features to enhance UX
-                      </p>
+                    <h4 className="font-bold text-green-900 mb-2 chicago-font">
+                      Phase 1 (Light Grey)
+                    </h4>
+                    <p className="text-green-900 text-sm">
+                      Must-have features for MVP launch
+                    </p>
+                  </div>
+                  <div className="bg-green-200 border-2 border-green-800 p-4 rounded">
+                    <div className="w-8 h-8 bg-green-800 text-white rounded-full flex items-center justify-center mb-3 font-bold chicago-font">
+                      2
                     </div>
-                    <div className="bg-green-200 border-2 border-green-800 p-4 rounded">
-                      <div className="w-8 h-8 bg-green-800 text-white rounded-full flex items-center justify-center mb-3 font-bold chicago-font">
-                        3
-                      </div>
-                      <h4 className="font-bold text-green-900 mb-2 chicago-font">
-                        Phase 3 (Dark Blue)
-                      </h4>
-                      <p className="text-green-900 text-sm">
-                        Advanced features if time permitted
-                      </p>
+                    <h4 className="font-bold text-green-900 mb-2 chicago-font">
+                      Phase 2 (Dark Grey)
+                    </h4>
+                    <p className="text-green-900 text-sm">
+                      Additional features to enhance UX
+                    </p>
+                  </div>
+                  <div className="bg-green-200 border-2 border-green-800 p-4 rounded">
+                    <div className="w-8 h-8 bg-green-800 text-white rounded-full flex items-center justify-center mb-3 font-bold chicago-font">
+                      3
                     </div>
+                    <h4 className="font-bold text-green-900 mb-2 chicago-font">
+                      Phase 3 (Dark Blue)
+                    </h4>
+                    <p className="text-green-900 text-sm">
+                      Advanced features if time permitted
+                    </p>
                   </div>
                 </div>
+              </div>
               </div>
             </section>
 
             {/* Solution */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-6 chicago-font">
-                The Solution
-              </h2>
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Ff970701819c341929c64e399cfb091cf?format=webp&width=800"
-                alt="Solution Overview"
-                className="w-full rounded-lg shadow-lg mb-6 border-4 border-black"
-              />
+              <div className="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                <h2 className="text-2xl font-bold text-black mb-6 chicago-font-xl">
+                  The Solution
+                </h2>
+                <img
+                  src="https://images.pexels.com/photos/10265450/pexels-photo-10265450.jpeg"
+                  alt="Wine pairing with food at restaurant setting"
+                  className="w-full border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mb-6"
+                />
 
-              <p className="text-gray-700 leading-relaxed mb-8">
-                Our solution addressed each identified usability issue while
-                adding new features that would delight Cooper's Hawk customers.
-                We focused on creating an intuitive wine discovery experience
-                that would seamlessly integrate into the restaurant environment.
-              </p>
+                <p className="text-black leading-relaxed mb-8 chicago-font-md">
+                  Our solution addressed each identified usability issue while
+                  adding new features that would delight Cooper's Hawk customers.
+                  We focused on creating an intuitive wine discovery experience
+                  that would seamlessly integrate into the restaurant environment.
+                </p>
 
               {/* Solution Features */}
               <div className="grid md:grid-cols-3 gap-6 mb-8">
