@@ -626,7 +626,7 @@ export default function Index() {
               icon={<ContactIcon />}
               label="Contact Me"
               onClick={() => openNewWindow("Contact")}
-              className="scale-75 md:scale-100"
+              className="scale-50 md:scale-[0.8]"
             />
           </div>
 
