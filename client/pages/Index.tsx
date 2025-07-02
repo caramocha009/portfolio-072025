@@ -27,7 +27,11 @@ interface RSSResponse {
 }
 
 // Medium Article Embed Component
-function MediumArticleEmbed() {
+function MediumArticleEmbed({
+  onImageClick,
+}: {
+  onImageClick: (src: string) => void;
+}) {
   const [articleContent, setArticleContent] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
