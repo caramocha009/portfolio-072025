@@ -291,19 +291,6 @@ export default function Index() {
           />
         </div>
 
-        {/* Your Bag Icon - Top Right */}
-        <div
-          className="absolute z-20"
-          style={{ right: "calc(8px + 2vw)", top: "calc(16px + 2vw)" }}
-        >
-          <DesktopIcon
-            icon={<YourBagIcon />}
-            label="Your Bag"
-            onClick={() => openNewWindow("Your Bag")}
-            className="scale-75 md:scale-100"
-          />
-        </div>
-
         {/* Recycling Icon - Lower Right */}
         <div
           className="absolute z-20"
