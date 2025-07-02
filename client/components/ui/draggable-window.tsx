@@ -237,13 +237,6 @@ export function DraggableWindow({
         onMouseDown={handleMouseDown}
         onTouchStart={handleTouchStart}
       >
-        {/* Full-width horizontal lines */}
-        <div className="absolute inset-0 flex flex-col justify-center gap-1 px-2">
-          <div className="w-full h-0.5 bg-black" />
-          <div className="w-full h-0.5 bg-black" />
-          <div className="w-full h-0.5 bg-black" />
-        </div>
-
         {/* Window Title */}
         {title && (
           <div className="absolute inset-0 flex items-center justify-center px-8">
