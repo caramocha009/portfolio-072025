@@ -120,11 +120,14 @@ function MediumArticleEmbed() {
             color: "#292929",
           }}
           dangerouslySetInnerHTML={{
-            __html: articleContent.content || articleContent.description,
+            __html: (articleContent.content || articleContent.description)
+              ?.replace(/<img[^>]*>/g, "") // Remove all img tags
+              ?.replace(/\s*<\/p>\s*$/, "</p>") // Clean up trailing whitespace
+              ?.replace(/(<\/[^>]+>)\s*(<\/[^>]+>)/g, "$1$2"), // Remove spaces between closing tags
           }}
         />
 
-        <div className="mt-2">
+        <div style={{ marginTop: "32px" }}>
           <a
             href={articleContent.link}
             target="_blank"
