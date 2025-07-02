@@ -23,7 +23,7 @@ export function DesktopIcon({
         className="bg-desktop-azure px-2 py-1 rounded text-black text-center min-w-[100px]"
         style={{
           fontFamily: '"JetBrains Mono", monospace',
-          fontSize: "12px",
+          fontSize: "16px",
           fontWeight: "700",
         }}
       >
