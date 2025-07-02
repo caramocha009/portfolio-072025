@@ -469,7 +469,7 @@ export default function Index() {
         >
           <DesktopIcon
             icon={<PlaylistIcon />}
-            label="Playlist"
+            label="Listen"
             onClick={() => openNewWindow("Playlist")}
             className="scale-75 md:scale-100"
           />
