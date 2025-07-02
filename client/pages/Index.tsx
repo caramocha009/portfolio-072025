@@ -85,8 +85,12 @@ export default function Index() {
       id: "sticky1",
       backgroundColor: "#F2B973",
       headerColor: "#E68C4F",
-      initialX: 400,
-      initialY: 250,
+      initialX: window.innerWidth
+        ? Math.max(50, window.innerWidth / 2 - 350)
+        : 350,
+      initialY: window.innerHeight
+        ? Math.max(50, window.innerHeight / 2 - 150)
+        : 250,
       zIndex: 10,
       content: (
         <div className="space-y-5">
@@ -108,8 +112,12 @@ export default function Index() {
       id: "sticky2",
       backgroundColor: "#F0A7CC",
       headerColor: "#E68AA8",
-      initialX: 720,
-      initialY: 250,
+      initialX: window.innerWidth
+        ? Math.max(370, window.innerWidth / 2 + 30)
+        : 670,
+      initialY: window.innerHeight
+        ? Math.max(50, window.innerHeight / 2 - 150)
+        : 250,
       zIndex: 11,
       content: (
         <div className="space-y-5">
