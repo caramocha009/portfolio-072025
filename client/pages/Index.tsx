@@ -514,9 +514,6 @@ export default function Index() {
           </DraggableWindow>
         ))}
       </main>
-
-      {/* Bottom border */}
-      <div className="absolute bottom-0 left-0 right-0 h-2 bg-white"></div>
     </div>
   );
 }
