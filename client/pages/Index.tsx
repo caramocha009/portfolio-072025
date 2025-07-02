@@ -298,30 +298,31 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
       const containerRect = container.getBoundingClientRect();
       const scrollTop = container.scrollTop;
 
-      // If we're at the very top, default to project-brief
-      if (scrollTop < 100) {
-        current = "project-brief";
-      } else {
-        // Find the section that's currently in view (closest to top of viewport)
-        let closestSection = null;
-        let closestDistance = Infinity;
+      // Find the section that's currently in view
+      let closestSection = null;
+      let closestDistance = Infinity;
 
-        allSections.forEach((section) => {
-          const rect = section.getBoundingClientRect();
-          const relativeTop = rect.top - containerRect.top;
+      allSections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        const relativeTop = rect.top - containerRect.top;
 
-          // Section is in view if it's within the top portion of the viewport
-          if (relativeTop <= 200 && relativeTop >= -200) {
-            const distance = Math.abs(relativeTop - 100); // Target 100px from top
-            if (distance < closestDistance) {
-              closestDistance = distance;
-              closestSection = section;
-            }
+        // Section is in view if it's within the viewport area
+        if (relativeTop <= 250 && relativeTop >= -500) {
+          const distance = Math.abs(relativeTop - 150); // Target 150px from top
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestSection = section;
           }
-        });
+        }
+      });
 
-        if (closestSection) {
-          current = closestSection.getAttribute("id") || "";
+      if (closestSection) {
+        current = closestSection.getAttribute("id") || "";
+      } else if (scrollTop < 200) {
+        // Only default to project-brief if we're near the very top and no other section is found
+        const projectBrief = document.getElementById("project-brief");
+        if (projectBrief) {
+          current = "project-brief";
         }
       }
 
