@@ -14,13 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        chicago: [
-          '"FA Sysfont C"',
-          '"Courier New"',
-          '"Monaco"',
-          '"Lucida Console"',
-          "monospace",
-        ],
+        chicago: ["ChicagoFLF", '"Courier New"', '"Monaco"', "monospace"],
       },
       colors: {
         border: "hsl(var(--border))",
