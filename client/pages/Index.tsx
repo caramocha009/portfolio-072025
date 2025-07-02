@@ -652,7 +652,7 @@ export default function Index() {
               icon={<RecyclingIcon />}
               label="Recycling Bin"
               onClick={() => openNewWindow("Recycling Bin")}
-              className="scale-75 md:scale-100"
+              className="scale-50 md:scale-[0.8]"
             />
           </div>
 
