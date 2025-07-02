@@ -478,7 +478,7 @@ export default function Index() {
                   setCurrentCaseStudy(null);
                   setIsWorksFullscreenOpen(true);
                 }}
-                className="px-4 py-2 bg-red-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:bg-red-300 transition-colors chicago-font-sm font-bold"
+                className="px-4 py-2 bg-red-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:bg-red-300 transition-colors font-mono text-sm font-bold"
               >
                 ← Back to Works
               </button>
