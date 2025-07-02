@@ -8,7 +8,6 @@ import {
   AboutIcon,
   PlaylistIcon,
   RecyclingIcon,
-  YourBagIcon,
 } from "@/components/ui/folder-icons";
 
 interface WindowConfig {
