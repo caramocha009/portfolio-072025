@@ -120,6 +120,17 @@ export default function Index() {
     },
   ]);
 
+  const [nextZIndex, setNextZIndex] = useState(100);
+
+  const bringToFront = (windowId: string) => {
+    setOpenWindows((prev) =>
+      prev.map((window) =>
+        window.id === windowId ? { ...window, zIndex: nextZIndex } : window,
+      ),
+    );
+    setNextZIndex((prev) => prev + 1);
+  };
+
   const closeWindow = (id: string) => {
     setOpenWindows((prev) => prev.filter((window) => window.id !== id));
   };
@@ -131,6 +142,7 @@ export default function Index() {
       headerColor: "#5088BA",
       initialX: Math.random() * 200 + 100,
       initialY: Math.random() * 200 + 100,
+      zIndex: nextZIndex,
       content: (
         <div className="text-black">
           <h3 className="font-bold text-lg mb-4">{type}</h3>
@@ -141,6 +153,7 @@ export default function Index() {
       ),
     };
     setOpenWindows((prev) => [...prev, newWindow]);
+    setNextZIndex((prev) => prev + 1);
   };
 
   return (
