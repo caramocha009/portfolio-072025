@@ -105,6 +105,18 @@
     overflow: hidden;
   }
 
+  /* Pixelated font for digital/retro theme */
+  .pixel-font {
+    font-family:
+      "Courier New", "Monaco", "Lucida Console", "Liberation Mono",
+      "DejaVu Sans Mono", monospace;
+    font-weight: bold;
+    text-rendering: pixelated;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: none;
+    font-smooth: never;
+  }
+
   /* Ensure smooth dragging */
   .dragging {
     user-select: none;
