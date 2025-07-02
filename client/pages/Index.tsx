@@ -344,7 +344,9 @@ export default function Index() {
             initialY={window.initialY}
             width={window.width}
             height={window.height}
+            zIndex={window.zIndex}
             onClose={() => closeWindow(window.id)}
+            onBringToFront={() => bringToFront(window.id)}
           >
             {window.content}
           </DraggableWindow>
