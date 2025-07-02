@@ -498,16 +498,10 @@ export default function Index() {
       {/* Case Study View */}
       {currentCaseStudy && (
         <div
-          className="fixed inset-0 bg-gray-100 z-[9999] overflow-y-auto"
+          className="fixed inset-0 z-[9999] overflow-y-auto"
           data-case-study-container
           style={{
-            backgroundImage: `repeating-linear-gradient(
-              45deg,
-              transparent,
-              transparent 2px,
-              rgba(0,0,0,0.02) 2px,
-              rgba(0,0,0,0.02) 4px
-            )`,
+            backgroundColor: "#fafafa",
           }}
         >
           {/* Progress Bar */}
