@@ -225,7 +225,7 @@ export default function Index() {
               </div>
               <h1 className="text-black font-medium">Works</h1>
               <button
-                onClick={() => closeWindow(`${type}-${Date.now()}`)}
+                onClick={() => setIsWorksFullscreenOpen(false)}
                 className="w-6 h-6 flex items-center justify-center hover:bg-gray-100 rounded"
               >
                 ×
