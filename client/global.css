@@ -13,6 +13,14 @@
 
 @layer base {
   /**
+   * Prevent horizontal scrolling at any viewport size
+   */
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  /**
    * Tailwind CSS theme
    * tailwind.config.ts expects the following color variables to be expressed as HSL values.
    * A different format will require also updating the theme in tailwind.config.ts.
