@@ -424,6 +424,16 @@ export function PlaylistIcon() {
   );
 }
 
+export function RecyclingIcon() {
+  return (
+    <img
+      src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F7af45aa690dd4c26ad20f73fb068f6fa?format=webp&width=800"
+      alt="Recycling"
+      className="w-24 h-24"
+    />
+  );
+}
+
 export function YourBagIcon() {
   return (
     <img
