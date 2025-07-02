@@ -210,6 +210,78 @@ export default function Index() {
           </div>
         </div>
       );
+    } else if (type === "Works") {
+      bgColor = "#FFFFFF";
+      headerColor = "#FFFFFF";
+      windowContent = (
+        <div className="bg-white h-full overflow-y-auto">
+          {/* Project 1 */}
+          <div className="flex items-start gap-2 sm:gap-4 p-2 sm:p-4">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded flex items-center justify-center flex-shrink-0">
+              <span className="text-white font-bold text-sm sm:text-lg">
+                AI
+              </span>
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-sm sm:text-lg font-normal text-black leading-tight mb-2 truncate">
+                AI-Powered Investment Analytics Platform
+              </h3>
+              <div className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm text-gray-600">
+                <div className="w-3 h-3 sm:w-4 sm:h-4 bg-green-500 rounded text-white text-xs flex items-center justify-center font-bold flex-shrink-0">
+                  ✓
+                </div>
+                <span className="truncate">Machine Learning</span>
+                <span className="flex-shrink-0">•</span>
+                <span className="truncate">2024</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Project 2 */}
+          <div className="flex items-start gap-2 sm:gap-4 p-2 sm:p-4">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-pink-500 to-red-600 rounded flex items-center justify-center flex-shrink-0">
+              <span className="text-white font-bold text-sm sm:text-lg">
+                VC
+              </span>
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-sm sm:text-lg font-normal text-black leading-tight mb-2 truncate">
+                Early Stage Venture Capital Fund
+              </h3>
+              <div className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm text-gray-600">
+                <div className="w-3 h-3 sm:w-4 sm:h-4 bg-blue-500 rounded text-white text-xs flex items-center justify-center font-bold flex-shrink-0">
+                  $
+                </div>
+                <span className="truncate">Fintech</span>
+                <span className="flex-shrink-0">•</span>
+                <span className="truncate">Active</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Project 3 */}
+          <div className="flex items-start gap-2 sm:gap-4 p-2 sm:p-4">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded flex items-center justify-center flex-shrink-0">
+              <span className="text-white font-bold text-sm sm:text-lg">
+                🌐
+              </span>
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-sm sm:text-lg font-normal text-black leading-tight mb-2 truncate">
+                Decentralized Social Media Platform
+              </h3>
+              <div className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm text-gray-600">
+                <div className="w-3 h-3 sm:w-4 sm:h-4 bg-purple-500 rounded text-white text-xs flex items-center justify-center font-bold flex-shrink-0">
+                  ⚡
+                </div>
+                <span className="truncate">Blockchain</span>
+                <span className="flex-shrink-0">•</span>
+                <span className="truncate">Beta</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
     } else {
       bgColor = "#FFFFFF";
       headerColor = "#FFFFFF";
