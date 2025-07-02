@@ -13,6 +13,15 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        chicago: [
+          '"Chicago"',
+          '"Courier New"',
+          '"Monaco"',
+          '"Lucida Console"',
+          "monospace",
+        ],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -66,6 +75,11 @@ export default {
           roseDark: "#EB2682",
           azureDark: "#5088BA",
         },
+        app: "hsl(var(--app))",
+        "icon-background": "hsl(var(--icon-background))",
+        "icon-foreground": "hsl(var(--icon-foreground))",
+        "icon-background-selected": "hsl(var(--icon-background-selected))",
+        "icon-foreground-selected": "hsl(var(--icon-foreground-selected))",
       },
       borderRadius: {
         lg: "var(--radius)",
