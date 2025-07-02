@@ -22,7 +22,7 @@ export function DesktopIcon({
       <div
         className="chicago-font bg-desktop-azure px-2 py-1 rounded text-black text-center min-w-[100px]"
         style={{
-          fontFamily: 'ChicagoFLF, "Courier New", monospace',
+          fontFamily: '"JetBrains Mono", monospace',
           fontSize: "12px",
           fontWeight: "700",
         }}
