@@ -163,7 +163,7 @@ export function DraggableWindow({
 
         {/* Window Title */}
         {title && (
-          <div className="text-black text-sm font-bold px-4 chicago-font">
+          <div className="text-black text-sm font-bold px-4 chicago-font text-center">
             {title}
           </div>
         )}
