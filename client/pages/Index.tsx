@@ -520,6 +520,7 @@ export default function Index() {
               style={{
                 fontFamily: '"JetBrains Mono", monospace',
                 fontSize: "18px",
+                fontWeight: "700",
               }}
             >
               Cara Liu
