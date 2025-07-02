@@ -758,22 +758,24 @@ export default function Index() {
 
             {/* Project Overview */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-6 chicago-font">
-                Project Overview
-              </h2>
-              <div className="border-4 border-black bg-yellow-200 p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-6">
-                <h3 className="font-bold text-black mb-3 chicago-font">
-                  🍷 The Mission
-                </h3>
-                <p className="text-black leading-relaxed">
-                  Savvo Digital Sommelier operates wine kiosks in select retail
-                  stores in the Greater Chicago area. The kiosks assist users in
-                  browsing wine selections and suggest pairings with cheese and
-                  meats. Our team was tasked with enhancing the kiosk's
-                  interface to better integrate with Cooper's Hawk Restaurant
-                  and Winery, creating a prototype that would impress Cooper's
-                  Hawk's CEO.
-                </p>
+              <div className="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                <h2 className="text-2xl font-bold text-black mb-6 chicago-font-xl">
+                  Project Overview
+                </h2>
+                <div className="border-4 border-black bg-yellow-200 p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-6">
+                  <h3 className="font-bold text-black mb-3 chicago-font-lg">
+                    🍷 The Mission
+                  </h3>
+                  <p className="text-black leading-relaxed chicago-font-md">
+                    Savvo Digital Sommelier operates wine kiosks in select
+                    retail stores in the Greater Chicago area. The kiosks assist
+                    users in browsing wine selections and suggest pairings with
+                    cheese and meats. Our team was tasked with enhancing the
+                    kiosk's interface to better integrate with Cooper's Hawk
+                    Restaurant and Winery, creating a prototype that would
+                    impress Cooper's Hawk's CEO.
+                  </p>
+                </div>
               </div>
             </section>
 
