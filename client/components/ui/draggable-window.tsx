@@ -176,21 +176,22 @@ export function DraggableWindow({
               className="w-6 h-6 flex items-center justify-center hover:bg-black hover:bg-opacity-10"
               style={{ backgroundColor: headerColor }}
             >
-            <svg width="14" height="20" viewBox="0 0 14 20" fill="none">
-              <path
-                d="M0.699951 3.7H13.3V16.3H0.699951V3.7Z"
-                fill={headerColor}
-                stroke="black"
-                strokeWidth="1.4"
-              />
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M2.38963 4.4H11.6097L6.99966 9.00984L2.38963 4.4ZM1.4 5.39026V14.6093L6.00969 9.99976L1.4 5.39026ZM6.99966 10.9897L2.38916 15.6H11.6101L6.99966 10.9897ZM12.6 14.6099V5.38958L7.98966 9.99976L12.6 14.6099ZM1.4 3H0V4.4V15.6V17H1.4H12.6H14V15.6V4.4V3H12.6H1.4Z"
-                fill="black"
-              />
-            </svg>
-          </button>
+              <svg width="14" height="20" viewBox="0 0 14 20" fill="none">
+                <path
+                  d="M0.699951 3.7H13.3V16.3H0.699951V3.7Z"
+                  fill={headerColor}
+                  stroke="black"
+                  strokeWidth="1.4"
+                />
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M2.38963 4.4H11.6097L6.99966 9.00984L2.38963 4.4ZM1.4 5.39026V14.6093L6.00969 9.99976L1.4 5.39026ZM6.99966 10.9897L2.38916 15.6H11.6101L6.99966 10.9897ZM12.6 14.6099V5.38958L7.98966 9.99976L12.6 14.6099ZM1.4 3H0V4.4V15.6V17H1.4H12.6H14V15.6V4.4V3H12.6H1.4Z"
+                  fill="black"
+                />
+              </svg>
+            </button>
+          </div>
         )}
       </div>
 
