@@ -118,16 +118,25 @@
   }
 
   /* Chicago/Pixelated font styling */
-  .font-chicago {
+  .font-chicago,
+  .font-chicago * {
     font-family:
       "FA Sysfont C", "Courier New", "Monaco", "Lucida Console", monospace !important;
     font-weight: normal !important;
-    text-rendering: pixelated;
-    -webkit-font-smoothing: none;
-    -moz-osx-font-smoothing: none;
-    font-smooth: never;
-    letter-spacing: 0.025em;
-    font-display: swap;
+    text-rendering: pixelated !important;
+    -webkit-font-smoothing: none !important;
+    -moz-osx-font-smoothing: none !important;
+    font-smooth: never !important;
+    letter-spacing: 0.025em !important;
+  }
+
+  /* Force font loading */
+  body:before {
+    content: "";
+    font-family: "FA Sysfont C";
+    position: absolute;
+    left: -9999px;
+    visibility: hidden;
   }
 
   /* Ensure smooth dragging */
