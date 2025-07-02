@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { DraggableWindow } from "@/components/ui/draggable-window";
 import { DesktopIcon } from "@/components/ui/desktop-icon";
 import {
