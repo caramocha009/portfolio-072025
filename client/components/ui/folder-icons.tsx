@@ -236,6 +236,237 @@ export function ShopIcon() {
   );
 }
 
+export function WorksIcon() {
+  return (
+    <svg width="96" height="96" viewBox="0 0 96 96" fill="none">
+      <mask
+        id="mask0_works"
+        maskUnits="userSpaceOnUse"
+        x="10"
+        y="6"
+        width="76"
+        height="85"
+      >
+        <path d="M10 6H86V90.216H10V6Z" fill="white" />
+      </mask>
+      <g mask="url(#mask0_works)">
+        {/* Folder structure similar to Contact Me */}
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M71.6221 38.865H69.5671V40.919H71.6221V38.865ZM28.4861 14.216V40.92H67.5121V38.866H69.5661L69.5671 36.811ZM32.5941 38.865H65.4601V36.811H32.5941V38.865ZM32.5941 32.703H65.4601V30.649H32.5941V32.703ZM32.5941 26.541H65.4601V24.487H32.5941V26.541ZM32.5941 18.324V20.378H42.8641V18.324H32.5941Z"
+          fill="white"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M65.46 8.054H22.323V42.973H24.377V10.108H65.46V8.054Z"
+          fill="#E68C4F"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M65.46 10.108H24.377V42.973H26.431V12.163H65.46V10.108Z"
+          fill="#D26218"
+        />
+        {/* Tools/Work symbols inside folder */}
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M40.5 24H42.5V26H44.5V28H46.5V30H44.5V32H42.5V30H40.5V32H38.5V30H36.5V28H38.5V26H40.5V24Z"
+          fill="black"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M50.5 24H52.5V32H50.5V30H48.5V32H46.5V30H48.5V28H50.5V24Z"
+          fill="black"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M54.5 26H58.5V28H60.5V30H58.5V32H54.5V30H56.5V28H54.5V26Z"
+          fill="black"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M28.4861 42.973H79.8381V22.433H71.6221V24.487H77.7841V30.649H75.7301V32.703H73.6761V34.757H75.7301V32.703H77.7841V34.757H75.7301V36.811H73.6761V38.865H71.6221V40.919H69.5671V38.865H67.5131V40.919H28.4861V42.973Z"
+          fill="#E0D9D0"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M83.946 88.162H12.054V90.216H83.946V88.162ZM86 88.162V45.027H83.946V88.162H86ZM12.054 88.162V45.027H10V88.162H12.054Z"
+          fill="#DCA460"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M79.838 22.432H71.622V14.216H28.487V42.973H79.837L79.838 22.432Z"
+          fill="black"
+        />
+      </g>
+    </svg>
+  );
+}
+
+export function ArticlesIcon() {
+  return (
+    <svg width="96" height="96" viewBox="0 0 96 96" fill="none">
+      <mask
+        id="mask0_articles"
+        maskUnits="userSpaceOnUse"
+        x="10"
+        y="6"
+        width="76"
+        height="85"
+      >
+        <path d="M10 6H86V90.216H10V6Z" fill="white" />
+      </mask>
+      <g mask="url(#mask0_articles)">
+        {/* Folder structure */}
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M71.6221 38.865H69.5671V40.919H71.6221V38.865ZM28.4861 14.216V40.92H67.5121V38.866H69.5661L69.5671 36.811ZM32.5941 38.865H65.4601V36.811H32.5941V38.865ZM32.5941 32.703H65.4601V30.649H32.5941V32.703ZM32.5941 26.541H65.4601V24.487H32.5941V26.541ZM32.5941 18.324V20.378H42.8641V18.324H32.5941Z"
+          fill="white"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M65.46 8.054H22.323V42.973H24.377V10.108H65.46V8.054Z"
+          fill="#E68C4F"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M65.46 10.108H24.377V42.973H26.431V12.163H65.46V10.108Z"
+          fill="#D26218"
+        />
+        {/* Document/Article symbols inside folder */}
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M36 22H60V24H62V32H60V34H36V32H34V24H36V22Z"
+          fill="#64AAE8"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M38 24H58V26H38V24ZM38 26H54V28H38V26ZM38 28H56V30H38V28ZM38 30H52V32H38V30Z"
+          fill="white"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M28.4861 42.973H79.8381V22.433H71.6221V24.487H77.7841V30.649H75.7301V32.703H73.6761V34.757H75.7301V32.703H77.7841V34.757H75.7301V36.811H73.6761V38.865H71.6221V40.919H69.5671V38.865H67.5131V40.919H28.4861V42.973Z"
+          fill="#E0D9D0"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M83.946 88.162H12.054V90.216H83.946V88.162ZM86 88.162V45.027H83.946V88.162H86ZM12.054 88.162V45.027H10V88.162H12.054Z"
+          fill="#DCA460"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M79.838 22.432H71.622V14.216H28.487V42.973H79.837L79.838 22.432Z"
+          fill="black"
+        />
+      </g>
+    </svg>
+  );
+}
+
+export function AboutIcon() {
+  return (
+    <svg width="96" height="96" viewBox="0 0 96 96" fill="none">
+      <mask
+        id="mask0_about"
+        maskUnits="userSpaceOnUse"
+        x="10"
+        y="6"
+        width="76"
+        height="85"
+      >
+        <path d="M10 6H86V90.216H10V6Z" fill="white" />
+      </mask>
+      <g mask="url(#mask0_about)">
+        {/* Folder structure */}
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M71.6221 38.865H69.5671V40.919H71.6221V38.865ZM28.4861 14.216V40.92H67.5121V38.866H69.5661L69.5671 36.811ZM32.5941 38.865H65.4601V36.811H32.5941V38.865ZM32.5941 32.703H65.4601V30.649H32.5941V32.703ZM32.5941 26.541H65.4601V24.487H32.5941V26.541ZM32.5941 18.324V20.378H42.8641V18.324H32.5941Z"
+          fill="white"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M65.46 8.054H22.323V42.973H24.377V10.108H65.46V8.054Z"
+          fill="#E68C4F"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M65.46 10.108H24.377V42.973H26.431V12.163H65.46V10.108Z"
+          fill="#D26218"
+        />
+        {/* Person/Profile symbol inside folder */}
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M46 20H50V22H52V26H50V28H46V26H44V22H46V20Z"
+          fill="#F168AA"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M42 28H54V30H56V34H54V36H42V34H40V30H42V28Z"
+          fill="#F168AA"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M48 22H50V24H48V22Z"
+          fill="black"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M46 22H48V24H46V22Z"
+          fill="black"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M47 24H49V26H47V24Z"
+          fill="black"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M28.4861 42.973H79.8381V22.433H71.6221V24.487H77.7841V30.649H75.7301V32.703H73.6761V34.757H75.7301V32.703H77.7841V34.757H75.7301V36.811H73.6761V38.865H71.6221V40.919H69.5671V38.865H67.5131V40.919H28.4861V42.973Z"
+          fill="#E0D9D0"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M83.946 88.162H12.054V90.216H83.946V88.162ZM86 88.162V45.027H83.946V88.162H86ZM12.054 88.162V45.027H10V88.162H12.054Z"
+          fill="#DCA460"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M79.838 22.432H71.622V14.216H28.487V42.973H79.837L79.838 22.432Z"
+          fill="black"
+        />
+      </g>
+    </svg>
+  );
+}
+
 export function YourBagIcon() {
   return (
     <img
