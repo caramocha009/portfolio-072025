@@ -141,28 +141,28 @@ export default function Index() {
     let headerColor = "#5088BA";
 
     if (type === "Articles") {
-      bgColor = "#E8E8E8";
-      headerColor = "#D0D0D0";
+      bgColor = "#FFFFFF";
+      headerColor = "#FFFFFF";
       windowContent = (
         <div className="bg-white h-full overflow-y-auto">
           {/* Article 1 */}
-          <div className="flex items-start gap-4 p-4 border-b border-gray-200">
+          <div className="flex items-start gap-2 sm:gap-4 p-2 sm:p-4 border-b border-gray-200">
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fcaaef5fe4be442b7aafe8dfdaf76973a?format=webp&width=800"
               alt="Article thumbnail"
-              className="w-16 h-16 object-cover rounded"
+              className="w-12 h-12 sm:w-16 sm:h-16 object-cover rounded flex-shrink-0"
             />
-            <div className="flex-1">
-              <h3 className="text-lg font-normal text-black leading-tight mb-2">
+            <div className="flex-1 min-w-0">
+              <h3 className="text-sm sm:text-lg font-normal text-black leading-tight mb-2 truncate">
                 Cyan Banister — From Homeless and Broke to Top Angel Investo...
               </h3>
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <div className="w-4 h-4 bg-blue-500 rounded text-white text-xs flex items-center justify-center font-bold">
+              <div className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm text-gray-600">
+                <div className="w-3 h-3 sm:w-4 sm:h-4 bg-blue-500 rounded text-white text-xs flex items-center justify-center font-bold flex-shrink-0">
                   A
                 </div>
-                <span>Tim</span>
-                <span>•</span>
-                <span>Tim Ferriss</span>
+                <span className="truncate">Tim</span>
+                <span className="flex-shrink-0">•</span>
+                <span className="truncate">Tim Ferriss</span>
               </div>
             </div>
           </div>
