@@ -149,13 +149,13 @@ export function DraggableWindow({
     >
       {/* Window Header */}
       <div
-        className="h-8 border-b-2 border-black flex items-center cursor-move"
+        className="h-8 border-b-2 border-black relative cursor-move"
         style={{ backgroundColor: headerColor }}
         onMouseDown={handleMouseDown}
         onTouchStart={handleTouchStart}
       >
-        {/* Window controls - horizontal lines */}
-        <div className="flex flex-col items-center gap-1 flex-1 pl-2">
+        {/* Full-width horizontal lines */}
+        <div className="absolute inset-0 flex flex-col justify-center gap-1 px-2">
           <div className="w-full h-0.5 bg-black" />
           <div className="w-full h-0.5 bg-black" />
           <div className="w-full h-0.5 bg-black" />
@@ -163,17 +163,22 @@ export function DraggableWindow({
 
         {/* Window Title */}
         {title && (
-          <div className="text-black text-sm font-bold flex-1 chicago-font text-center">
-            {title}
+          <div className="absolute inset-0 flex items-center justify-center px-8">
+            <div
+              className="text-black text-sm font-bold chicago-font text-center bg-opacity-90 px-2 rounded-sm"
+              style={{ backgroundColor: headerColor }}
+            >
+              {title}
+            </div>
           </div>
         )}
 
         {/* Close button */}
         {onClose && (
-          <div className="flex-1 flex justify-end pr-2">
+          <div className="absolute right-2 top-1/2 transform -translate-y-1/2">
             <button
               onClick={onClose}
-              className="w-6 h-6 flex items-center justify-center hover:bg-black hover:bg-opacity-10"
+              className="w-6 h-6 flex items-center justify-center hover:bg-black hover:bg-opacity-10 bg-opacity-90 rounded-sm"
               style={{ backgroundColor: headerColor }}
             >
               <svg width="14" height="20" viewBox="0 0 14 20" fill="none">
