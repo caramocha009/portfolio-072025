@@ -128,7 +128,7 @@ export function DraggableWindow({
       setIsResizing(false);
     };
 
-    if (isDragging) {
+    if (isDragging || isResizing) {
       document.addEventListener("mousemove", handleMouseMove);
       document.addEventListener("mouseup", handleMouseUp);
       document.addEventListener("touchmove", handleTouchMove, {
@@ -143,7 +143,18 @@ export function DraggableWindow({
       document.removeEventListener("touchmove", handleTouchMove);
       document.removeEventListener("touchend", handleTouchEnd);
     };
-  }, [isDragging, dragStart, width, height]);
+  }, [
+    isDragging,
+    isResizing,
+    dragStart,
+    resizeStart,
+    size.width,
+    size.height,
+    minWidth,
+    minHeight,
+    maxWidth,
+    maxHeight,
+  ]);
 
   const handleMouseDown = (e: React.MouseEvent) => {
     setDragStart({
