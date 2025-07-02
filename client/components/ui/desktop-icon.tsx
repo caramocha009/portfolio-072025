@@ -16,7 +16,7 @@ export function DesktopIcon({
   return (
     <button
       onClick={onClick}
-      className={`flex flex-col items-center gap-2 p-2 hover:bg-white hover:bg-opacity-10 rounded transition-colors ${className}`}
+      className={`flex flex-col items-center gap-2 p-2 hover:opacity-80 transition-opacity ${className}`}
     >
       <div className="w-24 h-24 flex items-center justify-center">{icon}</div>
       <div
