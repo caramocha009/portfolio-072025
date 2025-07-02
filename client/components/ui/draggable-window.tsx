@@ -138,6 +138,7 @@ export function DraggableWindow({
         className="h-8 border-b-2 border-black flex items-center justify-between px-1 cursor-move"
         style={{ backgroundColor: headerColor }}
         onMouseDown={handleMouseDown}
+        onTouchStart={handleTouchStart}
       >
         <div className="flex-1" />
 
