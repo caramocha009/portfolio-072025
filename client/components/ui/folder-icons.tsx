@@ -414,6 +414,16 @@ export function AboutIcon() {
   );
 }
 
+export function PlaylistIcon() {
+  return (
+    <img
+      src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fd779dbb45e2c47e1ab4e9c592b1f4234?format=webp&width=800"
+      alt="Playlist"
+      className="w-24 h-24"
+    />
+  );
+}
+
 export function YourBagIcon() {
   return (
     <img
