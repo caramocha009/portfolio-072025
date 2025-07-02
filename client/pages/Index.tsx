@@ -736,67 +736,6 @@ export default function Index() {
       )}
 
       {/* Contact Form Modal */}
-              <p className="text-xl text-black mb-6 chicago-font-md">
-                A study in user research and contextual inquiry around kiosk,
-                restaurant, and membership experience of wines
-              </p>
-
-              {/* Project Details - Retro Style */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                <div className="border-4 border-black bg-cyan-300 p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                  <h4 className="font-bold text-black mb-1 chicago-font-sm">
-                    Timeline
-                  </h4>
-                  <p className="text-black chicago-font-sm">
-                    3 Phases (MVP Focus)
-                  </p>
-                </div>
-                <div className="border-4 border-black bg-pink-300 p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                  <h4 className="font-bold text-black mb-1 chicago-font-sm">
-                    My Role
-                  </h4>
-                  <p className="text-black chicago-font-sm">Lead UX Designer</p>
-                </div>
-                <div className="border-4 border-black bg-lime-300 p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                  <h4 className="font-bold text-black mb-1 chicago-font-sm">
-                    Client
-                  </h4>
-                  <p className="text-black chicago-font-sm">
-                    Savvo & Cooper's Hawk
-                  </p>
-                </div>
-                <div className="border-4 border-black bg-orange-300 p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                  <h4 className="font-bold text-black mb-1 chicago-font-sm">
-                    Status
-                  </h4>
-                  <p className="text-black chicago-font-sm">MVP Delivered</p>
-                </div>
-              </div>
-
-              {/* Methodologies - Retro Tags */}
-              <div className="mb-8">
-                <h4 className="font-bold text-black mb-3 chicago-font-lg">
-                  Methodologies
-                </h4>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-blue-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] chicago-font-sm font-bold">
-                    User Research
-                  </span>
-                  <span className="px-3 py-1 bg-green-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] chicago-font-sm font-bold">
-                    Contextual Inquiry
-                  </span>
-                  <span className="px-3 py-1 bg-purple-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] chicago-font-sm font-bold">
-                    Prototyping
-                  </span>
-                  <span className="px-3 py-1 bg-orange-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] chicago-font-sm font-bold">
-                    User Testing
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Project Overview */}
-            <section className="mb-12">
               <div className="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
                 <h2 className="text-2xl font-bold text-black mb-6 chicago-font-xl">
                   Project Overview
