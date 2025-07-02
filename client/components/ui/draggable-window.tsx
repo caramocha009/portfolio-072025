@@ -106,6 +106,9 @@ export function DraggableWindow({
       y: e.clientY - position.y,
     });
     setIsDragging(true);
+    if (onBringToFront) {
+      onBringToFront();
+    }
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -115,6 +118,9 @@ export function DraggableWindow({
       y: touch.clientY - position.y,
     });
     setIsDragging(true);
+    if (onBringToFront) {
+      onBringToFront();
+    }
   };
 
   const handleWindowClick = () => {
