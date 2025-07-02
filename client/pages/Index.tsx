@@ -572,7 +572,7 @@ export default function Index() {
           {/* Works Icon - Top of first column */}
           <div
             className="absolute z-20"
-            style={{ top: "calc(24px + 1vw)", left: "calc(24px + 2vw)" }}
+            style={{ top: "calc(32px + 1vw)", left: "calc(32px + 2vw)" }}
           >
             <DesktopIcon
               icon={<WorksIcon />}
@@ -586,8 +586,8 @@ export default function Index() {
           <div
             className="absolute z-20"
             style={{
-              top: "calc(24px + 1vw + 140px)",
-              left: "calc(24px + 2vw)",
+              top: "calc(32px + 1vw + 160px)",
+              left: "calc(32px + 2vw)",
             }}
           >
             <DesktopIcon
@@ -602,8 +602,8 @@ export default function Index() {
           <div
             className="absolute z-20"
             style={{
-              top: "calc(24px + 1vw + 280px)",
-              left: "calc(24px + 2vw)",
+              top: "calc(32px + 1vw + 320px)",
+              left: "calc(32px + 2vw)",
             }}
           >
             <DesktopIcon
@@ -614,13 +614,12 @@ export default function Index() {
             />
           </div>
 
-          {/* Second Column */}
-          {/* Contact Me Icon - Second column, aligned with About */}
+          {/* Contact Me Icon - Fourth in first column */}
           <div
             className="absolute z-20"
             style={{
-              top: "calc(24px + 1vw + 280px)",
-              left: "calc(24px + 2vw + 200px)",
+              top: "calc(32px + 1vw + 480px)",
+              left: "calc(32px + 2vw)",
             }}
           >
             <DesktopIcon
@@ -634,7 +633,7 @@ export default function Index() {
           {/* Listen Icon - Same row as Works, same column as Recycling Bin */}
           <div
             className="absolute z-20"
-            style={{ top: "calc(24px + 1vw)", right: "calc(24px + 2vw)" }}
+            style={{ top: "calc(32px + 1vw)", right: "calc(32px + 2vw)" }}
           >
             <DesktopIcon
               icon={<PlaylistIcon />}
