@@ -121,9 +121,39 @@ function MediumArticleEmbed({
     );
   }
 
+  // Extract first image from content
+  const extractFirstImage = (content: string) => {
+    const firstImageMatch = content.match(/<img[^>]*>/);
+    if (firstImageMatch) {
+      const firstImage =
+        firstImageMatch[0]
+          .replace(/onclick="[^"]*"/g, "")
+          .replace(/style="[^"]*"/g, "") +
+        " onclick=\"window.openLightbox('" +
+        firstImageMatch[0].match(/src="([^"]*)"/)?.[1] +
+        '\')" style="cursor: pointer; width: 100%; height: auto; margin: 0 auto 48px auto; display: block; max-width: 782px;"';
+      const contentWithoutFirstImage = content.replace(/<img[^>]*>/, "");
+      return { firstImage, remainingContent: contentWithoutFirstImage };
+    }
+    return { firstImage: "", remainingContent: content };
+  };
+
+  const { firstImage, remainingContent } = extractFirstImage(
+    articleContent.content || articleContent.description || "",
+  );
+
   return (
     <>
       <article className="text-black max-w-4xl mx-auto">
+        {/* First Image */}
+        {firstImage && (
+          <div
+            style={{ maxWidth: "782px", margin: "0 auto 48px auto" }}
+            dangerouslySetInnerHTML={{ __html: firstImage }}
+          />
+        )}
+
+        {/* Title */}
         <h1
           style={{
             fontFamily: 'sohne, "Helvetica Neue", Helvetica, Arial, sans-serif',
@@ -133,13 +163,14 @@ function MediumArticleEmbed({
             letterSpacing: "-0.02em",
             color: "#242424",
             maxWidth: "782px",
-            margin: "48px auto 24px auto",
+            margin: "0 auto 24px auto",
             textAlign: "left",
           }}
         >
           Savvo Digital Sommelier
         </h1>
 
+        {/* Subtitle */}
         <h2
           style={{
             fontFamily: 'sohne, "Helvetica Neue", Helvetica, Arial, sans-serif',
@@ -166,12 +197,10 @@ function MediumArticleEmbed({
           }}
           dangerouslySetInnerHTML={{
             __html: (() => {
-              let content =
-                articleContent.content || articleContent.description;
-              if (!content) return "";
+              if (!remainingContent) return "";
 
               // Split into parts and remove the last img tag
-              const parts = content.split(/(<img[^>]*>)/);
+              const parts = remainingContent.split(/(<img[^>]*>)/);
               let lastImgIndex = -1;
 
               // Find the last img tag
