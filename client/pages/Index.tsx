@@ -246,13 +246,12 @@ export default function Index() {
 
       {/* Main Desktop Area */}
       <main className="relative h-[calc(100vh-48px)] overflow-hidden">
-        {/* Desktop Icons - Responsive Layout */}
+        {/* Desktop Icons - First Column */}
         <div
           className="absolute z-20"
           style={{ left: "calc(8px + 2vw)", top: "calc(16px + 2vw)" }}
         >
-          {/* Mobile: Grid layout optimized for 5 icons, Desktop: Column layout */}
-          <div className="grid grid-cols-2 gap-1 sm:gap-2 md:grid-cols-1 md:gap-4 max-h-[calc(100vh-120px)] overflow-y-auto">
+          <div className="grid grid-cols-2 gap-1 sm:gap-2 md:grid-cols-1 md:gap-4">
             <DesktopIcon
               icon={<WorksIcon />}
               label="Works"
@@ -277,13 +276,20 @@ export default function Index() {
               onClick={() => openNewWindow("About")}
               className="scale-75 md:scale-100"
             />
-            <DesktopIcon
-              icon={<PlaylistIcon />}
-              label="Playlist"
-              onClick={() => openNewWindow("Playlist")}
-              className="scale-75 md:scale-100"
-            />
           </div>
+        </div>
+
+        {/* Desktop Icons - Second Column (Playlist) */}
+        <div
+          className="absolute z-20"
+          style={{ left: "calc(180px + 2vw)", top: "calc(16px + 2vw)" }}
+        >
+          <DesktopIcon
+            icon={<PlaylistIcon />}
+            label="Playlist"
+            onClick={() => openNewWindow("Playlist")}
+            className="scale-75 md:scale-100"
+          />
         </div>
 
         {/* Your Bag Icon - Top Right */}
