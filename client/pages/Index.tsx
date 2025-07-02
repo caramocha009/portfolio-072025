@@ -287,7 +287,10 @@ export default function Index() {
         </div>
 
         {/* Your Bag Icon - Top Right */}
-        <div className="absolute right-2 md:right-14 top-4 md:top-12 z-20">
+        <div
+          className="absolute z-20"
+          style={{ right: "calc(8px + 2vw)", top: "calc(16px + 2vw)" }}
+        >
           <DesktopIcon
             icon={<YourBagIcon />}
             label="Your Bag"
