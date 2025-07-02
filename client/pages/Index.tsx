@@ -464,8 +464,10 @@ export default function Index() {
                 >
                   📂 Works
                 </button>
-                <span className="text-black chicago-font-sm font-bold">→</span>
-                <span className="px-3 py-1 bg-yellow-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] chicago-font-sm font-bold">
+                <span className="text-black font-mono text-sm font-bold">
+                  →
+                </span>
+                <span className="px-3 py-1 bg-yellow-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] font-mono text-sm font-bold">
                   Savvo Digital Sommelier
                 </span>
               </div>
