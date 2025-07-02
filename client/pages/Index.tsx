@@ -170,7 +170,7 @@ export default function Index() {
         </div>
 
         {/* Social Media Icons */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-1 md:gap-3">
           {/* Twitter/X */}
           <button className="text-desktop-blue hover:opacity-80">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
