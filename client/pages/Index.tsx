@@ -168,41 +168,43 @@ export default function Index() {
           </div>
 
           {/* Article 2 */}
-          <div className="flex items-start gap-4 p-4 border-b border-gray-200">
+          <div className="flex items-start gap-2 sm:gap-4 p-2 sm:p-4 border-b border-gray-200">
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fcaaef5fe4be442b7aafe8dfdaf76973a?format=webp&width=800"
               alt="Article thumbnail"
-              className="w-16 h-16 object-cover rounded"
+              className="w-12 h-12 sm:w-16 sm:h-16 object-cover rounded flex-shrink-0"
             />
-            <div className="flex-1">
-              <h3 className="text-lg font-normal text-black leading-tight mb-2">
+            <div className="flex-1 min-w-0">
+              <h3 className="text-sm sm:text-lg font-normal text-black leading-tight mb-2 truncate">
                 Cyan Banister, Arielle Zuckerberg Raise $181 Million to Back...
               </h3>
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <div className="w-4 h-4 bg-black rounded text-white text-xs flex items-center justify-center font-bold">
+              <div className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm text-gray-600">
+                <div className="w-3 h-3 sm:w-4 sm:h-4 bg-black rounded text-white text-xs flex items-center justify-center font-bold flex-shrink-0">
                   B
                 </div>
-                <span>Bloomberg</span>
-                <span>•</span>
-                <span>Lizette Chapman</span>
+                <span className="truncate">Bloomberg</span>
+                <span className="flex-shrink-0">•</span>
+                <span className="truncate">Lizette Chapman</span>
               </div>
             </div>
           </div>
 
           {/* Article 3 */}
-          <div className="flex items-start gap-4 p-4 border-b border-gray-200">
-            <div className="w-16 h-16 bg-gray-800 rounded flex items-center justify-center">
-              <span className="text-white font-bold text-lg">VB</span>
+          <div className="flex items-start gap-2 sm:gap-4 p-2 sm:p-4 border-b border-gray-200">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gray-800 rounded flex items-center justify-center flex-shrink-0">
+              <span className="text-white font-bold text-sm sm:text-lg">
+                VB
+              </span>
             </div>
-            <div className="flex-1">
-              <h3 className="text-lg font-normal text-black leading-tight mb-2">
+            <div className="flex-1 min-w-0">
+              <h3 className="text-sm sm:text-lg font-normal text-black leading-tight mb-2 truncate">
                 Zivity founder finally takes it all off
               </h3>
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <span className="text-red-600 font-bold">VB</span>
-                <span>VentureBeat</span>
-                <span>•</span>
-                <span>Paul Boutin</span>
+              <div className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm text-gray-600">
+                <span className="text-red-600 font-bold flex-shrink-0">VB</span>
+                <span className="truncate">VentureBeat</span>
+                <span className="flex-shrink-0">•</span>
+                <span className="truncate">Paul Boutin</span>
               </div>
             </div>
           </div>
