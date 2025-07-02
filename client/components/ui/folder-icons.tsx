@@ -258,66 +258,11 @@ export function ArticlesIcon() {
 
 export function AboutIcon() {
   return (
-    <svg
-      width="96"
-      height="96"
-      viewBox="0 0 96 96"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      {/* Base folder structure */}
-      <rect
-        x="20"
-        y="16"
-        width="56"
-        height="8"
-        fill="#E68C4F"
-        stroke="#000"
-        strokeWidth="2"
-      />
-      <rect
-        x="18"
-        y="24"
-        width="60"
-        height="48"
-        fill="#F2B973"
-        stroke="#000"
-        strokeWidth="2"
-      />
-      <rect
-        x="18"
-        y="24"
-        width="60"
-        height="8"
-        fill="#E68C4F"
-        stroke="#000"
-        strokeWidth="2"
-      />
-
-      {/* Person icon inside folder */}
-      <circle
-        cx="48"
-        cy="42"
-        r="6"
-        fill="#F168AA"
-        stroke="#000"
-        strokeWidth="2"
-      />
-      <rect
-        x="40"
-        y="52"
-        width="16"
-        height="12"
-        fill="#F168AA"
-        stroke="#000"
-        strokeWidth="2"
-      />
-
-      {/* Face details */}
-      <circle cx="45" cy="40" r="1" fill="#000" />
-      <circle cx="51" cy="40" r="1" fill="#000" />
-      <rect x="46" y="44" width="4" height="1" fill="#000" />
-    </svg>
+    <img
+      src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F65b5045c8e824b6aa99dd17191c16c89?format=webp&width=800"
+      alt="About"
+      className="w-24 h-24"
+    />
   );
 }
 
