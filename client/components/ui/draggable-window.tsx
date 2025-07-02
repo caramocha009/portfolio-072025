@@ -16,6 +16,7 @@ interface DraggableWindowProps {
   zIndex?: number;
   onBringToFront?: () => void;
   title?: string;
+  resizable?: boolean;
 }
 
 export function DraggableWindow({
