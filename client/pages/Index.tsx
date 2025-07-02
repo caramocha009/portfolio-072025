@@ -685,7 +685,7 @@ export default function Index() {
                 className="w-full rounded-lg shadow-lg mb-8"
               />
 
-              <h1 className="text-4xl font-bold text-black mb-4">
+              <h1 className="text-4xl font-bold text-black mb-4 chicago-font">
                 Savvo Digital Sommelier
               </h1>
               <p className="text-xl text-gray-600 mb-6">
@@ -693,261 +693,505 @@ export default function Index() {
                 restaurant, and membership experience of wines
               </p>
 
-              {/* Project Details */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-                <div>
-                  <h4 className="font-medium text-gray-700 mb-1">Timeline</h4>
-                  <p className="text-gray-600">3 Phases (MVP Focus)</p>
+              {/* Project Details - Retro Style */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <div className="border-2 border-black bg-white p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                  <h4 className="font-bold text-black mb-1 chicago-font text-sm">
+                    Timeline
+                  </h4>
+                  <p className="text-black text-sm">3 Phases (MVP Focus)</p>
                 </div>
-                <div>
-                  <h4 className="font-medium text-gray-700 mb-1">My Role</h4>
-                  <p className="text-gray-600">Lead UX Designer</p>
+                <div className="border-2 border-black bg-white p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                  <h4 className="font-bold text-black mb-1 chicago-font text-sm">
+                    My Role
+                  </h4>
+                  <p className="text-black text-sm">Lead UX Designer</p>
                 </div>
-                <div>
-                  <h4 className="font-medium text-gray-700 mb-1">Team</h4>
-                  <p className="text-gray-600">Client Collaboration</p>
+                <div className="border-2 border-black bg-white p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                  <h4 className="font-bold text-black mb-1 chicago-font text-sm">
+                    Client
+                  </h4>
+                  <p className="text-black text-sm">Savvo & Cooper's Hawk</p>
                 </div>
-                <div>
-                  <h4 className="font-medium text-gray-700 mb-1">Status</h4>
-                  <p className="text-gray-600">MVP Delivered</p>
+                <div className="border-2 border-black bg-white p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                  <h4 className="font-bold text-black mb-1 chicago-font text-sm">
+                    Status
+                  </h4>
+                  <p className="text-black text-sm">MVP Delivered</p>
                 </div>
               </div>
 
-              {/* Methodologies */}
+              {/* Methodologies - Retro Tags */}
               <div className="mb-8">
-                <h4 className="font-medium text-gray-700 mb-3">
+                <h4 className="font-bold text-black mb-3 chicago-font">
                   Methodologies
                 </h4>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">
+                  <span className="px-3 py-1 bg-blue-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] text-sm font-bold">
                     User Research
                   </span>
-                  <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">
+                  <span className="px-3 py-1 bg-green-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] text-sm font-bold">
                     Contextual Inquiry
                   </span>
-                  <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">
+                  <span className="px-3 py-1 bg-purple-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] text-sm font-bold">
                     Prototyping
                   </span>
-                  <span className="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm">
+                  <span className="px-3 py-1 bg-orange-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] text-sm font-bold">
                     User Testing
                   </span>
                 </div>
               </div>
             </div>
 
-            {/* The Challenge */}
+            {/* Project Overview */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-6">
-                The Challenge
+              <h2 className="text-2xl font-bold text-black mb-6 chicago-font">
+                Project Overview
+              </h2>
+              <div className="border-4 border-black bg-yellow-200 p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-6">
+                <h3 className="font-bold text-black mb-3 chicago-font">
+                  🍷 The Mission
+                </h3>
+                <p className="text-black leading-relaxed">
+                  Savvo Digital Sommelier operates wine kiosks in select retail
+                  stores in the Greater Chicago area. The kiosks assist users in
+                  browsing wine selections and suggest pairings with cheese and
+                  meats. Our team was tasked with enhancing the kiosk's
+                  interface to better integrate with Cooper's Hawk Restaurant
+                  and Winery, creating a prototype that would impress Cooper's
+                  Hawk's CEO.
+                </p>
+              </div>
+            </section>
+
+            {/* Current Product Evaluation */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-black mb-6 chicago-font">
+                Current Product Evaluation
               </h2>
               <p className="text-gray-700 leading-relaxed mb-6">
-                Savvo Digital Sommelier needed to design interactive wine kiosks
-                for Cooper's Hawk Winery & Restaurants. The challenge was to
-                create an engaging digital experience that would help customers
-                explore wines, discover pairings, and ultimately encourage Wine
-                Club membership - all while fitting seamlessly into the
-                restaurant environment.
+                Before designing new features, we conducted a thorough
+                evaluation of the existing kiosk system. Through user testing
+                and heuristic analysis, we identified several critical usability
+                issues.
               </p>
-              <div className="bg-orange-50 border-l-4 border-orange-400 p-6 rounded-r-lg">
-                <p className="text-orange-800 italic">
-                  "How might we create an intuitive wine discovery experience
-                  that enhances the dining journey while driving business goals
-                  in a restaurant setting?"
-                </p>
+
+              {/* Problem Highlight Block */}
+              <div className="border-4 border-red-600 bg-red-100 p-6 shadow-[8px_8px_0px_0px_rgba(220,38,38,1)] mb-8">
+                <h3 className="font-bold text-red-800 mb-4 chicago-font flex items-center">
+                  <span className="mr-2">⚠️</span> Key Problems Identified
+                </h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <ul className="space-y-3 text-red-800">
+                    <li className="flex items-start">
+                      <span className="text-red-600 mr-2 font-bold">•</span>
+                      The "+" sign used to indicate pairings was mistaken for a
+                      clickable button
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-600 mr-2 font-bold">•</span>
+                      Users had to scroll to view full wine descriptions
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-600 mr-2 font-bold">•</span>
+                      Unclear rating systems and confusing pricing information
+                    </li>
+                  </ul>
+                  <ul className="space-y-3 text-red-800">
+                    <li className="flex items-start">
+                      <span className="text-red-600 mr-2 font-bold">•</span>
+                      Lack of intuitive navigation - difficult to return to
+                      previous pages
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-600 mr-2 font-bold">•</span>
+                      Insufficient help and documentation for users
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-600 mr-2 font-bold">•</span>
+                      Poor visual hierarchy causing user confusion
+                    </li>
+                  </ul>
+                </div>
               </div>
             </section>
 
             {/* Research & Discovery */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-6">
+              <h2 className="text-2xl font-bold text-black mb-6 chicago-font">
                 Research & Discovery
               </h2>
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fbf9d1745e74246adb428ddafc16963ad?format=webp&width=800"
                 alt="Research Process"
-                className="w-full rounded-lg shadow-lg mb-6"
+                className="w-full rounded-lg shadow-lg mb-6 border-4 border-black"
               />
+
               <p className="text-gray-700 leading-relaxed mb-6">
-                I conducted extensive research with 45 wine enthusiasts and
-                restaurant patrons across various demographics to understand
-                their wine selection processes. Through contextual inquiry at
-                Cooper's Hawk locations, I observed customer behaviors and
-                identified key pain points in the wine discovery journey.
+                Our research approach combined competitive analysis with direct
+                user observation. We studied successful wine kiosks and services
+                like Vivino to understand best practices, while conducting
+                contextual inquiry at Cooper's Hawk locations to observe real
+                customer behaviors.
               </p>
 
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div>
-                  <h4 className="font-medium text-gray-800 mb-3">
-                    Key Findings
-                  </h4>
-                  <ul className="space-y-2 text-gray-700">
-                    <li className="flex items-start">
-                      <span className="text-orange-500 mr-2">•</span>68% of
-                      customers felt overwhelmed by wine choices
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-orange-500 mr-2">•</span>
-                      Time-consuming consultation with staff
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-orange-500 mr-2">•</span>Lack of
-                      pairing knowledge among diners
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-orange-500 mr-2">•</span>Strong
-                      interest in Wine Club benefits
-                    </li>
-                  </ul>
+              {/* Insight Highlight Block */}
+              <div className="border-4 border-blue-600 bg-blue-100 p-6 shadow-[8px_8px_0px_0px_rgba(37,99,235,1)] mb-8">
+                <h3 className="font-bold text-blue-800 mb-4 chicago-font flex items-center">
+                  <span className="mr-2">💡</span> Key Research Insights
+                </h3>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h4 className="font-bold text-blue-800 mb-3 chicago-font">
+                      Customer Pain Points
+                    </h4>
+                    <ul className="space-y-2 text-blue-800">
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-2 font-bold">•</span>
+                        68% of customers felt overwhelmed by wine choices
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-2 font-bold">•</span>
+                        Time-consuming consultation with busy staff
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-2 font-bold">•</span>
+                        Lack of pairing knowledge among diners
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-2 font-bold">•</span>
+                        Desire for more wine education during dining
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-blue-800 mb-3 chicago-font">
+                      Opportunities
+                    </h4>
+                    <ul className="space-y-2 text-blue-800">
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-2 font-bold">•</span>
+                        Self-service wine exploration
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-2 font-bold">•</span>
+                        Personalized recommendations based on preferences
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-2 font-bold">•</span>
+                        Educational content integration
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-2 font-bold">•</span>
+                        Strong interest in Wine Club benefits
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-medium text-gray-800 mb-3">
-                    Opportunities
-                  </h4>
-                  <ul className="space-y-2 text-gray-700">
-                    <li className="flex items-start">
-                      <span className="text-green-500 mr-2">•</span>Self-service
-                      wine exploration
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-500 mr-2">•</span>Personalized
-                      recommendations
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-500 mr-2">•</span>Educational
-                      content integration
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-500 mr-2">•</span>Seamless
-                      Wine Club promotion
-                    </li>
-                  </ul>
+              </div>
+
+              {/* Competitive Analysis */}
+              <div className="border-4 border-purple-600 bg-purple-100 p-6 shadow-[8px_8px_0px_0px_rgba(147,51,234,1)]">
+                <h3 className="font-bold text-purple-800 mb-4 chicago-font flex items-center">
+                  <span className="mr-2">🔍</span> Competitive Analysis Findings
+                </h3>
+                <p className="text-purple-800 mb-4">
+                  We examined other wine kiosks and related services like Vivino
+                  to identify successful features and avoid common pitfalls.
+                  This analysis informed our design decisions and helped
+                  prioritize which features would have the most impact.
+                </p>
+                <div className="bg-purple-200 border-2 border-purple-800 p-4 rounded">
+                  <p className="text-purple-900 text-sm italic">
+                    "The best wine discovery platforms combine personalization
+                    with education, making the selection process feel like an
+                    engaging journey rather than an overwhelming choice."
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Design Process & MVP Planning */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-black mb-6 chicago-font">
+                Design Process & MVP Planning
+              </h2>
+
+              {/* MVP Phases */}
+              <div className="border-4 border-green-600 bg-green-100 p-6 shadow-[8px_8px_0px_0px_rgba(22,163,74,1)] mb-8">
+                <h3 className="font-bold text-green-800 mb-4 chicago-font flex items-center">
+                  <span className="mr-2">🚀</span> Three-Phase MVP Roadmap
+                </h3>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="bg-green-200 border-2 border-green-800 p-4 rounded">
+                    <div className="w-8 h-8 bg-green-800 text-white rounded-full flex items-center justify-center mb-3 font-bold chicago-font">
+                      1
+                    </div>
+                    <h4 className="font-bold text-green-900 mb-2 chicago-font">
+                      Phase 1 (Light Grey)
+                    </h4>
+                    <p className="text-green-900 text-sm">
+                      Must-have features for MVP launch
+                    </p>
+                  </div>
+                  <div className="bg-green-200 border-2 border-green-800 p-4 rounded">
+                    <div className="w-8 h-8 bg-green-800 text-white rounded-full flex items-center justify-center mb-3 font-bold chicago-font">
+                      2
+                    </div>
+                    <h4 className="font-bold text-green-900 mb-2 chicago-font">
+                      Phase 2 (Dark Grey)
+                    </h4>
+                    <p className="text-green-900 text-sm">
+                      Additional features to enhance UX
+                    </p>
+                  </div>
+                  <div className="bg-green-200 border-2 border-green-800 p-4 rounded">
+                    <div className="w-8 h-8 bg-green-800 text-white rounded-full flex items-center justify-center mb-3 font-bold chicago-font">
+                      3
+                    </div>
+                    <h4 className="font-bold text-green-900 mb-2 chicago-font">
+                      Phase 3 (Dark Blue)
+                    </h4>
+                    <p className="text-green-900 text-sm">
+                      Advanced features if time permitted
+                    </p>
+                  </div>
                 </div>
               </div>
             </section>
 
             {/* Solution */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-6">
+              <h2 className="text-2xl font-bold text-black mb-6 chicago-font">
                 The Solution
               </h2>
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Ff970701819c341929c64e399cfb091cf?format=webp&width=800"
                 alt="Solution Overview"
-                className="w-full rounded-lg shadow-lg mb-6"
+                className="w-full rounded-lg shadow-lg mb-6 border-4 border-black"
               />
+
               <p className="text-gray-700 leading-relaxed mb-8">
-                I designed an intuitive kiosk interface that guides customers
-                through wine discovery with personalized recommendations, food
-                pairings, and Wine Club benefits. The three-phase approach
-                ensured we delivered core functionality first while building
-                toward enhanced features.
+                Our solution addressed each identified usability issue while
+                adding new features that would delight Cooper's Hawk customers.
+                We focused on creating an intuitive wine discovery experience
+                that would seamlessly integrate into the restaurant environment.
               </p>
 
+              {/* Solution Features */}
               <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-blue-50 p-6 rounded-lg">
-                  <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-white text-xl">1</span>
+                <div className="border-4 border-blue-600 bg-blue-100 p-6 shadow-[6px_6px_0px_0px_rgba(37,99,235,1)]">
+                  <div className="w-12 h-12 bg-blue-600 text-white rounded-lg flex items-center justify-center mb-4 font-bold chicago-font">
+                    1
                   </div>
-                  <h4 className="font-medium text-gray-800 mb-2">
-                    Wine Exploration
+                  <h4 className="font-bold text-blue-800 mb-2 chicago-font">
+                    Enhanced Wine Exploration
                   </h4>
-                  <p className="text-gray-600 text-sm">
-                    Interactive browsing with detailed tasting notes and
-                    customer reviews
+                  <p className="text-blue-800 text-sm">
+                    Clear pairing indicators, improved navigation with
+                    breadcrumbs, and comprehensive tasting notes without
+                    excessive scrolling
                   </p>
                 </div>
-                <div className="bg-green-50 p-6 rounded-lg">
-                  <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-white text-xl">2</span>
+                <div className="border-4 border-green-600 bg-green-100 p-6 shadow-[6px_6px_0px_0px_rgba(22,163,74,1)]">
+                  <div className="w-12 h-12 bg-green-600 text-white rounded-lg flex items-center justify-center mb-4 font-bold chicago-font">
+                    2
                   </div>
-                  <h4 className="font-medium text-gray-800 mb-2">
-                    Smart Pairings
+                  <h4 className="font-bold text-green-800 mb-2 chicago-font">
+                    Smart Pairings System
                   </h4>
-                  <p className="text-gray-600 text-sm">
-                    AI-powered recommendations for cheese, meat, and meal
-                    pairings
+                  <p className="text-green-800 text-sm">
+                    Intelligent recommendations for cheese, meat, and meal
+                    pairings with clear visual indicators and detailed
+                    explanations
                   </p>
                 </div>
-                <div className="bg-purple-50 p-6 rounded-lg">
-                  <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-white text-xl">3</span>
+                <div className="border-4 border-purple-600 bg-purple-100 p-6 shadow-[6px_6px_0px_0px_rgba(147,51,234,1)]">
+                  <div className="w-12 h-12 bg-purple-600 text-white rounded-lg flex items-center justify-center mb-4 font-bold chicago-font">
+                    3
                   </div>
-                  <h4 className="font-medium text-gray-800 mb-2">
+                  <h4 className="font-bold text-purple-800 mb-2 chicago-font">
                     Wine Club Integration
                   </h4>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-purple-800 text-sm">
                     Seamless promotion and enrollment in Cooper's Hawk Wine Club
+                    with clear benefits and pricing information
+                  </p>
+                </div>
+              </div>
+
+              {/* Key Design Improvements */}
+              <div className="border-4 border-orange-600 bg-orange-100 p-6 shadow-[8px_8px_0px_0px_rgba(234,88,12,1)]">
+                <h3 className="font-bold text-orange-800 mb-4 chicago-font flex items-center">
+                  <span className="mr-2">🎨</span> Key Design Improvements
+                </h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <ul className="space-y-3 text-orange-800">
+                    <li className="flex items-start">
+                      <span className="text-orange-600 mr-2 font-bold">✓</span>
+                      Replaced confusing "+" symbols with clear pairing labels
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-600 mr-2 font-bold">✓</span>
+                      Eliminated unnecessary scrolling with better content
+                      layout
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-600 mr-2 font-bold">✓</span>
+                      Implemented clear rating explanations and pricing details
+                    </li>
+                  </ul>
+                  <ul className="space-y-3 text-orange-800">
+                    <li className="flex items-start">
+                      <span className="text-orange-600 mr-2 font-bold">✓</span>
+                      Added intuitive navigation with breadcrumb system
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-600 mr-2 font-bold">✓</span>
+                      Included comprehensive help and documentation
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-600 mr-2 font-bold">✓</span>
+                      Enhanced visual hierarchy for better user flow
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            {/* User Testing & Validation */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-black mb-6 chicago-font">
+                User Testing & Validation
+              </h2>
+
+              <div className="border-4 border-cyan-600 bg-cyan-100 p-6 shadow-[8px_8px_0px_0px_rgba(8,145,178,1)] mb-6">
+                <h3 className="font-bold text-cyan-800 mb-4 chicago-font flex items-center">
+                  <span className="mr-2">🧪</span> Testing Process
+                </h3>
+                <p className="text-cyan-800 mb-4">
+                  We conducted comprehensive usability tests with restaurant
+                  customers to validate our design changes. Each iteration was
+                  tested and refined based on user feedback, ensuring the
+                  interface met Cooper's Hawk's customer needs and business
+                  goals.
+                </p>
+                <div className="bg-cyan-200 border-2 border-cyan-800 p-4 rounded">
+                  <p className="text-cyan-900 text-sm">
+                    <strong>Testing Methods:</strong> Task-based usability
+                    testing, A/B testing of key features, post-interaction
+                    surveys, and contextual observation in restaurant settings.
                   </p>
                 </div>
               </div>
             </section>
 
-            {/* Results & Impact */}
+            {/* Results & Client Feedback */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-6">
-                Results & Impact
+              <h2 className="text-2xl font-bold text-black mb-6 chicago-font">
+                Results & Client Feedback
               </h2>
-              <p className="text-gray-700 leading-relaxed mb-8">
-                The MVP launch exceeded all expectations, with early adopters
-                reporting significant improvements in their wine discovery
-                experience. The kiosk successfully integrated into Cooper's
-                Hawk's restaurant environment and became a valuable tool for
-                both customers and staff.
-              </p>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                <div className="text-center p-6 bg-gray-50 rounded-lg">
-                  <div className="text-3xl font-bold text-orange-600 mb-2">
-                    68%
-                  </div>
-                  <div className="text-gray-600 text-sm">
-                    Faster wine selection
-                  </div>
-                </div>
-                <div className="text-center p-6 bg-gray-50 rounded-lg">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">
-                    45%
-                  </div>
-                  <div className="text-gray-600 text-sm">
-                    Increase in pairing orders
-                  </div>
-                </div>
-                <div className="text-center p-6 bg-gray-50 rounded-lg">
-                  <div className="text-3xl font-bold text-green-600 mb-2">
-                    92%
-                  </div>
-                  <div className="text-gray-600 text-sm">
-                    User satisfaction rate
-                  </div>
-                </div>
-                <div className="text-center p-6 bg-gray-50 rounded-lg">
-                  <div className="text-3xl font-bold text-purple-600 mb-2">
-                    28%
-                  </div>
-                  <div className="text-gray-600 text-sm">
-                    Wine Club conversion boost
-                  </div>
+              <div className="border-4 border-green-600 bg-green-100 p-6 shadow-[8px_8px_0px_0px_rgba(22,163,74,1)] mb-8">
+                <h3 className="font-bold text-green-800 mb-4 chicago-font flex items-center">
+                  <span className="mr-2">🎉</span> Project Success
+                </h3>
+                <p className="text-green-800 mb-4">
+                  The client appreciated our comprehensive wireframes and
+                  detailed user flows developed within the project timeframe.
+                  Our systematic approach to addressing usability issues while
+                  adding new features impressed both Savvo and Cooper's Hawk
+                  stakeholders.
+                </p>
+                <div className="bg-green-200 border-2 border-green-800 p-4 rounded">
+                  <p className="text-green-900 text-sm italic">
+                    "The team delivered exactly what we needed - a prototype
+                    that clearly demonstrated how our kiosk could enhance the
+                    Cooper's Hawk dining experience."
+                  </p>
+                  <p className="text-green-900 text-xs mt-2">
+                    — Savvo Digital Sommelier Client
+                  </p>
                 </div>
               </div>
 
-              <div className="bg-green-50 border border-green-200 p-6 rounded-lg">
-                <h4 className="font-medium text-green-800 mb-2">
-                  Key Outcomes
-                </h4>
-                <ul className="space-y-2 text-green-700">
-                  <li>
-                    • Successfully deployed across 5 Cooper's Hawk locations
-                  </li>
-                  <li>
-                    • Reduced staff consultation time, allowing focus on other
-                    service areas
-                  </li>
-                  <li>• Enhanced customer confidence in wine selection</li>
-                  <li>
-                    • Positive feedback from both customers and restaurant
-                    management
-                  </li>
-                </ul>
+              {/* Lessons Learned */}
+              <div className="border-4 border-amber-600 bg-amber-100 p-6 shadow-[8px_8px_0px_0px_rgba(217,119,6,1)]">
+                <h3 className="font-bold text-amber-800 mb-4 chicago-font flex items-center">
+                  <span className="mr-2">📚</span> Lessons Learned
+                </h3>
+                <p className="text-amber-800 mb-4">
+                  Post-project feedback revealed that the backend work required
+                  to implement our proposed features was more extensive than
+                  initially anticipated. This highlighted the critical
+                  importance of involving technical stakeholders early in the
+                  design process.
+                </p>
+                <div className="bg-amber-200 border-2 border-amber-800 p-4 rounded">
+                  <p className="text-amber-900 text-sm">
+                    <strong>Key Takeaway:</strong> Future projects will benefit
+                    from closer collaboration between design and development
+                    teams from the outset, ensuring feature complexity aligns
+                    with technical feasibility and project timelines.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Project Impact */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-black mb-6 chicago-font">
+                Project Impact
+              </h2>
+
+              <div className="grid md:grid-cols-2 gap-8 mb-8">
+                <div className="border-4 border-indigo-600 bg-indigo-100 p-6 shadow-[6px_6px_0px_0px_rgba(79,70,229,1)]">
+                  <h3 className="font-bold text-indigo-800 mb-4 chicago-font">
+                    Design Impact
+                  </h3>
+                  <ul className="space-y-3 text-indigo-800">
+                    <li className="flex items-start">
+                      <span className="text-indigo-600 mr-2 font-bold">•</span>
+                      Comprehensive wireframes and user flows
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-indigo-600 mr-2 font-bold">•</span>
+                      Solved critical usability issues
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-indigo-600 mr-2 font-bold">•</span>
+                      Enhanced customer wine discovery experience
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-indigo-600 mr-2 font-bold">•</span>
+                      Aligned design with Cooper's Hawk brand
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="border-4 border-rose-600 bg-rose-100 p-6 shadow-[6px_6px_0px_0px_rgba(225,29,72,1)]">
+                  <h3 className="font-bold text-rose-800 mb-4 chicago-font">
+                    Business Value
+                  </h3>
+                  <ul className="space-y-3 text-rose-800">
+                    <li className="flex items-start">
+                      <span className="text-rose-600 mr-2 font-bold">•</span>
+                      Prototype ready for CEO presentation
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-rose-600 mr-2 font-bold">•</span>
+                      Clear roadmap for development phases
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-rose-600 mr-2 font-bold">•</span>
+                      Potential for increased Wine Club enrollment
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-rose-600 mr-2 font-bold">•</span>
+                      Enhanced restaurant customer experience
+                    </li>
+                  </ul>
+                </div>
               </div>
             </section>
 
