@@ -121,10 +121,16 @@ export function DraggableWindow({
     }
   };
 
+  const handleWindowClick = () => {
+    if (onBringToFront) {
+      onBringToFront();
+    }
+  };
+
   return (
     <div
       ref={windowRef}
-      className="absolute border-2 border-black shadow-lg z-10 select-none"
+      className="absolute border-2 border-black shadow-lg select-none"
       style={{
         left: position.x,
         top: position.y,
@@ -135,7 +141,9 @@ export function DraggableWindow({
         maxWidth: `${maxWidth}px`,
         maxHeight: `${maxHeight}px`,
         backgroundColor,
+        zIndex,
       }}
+      onClick={handleWindowClick}
     >
       {/* Window Header */}
       <div
