@@ -663,16 +663,23 @@ export default function Index() {
             />
           </div>
 
-          {/* Recycling Icon - Lower Right */}
+          {/* Recycling Icon - Aligned with Listen */}
           <div
             className="absolute z-20"
-            style={{ bottom: "calc(16px + 2vw)", right: "calc(8px + 2vw)" }}
+            style={{
+              top: "calc(32px + 1vw + 160px)",
+              right: "calc(32px + 2vw)",
+            }}
           >
             <DesktopIcon
-              icon={<RecyclingIcon />}
+              icon={
+                <div className="scale-50 md:scale-[0.8]">
+                  <RecyclingIcon />
+                </div>
+              }
               label="Recycling Bin"
               onClick={() => openNewWindow("Recycling Bin")}
-              className="scale-50 md:scale-[0.8]"
+              className=""
             />
           </div>
 
