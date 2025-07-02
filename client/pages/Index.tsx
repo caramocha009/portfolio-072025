@@ -97,32 +97,21 @@ function MediumArticleEmbed() {
   return (
     <>
       <article className="text-black max-w-4xl mx-auto">
-        <div className="medium-article-content">
-          <h1
-            style={{
-              fontFamily: 'Georgia, Charter, "Times New Roman", serif',
-              fontSize: "48px",
-              fontWeight: "800",
-              lineHeight: "1.2",
-              margin: "0 0 16px 0",
-              color: "#242424",
-            }}
-          >
-            Savvo Digital Sommelier
-          </h1>
-          <h2
-            style={{
-              fontFamily:
-                'sohne, "Helvetica Neue", Helvetica, Arial, sans-serif',
-              fontSize: "24px",
-              fontWeight: "600",
-              lineHeight: "1.35",
-              margin: "0 0 40px 0",
-              color: "#242424",
-            }}
-          >
-            A study in user research and contextual inquiry.
-          </h2>
+        <div
+          className="medium-article-content"
+          style={{
+            color: "#242424",
+            letterSpacing: "-0.192px",
+            maxWidth: "782px",
+            margin: "0 auto",
+            padding: "64px 0 24px",
+            fontFamily: 'sohne, "Helvetica Neue", Helvetica, Arial, sans-serif',
+            fontSize: "48px",
+            lineHeight: "57.6px",
+            fontWeight: "400",
+          }}
+        >
+          Savvo Digital Sommelier
         </div>
 
         <div
@@ -159,6 +148,7 @@ function MediumArticleEmbed() {
               let processedContent = parts
                 .join("")
                 .replace(/<h1[^>]*>.*?<\/h1>/i, "") // Completely remove the original title
+                .replace(/<h3[^>]*>\[UX Case Study\][^<]*<\/h3>/i, "") // Remove UX Case Study heading
                 .replace(/\s*<\/p>\s*$/, "</p>") // Clean up trailing whitespace
                 .replace(/(<\/[^>]+>)\s*(<\/[^>]+>)/g, "$1$2"); // Remove spaces between closing tags
 
