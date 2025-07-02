@@ -163,18 +163,19 @@ export function DraggableWindow({
 
         {/* Window Title */}
         {title && (
-          <div className="text-black text-sm font-bold px-4 chicago-font text-center">
+          <div className="text-black text-sm font-bold flex-1 chicago-font text-center">
             {title}
           </div>
         )}
 
         {/* Close button */}
         {onClose && (
-          <button
-            onClick={onClose}
-            className="w-6 h-6 flex items-center justify-center hover:bg-black hover:bg-opacity-10 mr-2 flex-shrink-0"
-            style={{ backgroundColor: headerColor }}
-          >
+          <div className="flex-1 flex justify-end pr-2">
+            <button
+              onClick={onClose}
+              className="w-6 h-6 flex items-center justify-center hover:bg-black hover:bg-opacity-10"
+              style={{ backgroundColor: headerColor }}
+            >
             <svg width="14" height="20" viewBox="0 0 14 20" fill="none">
               <path
                 d="M0.699951 3.7H13.3V16.3H0.699951V3.7Z"
