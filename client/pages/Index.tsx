@@ -30,6 +30,7 @@ export default function Index() {
       headerColor: "#E68C4F",
       initialX: 490,
       initialY: 187,
+      zIndex: 10,
       content: (
         <div className="space-y-5">
           <div>
