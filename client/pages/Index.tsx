@@ -148,8 +148,14 @@ export default function Index() {
       <header className="h-12 bg-white border-b-2 border-black flex items-center justify-between px-2 md:px-4">
         {/* Logo and Brand */}
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-black rounded-sm flex items-center justify-center">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <div className="w-6 h-6 md:w-8 md:h-8 bg-black rounded-sm flex items-center justify-center">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 32 32"
+              fill="none"
+              className="md:w-8 md:h-8"
+            >
               <path
                 fillRule="evenodd"
                 clipRule="evenodd"
@@ -158,7 +164,7 @@ export default function Index() {
               />
             </svg>
           </div>
-          <span className="text-black font-normal text-[17px] leading-6">
+          <span className="hidden sm:block text-black font-normal text-[14px] md:text-[17px] leading-6">
             Cyan Banister
           </span>
         </div>
