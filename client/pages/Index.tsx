@@ -268,17 +268,24 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
         sectionList.push({ id: "project-brief", title: "Project Brief" });
       }
 
-      // Add other sections from headings in the content
+      // Add other sections from headings in the content, excluding "The Challenge"
       const headings = document.querySelectorAll(
         ".medium-article-content h2, .medium-article-content h3",
       );
 
       headings.forEach((heading, index) => {
         const text = heading.textContent?.trim() || "";
-        if (text && text !== "Project Brief") {
+        if (
+          text &&
+          text !== "Project Brief" &&
+          !text.toLowerCase().includes("challenge")
+        ) {
           const id = `section-${index + 1}`;
           heading.setAttribute("id", id);
           sectionList.push({ id, title: text });
+        } else if (text.toLowerCase().includes("challenge")) {
+          // Hide The Challenge heading since we're merging it with Project Brief
+          heading.style.display = "none";
         }
       });
 
