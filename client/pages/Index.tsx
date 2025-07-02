@@ -518,7 +518,7 @@ export default function Index() {
               ) : (
                 <div className="text-center text-gray-500 max-w-sm">
                   <div className="mb-4">
-                    <span className="text-4xl">👋</span>
+                    <span className="text-4xl">��</span>
                   </div>
                   <h3 className="text-lg font-medium mb-2">
                     Hover over a project to see details
@@ -543,7 +543,7 @@ export default function Index() {
           {/* Progress Bar */}
           <div className="fixed top-0 left-0 w-full h-2 bg-black border-b-2 border-black z-[10001]">
             <div
-              className="h-full bg-gradient-to-r from-yellow-400 to-orange-500 transition-all duration-150"
+              className="h-full bg-gradient-to-r from-desktop-blue to-blue-800 transition-all duration-150"
               style={{ width: `${scrollProgress}%` }}
             />
           </div>
@@ -558,26 +558,22 @@ export default function Index() {
                     setCurrentCaseStudy(null);
                     setIsWorksFullscreenOpen(false);
                   }}
-                  className="px-3 py-1 bg-blue-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:bg-blue-300 transition-colors font-mono text-sm font-bold"
+                  className="text-black font-mono text-sm hover:opacity-70 transition-opacity cursor-pointer"
                 >
                   🏠 Home
                 </button>
-                <span className="text-black font-mono text-sm font-bold">
-                  →
-                </span>
+                <span className="text-black font-mono text-sm">→</span>
                 <button
                   onClick={() => {
                     setCurrentCaseStudy(null);
                     setIsWorksFullscreenOpen(true);
                   }}
-                  className="px-3 py-1 bg-green-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:bg-green-300 transition-colors font-mono text-sm font-bold"
+                  className="text-black font-mono text-sm hover:opacity-70 transition-opacity cursor-pointer"
                 >
                   📂 Works
                 </button>
-                <span className="text-black font-mono text-sm font-bold">
-                  →
-                </span>
-                <span className="px-3 py-1 bg-yellow-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] font-mono text-sm font-bold">
+                <span className="text-black font-mono text-sm">→</span>
+                <span className="text-black font-mono text-sm">
                   Savvo Digital Sommelier
                 </span>
               </div>
@@ -588,7 +584,7 @@ export default function Index() {
                   setCurrentCaseStudy(null);
                   setIsWorksFullscreenOpen(true);
                 }}
-                className="px-4 py-2 bg-red-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:bg-red-300 transition-colors font-mono text-sm font-bold"
+                className="px-4 py-2 bg-gray-300 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:bg-gray-200 transition-colors font-mono text-sm"
               >
                 ← Back to Works
               </button>
