@@ -211,10 +211,12 @@ export default function Index() {
         </div>
       );
     } else {
+      bgColor = "#FFFFFF";
+      headerColor = "#FFFFFF";
       windowContent = (
-        <div className="text-black">
-          <h3 className="font-bold text-lg mb-4">{type}</h3>
-          <p>
+        <div className="text-black p-4">
+          <h3 className="font-bold text-lg sm:text-xl mb-4 truncate">{type}</h3>
+          <p className="text-sm sm:text-base leading-relaxed">
             This is a placeholder window for {type}. More content coming soon!
           </p>
         </div>
