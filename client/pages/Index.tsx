@@ -231,14 +231,23 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
 
     // Extract sections from the article content
     const extractSections = () => {
+      const sectionList: Array<{ id: string; title: string }> = [];
+
+      // Add Project Brief as first section (points to title area)
+      const titleElement = document.querySelector(".medium-article-content h1");
+      if (titleElement) {
+        titleElement.setAttribute("id", "project-brief");
+        sectionList.push({ id: "project-brief", title: "Project Brief" });
+      }
+
+      // Add other sections from headings
       const headings = document.querySelectorAll(
         ".medium-article-content h2, .medium-article-content h3",
       );
-      const sectionList: Array<{ id: string; title: string }> = [];
 
       headings.forEach((heading, index) => {
         const text = heading.textContent || "";
-        const id = `section-${index}`;
+        const id = `section-${index + 1}`;
         heading.setAttribute("id", id);
         sectionList.push({ id, title: text });
       });
@@ -248,15 +257,15 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
 
     // Track active section based on scroll position
     const handleScroll = () => {
-      const headings = document.querySelectorAll(
-        ".medium-article-content h2, .medium-article-content h3",
+      const allSections = document.querySelectorAll(
+        '[id^="project-brief"], [id^="section-"]',
       );
       let current = "";
 
-      headings.forEach((heading) => {
-        const rect = heading.getBoundingClientRect();
+      allSections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
         if (rect.top <= 150) {
-          current = heading.getAttribute("id") || "";
+          current = section.getAttribute("id") || "";
         }
       });
 
@@ -277,7 +286,19 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      const container = document.querySelector("[data-case-study-container]");
+      if (container) {
+        const elementRect = element.getBoundingClientRect();
+        const containerRect = container.getBoundingClientRect();
+        const scrollTop = container.scrollTop;
+        const targetPosition =
+          scrollTop + elementRect.top - containerRect.top - 100; // 100px spacing from top
+
+        container.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
+      }
     }
   };
 
