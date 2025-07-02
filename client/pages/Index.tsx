@@ -162,7 +162,7 @@ export default function Index() {
             </svg>
           </div>
           <span className="hidden sm:block text-black font-normal text-[14px] md:text-[17px] leading-6">
-            Cyan Banister
+            Cara Liu
           </span>
         </div>
 
