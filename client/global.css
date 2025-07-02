@@ -110,11 +110,13 @@
     font-family:
       "Courier New", "Monaco", "Lucida Console", "Liberation Mono",
       "DejaVu Sans Mono", monospace;
-    font-weight: bold;
+    font-weight: 900;
     text-rendering: pixelated;
     -webkit-font-smoothing: none;
     -moz-osx-font-smoothing: none;
     font-smooth: never;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
+    letter-spacing: 0.5px;
   }
 
   /* Ensure smooth dragging */
