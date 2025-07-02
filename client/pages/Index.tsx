@@ -510,35 +510,11 @@ export default function Index() {
         <header className="h-12 bg-white border-b-2 border-black flex items-center justify-between px-2 md:px-4">
           {/* Logo and Brand */}
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 md:w-8 md:h-8 bg-green-600 rounded-sm flex items-center justify-center">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                className="md:w-6 md:h-6"
-              >
-                <path
-                  d="M12 2C8.5 2 6 4.5 6 8c0 1.5.5 3 1.5 4l-1.5 4c0 1.5 1 2.5 2.5 2.5h1v1.5c0 1 1 2 2 2h3c1 0 2-1 2-2V18h1c1.5 0 2.5-1 2.5-2.5l-1.5-4c1-1 1.5-2.5 1.5-4 0-3.5-2.5-6-6-6z"
-                  fill="white"
-                />
-                <circle cx="10" cy="7" r="1" fill="black" />
-                <circle cx="14" cy="7" r="1" fill="black" />
-                <path
-                  d="M8 10c0 2 1.5 3.5 4 3.5s4-1.5 4-3.5"
-                  stroke="black"
-                  strokeWidth="1"
-                  fill="none"
-                />
-                <ellipse cx="12" cy="16" rx="4" ry="2" fill="white" />
-                <path
-                  d="M8 16c0-1 1.5-2 4-2s4 1 4 2"
-                  stroke="green"
-                  strokeWidth="1"
-                  fill="none"
-                />
-              </svg>
-            </div>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F06b8f3812aef472ba6f2dbbdc9c5f523?format=webp&width=800"
+              alt="Logo"
+              className="w-6 h-6 md:w-8 md:h-8 object-contain"
+            />
             <span className="hidden sm:block text-black font-normal text-[14px] md:text-[17px] leading-6">
               Cara Liu
             </span>
