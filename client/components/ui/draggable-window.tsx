@@ -105,6 +105,18 @@ export function DraggableWindow({
     }
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (windowRef.current) {
+      const rect = windowRef.current.getBoundingClientRect();
+      const touch = e.touches[0];
+      setDragStart({
+        x: touch.clientX - rect.left,
+        y: touch.clientY - rect.top,
+      });
+      setIsDragging(true);
+    }
+  };
+
   return (
     <div
       ref={windowRef}
