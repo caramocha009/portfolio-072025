@@ -387,6 +387,7 @@ export default function Index() {
                   className="border-2 border-orange-200 rounded-lg p-4 hover:border-orange-400 cursor-pointer transition-colors"
                   onMouseEnter={() => setHoveredProject("savvo-sommelier")}
                   onMouseLeave={() => setHoveredProject(null)}
+                  onClick={() => setCurrentCaseStudy("savvo-sommelier")}
                 >
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
