@@ -48,64 +48,51 @@ export default function Index() {
       ),
     },
     {
-      id: "sticky3",
-      backgroundColor: "#F168AA",
-      headerColor: "#EB2682",
+      id: "sticky2",
+      backgroundColor: "#F0A7CC",
+      headerColor: "#E68AA8",
       initialX: 720,
       initialY: 250,
-      zIndex: 12,
+      zIndex: 11,
       content: (
-        <div className="space-y-0">
-          <p className="text-black text-base leading-6">
-            The moment I cease running experiments on my life is when the true
-            experiment begins.{" "}
-          </p>
-          <div className="space-y-1">
-            <p className="text-[#101828] font-bold text-base leading-6">
-              What if all
-            </p>
-            <p className="text-[#101828] font-bold text-base leading-6">
-              my searching was merely the cosmos teaching me
+        <div className="space-y-5">
+          <div>
+            <p className="text-black text-base leading-6">
+              <em>
+                "A dice roll is more than chance—it's possibility crystallizing
+                into reality. Every number that comes up was always going to
+                come up, from the moment you decided to roll."
+              </em>
+              <br />
+              <br />
+              <strong>Philosophy through probability.</strong>
             </p>
           </div>
-          <p className="text-black text-base leading-6">
-            {" "}
-            how to be still enough to receive what was already mine? The dice
-            roll themselves when I am truly present.
-          </p>
         </div>
       ),
     },
   ]);
 
-  const [nextZIndex, setNextZIndex] = useState(100);
-  const [hoveredProject, setHoveredProject] = useState<string | null>(null);
+  const [nextZIndex, setNextZIndex] = useState(20);
   const [isWorksFullscreenOpen, setIsWorksFullscreenOpen] = useState(false);
   const [currentCaseStudy, setCurrentCaseStudy] = useState<string | null>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [showContactForm, setShowContactForm] = useState(false);
+  const [hoveredProject, setHoveredProject] = useState<string | null>(null);
 
-  // Scroll progress tracking
   useEffect(() => {
-    if (!currentCaseStudy) return;
+    if (currentCaseStudy) {
+      const container = document.querySelector("[data-case-study-container]");
+      if (container) {
+        const handleScroll = () => {
+          const scrollTop = container.scrollTop;
+          const scrollHeight = container.scrollHeight - container.clientHeight;
+          const progress = (scrollTop / scrollHeight) * 100;
+          setScrollProgress(Math.min(100, Math.max(0, progress)));
+        };
 
-    const handleScroll = (e: Event) => {
-      const target = e.target as HTMLElement;
-      const scrollTop = target.scrollTop;
-      const scrollHeight = target.scrollHeight;
-      const clientHeight = target.clientHeight;
-      const progress = (scrollTop / (scrollHeight - clientHeight)) * 100;
-      setScrollProgress(Math.min(progress, 100));
-    };
-
-    // Find the case study container
-    const caseStudyContainer = document.querySelector(
-      "[data-case-study-container]",
-    );
-    if (caseStudyContainer) {
-      caseStudyContainer.addEventListener("scroll", handleScroll);
-      return () =>
-        caseStudyContainer.removeEventListener("scroll", handleScroll);
+        container.addEventListener("scroll", handleScroll);
+        return () => container.removeEventListener("scroll", handleScroll);
+      }
     }
   }, [currentCaseStudy]);
 
@@ -246,7 +233,7 @@ export default function Index() {
 
             {/* Window Title */}
             <div className="absolute inset-0 flex items-center justify-center px-8">
-              <div className="text-black text-sm font-bold chicago-font text-center px-2 rounded-sm bg-white">
+              <div className="text-black text-sm font-bold chicago-font-sm text-center px-2 rounded-sm bg-white">
                 Works
               </div>
             </div>
@@ -281,115 +268,6 @@ export default function Index() {
             <div className="w-1/2 bg-white border-r-2 border-gray-200 overflow-y-auto">
               {/* Projects List */}
               <div className="p-6 space-y-4">
-                {/* AI-Powered Investment Analytics */}
-                <div
-                  className="border-2 border-blue-200 rounded-lg p-4 hover:border-blue-400 cursor-pointer transition-colors group"
-                  onMouseEnter={() => setHoveredProject("ai-platform")}
-                  onMouseLeave={() => setHoveredProject(null)}
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-lg">AI</span>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-lg font-medium text-black mb-1">
-                        AI-Powered Investment Analytics Platform
-                      </h3>
-                      <p className="text-sm text-gray-600 mb-2">
-                        Transforming financial decision making with machine
-                        learning
-                      </p>
-                      <div className="flex items-center gap-2 text-xs">
-                        <span className="px-2 py-1 bg-green-100 text-green-700 rounded">
-                          Machine Learning
-                        </span>
-                        <span className="text-gray-500">2024</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Early Stage Venture Capital Fund */}
-                <div
-                  className="border-2 border-pink-200 rounded-lg p-4 hover:border-pink-400 cursor-pointer transition-colors"
-                  onMouseEnter={() => setHoveredProject("vc-fund")}
-                  onMouseLeave={() => setHoveredProject(null)}
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-lg">VC</span>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-lg font-medium text-black mb-1">
-                        Early Stage Venture Capital Fund
-                      </h3>
-                      <p className="text-sm text-gray-600 mb-2">
-                        Streamlining investment workflows for VCs
-                      </p>
-                      <div className="flex items-center gap-2 text-xs">
-                        <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded">
-                          Fintech
-                        </span>
-                        <span className="text-gray-500">Active</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Decentralized Social Media Platform */}
-                <div
-                  className="border-2 border-green-200 rounded-lg p-4 hover:border-green-400 cursor-pointer transition-colors"
-                  onMouseEnter={() => setHoveredProject("social-platform")}
-                  onMouseLeave={() => setHoveredProject(null)}
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-lg">🌐</span>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-lg font-medium text-black mb-1">
-                        Decentralized Social Media Platform
-                      </h3>
-                      <p className="text-sm text-gray-600 mb-2">
-                        Web3 social networking with user ownership
-                      </p>
-                      <div className="flex items-center gap-2 text-xs">
-                        <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded">
-                          Blockchain
-                        </span>
-                        <span className="text-gray-500">Beta</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Telemedicine Platform */}
-                <div
-                  className="border-2 border-cyan-200 rounded-lg p-4 hover:border-cyan-400 cursor-pointer transition-colors"
-                  onMouseEnter={() => setHoveredProject("telemedicine")}
-                  onMouseLeave={() => setHoveredProject(null)}
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-lg">+</span>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-lg font-medium text-black mb-1">
-                        Telemedicine Platform
-                      </h3>
-                      <p className="text-sm text-gray-600 mb-2">
-                        Connecting patients with healthcare providers
-                      </p>
-                      <div className="flex items-center gap-2 text-xs">
-                        <span className="px-2 py-1 bg-red-100 text-red-700 rounded">
-                          Healthcare
-                        </span>
-                        <span className="text-gray-500">2023</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
                 {/* Savvo Digital Sommelier */}
                 <div
                   className="border-2 border-orange-200 rounded-lg p-4 hover:border-orange-400 cursor-pointer transition-colors"
@@ -423,117 +301,7 @@ export default function Index() {
 
             {/* Right Panel - Preview */}
             <div className="w-1/2 bg-gray-50 flex items-center justify-center">
-              {hoveredProject === "ai-platform" ? (
-                <div className="max-w-lg w-full p-8">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Ff693255c6ef24546b9a9bf1ba8e05612?format=webp&width=800"
-                    alt="AI Platform Preview"
-                    className="w-full rounded-lg shadow-lg mb-6"
-                  />
-                  <h2 className="text-2xl font-bold text-black mb-2">
-                    AI-Powered Investment Analytics Platform
-                  </h2>
-                  <p className="text-gray-600 mb-4">
-                    Transforming financial decision making with machine learning
-                  </p>
-                  <div className="space-y-3">
-                    <div>
-                      <span className="font-medium text-gray-700">
-                        Timeline:
-                      </span>
-                      <span className="ml-2 text-gray-600">
-                        Jan 2024 - Jun 2024
-                      </span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-gray-700">Status:</span>
-                      <span className="ml-2 text-gray-600">2024</span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-gray-700">
-                        My Role:
-                      </span>
-                      <span className="ml-2 text-gray-600">
-                        Lead Product Designer, UX Researcher
-                      </span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-gray-700">Team:</span>
-                      <span className="ml-2 text-gray-600">
-                        2 Engineers, 1 Data Scientist, 1 PM
-                      </span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-gray-700">
-                        Methodologies:
-                      </span>
-                      <div className="mt-1 space-x-2">
-                        <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded text-sm">
-                          Design Thinking
-                        </span>
-                        <span className="px-2 py-1 bg-green-100 text-green-700 rounded text-sm">
-                          Agile
-                        </span>
-                        <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded text-sm">
-                          User-Centered Design
-                        </span>
-                      </div>
-                    </div>
-                    <div>
-                      <span className="font-medium text-gray-700">
-                        Overview:
-                      </span>
-                      <p className="mt-1 text-gray-600 text-sm">
-                        Designed an AI-powered platform that helps investors
-                        make data-driven decisions through advanced analytics
-                        and machine learning algorithms.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ) : hoveredProject === "vc-fund" ? (
-                <div className="max-w-lg w-full p-8">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Ff44dfd9b0d1b492eac28ca4274e3990b?format=webp&width=800"
-                    alt="VC Fund Preview"
-                    className="w-full rounded-lg shadow-lg mb-6"
-                  />
-                  <h2 className="text-2xl font-bold text-black mb-2">
-                    Early Stage Venture Capital Fund
-                  </h2>
-                  <p className="text-gray-600 mb-4">
-                    Streamlining investment workflows for venture capitalists
-                  </p>
-                  <div className="space-y-3">
-                    <div>
-                      <span className="font-medium text-gray-700">
-                        Timeline:
-                      </span>
-                      <span className="ml-2 text-gray-600">
-                        Mar 2023 - Ongoing
-                      </span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-gray-700">Status:</span>
-                      <span className="ml-2 text-gray-600">Active</span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-gray-700">
-                        My Role:
-                      </span>
-                      <span className="ml-2 text-gray-600">
-                        Senior UX Designer
-                      </span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-gray-700">Team:</span>
-                      <span className="ml-2 text-gray-600">
-                        3 Engineers, 1 Product Manager
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              ) : hoveredProject === "savvo-sommelier" ? (
+              {hoveredProject === "savvo-sommelier" ? (
                 <div className="max-w-lg w-full p-8">
                   <div className="w-full h-48 bg-gradient-to-br from-orange-100 to-red-100 rounded-lg shadow-lg mb-6 flex items-center justify-center">
                     <span className="text-6xl">🍷</span>
@@ -571,34 +339,6 @@ export default function Index() {
                       <span className="ml-2 text-gray-600">
                         Savvo & Cooper's Hawk Winery
                       </span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-gray-700">
-                        Methodologies:
-                      </span>
-                      <div className="mt-1 space-x-2">
-                        <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded text-sm">
-                          User Research
-                        </span>
-                        <span className="px-2 py-1 bg-green-100 text-green-700 rounded text-sm">
-                          Contextual Inquiry
-                        </span>
-                        <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded text-sm">
-                          Prototyping
-                        </span>
-                      </div>
-                    </div>
-                    <div>
-                      <span className="font-medium text-gray-700">
-                        Overview:
-                      </span>
-                      <p className="mt-1 text-gray-600 text-sm">
-                        Designed interactive wine kiosks for restaurants,
-                        focusing on wine exploration, pairing suggestions, and
-                        Wine Club promotion. Conducted extensive user interviews
-                        and contextual inquiry at Cooper's Hawk locations to
-                        inform design decisions.
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -692,7 +432,8 @@ export default function Index() {
                 Savvo Digital Sommelier
               </h1>
               <p className="text-black mb-6 chicago-font-md">
-                A study in user research and contextual inquiry around kiosk, restaurant, and membership experience of wines
+                A study in user research and contextual inquiry around kiosk,
+                restaurant, and membership experience of wines
               </p>
 
               {/* Medium Embed */}
@@ -731,563 +472,6 @@ export default function Index() {
                 ← Back to Works
               </button>
             </div>
-          </div>
-        </div>
-      )}
-
-      {/* Contact Form Modal */}
-      {showContactForm && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-[10000] flex items-center justify-center p-4">
-          <div className="bg-white rounded-lg max-w-md w-full p-6">
-                <h2 className="text-2xl font-bold text-black mb-6 chicago-font-xl">
-                  Project Overview
-                </h2>
-                <div className="border-4 border-black bg-yellow-200 p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-6">
-                  <h3 className="font-bold text-black mb-3 chicago-font-lg">
-                    🍷 The Mission
-                  </h3>
-                  <p className="text-black leading-relaxed chicago-font-md">
-                    Savvo Digital Sommelier operates wine kiosks in select retail
-                    stores in the Greater Chicago area. The kiosks assist users in
-                    browsing wine selections and suggest pairings with cheese and
-                    meats. Our team was tasked with enhancing the kiosk's
-                    interface to better integrate with Cooper's Hawk Restaurant
-                    and Winery, creating a prototype that would impress Cooper's
-                    Hawk's CEO.
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            {/* Current Product Evaluation */}
-            <section className="mb-12">
-              <div className="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-                <h2 className="text-2xl font-bold text-black mb-6 chicago-font-xl">
-                  Current Product Evaluation
-                </h2>
-                <img
-                  src="https://images.pexels.com/photos/276147/pexels-photo-276147.jpeg"
-                  alt="Restaurant menu display and kiosk interface"
-                  className="w-full border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mb-6"
-                />
-                <p className="text-black leading-relaxed mb-6 chicago-font-md">
-                  Before designing new features, we conducted a thorough
-                  evaluation of the existing kiosk system. Through user testing
-                  and heuristic analysis, we identified several critical usability
-                  issues.
-                </p>
-
-                {/* Problem Highlight Block */}
-              <div className="border-4 border-red-600 bg-red-100 p-6 shadow-[8px_8px_0px_0px_rgba(220,38,38,1)] mb-8">
-                <h3 className="font-bold text-red-800 mb-4 chicago-font flex items-center">
-                  <span className="mr-2">⚠️</span> Key Problems Identified
-                </h3>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <ul className="space-y-3 text-red-800">
-                    <li className="flex items-start">
-                      <span className="text-red-600 mr-2 font-bold">•</span>
-                      The "+" sign used to indicate pairings was mistaken for a
-                      clickable button
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-red-600 mr-2 font-bold">•</span>
-                      Users had to scroll to view full wine descriptions
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-red-600 mr-2 font-bold">•</span>
-                      Unclear rating systems and confusing pricing information
-                    </li>
-                  </ul>
-                  <ul className="space-y-3 text-red-800">
-                    <li className="flex items-start">
-                      <span className="text-red-600 mr-2 font-bold">•</span>
-                      Lack of intuitive navigation - difficult to return to
-                      previous pages
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-red-600 mr-2 font-bold">•</span>
-                      Insufficient help and documentation for users
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-red-600 mr-2 font-bold">•</span>
-                      Poor visual hierarchy causing user confusion
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              </div>
-            </section>
-
-            {/* Research & Discovery */}
-            <section className="mb-12">
-              <div className="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-                <h2 className="text-2xl font-bold text-black mb-6 chicago-font-xl">
-                  Research & Discovery
-                </h2>
-                <img
-                  src="https://images.pexels.com/photos/9870240/pexels-photo-9870240.jpeg"
-                  alt="User research and contextual inquiry process"
-                  className="w-full border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mb-6"
-                />
-
-                <p className="text-black leading-relaxed mb-6 chicago-font-md">
-                  Our research approach combined competitive analysis with direct
-                  user observation. We studied successful wine kiosks and services
-                  like Vivino to understand best practices, while conducting
-                  contextual inquiry at Cooper's Hawk locations to observe real
-                  customer behaviors.
-                </p>
-
-              {/* Insight Highlight Block */}
-              <div className="border-4 border-blue-600 bg-blue-100 p-6 shadow-[8px_8px_0px_0px_rgba(37,99,235,1)] mb-8">
-                <h3 className="font-bold text-blue-800 mb-4 chicago-font flex items-center">
-                  <span className="mr-2">💡</span> Key Research Insights
-                </h3>
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h4 className="font-bold text-blue-800 mb-3 chicago-font">
-                      Customer Pain Points
-                    </h4>
-                    <ul className="space-y-2 text-blue-800">
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2 font-bold">•</span>
-                        68% of customers felt overwhelmed by wine choices
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2 font-bold">•</span>
-                        Time-consuming consultation with busy staff
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2 font-bold">•</span>
-                        Lack of pairing knowledge among diners
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2 font-bold">•</span>
-                        Desire for more wine education during dining
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-blue-800 mb-3 chicago-font">
-                      Opportunities
-                    </h4>
-                    <ul className="space-y-2 text-blue-800">
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2 font-bold">•</span>
-                        Self-service wine exploration
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2 font-bold">•</span>
-                        Personalized recommendations based on preferences
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2 font-bold">•</span>
-                        Educational content integration
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2 font-bold">•</span>
-                        Strong interest in Wine Club benefits
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              {/* Competitive Analysis */}
-              <div className="border-4 border-purple-600 bg-purple-100 p-6 shadow-[8px_8px_0px_0px_rgba(147,51,234,1)]">
-                <h3 className="font-bold text-purple-800 mb-4 chicago-font flex items-center">
-                  <span className="mr-2">🔍</span> Competitive Analysis Findings
-                </h3>
-                <p className="text-purple-800 mb-4">
-                  We examined other wine kiosks and related services like Vivino
-                  to identify successful features and avoid common pitfalls.
-                  This analysis informed our design decisions and helped
-                  prioritize which features would have the most impact.
-                </p>
-                <div className="bg-purple-200 border-2 border-purple-800 p-4 rounded">
-                  <p className="text-purple-900 text-sm italic">
-                    "The best wine discovery platforms combine personalization
-                    with education, making the selection process feel like an
-                    engaging journey rather than an overwhelming choice."
-                  </p>
-                </div>
-              </div>
-              </div>
-            </section>
-
-            {/* Design Process & MVP Planning */}
-            <section className="mb-12">
-              <div className="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-                <h2 className="text-2xl font-bold text-black mb-6 chicago-font-xl">
-                  Design Process & MVP Planning
-                </h2>
-
-              {/* MVP Phases */}
-              <div className="border-4 border-green-600 bg-green-100 p-6 shadow-[8px_8px_0px_0px_rgba(22,163,74,1)] mb-8">
-                <h3 className="font-bold text-green-800 mb-4 chicago-font flex items-center">
-                  <span className="mr-2">🚀</span> Three-Phase MVP Roadmap
-                </h3>
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="bg-green-200 border-2 border-green-800 p-4 rounded">
-                    <div className="w-8 h-8 bg-green-800 text-white rounded-full flex items-center justify-center mb-3 font-bold chicago-font">
-                      1
-                    </div>
-                    <h4 className="font-bold text-green-900 mb-2 chicago-font">
-                      Phase 1 (Light Grey)
-                    </h4>
-                    <p className="text-green-900 text-sm">
-                      Must-have features for MVP launch
-                    </p>
-                  </div>
-                  <div className="bg-green-200 border-2 border-green-800 p-4 rounded">
-                    <div className="w-8 h-8 bg-green-800 text-white rounded-full flex items-center justify-center mb-3 font-bold chicago-font">
-                      2
-                    </div>
-                    <h4 className="font-bold text-green-900 mb-2 chicago-font">
-                      Phase 2 (Dark Grey)
-                    </h4>
-                    <p className="text-green-900 text-sm">
-                      Additional features to enhance UX
-                    </p>
-                  </div>
-                  <div className="bg-green-200 border-2 border-green-800 p-4 rounded">
-                    <div className="w-8 h-8 bg-green-800 text-white rounded-full flex items-center justify-center mb-3 font-bold chicago-font">
-                      3
-                    </div>
-                    <h4 className="font-bold text-green-900 mb-2 chicago-font">
-                      Phase 3 (Dark Blue)
-                    </h4>
-                    <p className="text-green-900 text-sm">
-                      Advanced features if time permitted
-                    </p>
-                  </div>
-                </div>
-              </div>
-              </div>
-            </section>
-
-            {/* Solution */}
-            <section className="mb-12">
-              <div className="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-                <h2 className="text-2xl font-bold text-black mb-6 chicago-font-xl">
-                  The Solution
-                </h2>
-                <img
-                  src="https://images.pexels.com/photos/10265450/pexels-photo-10265450.jpeg"
-                  alt="Wine pairing with food at restaurant setting"
-                  className="w-full border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mb-6"
-                />
-
-                <p className="text-black leading-relaxed mb-8 chicago-font-md">
-                  Our solution addressed each identified usability issue while
-                  adding new features that would delight Cooper's Hawk customers.
-                  We focused on creating an intuitive wine discovery experience
-                  that would seamlessly integrate into the restaurant environment.
-                </p>
-
-              {/* Solution Features */}
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <div className="border-4 border-blue-600 bg-blue-100 p-6 shadow-[6px_6px_0px_0px_rgba(37,99,235,1)]">
-                  <div className="w-12 h-12 bg-blue-600 text-white rounded-lg flex items-center justify-center mb-4 font-bold chicago-font">
-                    1
-                  </div>
-                  <h4 className="font-bold text-blue-800 mb-2 chicago-font">
-                    Enhanced Wine Exploration
-                  </h4>
-                  <p className="text-blue-800 text-sm">
-                    Clear pairing indicators, improved navigation with
-                    breadcrumbs, and comprehensive tasting notes without
-                    excessive scrolling
-                  </p>
-                </div>
-                <div className="border-4 border-green-600 bg-green-100 p-6 shadow-[6px_6px_0px_0px_rgba(22,163,74,1)]">
-                  <div className="w-12 h-12 bg-green-600 text-white rounded-lg flex items-center justify-center mb-4 font-bold chicago-font">
-                    2
-                  </div>
-                  <h4 className="font-bold text-green-800 mb-2 chicago-font">
-                    Smart Pairings System
-                  </h4>
-                  <p className="text-green-800 text-sm">
-                    Intelligent recommendations for cheese, meat, and meal
-                    pairings with clear visual indicators and detailed
-                    explanations
-                  </p>
-                </div>
-                <div className="border-4 border-purple-600 bg-purple-100 p-6 shadow-[6px_6px_0px_0px_rgba(147,51,234,1)]">
-                  <div className="w-12 h-12 bg-purple-600 text-white rounded-lg flex items-center justify-center mb-4 font-bold chicago-font">
-                    3
-                  </div>
-                  <h4 className="font-bold text-purple-800 mb-2 chicago-font">
-                    Wine Club Integration
-                  </h4>
-                  <p className="text-purple-800 text-sm">
-                    Seamless promotion and enrollment in Cooper's Hawk Wine Club
-                    with clear benefits and pricing information
-                  </p>
-                </div>
-              </div>
-
-              {/* Key Design Improvements */}
-              <div className="border-4 border-orange-600 bg-orange-100 p-6 shadow-[8px_8px_0px_0px_rgba(234,88,12,1)]">
-                <h3 className="font-bold text-orange-800 mb-4 chicago-font flex items-center">
-                  <span className="mr-2">🎨</span> Key Design Improvements
-                </h3>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <ul className="space-y-3 text-orange-800">
-                    <li className="flex items-start">
-                      <span className="text-orange-600 mr-2 font-bold">✓</span>
-                      Replaced confusing "+" symbols with clear pairing labels
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-orange-600 mr-2 font-bold">✓</span>
-                      Eliminated unnecessary scrolling with better content
-                      layout
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-orange-600 mr-2 font-bold">✓</span>
-                      Implemented clear rating explanations and pricing details
-                    </li>
-                  </ul>
-                  <ul className="space-y-3 text-orange-800">
-                    <li className="flex items-start">
-                      <span className="text-orange-600 mr-2 font-bold">✓</span>
-                      Added intuitive navigation with breadcrumb system
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-orange-600 mr-2 font-bold">✓</span>
-                      Included comprehensive help and documentation
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-orange-600 mr-2 font-bold">✓</span>
-                      Enhanced visual hierarchy for better user flow
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </section>
-
-            {/* User Testing & Validation */}
-            <section className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-6 chicago-font">
-                User Testing & Validation
-              </h2>
-
-              <div className="border-4 border-cyan-600 bg-cyan-100 p-6 shadow-[8px_8px_0px_0px_rgba(8,145,178,1)] mb-6">
-                <h3 className="font-bold text-cyan-800 mb-4 chicago-font flex items-center">
-                  <span className="mr-2">🧪</span> Testing Process
-                </h3>
-                <p className="text-cyan-800 mb-4">
-                  We conducted comprehensive usability tests with restaurant
-                  customers to validate our design changes. Each iteration was
-                  tested and refined based on user feedback, ensuring the
-                  interface met Cooper's Hawk's customer needs and business
-                  goals.
-                </p>
-                <div className="bg-cyan-200 border-2 border-cyan-800 p-4 rounded">
-                  <p className="text-cyan-900 text-sm">
-                    <strong>Testing Methods:</strong> Task-based usability
-                    testing, A/B testing of key features, post-interaction
-                    surveys, and contextual observation in restaurant settings.
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            {/* Results & Client Feedback */}
-            <section className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-6 chicago-font">
-                Results & Client Feedback
-              </h2>
-
-              <div className="border-4 border-green-600 bg-green-100 p-6 shadow-[8px_8px_0px_0px_rgba(22,163,74,1)] mb-8">
-                <h3 className="font-bold text-green-800 mb-4 chicago-font flex items-center">
-                  <span className="mr-2">🎉</span> Project Success
-                </h3>
-                <p className="text-green-800 mb-4">
-                  The client appreciated our comprehensive wireframes and
-                  detailed user flows developed within the project timeframe.
-                  Our systematic approach to addressing usability issues while
-                  adding new features impressed both Savvo and Cooper's Hawk
-                  stakeholders.
-                </p>
-                <div className="bg-green-200 border-2 border-green-800 p-4 rounded">
-                  <p className="text-green-900 text-sm italic">
-                    "The team delivered exactly what we needed - a prototype
-                    that clearly demonstrated how our kiosk could enhance the
-                    Cooper's Hawk dining experience."
-                  </p>
-                  <p className="text-green-900 text-xs mt-2">
-                    — Savvo Digital Sommelier Client
-                  </p>
-                </div>
-              </div>
-
-              {/* Lessons Learned */}
-              <div className="border-4 border-amber-600 bg-amber-100 p-6 shadow-[8px_8px_0px_0px_rgba(217,119,6,1)]">
-                <h3 className="font-bold text-amber-800 mb-4 chicago-font flex items-center">
-                  <span className="mr-2">📚</span> Lessons Learned
-                </h3>
-                <p className="text-amber-800 mb-4">
-                  Post-project feedback revealed that the backend work required
-                  to implement our proposed features was more extensive than
-                  initially anticipated. This highlighted the critical
-                  importance of involving technical stakeholders early in the
-                  design process.
-                </p>
-                <div className="bg-amber-200 border-2 border-amber-800 p-4 rounded">
-                  <p className="text-amber-900 text-sm">
-                    <strong>Key Takeaway:</strong> Future projects will benefit
-                    from closer collaboration between design and development
-                    teams from the outset, ensuring feature complexity aligns
-                    with technical feasibility and project timelines.
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            {/* Project Impact */}
-            <section className="mb-12">
-              <h2 className="text-2xl font-bold text-black mb-6 chicago-font">
-                Project Impact
-              </h2>
-
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div className="border-4 border-indigo-600 bg-indigo-100 p-6 shadow-[6px_6px_0px_0px_rgba(79,70,229,1)]">
-                  <h3 className="font-bold text-indigo-800 mb-4 chicago-font">
-                    Design Impact
-                  </h3>
-                  <ul className="space-y-3 text-indigo-800">
-                    <li className="flex items-start">
-                      <span className="text-indigo-600 mr-2 font-bold">•</span>
-                      Comprehensive wireframes and user flows
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-indigo-600 mr-2 font-bold">•</span>
-                      Solved critical usability issues
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-indigo-600 mr-2 font-bold">•</span>
-                      Enhanced customer wine discovery experience
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-indigo-600 mr-2 font-bold">•</span>
-                      Aligned design with Cooper's Hawk brand
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="border-4 border-rose-600 bg-rose-100 p-6 shadow-[6px_6px_0px_0px_rgba(225,29,72,1)]">
-                  <h3 className="font-bold text-rose-800 mb-4 chicago-font">
-                    Business Value
-                  </h3>
-                  <ul className="space-y-3 text-rose-800">
-                    <li className="flex items-start">
-                      <span className="text-rose-600 mr-2 font-bold">•</span>
-                      Prototype ready for CEO presentation
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-rose-600 mr-2 font-bold">•</span>
-                      Clear roadmap for development phases
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-rose-600 mr-2 font-bold">•</span>
-                      Potential for increased Wine Club enrollment
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-rose-600 mr-2 font-bold">•</span>
-                      Enhanced restaurant customer experience
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </section>
-
-            {/* CTA Section */}
-            <section className="text-center py-12 border-t border-gray-200">
-              <h3 className="text-2xl font-bold text-black mb-4">
-                Enjoyed this case study?
-              </h3>
-              <p className="text-gray-600 mb-6">
-                Let's work together on your next project
-              </p>
-              <button
-                onClick={() => {
-                  setCurrentCaseStudy(null);
-                  setShowContactForm(true);
-                }}
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-desktop-blue to-blue-800 text-white rounded-lg hover:shadow-lg transition-all"
-              >
-                Let's work together →
-              </button>
-            </section>
-
-            {/* Bottom Back Button */}
-            <div className="text-center pt-8">
-              <button
-                onClick={() => {
-                  setCurrentCaseStudy(null);
-                  setIsWorksFullscreenOpen(true);
-                }}
-                className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-sm"
-              >
-                ← Back to Works
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Contact Form Modal */}
-      {showContactForm && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-[10000] flex items-center justify-center p-4">
-          <div className="bg-white rounded-lg max-w-md w-full p-6">
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-xl font-bold">Get in Touch</h3>
-              <button
-                onClick={() => setShowContactForm(false)}
-                className="text-gray-400 hover:text-gray-600"
-              >
-                ×
-              </button>
-            </div>
-            <form className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Your name"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="your@email.com"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Project Details
-                </label>
-                <textarea
-                  rows={4}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Tell me about your project..."
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-desktop-blue to-blue-800 text-white py-2 rounded-md hover:shadow-lg transition-all"
-              >
-                Send Message
-              </button>
-            </form>
           </div>
         </div>
       )}
@@ -1380,73 +564,66 @@ export default function Index() {
                 />
               </svg>
             </button>
-
-            {/* Instagram */}
-            <button className="text-desktop-blue hover:opacity-80 p-1">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                className="md:w-6 md:h-6"
-              >
-                <path
-                  d="M12.0008 9.49996C10.6197 9.49996 9.50081 10.6192 9.50081 12C9.50081 13.381 10.6201 14.5 12.0008 14.5C13.3819 14.5 14.5008 13.3807 14.5008 12C14.5008 10.6189 13.3816 9.49996 12.0008 9.49996ZM12.0008 7.83329C14.3012 7.83329 16.1675 9.69754 16.1675 12C16.1675 14.3004 14.3032 16.1666 12.0008 16.1666C9.70042 16.1666 7.83415 14.3024 7.83415 12C7.83415 9.69957 9.6984 7.83329 12.0008 7.83329ZM17.4175 7.62425C17.4175 8.19934 16.9502 8.66593 16.3758 8.66593C15.8007 8.66593 15.3342 8.19863 15.3342 7.62425C15.3342 7.04988 15.8014 6.58329 16.3758 6.58329C16.9494 6.58257 17.4175 7.04988 17.4175 7.62425ZM12.0008 5.33329C9.93875 5.33329 9.60265 5.33875 8.64356 5.38146C7.99012 5.41213 7.55211 5.50002 7.14513 5.65802C6.78346 5.79828 6.52257 5.96578 6.2446 6.24375C5.96556 6.52279 5.79836 6.78298 5.65866 7.14482C5.5003 7.55273 5.41244 7.99005 5.38231 8.64258C5.33919 9.56263 5.33415 9.88417 5.33415 12C5.33415 14.062 5.33961 14.3981 5.38231 15.3571C5.413 16.0103 5.501 16.449 5.65861 16.855C5.79925 17.2171 5.96708 17.4786 6.24371 17.7553C6.52386 18.035 6.78482 18.2028 7.14322 18.3411C7.55516 18.5004 7.9929 18.5884 8.64343 18.6185C9.56348 18.6615 9.88502 18.6666 12.0008 18.6666C14.0629 18.6666 14.399 18.6611 15.358 18.6185C16.0097 18.5879 16.4487 18.4996 16.8558 18.3421C17.217 18.2019 17.4793 18.0335 17.7562 17.757C18.0363 17.4765 18.2037 17.2161 18.3422 16.8569C18.5011 16.4465 18.5892 16.0081 18.6193 15.3574C18.6624 14.4373 18.6675 14.1157 18.6675 12C18.6675 9.93789 18.662 9.6018 18.6193 8.64277C18.5887 7.99084 18.5004 7.5512 18.3427 7.14428C18.2028 6.78361 18.0347 6.52192 17.757 6.24375C17.4775 5.96425 17.218 5.7974 16.8559 5.65781C16.4483 5.49958 16.0103 5.41159 15.3582 5.38147C14.4382 5.33833 14.1166 5.33329 12.0008 5.33329ZM12.0008 3.66663C14.2647 3.66663 14.5473 3.67496 15.4362 3.71663C16.323 3.7576 16.9279 3.89788 17.4592 4.10413C18.0084 4.31593 18.4723 4.60204 18.9355 5.06523C19.398 5.52843 19.6842 5.99371 19.8967 6.54163C20.1022 7.07218 20.2425 7.67773 20.2842 8.56454C20.3237 9.45343 20.3342 9.73607 20.3342 12C20.3342 14.2639 20.3258 14.5465 20.2842 15.4354C20.2432 16.3222 20.1022 16.927 19.8967 17.4583C19.6848 18.0076 19.398 18.4715 18.9355 18.9347C18.4723 19.3972 18.0063 19.6833 17.4592 19.8958C16.9279 20.1014 16.323 20.2416 15.4362 20.2833C14.5473 20.3229 14.2647 20.3333 12.0008 20.3333C9.73692 20.3333 9.45428 20.325 8.5654 20.2833C7.67859 20.2423 7.07442 20.1014 6.54248 19.8958C5.99386 19.684 5.52928 19.3972 5.06609 18.9347C4.6029 18.4715 4.31748 18.0055 4.10498 17.4583C3.89873 16.927 3.75915 16.3222 3.71748 15.4354C3.6779 14.5465 3.66748 14.2639 3.66748 12C3.66748 9.73607 3.67581 9.45343 3.71748 8.56454C3.75845 7.67704 3.89873 7.07288 4.10498 6.54163C4.31678 5.99302 4.6029 5.52843 5.06609 5.06523C5.52928 4.60204 5.99456 4.31663 6.54248 4.10413C7.07373 3.89788 7.6779 3.75829 8.5654 3.71663C9.45428 3.67704 9.73692 3.66663 12.0008 3.66663Z"
-                  fill="#5656E9"
-                />
-              </svg>
-            </button>
           </div>
         </header>
 
-        {/* Background with grid pattern */}
-        <div className="absolute inset-0 top-12 overflow-hidden">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/d8f348fdc69db5785ea51e7176e10e2c1f5ce835?width=4608"
-            alt=""
-            className="w-full h-full object-cover opacity-20"
-          />
-        </div>
-
-        {/* Main Desktop Area */}
-        <main className="relative h-[calc(100vh-48px)] overflow-hidden">
-          {/* Desktop Icons - First Column */}
+        <main className="relative h-[calc(100vh-48px)]">
+          {/* Contact Me Icon - Top Right */}
           <div
             className="absolute z-20"
-            style={{ left: "calc(8px + 2vw)", top: "calc(16px + 2vw)" }}
+            style={{ top: "calc(8px + 1vw)", right: "calc(8px + 2vw)" }}
           >
-            <div className="grid grid-cols-2 gap-1 sm:gap-2 md:grid-cols-1 md:gap-4">
-              <DesktopIcon
-                icon={<WorksIcon />}
-                label="Works"
-                onClick={() => openNewWindow("Works")}
-                className="scale-75 md:scale-100"
-              />
-              <DesktopIcon
-                icon={<ContactIcon />}
-                label="Contact Me"
-                onClick={() => setShowContactForm(true)}
-                className="scale-75 md:scale-100"
-              />
-              <DesktopIcon
-                icon={<ArticlesIcon />}
-                label="Read"
-                onClick={() => openNewWindow("Articles")}
-                className="scale-75 md:scale-100"
-              />
-              <DesktopIcon
-                icon={<AboutIcon />}
-                label="About"
-                onClick={() => openNewWindow("About")}
-                className="scale-75 md:scale-100"
-              />
-            </div>
+            <DesktopIcon
+              icon={<ContactIcon />}
+              label="Contact Me"
+              onClick={() => openNewWindow("Contact")}
+              className="scale-75 md:scale-100"
+            />
           </div>
 
-          {/* Desktop Icons - Second Column (Playlist) */}
+          {/* Works Icon - Top Left */}
           <div
             className="absolute z-20"
-            style={{ left: "calc(180px + 2vw)", top: "calc(16px + 2vw)" }}
+            style={{ top: "calc(8px + 1vw)", left: "calc(8px + 2vw)" }}
+          >
+            <DesktopIcon
+              icon={<WorksIcon />}
+              label="Works"
+              onClick={() => openNewWindow("Works")}
+              className="scale-75 md:scale-100"
+            />
+          </div>
+
+          {/* Articles Icon - Left Side */}
+          <div
+            className="absolute z-20"
+            style={{ top: "calc(25% + 2vw)", left: "calc(8px + 2vw)" }}
+          >
+            <DesktopIcon
+              icon={<ArticlesIcon />}
+              label="Read"
+              onClick={() => openNewWindow("Articles")}
+              className="scale-75 md:scale-100"
+            />
+          </div>
+
+          {/* About Icon - Lower Left */}
+          <div
+            className="absolute z-20"
+            style={{ bottom: "calc(16px + 8vw)", left: "calc(8px + 2vw)" }}
+          >
+            <DesktopIcon
+              icon={<AboutIcon />}
+              label="About"
+              onClick={() => openNewWindow("About")}
+              className="scale-75 md:scale-100"
+            />
+          </div>
+
+          {/* Playlist Icon - Lower Left, second from bottom */}
+          <div
+            className="absolute z-20"
+            style={{ bottom: "calc(16px + 2vw)", left: "calc(8px + 2vw)" }}
           >
             <DesktopIcon
               icon={<PlaylistIcon />}
