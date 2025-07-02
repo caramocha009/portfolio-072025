@@ -101,14 +101,14 @@ function MediumArticleEmbed() {
           className="text-4xl font-bold mb-4 leading-tight"
           style={{ fontFamily: 'Georgia, Charter, "Times New Roman", serif' }}
         >
-          A study in user research and contextual inquiry
+          Savvo Digital Sommelier
         </h1>
 
         <div
-          className="mb-8 text-sm text-gray-600"
+          className="mb-8 text-lg text-gray-600"
           style={{ fontFamily: 'Georgia, Charter, "Times New Roman", serif' }}
         >
-          Published: {new Date(articleContent.pubDate).toLocaleDateString()}
+          A study in user research and contextual inquiry.
         </div>
 
         <div
@@ -147,32 +147,6 @@ function MediumArticleEmbed() {
                 .replace(/<h1[^>]*>.*?<\/h1>/i, "") // Remove first h1 tag (redundant title)
                 .replace(/\s*<\/p>\s*$/, "</p>") // Clean up trailing whitespace
                 .replace(/(<\/[^>]+>)\s*(<\/[^>]+>)/g, "$1$2"); // Remove spaces between closing tags
-
-              // Add project info after first image
-              const projectInfo = `
-                <div style="background-color: #f8f9fa; padding: 32px; margin: 48px 0; font-family: charter, Georgia, serif;">
-                  <h2 style="font-size: 36px; font-weight: 700; margin: 0 0 16px 0; color: #242424; line-height: 1.25;">Savvo Digital Sommelier</h2>
-                  <p style="font-size: 18px; font-weight: 400; line-height: 1.5; margin: 0 0 32px 0; color: #666;">A study in user research and contextual inquiry around kiosk, restaurant, and membership experience of wines</p>
-                  <div style="font-size: 16px; line-height: 1.6; color: #242424;">
-                    <div style="margin-bottom: 12px;"><strong>Timeline:</strong> 3 Phases (MVP Focus)</div>
-                    <div style="margin-bottom: 12px;"><strong>Status:</strong> MVP Delivered</div>
-                    <div style="margin-bottom: 12px;"><strong>My Role:</strong> Lead UX Designer</div>
-                    <div style="margin-bottom: 12px;"><strong>Client:</strong> Savvo & Cooper's Hawk Winery</div>
-                  </div>
-                </div>
-              `;
-
-              // Insert project info after first image
-              const firstImageMatch = processedContent.match(/(<img[^>]*>)/);
-              if (firstImageMatch) {
-                const firstImageIndex =
-                  processedContent.indexOf(firstImageMatch[0]) +
-                  firstImageMatch[0].length;
-                processedContent =
-                  processedContent.slice(0, firstImageIndex) +
-                  projectInfo +
-                  processedContent.slice(firstImageIndex);
-              }
 
               return processedContent;
             })(),
