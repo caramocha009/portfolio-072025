@@ -293,6 +293,19 @@ export function DraggableWindow({
 
       {/* Window Content */}
       <div className="flex-1 p-6 overflow-auto">{children}</div>
+
+      {/* Resize Handle - only for resizable windows */}
+      {resizable && (
+        <div
+          className="absolute bottom-0 right-0 w-4 h-4 cursor-se-resize bg-gray-600 hover:bg-gray-800 opacity-50 hover:opacity-100"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath d='M4,0L4,4L0,4' fill='%23ffffff'/%3E%3C/svg%3E")`,
+            backgroundRepeat: "repeat",
+          }}
+          onMouseDown={handleResizeMouseDown}
+          onTouchStart={handleResizeTouchStart}
+        />
+      )}
     </div>
   );
 }
