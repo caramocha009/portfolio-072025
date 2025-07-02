@@ -85,6 +85,22 @@ export default function Index() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [showContactForm, setShowContactForm] = useState(false);
 
+  // Scroll progress tracking
+  useEffect(() => {
+    if (!currentCaseStudy) return;
+
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (scrollTop / docHeight) * 100;
+      setScrollProgress(Math.min(progress, 100));
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [currentCaseStudy]);
+
   const bringToFront = (windowId: string) => {
     setOpenWindows((prev) =>
       prev.map((window) =>
