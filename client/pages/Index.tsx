@@ -35,20 +35,13 @@ export default function Index() {
         <div className="space-y-5">
           <div>
             <p className="text-black text-base leading-6">
-              Monkcore - I invested in Flair, which makes custom clothing based
-              on AI generation. Posted a couple of photos, and the demand was so
-              high for them that we decided to sell a few.
-            </p>
-          </div>
-          <div>
-            <p className="text-black text-base leading-6">
-              Get yours here:{" "}
-              <a
-                href="https://www.flair.com/monk-hoodie"
-                className="text-[#101828] underline"
-              >
-                https://www.flair.com/monk-hoodie
-              </a>
+              Hey! I'm <strong>Cara</strong>, your friendly neighborhood product
+              designer. Spent <strong>8+ years</strong>
+              &nbsp;turning chaos into "ooh, that actually works".
+              <em> Plot twist: I also make videos. </em>
+              <br />
+              <br />
+              What's your impossible design problem?
             </p>
           </div>
         </div>
