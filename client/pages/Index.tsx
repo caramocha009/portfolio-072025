@@ -413,7 +413,6 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
 
   return (
     <nav className="fixed left-8 top-1/2 transform -translate-y-1/2 z-[9998] bg-white border border-gray-200 rounded-lg shadow-lg p-4 max-w-[200px]">
-      <div className="text-xs font-mono text-gray-500 mb-3">SECTIONS</div>
       <ul className="space-y-2">
         {sections.map((section) => (
           <li key={section.id}>
