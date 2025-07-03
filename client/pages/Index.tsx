@@ -1458,17 +1458,18 @@ export default function Index() {
                     Interactive Case Study
                   </h2>
                   <div className="bg-gray-50 w-full flex justify-center">
-                  <iframe
-                    style={{
-                      border: "1px solid rgba(0, 0, 0, 0.1)",
-                      width: "100%",
-                      height: "80vh",
-                      maxWidth: "100%",
-                    }}
-                    src="https://embed.figma.com/proto/2MQxSGbmQEHbyZg8JYepO4/UI-Portfolio?page-id=0%3A1&node-id=937-2926&p=f&viewport=526%2C493%2C0.02&scaling=contain&content-scaling=fixed&starting-point-node-id=915%3A1139&embed-host=share"
-                    allowFullScreen
-                    title="Ascent Global Logistics Case Study"
-                  ></iframe>
+                    <iframe
+                      style={{
+                        border: "1px solid rgba(0, 0, 0, 0.1)",
+                        width: "100%",
+                        height: "80vh",
+                        maxWidth: "100%",
+                      }}
+                      src="https://embed.figma.com/proto/2MQxSGbmQEHbyZg8JYepO4/UI-Portfolio?page-id=0%3A1&node-id=937-2926&p=f&viewport=526%2C493%2C0.02&scaling=contain&content-scaling=fixed&starting-point-node-id=915%3A1139&embed-host=share"
+                      allowFullScreen
+                      title="Ascent Global Logistics Case Study"
+                    ></iframe>
+                  </div>
                 </div>
 
                 {/* View Prototype Section */}
