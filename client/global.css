@@ -309,15 +309,28 @@
     letter-spacing: -0.003em !important;
   }
 
+  /* Images span wider than text content like on Medium */
   .medium-article-content img {
     width: 100% !important;
     height: auto !important;
-    margin: 32px 0 !important;
-    border-radius: 0 !important;
+    margin: 0 !important;
+    border-radius: 3px !important;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px !important;
   }
 
   .medium-article-content figure {
-    margin: 32px 0 !important;
+    grid-column: 1 / -1 !important;
+    margin: 48px 0 !important;
+    max-width: 1000px !important;
+    justify-self: center !important;
+  }
+
+  /* For standalone images (not in figures) */
+  .medium-article-content > img {
+    grid-column: 1 / -1 !important;
+    margin: 48px 0 !important;
+    max-width: 1000px !important;
+    justify-self: center !important;
   }
 
   .medium-article-content figcaption {
