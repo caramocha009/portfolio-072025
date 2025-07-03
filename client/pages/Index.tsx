@@ -49,7 +49,8 @@ function MediumArticleEmbed({
           title: "Cards, Tags, and Ads – Oh my!",
           link: "https://medium.com/@caramocha/cards-tags-and-ads-ux-for-online-shopping-experience-10b577148105",
           pubDate: "Dec 15, 2023",
-          description: "A UX case study on redesigning Hy-Vee's Aisles Online platform, focusing on enhancing product cards and integrating strategic advertising to boost revenue without compromising user experience.",
+          description:
+            "A UX case study on redesigning Hy-Vee's Aisles Online platform, focusing on enhancing product cards and integrating strategic advertising to boost revenue without compromising user experience.",
           content: `
             <div class="medium-article">
               <h1 style="font-size: 2.5rem; font-weight: bold; margin: 30px 0 20px 0; line-height: 1.2; color: #1a1a1a;">Cards, Tags, and Ads – Oh my!</h1>
@@ -83,32 +84,10 @@ function MediumArticleEmbed({
         });
         setLoading(false);
         return;
-      } else {
-          // If the latest article isn't the Hy-Vee one, use RSS fallback
-          const response = await fetch(
-            "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@caramocha",
-          );
+      }
 
-          if (!response.ok) {
-            throw new Error("Failed to fetch article");
-          }
-
-          const data = await response.json();
-          const targetArticle = data.items.find(
-            (item: any) =>
-              item.link.includes("10b577148105") ||
-              item.link.includes(
-                "cards-tags-and-ads-ux-for-online-shopping-experience",
-              ),
-          );
-
-          if (targetArticle) {
-            setArticleContent(targetArticle);
-          } else {
-            throw new Error("Hy-Vee article not found");
-          }
-        }
-      } else if (articleType === "savvo-sommelier") {
+      // For other articles, use RSS2JSON
+      if (articleType === "savvo-sommelier") {
         // For Savvo article, try to find it in the feed
         const response = await fetch(
           "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@caramocha",
