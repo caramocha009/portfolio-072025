@@ -1942,7 +1942,7 @@ export default function Index() {
 
           {/* Listen Icon - Top right */}
           <div
-            className="absolute z-20"
+            className="absolute z-20 hidden"
             style={{ top: "calc(24px + 1vw)", right: "calc(24px + 1vw)" }}
           >
             <DesktopIcon
@@ -1957,12 +1957,12 @@ export default function Index() {
           <div
             className="absolute z-20"
             style={{ bottom: "calc(24px + 1vw)", right: "calc(24px + 1vw)" }}
+            title="I'm just a humble trash can..."
           >
             <DesktopIcon
               icon={<RecyclingIcon />}
               label="Recycling Bin"
-              onClick={() => openNewWindow("Recycling Bin")}
-              className="scale-75 md:scale-90"
+              className="scale-75 md:scale-90 pointer-events-none"
             />
           </div>
 
