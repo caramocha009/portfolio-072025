@@ -1179,29 +1179,38 @@ export default function Index() {
                                 '<blockquote$1 style="border-left: 3px solid #242424; padding-left: 24px; margin: 32px 0; font-style: italic; font-size: 24px; color: #6B6B6B; font-family: charter, Georgia, Cambria, Times New Roman, Times, serif;">',
                               )
 
-                              // Remove broken/empty images and style valid images to match Savvo layout
-                              .replace(/<img[^>]*src=""[^>]*>/g, "") // Remove images with empty src
-                              .replace(/<img[^>]*src="undefined"[^>]*>/g, "") // Remove images with undefined src
+                              // Remove all broken/invalid images more aggressively
                               .replace(/<img[^>]*>/g, (match) => {
-                                // Only keep images with valid src attributes
-                                const srcMatch = match.match(/src="([^"]+)"/);
+                                // Extract src attribute
+                                const srcMatch = match.match(/src="([^"]*)"/);
+
+                                // If no src attribute, remove the image
+                                if (!srcMatch) return "";
+
+                                const src = srcMatch[1];
+
+                                // Remove if src is empty, undefined, null, or invalid
                                 if (
-                                  srcMatch &&
-                                  srcMatch[1] &&
-                                  srcMatch[1] !== "" &&
-                                  srcMatch[1] !== "undefined"
+                                  !src ||
+                                  src === "" ||
+                                  src === "undefined" ||
+                                  src === "null" ||
+                                  src.length < 10 ||
+                                  !src.startsWith("http")
                                 ) {
-                                  return match
-                                    .replace(/style="[^"]*"/g, "")
-                                    .replace(
-                                      /<img/,
-                                      '<img style="width: 100%; height: auto; margin: 32px 0; max-width: 1000px; cursor: pointer;" onclick="window.openLightbox && window.openLightbox(\'' +
-                                        srcMatch[1] +
-                                        "')\"",
-                                    );
+                                  return "";
                                 }
-                                return ""; // Remove invalid images
+
+                                // Keep valid images with proper styling
+                                return `<img src="${src}" style="width: 100%; height: auto; margin: 32px 0; max-width: 1000px; cursor: pointer;" onclick="window.openLightbox && window.openLightbox('${src}')" alt="">`;
                               })
+
+                              // Remove any remaining empty figure tags that might contain broken images
+                              .replace(/<figure[^>]*>\s*<\/figure>/g, "")
+                              .replace(
+                                /<figure[^>]*>\s*<figcaption[^>]*>.*?<\/figcaption>\s*<\/figure>/g,
+                                "",
+                              )
 
                               // Clean up any extra whitespace
                               .replace(/\s*<\/p>\s*$/, "</p>")
