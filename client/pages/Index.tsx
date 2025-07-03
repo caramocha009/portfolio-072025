@@ -89,6 +89,15 @@ function MediumArticleEmbed({
         );
 
         if (targetArticle) {
+          console.log("Found Hy-Vee article:", targetArticle);
+          console.log(
+            "Article content length:",
+            targetArticle.content?.length || 0,
+          );
+          console.log(
+            "Article description length:",
+            targetArticle.description?.length || 0,
+          );
           setArticleContent(targetArticle);
         } else {
           throw new Error(
