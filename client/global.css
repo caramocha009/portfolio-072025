@@ -376,4 +376,62 @@
   .medium-article-content a:hover {
     text-decoration-color: rgba(36, 36, 36, 1) !important;
   }
+
+  /* Responsive design for mobile devices */
+  @media (max-width: 768px) {
+    .medium-article-content {
+      grid-template-columns: 1fr min(100%, calc(100% - 32px)) 1fr !important;
+      grid-column-gap: 16px !important;
+    }
+
+    .medium-article-content h1 {
+      font-size: 32px !important;
+      margin: 32px 0 16px 0 !important;
+    }
+
+    .medium-article-content h2 {
+      font-size: 28px !important;
+      margin: 32px 0 16px 0 !important;
+    }
+
+    .medium-article-content h3 {
+      font-size: 24px !important;
+      margin: 24px 0 12px 0 !important;
+    }
+
+    .medium-article-content p {
+      font-size: 18px !important;
+      line-height: 1.6 !important;
+      margin: 20px 0 !important;
+    }
+
+    .medium-article-content figure,
+    .medium-article-content > img {
+      margin: 32px 0 !important;
+    }
+  }
+
+  /* Enhanced visual hierarchy for better readability */
+  .medium-article-content > h1:first-child {
+    margin-top: 0 !important;
+  }
+
+  .medium-article-content pre {
+    background-color: #f7f7f7 !important;
+    border-radius: 6px !important;
+    padding: 16px !important;
+    margin: 32px 0 !important;
+    overflow-x: auto !important;
+    font-family: "Monaco", "Consolas", "Lucida Console", monospace !important;
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+  }
+
+  .medium-article-content code {
+    background-color: #f7f7f7 !important;
+    padding: 2px 4px !important;
+    border-radius: 3px !important;
+    font-family: "Monaco", "Consolas", "Lucida Console", monospace !important;
+    font-size: 0.9em !important;
+  }
 }
