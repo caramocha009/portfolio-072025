@@ -298,30 +298,44 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
       // Check if we're in the Hy-Vee case study
       const hyveeTitle = document.querySelector("h1")?.textContent;
       if (hyveeTitle && hyveeTitle.includes("Hy-Vee Aisles Online")) {
-        // For Hy-Vee case study, use predefined sections
-        sectionList.push({ id: "intro", title: "Intro" });
-        sectionList.push({ id: "the-scope", title: "The Scope" });
-        sectionList.push({ id: "current-state", title: "Current State" });
+        // For Hy-Vee case study, use predefined sections with proper organization
+        sectionList.push({ id: "online-shopping", title: "Online Shopping" });
         sectionList.push({
-          id: "cards-visual-hierarchy",
-          title: "Cards Visual Heirarchy",
+          id: "hyvee-online-shopping-experience",
+          title: "Intro",
+        });
+        sectionList.push({ id: "the-scope-revelation", title: "The Scope" });
+        sectionList.push({
+          id: "understanding-current-state",
+          title: "Current State",
         });
         sectionList.push({
-          id: "technical-implementation",
+          id: "brand-color-constraint",
+          title: "Brand Color Constraint",
+        });
+        sectionList.push({
+          id: "information-architecture-redesign",
+          title: "Visual Hierarchy",
+        });
+        sectionList.push({
+          id: "technical-implementation-storybook",
           title: "Technical Implementation",
         });
         sectionList.push({
-          id: "product-tags-testing",
+          id: "user-testing-product-tags",
           title: "Product Tags Testing",
         });
+        sectionList.push({ id: "ads-strategy", title: "Ads Strategy" });
         sectionList.push({
-          id: "ads-placement-testing",
+          id: "advertising-strategy-challenge",
           title: "Ads Placement Testing",
         });
         sectionList.push({
-          id: "strategic-recommendations",
-          title: "Strategic Recommendations",
+          id: "large-scale-user-testing",
+          title: "Large-Scale User Testing",
         });
+        sectionList.push({ id: "project-reflections", title: "Reflections" });
+        sectionList.push({ id: "project-outcomes", title: "Outcomes" });
         setSections(sectionList);
         return;
       }
