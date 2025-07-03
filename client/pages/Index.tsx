@@ -176,7 +176,7 @@ function MediumArticleEmbed({
             lineHeight: "1.15",
             letterSpacing: "-0.02em",
             color: "#242424",
-            maxWidth: "782px",
+            maxWidth: "680px",
             margin: "0 auto 24px auto",
             textAlign: "left",
           }}
