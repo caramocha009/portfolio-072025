@@ -83,7 +83,27 @@ function MediumArticleEmbed({
       if (targetArticle) {
         setArticleContent(targetArticle);
       } else {
-        throw new Error(`Article not found for ${articleType}`);
+        // Fallback: if not found, try broader search or use first article as backup
+        console.log(
+          `Specific article not found for ${articleType}, available titles:`,
+          data.items.map((item: any) => item.title),
+        );
+
+        // For Hy-Vee, try even broader search
+        if (articleType === "hyvee-aisles") {
+          targetArticle = data.items.find(
+            (item: any) =>
+              item.title.toLowerCase().includes("ux") &&
+              (item.title.toLowerCase().includes("shop") ||
+                item.title.toLowerCase().includes("retail")),
+          );
+        }
+
+        if (targetArticle) {
+          setArticleContent(targetArticle);
+        } else {
+          throw new Error(`Article not found for ${articleType}`);
+        }
       }
     } catch (err) {
       setError(err instanceof Error ? err.message : "Unknown error");
