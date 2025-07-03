@@ -943,7 +943,11 @@ export default function Index() {
                 </button>
                 <span className="text-black font-mono text-sm">→</span>
                 <span className="text-black font-mono text-sm">
-                  Savvo Digital Sommelier
+                  {currentCaseStudy === "savvo-sommelier"
+                    ? "Savvo Digital Sommelier"
+                    : currentCaseStudy === "hyvee-aisles"
+                      ? "Hy-Vee Aisles Online"
+                      : "Case Study"}
                 </span>
               </div>
 
