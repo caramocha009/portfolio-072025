@@ -1500,6 +1500,47 @@ export default function Index() {
                   </button>
                 </div>
               </div>
+            ) : currentCaseStudy === "boa-merchant-checkout" ? (
+              /* Bank of America Merchant Partner Checkout case study */
+              <div className="max-w-4xl mx-auto">
+                <div className="mb-8">
+                  <h1 className="text-3xl font-bold text-black mb-4">
+                    Bank of America Merchant Partner Checkout
+                  </h1>
+                  <p className="text-gray-600 text-lg mb-6">
+                    Streamlined checkout experience for merchant partners and
+                    customers
+                  </p>
+                </div>
+
+                {/* Case study content */}
+                <div className="bg-gray-50 p-8">
+                  <div className="text-center py-16">
+                    <div className="text-8xl mb-6">💳</div>
+                    <h2 className="text-2xl font-bold text-black mb-4">
+                      Case Study Coming Soon
+                    </h2>
+                    <p className="text-gray-600 text-lg max-w-md mx-auto">
+                      This comprehensive case study is currently in development.
+                      Check back soon for insights into our payment optimization
+                      project.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Back to Projects Button */}
+                <div className="mt-8 flex justify-center">
+                  <button
+                    onClick={() => {
+                      setCurrentCaseStudy(null);
+                      setIsProjectsFullscreenOpen(true);
+                    }}
+                    className="inline-flex items-center px-6 py-3 bg-gray-300 text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-gray-200 transition-colors font-mono text-sm"
+                  >
+                    ← Back to Projects
+                  </button>
+                </div>
+              </div>
             ) : (
               <>
                 <MediumArticleEmbed
