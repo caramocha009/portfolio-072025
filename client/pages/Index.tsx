@@ -1105,8 +1105,8 @@ export default function Index() {
               title={
                 window.id.startsWith("Articles")
                   ? "Articles"
-                  : window.id.startsWith("Works")
-                    ? "Works"
+                  : window.id.startsWith("Projects")
+                    ? "Projects"
                     : undefined
               }
               resizable={!window.id.startsWith("sticky")}
