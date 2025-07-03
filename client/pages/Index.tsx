@@ -152,7 +152,15 @@ function ContactForm() {
       </form>
 
       <div className="mt-4 text-xs text-gray-500">
-        <p>Or email me directly at carayuliu@gmail.com</p>
+        <p>
+          Or email me directly at{" "}
+          <a
+            href="mailto:carayuliu@gmail.com"
+            className="text-blue-500 hover:text-blue-600 underline"
+          >
+            carayuliu@gmail.com
+          </a>
+        </p>
       </div>
     </div>
   );
@@ -1680,7 +1688,7 @@ export default function Index() {
                             }}
                             className="inline-flex items-center px-6 py-3 bg-gray-300 text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-gray-200 transition-colors font-mono text-sm"
                           >
-                            ← Back to Projects
+                            �� Back to Projects
                           </button>
                           <a
                             href={mediumArticle.link}
