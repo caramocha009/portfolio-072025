@@ -80,14 +80,10 @@ function MediumArticleEmbed({
         // For Hy-Vee article, try to find it in the feed using the exact title
         targetArticle = data.items.find(
           (item: any) =>
+            item.title.includes("Cards, Tags, and Ads – Oh my!") ||
             item.title
               .toLowerCase()
               .includes("cards, tags, and ads – oh my!") ||
-            item.title
-              .toLowerCase()
-              .includes("hy-vee's online shopping experience") ||
-            item.title.toLowerCase().includes("oh my!") ||
-            item.title.toLowerCase().includes("hy-vee") ||
             item.link.includes("10b577148105") ||
             item.link.includes("cards-tags-and-ads"),
         );
