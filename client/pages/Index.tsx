@@ -69,15 +69,28 @@ function MediumArticleEmbed({
             item.title.toLowerCase().includes("digital sommelier"),
         );
       } else if (articleType === "hyvee-aisles") {
+        // Try multiple search strategies for the Hy-Vee article
         targetArticle = data.items.find(
           (item: any) =>
             item.title.toLowerCase().includes("cards, tags, and ads") ||
             item.title.toLowerCase().includes("online shopping experience") ||
             item.title.toLowerCase().includes("hy-vee") ||
+            item.link.includes(
+              "cards-tags-and-ads-ux-for-online-shopping-experience",
+            ) ||
             (item.title.toLowerCase().includes("cards") &&
-              item.title.toLowerCase().includes("tags") &&
-              item.title.toLowerCase().includes("ads")),
+              item.title.toLowerCase().includes("tags")),
         );
+
+        // If still not found, try even broader search
+        if (!targetArticle) {
+          targetArticle = data.items.find(
+            (item: any) =>
+              item.title.toLowerCase().includes("shopping") ||
+              item.title.toLowerCase().includes("ux for") ||
+              item.link.includes("10b577148105"),
+          );
+        }
       }
 
       if (targetArticle) {
