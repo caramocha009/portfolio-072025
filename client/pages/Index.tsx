@@ -838,7 +838,8 @@ export default function Index() {
                         Hy-Vee Aisles Online
                       </h3>
                       <p className="text-sm text-gray-600 mb-2">
-                        Cards, tags, and ads: UX for online shopping experience
+                        Cards, tags, and ads: UX for online grocery shopping
+                        experience
                       </p>
                       <div className="flex items-center gap-2 text-xs">
                         <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded">
