@@ -2136,6 +2136,7 @@ export default function Index() {
           <div
             className="absolute z-20"
             style={{ bottom: "calc(24px + 1vw)", right: "calc(24px + 1vw)" }}
+            title="I'm just a humble trash can..."
             onMouseEnter={() => setShowRecyclingTooltip(true)}
             onMouseLeave={() => setShowRecyclingTooltip(false)}
           >
