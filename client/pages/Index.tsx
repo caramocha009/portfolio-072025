@@ -90,7 +90,7 @@ function MediumArticleEmbed({
 
   useEffect(() => {
     fetchMediumArticle();
-  }, [refetchKey]);
+  }, [refetchKey, articleType]);
 
   // Trigger immediate refetch on component mount
   useEffect(() => {
