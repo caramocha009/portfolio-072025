@@ -1093,11 +1093,7 @@ export default function Index() {
               </button>
 
               <a
-                href={
-                  currentCaseStudy === "hyvee-aisles"
-                    ? "https://medium.com/@caramocha/cards-tags-and-ads-ux-for-online-shopping-experience-10b577148105"
-                    : "https://medium.com/@caramocha/ux-case-study-savvo-digital-sommelier-c2da6957105d"
-                }
+                href="https://medium.com/@caramocha/ux-case-study-savvo-digital-sommelier-c2da6957105d"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-black text-white py-2 px-3 transition-opacity hover:opacity-80"
