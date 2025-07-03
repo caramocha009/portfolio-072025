@@ -762,8 +762,12 @@ export default function Index() {
             <div className="w-1/2 bg-gray-50 flex items-center justify-center">
               {hoveredProject === "savvo-sommelier" ? (
                 <div className="max-w-lg w-full p-8">
-                  <div className="w-full h-48 bg-gradient-to-br from-orange-100 to-red-100 rounded-lg shadow-lg mb-6 flex items-center justify-center">
-                    <span className="text-6xl">🍷</span>
+                  <div className="w-full h-48 rounded-lg shadow-lg mb-6 overflow-hidden">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F25b4f8410215451ba744a09577b540b7?format=webp&width=800"
+                      alt="Savvo Digital Sommelier Preview"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <h2 className="text-2xl font-bold text-black mb-2">
                     Savvo Digital Sommelier
