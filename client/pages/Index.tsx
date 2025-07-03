@@ -1354,8 +1354,18 @@ export default function Index() {
                     Ascent Global Logistics
                   </h1>
                   <p className="text-gray-600 text-lg mb-6">
-                    Streamlining supply chain operations and enhancing logistics
-                    efficiency
+                    This is a project where I was the lead designer for their
+                    logistics platform, Peak On-Demand (POD). They were going
+                    through both a design and backend revamp for a 2.0 version.
+                    This project took many months to complete and involved
+                    working closely with engineering, PMs, and business
+                    stakeholders.&nbsp;
+                    <br />
+                    <br />
+                    Order Entry was one of the first overhauls we did using the
+                    new design system and had extensive user testing and
+                    iterations. The company was very happy with how it had
+                    turned out.&nbsp;
                   </p>
                 </div>
 
