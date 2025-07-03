@@ -361,7 +361,7 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
       if (!container) return;
 
       const allSections = document.querySelectorAll(
-        '#project-brief, [id^="section-"]',
+        '#project-brief, [id^="section-"], #interactive-case-study, #view-prototype',
       );
       let current = "";
       const containerRect = container.getBoundingClientRect();
