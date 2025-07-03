@@ -875,7 +875,10 @@ export default function Index() {
                         <span className="px-2 py-1 bg-green-100 text-green-700 rounded">
                           Logistics
                         </span>
-                        <span className="text-gray-500">2024</span>
+                        <span className="text-gray-500">
+                          User Interviews, Cross-Functional Collab, Hi-Fi
+                          Prototype
+                        </span>
                       </div>
                     </div>
                   </div>
