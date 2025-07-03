@@ -820,6 +820,45 @@ export default function Index() {
           </div>
         </div>
       );
+    } else if (type === "About") {
+      bgColor = "#FFFFFF";
+      headerColor = "#FFFFFF";
+      windowContent = (
+        <div className="text-black p-6 overflow-y-auto">
+          <h3 className="font-bold text-lg sm:text-xl mb-6 truncate">{type}</h3>
+          <div className="text-sm sm:text-base leading-relaxed space-y-4">
+            <p>
+              Cara Liu is a Senior Product Designer with 8+ years of experience
+              creating thoughtful, user-centered solutions for complex financial
+              and B2B products. She has a proven track record of transforming
+              challenging workflows into intuitive experiences that drive real
+              business results—like reducing Pacific Life's underwriting process
+              from weeks to real-time and improving AWS tool efficiency by 20%.
+            </p>
+            <p>
+              Cara specializes in bridging the gap between intricate business
+              requirements and user needs, with particular expertise in user
+              research, prototyping, and scalable design systems. She's worked
+              across highly regulated industries, consistently delivering
+              accessible, compliant solutions that enhance both user
+              satisfaction and operational efficiency.
+            </p>
+            <p>
+              Known for her collaborative approach and strategic thinking, Cara
+              excels at leading cross-functional teams through complex design
+              challenges while mentoring other designers. She brings a
+              methodical yet creative approach to every project, always
+              grounding her design decisions in solid research and measurable
+              outcomes.
+            </p>
+            <p>
+              Based in Des Moines, Cara is passionate about creating digital
+              experiences that make complicated processes feel more human and
+              accessible.
+            </p>
+          </div>
+        </div>
+      );
     } else {
       bgColor = "#FFFFFF";
       headerColor = "#FFFFFF";
