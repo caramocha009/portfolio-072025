@@ -814,7 +814,9 @@ export default function Index() {
                         <span className="px-2 py-1 bg-orange-100 text-orange-700 rounded">
                           Retail
                         </span>
-                        <span className="text-gray-500">2023</span>
+                        <span className="text-gray-500">
+                          UX, UI, Field Study, Persona, Wireframes
+                        </span>
                       </div>
                     </div>
                   </div>
