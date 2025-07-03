@@ -282,6 +282,19 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
     const extractSections = () => {
       const sectionList: Array<{ id: string; title: string }> = [];
 
+      // Check if we're in the Ascent Global Logistics case study
+      const ascentHeading = document.querySelector("#interactive-case-study");
+      if (ascentHeading) {
+        // For Ascent case study, use predefined sections
+        sectionList.push({
+          id: "interactive-case-study",
+          title: "Interactive Case Study",
+        });
+        sectionList.push({ id: "view-prototype", title: "View Prototype" });
+        setSections(sectionList);
+        return;
+      }
+
       // Find and mark Project Brief section based on actual content
       const findProjectBriefLocation = () => {
         // Look for text containing "project brief" or similar patterns
