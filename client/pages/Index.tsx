@@ -194,7 +194,7 @@ function MediumArticleEmbed({
             letterSpacing: "-0.01em",
             color: "#6B6B6B",
             maxWidth: "782px",
-            margin: "0 auto 48px auto",
+            margin: "0 auto",
             textAlign: "left",
           }}
         >
