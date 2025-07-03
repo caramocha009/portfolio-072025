@@ -873,53 +873,8 @@ export default function Index() {
       bgColor = "#FFFFFF";
       headerColor = "#FFFFFF";
       windowContent = (
-        <div className="text-black p-6 overflow-y-auto flex flex-col h-full">
-          <h3 className="font-bold text-lg sm:text-xl mb-6">Contact Me</h3>
-
-          <form className="space-y-4 flex-1 flex flex-col">
-            {/* Name Field */}
-            <div>
-              <label className="block text-sm font-semibold mb-2">Name</label>
-              <input
-                type="text"
-                placeholder="Your full name"
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
-
-            {/* Email Field */}
-            <div>
-              <label className="block text-sm font-semibold mb-2">Email</label>
-              <input
-                type="email"
-                placeholder="your.email@example.com"
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
-
-            {/* Message Field */}
-            <div className="flex-1 flex flex-col">
-              <label className="block text-sm font-semibold mb-2">
-                Message
-              </label>
-              <textarea
-                placeholder="Tell me about your project or say hello..."
-                className="flex-1 w-full px-3 py-2 border border-gray-300 rounded resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm leading-relaxed"
-                style={{ minHeight: "150px" }}
-              />
-            </div>
-
-            {/* Submit Button */}
-            <div className="pt-4">
-              <button
-                type="submit"
-                className="w-full bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded font-semibold transition-colors"
-              >
-                Send Message
-              </button>
-            </div>
-          </form>
-        </div>
+        <ContactForm />
+      );
       );
     } else {
       bgColor = "#FFFFFF";
