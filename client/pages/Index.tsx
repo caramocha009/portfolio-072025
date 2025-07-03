@@ -44,10 +44,9 @@ function MediumArticleEmbed({
     setLoading(true);
     setError(null);
     try {
-      // Using RSS2JSON to fetch the specific article
-      const response = await fetch(
-        "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@caramocha",
-      );
+      // Using medium-article-api to fetch articles
+      const mediumArticles = MediumArticles();
+      const username = "caramocha";
 
       if (!response.ok) {
         throw new Error("Failed to fetch article");
