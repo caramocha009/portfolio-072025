@@ -572,6 +572,45 @@ export default function Index() {
     }
   }, [currentCaseStudy]);
 
+  // Load vue-rss-blog retainable script for Medium embed (following https://github.com/chrisj74/vue-rss-blog)
+  useEffect(() => {
+    if (currentCaseStudy === "hyvee-aisles") {
+      // Check if CSS is already loaded
+      if (!document.querySelector('link[href*="retainable.css"]')) {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href =
+          "https://cdn.jsdelivr.net/gh/chrisj74/vue-rss-blog@main/retainable.css";
+        document.head.appendChild(link);
+      }
+
+      // Check if script is already loaded
+      if (!document.querySelector('script[src*="retainable.js"]')) {
+        const script = document.createElement("script");
+        script.src =
+          "https://cdn.jsdelivr.net/gh/chrisj74/vue-rss-blog@main/retainable.js";
+        script.async = true;
+        document.body.appendChild(script);
+
+        return () => {
+          // Cleanup script if component unmounts
+          const scriptElement = document.querySelector(
+            'script[src*="retainable.js"]',
+          );
+          if (scriptElement) {
+            scriptElement.remove();
+          }
+          const linkElement = document.querySelector(
+            'link[href*="retainable.css"]',
+          );
+          if (linkElement) {
+            linkElement.remove();
+          }
+        };
+      }
+    }
+  }, [currentCaseStudy]);
+
   const bringToFront = (windowId: string) => {
     setOpenWindows((prev) =>
       prev.map((window) =>
