@@ -980,40 +980,6 @@ export default function Index() {
                     </div>
                   </div>
                 </div>
-              ) : hoveredProject === "hyvee-aisles" ? (
-                <div className="max-w-lg w-full p-8">
-                  <div className="w-full h-48 bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg shadow-lg mb-6 flex items-center justify-center">
-                    <span className="text-6xl">🛒</span>
-                  </div>
-                  <h2 className="text-2xl font-bold text-black mb-2">
-                    Hy-Vee Aisles Online
-                  </h2>
-                  <p className="text-gray-600 mb-4">
-                    Cards, tags, and ads: UX for online shopping experience
-                  </p>
-                  <div className="space-y-3">
-                    <div>
-                      <span className="font-medium text-gray-700">
-                        Timeline:
-                      </span>
-                      <span className="ml-2 text-gray-600">4 Months</span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-gray-700">Status:</span>
-                      <span className="ml-2 text-gray-600">Launched</span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-gray-700">
-                        My Role:
-                      </span>
-                      <span className="ml-2 text-gray-600">UX Designer</span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-gray-700">Client:</span>
-                      <span className="ml-2 text-gray-600">Hy-Vee Inc.</span>
-                    </div>
-                  </div>
-                </div>
               ) : (
                 <div className="text-center text-gray-500 max-w-sm">
                   <div className="mb-6 flex justify-center">
