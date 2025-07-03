@@ -1515,10 +1515,6 @@ export default function Index() {
                         Progressive Disclosure
                       </p>
                     </div>
-                    <h2 className="text-2xl font-bold text-black mb-6">
-                      Simplifying SMB Equipment Purchasing Through Strategic
-                      Progressive Disclosure
-                    </h2>
 
                     <div className="space-y-8">
                       <div>
