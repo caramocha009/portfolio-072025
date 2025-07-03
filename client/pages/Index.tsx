@@ -1215,23 +1215,15 @@ export default function Index() {
                       {/* Article Footer */}
                       <div className="pt-6 border-t border-gray-200">
                         <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-4">
-                            {mediumArticle.categories &&
-                              mediumArticle.categories.length > 0 && (
-                                <div className="flex gap-2">
-                                  {mediumArticle.categories
-                                    .slice(0, 3)
-                                    .map((category, index) => (
-                                      <span
-                                        key={index}
-                                        className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
-                                      >
-                                        {category}
-                                      </span>
-                                    ))}
-                                </div>
-                              )}
-                          </div>
+                          <button
+                            onClick={() => {
+                              setCurrentCaseStudy(null);
+                              setIsProjectsFullscreenOpen(true);
+                            }}
+                            className="inline-flex items-center px-6 py-3 bg-gray-300 text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-gray-200 transition-colors font-mono text-sm"
+                          >
+                            ← Back to Projects
+                          </button>
                           <a
                             href={mediumArticle.link}
                             target="_blank"
