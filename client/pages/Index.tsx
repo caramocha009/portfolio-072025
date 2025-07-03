@@ -301,7 +301,7 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
         // For Hy-Vee case study, create static navigation and find/add IDs to headings
         const headingMap = [
           {
-            searchText: "Hy-Vee's Online Shopping Experience",
+            searchText: "Online Shopping Experience",
             id: "hyvee-online-shopping-experience",
             title: "Intro",
           },
