@@ -65,10 +65,12 @@ function MediumArticleEmbed({
       } else if (articleType === "hyvee-aisles") {
         targetArticle = data.items.find(
           (item: any) =>
-            item.title.toLowerCase().includes("cards") ||
-            item.title.toLowerCase().includes("tags") ||
+            item.title.toLowerCase().includes("cards, tags, and ads") ||
+            item.title.toLowerCase().includes("online shopping experience") ||
             item.title.toLowerCase().includes("hy-vee") ||
-            item.title.toLowerCase().includes("online shopping"),
+            (item.title.toLowerCase().includes("cards") &&
+              item.title.toLowerCase().includes("tags") &&
+              item.title.toLowerCase().includes("ads")),
         );
       }
 
