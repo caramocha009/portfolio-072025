@@ -1035,7 +1035,7 @@ export default function Index() {
                 </div>
 
                 {/* Full Medium Article Content */}
-                <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                <div className="bg-gray-50">
                   {isLoadingArticle ? (
                     <div className="p-8">
                       <div className="animate-pulse">
