@@ -869,6 +869,67 @@ export default function Index() {
           </div>
         </div>
       );
+    } else if (type === "Contact") {
+      bgColor = "#FFFFFF";
+      headerColor = "#FFFFFF";
+      windowContent = (
+        <div className="text-black p-6 overflow-hidden flex flex-col h-full">
+          <h3 className="font-bold text-lg sm:text-xl mb-6 truncate">{type}</h3>
+
+          {/* Header Fields */}
+          <div className="space-y-4 mb-4 border-b border-gray-300 pb-4">
+            {/* To Field */}
+            <div className="flex items-center gap-4">
+              <label className="font-semibold text-sm w-16">To</label>
+              <input
+                type="text"
+                value="Cara Liu"
+                readOnly
+                className="flex-1 px-3 py-2 border border-gray-300 rounded bg-gray-50 text-gray-600"
+              />
+              <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded font-semibold text-sm">
+                Send
+              </button>
+            </div>
+
+            {/* From Field */}
+            <div className="flex items-center gap-4">
+              <label className="font-semibold text-sm w-16">From</label>
+              <input
+                type="email"
+                placeholder="Your email address"
+                className="flex-1 px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <select className="px-3 py-2 border border-gray-300 rounded bg-white text-sm">
+                <option>👤 As Yourself</option>
+              </select>
+            </div>
+
+            {/* Subject Field */}
+            <div className="flex items-center gap-4">
+              <label className="font-semibold text-sm w-16">Subject</label>
+              <select className="flex-1 px-3 py-2 border border-gray-300 rounded bg-white">
+                <option>💕 Personal Note</option>
+                <option>💼 Business Inquiry</option>
+                <option>🚀 Project Collaboration</option>
+                <option>❓ General Question</option>
+              </select>
+              <button className="px-4 py-2 border border-gray-300 rounded text-sm hover:bg-gray-50">
+                Attach
+              </button>
+            </div>
+          </div>
+
+          {/* Message Area */}
+          <div className="flex-1 flex flex-col">
+            <textarea
+              placeholder="Write your message here..."
+              className="flex-1 w-full p-4 border border-gray-300 rounded resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm leading-relaxed"
+              style={{ minHeight: "200px" }}
+            />
+          </div>
+        </div>
+      );
     } else {
       bgColor = "#FFFFFF";
       headerColor = "#FFFFFF";
