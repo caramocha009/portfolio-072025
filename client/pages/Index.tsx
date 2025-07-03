@@ -1515,16 +1515,101 @@ export default function Index() {
 
                 {/* Case study content */}
                 <div className="bg-gray-50 p-8">
-                  <div className="text-center py-16">
-                    <div className="text-8xl mb-6">💳</div>
-                    <h2 className="text-2xl font-bold text-black mb-4">
-                      Case Study Coming Soon
+                  <div className="max-w-3xl mx-auto">
+                    <h2 className="text-2xl font-bold text-black mb-6">
+                      Simplifying SMB Equipment Purchasing Through Strategic
+                      Progressive Disclosure
                     </h2>
-                    <p className="text-gray-600 text-lg max-w-md mx-auto">
-                      This comprehensive case study is currently in development.
-                      Check back soon for insights into our payment optimization
-                      project.
-                    </p>
+
+                    <div className="space-y-8">
+                      <div>
+                        <h3 className="text-xl font-semibold text-black mb-4">
+                          The Problem:
+                        </h3>
+                        <p className="text-gray-700 leading-relaxed">
+                          Small business owners using Bank of America's business
+                          banking platform were abandoning equipment purchases
+                          at alarming rates. The checkout process for scanners,
+                          POS systems, and business tools was overwhelming
+                          customers with complex plan structures, equipment
+                          options, and pricing details all presented
+                          upfront—creating decision paralysis in a
+                          revenue-critical flow.
+                        </p>
+                      </div>
+
+                      <div>
+                        <h3 className="text-xl font-semibold text-black mb-4">
+                          My Role & Approach:
+                        </h3>
+                        <p className="text-gray-700 leading-relaxed">
+                          As the lead designer, I took ownership of redesigning
+                          the entire equipment checkout experience. Rather than
+                          just making cosmetic improvements, I made strategic
+                          decisions about information architecture and user
+                          flow. I defined how Bank of America's equipment
+                          packages would be presented to reduce cognitive load
+                          while maintaining all necessary information for
+                          informed decision-making.
+                        </p>
+                      </div>
+
+                      <div>
+                        <h3 className="text-xl font-semibold text-black mb-4">
+                          The Solution:
+                        </h3>
+                        <p className="text-gray-700 leading-relaxed mb-4">
+                          I designed a progressive disclosure system across
+                          multiple pages that revealed information strategically
+                          rather than overwhelming users immediately. Key design
+                          decisions included:
+                        </p>
+                        <ul className="list-disc pl-6 text-gray-700 space-y-2">
+                          <li>
+                            Creating clear comparison frameworks for different
+                            equipment packages and service plans
+                          </li>
+                          <li>
+                            Designing intuitive switching and upgrade workflows
+                            so customers could easily modify existing equipment
+                            setups
+                          </li>
+                          <li>
+                            Structuring the checkout to show cost implications
+                            and usage patterns at the right moments in the
+                            decision process
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h3 className="text-xl font-semibold text-black mb-4">
+                          The Outcome:
+                        </h3>
+                        <p className="text-gray-700 leading-relaxed">
+                          The redesigned checkout flow resulted in increased
+                          conversion rates and significantly faster transaction
+                          completion times. SMB customers could now confidently
+                          configure their business equipment needs through a
+                          clear, step-by-step process that guided them to the
+                          right solution without decision fatigue.
+                        </p>
+                      </div>
+
+                      <div>
+                        <h3 className="text-xl font-semibold text-black mb-4">
+                          Key Learning:
+                        </h3>
+                        <p className="text-gray-700 leading-relaxed">
+                          This project reinforced that in B2B purchasing,
+                          strategic information architecture is just as critical
+                          as visual design. Users need to understand their
+                          current state before making upgrade decisions, so
+                          presenting plan structures must follow their mental
+                          model from "what I have" to "what I need."
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
