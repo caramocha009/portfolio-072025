@@ -392,7 +392,7 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
       if (!container) return;
 
       const allSections = document.querySelectorAll(
-        '#project-brief, [id^="section-"], #interactive-case-study, #view-prototype',
+        '#project-brief, [id^="section-"], #interactive-case-study, #view-prototype, #intro, #the-scope, #current-state, #cards-visual-hierarchy, #technical-implementation, #product-tags-testing, #ads-placement-testing, #strategic-recommendations',
       );
       let current = "";
       const containerRect = container.getBoundingClientRect();
