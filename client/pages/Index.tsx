@@ -1454,7 +1454,10 @@ export default function Index() {
 
                 {/* Interactive Case Study Section */}
                 <div className="mt-8">
-                  <h2 className="text-2xl font-bold text-black mb-4 text-center">
+                  <h2
+                    id="interactive-case-study"
+                    className="text-2xl font-bold text-black mb-4 text-center"
+                  >
                     Interactive Case Study
                   </h2>
                   <div className="bg-gray-50 w-full flex justify-center">
