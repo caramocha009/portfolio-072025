@@ -805,11 +805,7 @@ export default function Index() {
                 <div className="text-center text-gray-500 max-w-sm">
                   <div className="mb-6 flex justify-center">
                     <div className="w-32 h-32 border-4 border-dashed border-gray-300 rounded-lg flex items-center justify-center">
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F142c09b681f54847b9ff5741d9cb1428?format=webp&width=800"
-                        alt="Pointing hand"
-                        className="w-12 h-12"
-                      />
+                      <span className="text-4xl">👆</span>
                     </div>
                   </div>
                   <h3 className="text-lg font-medium mb-2 text-gray-600">
