@@ -954,8 +954,17 @@ export default function Index() {
           ? 500
           : type === "About"
             ? Math.floor(window.innerWidth * 0.5)
-            : 300,
-      height: type === "Articles" ? 400 : type === "About" ? 500 : 300,
+            : type === "Contact"
+              ? 600
+              : 300,
+      height:
+        type === "Articles"
+          ? 400
+          : type === "About"
+            ? 500
+            : type === "Contact"
+              ? 450
+              : 300,
       zIndex: nextZIndex,
       content: windowContent,
     };
