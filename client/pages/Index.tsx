@@ -732,6 +732,7 @@ function Lightbox({
 }
 
 export default function Index() {
+  const [showRecyclingTooltip, setShowRecyclingTooltip] = useState(false);
   const [openWindows, setOpenWindows] = useState<WindowConfig[]>([
     {
       id: "sticky1",
