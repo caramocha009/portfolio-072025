@@ -885,6 +885,39 @@ export default function Index() {
                     </div>
                   </div>
                 </div>
+
+                {/* Bank of America Merchant Partner Checkout */}
+                <div
+                  className="border-2 border-purple-200 rounded-lg p-4 hover:border-purple-400 cursor-pointer transition-colors"
+                  onMouseEnter={() =>
+                    setHoveredProject("boa-merchant-checkout")
+                  }
+                  onMouseLeave={() => setHoveredProject(null)}
+                  onClick={() => setCurrentCaseStudy("boa-merchant-checkout")}
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold text-lg">💳</span>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-lg font-medium text-black mb-1">
+                        Bank of America Merchant Partner Checkout
+                      </h3>
+                      <p className="text-sm text-gray-600 mb-2">
+                        Streamlined checkout experience for merchant partners
+                        and customers
+                      </p>
+                      <div className="flex items-center gap-2 text-xs">
+                        <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded">
+                          Fintech
+                        </span>
+                        <span className="text-gray-500">
+                          Checkout Flow, Payment UX, Security
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
