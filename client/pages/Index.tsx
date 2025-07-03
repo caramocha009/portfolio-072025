@@ -54,17 +54,28 @@ function MediumArticleEmbed({
 
       const data = await response.json();
 
-      // Find the specific Savvo Digital Sommelier article
-      const savvoArticle = data.items.find(
-        (item: any) =>
-          item.title.toLowerCase().includes("savvo") ||
-          item.title.toLowerCase().includes("digital sommelier"),
-      );
+      // Find the specific article based on articleType
+      let targetArticle;
+      if (articleType === "savvo-sommelier") {
+        targetArticle = data.items.find(
+          (item: any) =>
+            item.title.toLowerCase().includes("savvo") ||
+            item.title.toLowerCase().includes("digital sommelier"),
+        );
+      } else if (articleType === "hyvee-aisles") {
+        targetArticle = data.items.find(
+          (item: any) =>
+            item.title.toLowerCase().includes("cards") ||
+            item.title.toLowerCase().includes("tags") ||
+            item.title.toLowerCase().includes("hy-vee") ||
+            item.title.toLowerCase().includes("online shopping"),
+        );
+      }
 
-      if (savvoArticle) {
-        setArticleContent(savvoArticle);
+      if (targetArticle) {
+        setArticleContent(targetArticle);
       } else {
-        throw new Error("Savvo article not found");
+        throw new Error(`Article not found for ${articleType}`);
       }
     } catch (err) {
       setError(err instanceof Error ? err.message : "Unknown error");
