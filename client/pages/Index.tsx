@@ -977,12 +977,16 @@ export default function Index() {
             style={{ marginTop: "48px", paddingBottom: "144px" }}
           >
             {currentCaseStudy === "hyvee-aisles" ? (
-              {/* Empty content for Hy-Vee - only navigation shows */}
+              /* Empty content for Hy-Vee - only navigation shows */
               <div className="flex items-center justify-center min-h-[400px]">
                 <div className="text-center">
                   <div className="text-6xl mb-4">🛒</div>
-                  <h2 className="text-2xl font-bold text-black mb-2">Hy-Vee Aisles Online</h2>
-                  <p className="text-gray-600">Case study content coming soon...</p>
+                  <h2 className="text-2xl font-bold text-black mb-2">
+                    Hy-Vee Aisles Online
+                  </h2>
+                  <p className="text-gray-600">
+                    Case study content coming soon...
+                  </p>
                 </div>
               </div>
             ) : (
