@@ -1041,6 +1041,45 @@ export default function Index() {
                     </div>
                   </div>
                 </div>
+              ) : hoveredProject === "boa-merchant-checkout" ? (
+                <div className="max-w-lg w-full p-8">
+                  <div className="w-full h-48 bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg shadow-lg mb-6 flex items-center justify-center">
+                    <span className="text-6xl">💳</span>
+                  </div>
+                  <h2 className="text-2xl font-bold text-black mb-2">
+                    Bank of America Merchant Partner Checkout
+                  </h2>
+                  <p className="text-gray-600 mb-4">
+                    Streamlined checkout experience for merchant partners and
+                    customers
+                  </p>
+                  <div className="space-y-3">
+                    <div>
+                      <span className="font-medium text-gray-700">
+                        Timeline:
+                      </span>
+                      <span className="ml-2 text-gray-600">8 Months</span>
+                    </div>
+                    <div>
+                      <span className="font-medium text-gray-700">Status:</span>
+                      <span className="ml-2 text-gray-600">Launched</span>
+                    </div>
+                    <div>
+                      <span className="font-medium text-gray-700">
+                        My Role:
+                      </span>
+                      <span className="ml-2 text-gray-600">
+                        Senior UX Designer
+                      </span>
+                    </div>
+                    <div>
+                      <span className="font-medium text-gray-700">Client:</span>
+                      <span className="ml-2 text-gray-600">
+                        Bank of America
+                      </span>
+                    </div>
+                  </div>
+                </div>
               ) : (
                 <div className="text-center text-gray-500 max-w-sm">
                   <div className="mb-6 flex justify-center">
