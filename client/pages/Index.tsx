@@ -700,7 +700,7 @@ export default function Index() {
             {/* Close button */}
             <div className="absolute right-2 top-1/2 transform -translate-y-1/2">
               <button
-                onClick={() => setIsWorksFullscreenOpen(false)}
+                onClick={() => setIsProjectsFullscreenOpen(false)}
                 className="w-6 h-6 flex items-center justify-center hover:bg-black hover:bg-opacity-10 rounded-sm bg-white"
               >
                 <svg width="14" height="20" viewBox="0 0 14 20" fill="none">
