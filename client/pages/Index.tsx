@@ -125,15 +125,12 @@ function MediumArticleEmbed({
   const extractFirstImage = (content: string) => {
     const firstImageMatch = content.match(/<img[^>]*>/);
     if (firstImageMatch) {
-      const firstImage =
-        firstImageMatch[0]
-          .replace(/onclick="[^"]*"/g, "")
-          .replace(/style="[^"]*"/g, "") +
-        " onclick=\"window.openLightbox('" +
-        firstImageMatch[0].match(/src="([^"]*)"/)?.[1] +
-        '\')" style="cursor: pointer; width: 100%; height: auto; margin: 0 auto 48px auto; display: block; max-width: 782px;"';
-      const contentWithoutFirstImage = content.replace(/<img[^>]*>/, "");
-      return { firstImage, remainingContent: contentWithoutFirstImage };
+      const srcMatch = firstImageMatch[0].match(/src="([^"]*)"/);
+      if (srcMatch) {
+        const firstImage = `<img src="${srcMatch[1]}" onclick="window.openLightbox('${srcMatch[1]}')" style="cursor: pointer; width: 100%; height: auto; margin: 0 auto 48px auto; display: block; max-width: 782px;">`;
+        const contentWithoutFirstImage = content.replace(/<img[^>]*>/, "");
+        return { firstImage, remainingContent: contentWithoutFirstImage };
+      }
     }
     return { firstImage: "", remainingContent: content };
   };
