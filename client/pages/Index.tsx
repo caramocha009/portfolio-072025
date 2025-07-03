@@ -1025,7 +1025,7 @@ export default function Index() {
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F6829f07bb8154efd94e83e549cf50de0?format=webp&width=800"
                       alt="Ascent Global Logistics Preview"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-center"
                     />
                   </div>
                   <h2 className="text-2xl font-bold text-black mb-2">
