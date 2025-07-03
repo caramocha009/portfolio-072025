@@ -2134,7 +2134,7 @@ export default function Index() {
 
           {/* Recycling Icon - Bottom right, aligned with Listen column */}
           <div
-            className="absolute z-20 relative"
+            className="absolute z-20"
             style={{ bottom: "calc(24px + 1vw)", right: "calc(24px + 1vw)" }}
             onMouseEnter={() => setShowRecyclingTooltip(true)}
             onMouseLeave={() => setShowRecyclingTooltip(false)}
