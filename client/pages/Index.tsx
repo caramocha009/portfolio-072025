@@ -572,39 +572,23 @@ export default function Index() {
     }
   }, [currentCaseStudy]);
 
-  // Load vue-rss-blog retainable script for Medium embed (following https://github.com/chrisj74/vue-rss-blog)
+  // Load Medium article embed for Hy-Vee case study
   useEffect(() => {
     if (currentCaseStudy === "hyvee-aisles") {
-      // Check if CSS is already loaded
-      if (!document.querySelector('link[href*="retainable.css"]')) {
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href =
-          "https://cdn.jsdelivr.net/gh/chrisj74/vue-rss-blog@main/retainable.css";
-        document.head.appendChild(link);
-      }
-
-      // Check if script is already loaded
-      if (!document.querySelector('script[src*="retainable.js"]')) {
+      // Load Medium's embed script
+      if (!document.querySelector('script[src*="medium.com"]')) {
         const script = document.createElement("script");
-        script.src =
-          "https://cdn.jsdelivr.net/gh/chrisj74/vue-rss-blog@main/retainable.js";
+        script.src = "https://medium.com/media/embed";
         script.async = true;
-        document.body.appendChild(script);
+        document.head.appendChild(script);
 
         return () => {
           // Cleanup script if component unmounts
           const scriptElement = document.querySelector(
-            'script[src*="retainable.js"]',
+            'script[src*="medium.com"]',
           );
           if (scriptElement) {
             scriptElement.remove();
-          }
-          const linkElement = document.querySelector(
-            'link[href*="retainable.css"]',
-          );
-          if (linkElement) {
-            linkElement.remove();
           }
         };
       }
@@ -792,7 +776,7 @@ export default function Index() {
                 >
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-lg">🍷</span>
+                      <span className="text-white font-bold text-lg">���</span>
                     </div>
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-medium text-black mb-1">
