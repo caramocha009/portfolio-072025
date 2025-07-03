@@ -72,28 +72,27 @@ function MediumArticleEmbed({
             item.title.toLowerCase().includes("digital sommelier"),
         );
       } else if (articleType === "hyvee-aisles") {
-        // Try multiple search strategies for the Hy-Vee article
-        targetArticle = data.items.find(
-          (item: any) =>
-            item.link.includes("10b577148105") ||
-            item.link.includes(
-              "cards-tags-and-ads-ux-for-online-shopping-experience",
-            ) ||
-            item.title.toLowerCase().includes("cards, tags, and ads") ||
-            item.title.toLowerCase().includes("cards, tags and ads") ||
-            item.title.toLowerCase().includes("online shopping experience") ||
-            item.title.toLowerCase().includes("hy-vee") ||
-            (item.title.toLowerCase().includes("cards") &&
-              item.title.toLowerCase().includes("tags") &&
-              item.title.toLowerCase().includes("ads")),
+        // Find the specific Hy-Vee article by exact URL match first
+        targetArticle = data.items.find((item: any) =>
+          item.link.includes("10b577148105"),
         );
 
-        // If still not found, try even broader search
+        // If not found by URL, try by URL slug
+        if (!targetArticle) {
+          targetArticle = data.items.find((item: any) =>
+            item.link.includes(
+              "cards-tags-and-ads-ux-for-online-shopping-experience",
+            ),
+          );
+        }
+
+        // Only if the specific article isn't found, try title matching
         if (!targetArticle) {
           targetArticle = data.items.find(
             (item: any) =>
-              item.title.toLowerCase().includes("product card") ||
-              item.title.toLowerCase().includes("aisles online") ||
+              (item.title.toLowerCase().includes("cards") &&
+                item.title.toLowerCase().includes("tags") &&
+                item.title.toLowerCase().includes("ads")) ||
               item.title.toLowerCase().includes("oh my"),
           );
         }
