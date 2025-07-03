@@ -842,7 +842,7 @@ export default function Index() {
                 <button
                   onClick={() => {
                     setCurrentCaseStudy(null);
-                    setIsWorksFullscreenOpen(false);
+                    setIsProjectsFullscreenOpen(false);
                   }}
                   className="text-black font-mono text-sm hover:opacity-70 transition-opacity cursor-pointer"
                 >
