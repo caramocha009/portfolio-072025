@@ -208,6 +208,7 @@ function MediumArticleEmbed({
             fontSize: "21px",
             lineHeight: "1.58",
             color: "#292929",
+            marginTop: "-126px",
           }}
           dangerouslySetInnerHTML={{
             __html: (() => {
