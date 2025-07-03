@@ -1384,6 +1384,26 @@ export default function Index() {
                   ></iframe>
                 </div>
 
+                {/* View Prototype Section */}
+                <div className="mt-8">
+                  <h2 className="text-2xl font-bold text-black mb-4 text-center">
+                    View Prototype
+                  </h2>
+                  <div className="bg-gray-50 w-full flex justify-center">
+                    <iframe
+                      style={{
+                        border: "1px solid rgba(0, 0, 0, 0.1)",
+                        width: "100%",
+                        height: "80vh",
+                        maxWidth: "100%",
+                      }}
+                      src="https://embed.figma.com/proto/bFieg2HMmJAqM3goTMNE3k/Order-Entry--FINAL-?page-id=919%3A21676&type=design&node-id=919-21860&viewport=121%2C1710%2C0.06&scaling=min-zoom&starting-point-node-id=919%3A21860&embed-host=share"
+                      allowFullScreen
+                      title="Order Entry Prototype"
+                    ></iframe>
+                  </div>
+                </div>
+
                 {/* Back to Projects Button */}
                 <div className="mt-8 flex justify-center">
                   <button
