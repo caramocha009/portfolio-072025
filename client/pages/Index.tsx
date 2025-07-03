@@ -972,7 +972,10 @@ export default function Index() {
             className="max-w-4xl mx-auto px-6 py-2"
             style={{ marginTop: "48px", paddingBottom: "144px" }}
           >
-            <MediumArticleEmbed onImageClick={(src) => setLightboxImage(src)} />
+            <MediumArticleEmbed
+              onImageClick={(src) => setLightboxImage(src)}
+              articleType={currentCaseStudy || "savvo-sommelier"}
+            />
 
             {/* Buttons */}
             <div
