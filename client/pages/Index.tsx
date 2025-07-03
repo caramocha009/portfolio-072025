@@ -1149,7 +1149,9 @@ export default function Index() {
                       ? "Hy-Vee Aisles Online"
                       : currentCaseStudy === "ascent-logistics"
                         ? "Ascent Global Logistics"
-                        : "Case Study"}
+                        : currentCaseStudy === "boa-merchant-checkout"
+                          ? "Bank of America Merchant Partner Checkout"
+                          : "Case Study"}
                 </span>
               </div>
 
