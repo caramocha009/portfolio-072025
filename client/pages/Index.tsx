@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { MediumArticles } from "medium-article-api";
 import { DraggableWindow } from "@/components/ui/draggable-window";
 import { DesktopIcon } from "@/components/ui/desktop-icon";
 import {
