@@ -123,7 +123,11 @@ function MediumArticleEmbed({
           Unable to load article content
         </p>
         <a
-          href="https://medium.com/@caramocha/ux-case-study-savvo-digital-sommelier-c2da6957105d"
+          href={
+            articleType === "hyvee-aisles"
+              ? "https://medium.com/@caramocha/cards-tags-and-ads-ux-for-online-shopping-experience-10b577148105"
+              : "https://medium.com/@caramocha/ux-case-study-savvo-digital-sommelier-c2da6957105d"
+          }
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-6 py-3 bg-orange-400 text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all font-mono text-base font-bold"
