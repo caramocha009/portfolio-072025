@@ -5,6 +5,7 @@ interface DesktopIconProps {
   label: string;
   onClick?: () => void;
   className?: string;
+  title?: string;
 }
 
 export function DesktopIcon({
