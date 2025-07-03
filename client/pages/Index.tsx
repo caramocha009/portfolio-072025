@@ -2144,7 +2144,8 @@ export default function Index() {
             <DesktopIcon
               icon={<RecyclingIcon />}
               label="Recycling Bin"
-              className="scale-75 md:scale-90 pointer-events-none"
+              onClick={() => alert("I'm just a humble trash can...")}
+              className="scale-75 md:scale-90"
             />
           </div>
 
