@@ -1397,7 +1397,7 @@ export default function Index() {
                         height: "80vh",
                         maxWidth: "100%",
                       }}
-                      src="https://embed.figma.com/proto/bFieg2HMmJAqM3goTMNE3k/Order-Entry--FINAL-?page-id=919%3A21676&type=design&node-id=919-21860&viewport=121%2C1710%2C0.06&scaling=min-zoom&starting-point-node-id=919%3A21860&embed-host=share"
+                      src="https://embed.figma.com/proto/bFieg2HMmJAqM3goTMNE3k/Order-Entry--FINAL-?page-id=919%3A21676&type=design&node-id=919-21860&viewport=121%2C1710%2C0.06&scaling=contain&starting-point-node-id=919%3A21860&content-scaling=fixed&embed-host=share"
                       allowFullScreen
                       title="Order Entry Prototype"
                     ></iframe>
