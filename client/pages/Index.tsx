@@ -1066,7 +1066,9 @@ export default function Index() {
                     ? "Savvo Digital Sommelier"
                     : currentCaseStudy === "hyvee-aisles"
                       ? "Hy-Vee Aisles Online"
-                      : "Case Study"}
+                      : currentCaseStudy === "ascent-logistics"
+                        ? "Ascent Global Logistics"
+                        : "Case Study"}
                 </span>
               </div>
 
