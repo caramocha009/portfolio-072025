@@ -621,7 +621,7 @@ export default function Index() {
                   B
                 </div>
                 <span className="truncate">Bloomberg</span>
-                <span className="flex-shrink-0">•</span>
+                <span className="flex-shrink-0">��</span>
                 <span className="truncate">Lizette Chapman</span>
               </div>
             </div>
@@ -852,11 +852,11 @@ export default function Index() {
                 <button
                   onClick={() => {
                     setCurrentCaseStudy(null);
-                    setIsWorksFullscreenOpen(true);
+                    setIsProjectsFullscreenOpen(true);
                   }}
                   className="text-black font-mono text-sm hover:opacity-70 transition-opacity cursor-pointer"
                 >
-                  📂 Works
+                  📂 Projects
                 </button>
                 <span className="text-black font-mono text-sm">→</span>
                 <span className="text-black font-mono text-sm">
