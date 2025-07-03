@@ -63,18 +63,15 @@ function MediumArticleEmbed({
             item.title.toLowerCase().includes("tags") &&
             item.title.toLowerCase().includes("ads"),
         );
-      } else if (articleType === "savvo-sommelier") {
-        // For Savvo article, try to find it in the feed
-        const response = await fetch(
-          "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@caramocha",
-        );
 
-        if (!response.ok) {
-          throw new Error("Failed to fetch article");
+        if (targetArticle) {
+          setArticleContent(targetArticle);
+        } else {
+          throw new Error("Hy-Vee article not found");
         }
-
-        const data = await response.json();
-        const targetArticle = data.items.find(
+      } else if (articleType === "savvo-sommelier") {
+        // For Savvo article, find it in the feed (same pattern as Hy-Vee)
+        targetArticle = data.items.find(
           (item: any) =>
             item.title.toLowerCase().includes("savvo") ||
             item.title.toLowerCase().includes("digital sommelier"),
