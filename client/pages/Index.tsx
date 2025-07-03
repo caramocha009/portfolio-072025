@@ -1448,57 +1448,65 @@ export default function Index() {
                                 /<blockquote([^>]*)>/gi,
                                 '<blockquote$1 style="border-left: 3px solid #242424; padding-left: 24px; margin: 32px 0; font-style: italic; font-size: 24px; color: #6B6B6B; font-family: charter, Georgia, Cambria, Times New Roman, Times, serif;">',
                               )
+                              (
+                                // First, identify where Information Architecture Redesign section starts
+                                () => {
+                                  let imageCount = 0;
+                                  let inInfoArchSection = false;
 
-                              // Process images with special handling for Information Architecture Redesign section
-                              .replace(/<img[^>]*>/g, (match, offset) => {
-                                // Extract src attribute
-                                const srcMatch = match.match(/src="([^"]*)"/);
+                                  return processedContent.replace(
+                                    /<img[^>]*>/g,
+                                    (match) => {
+                                      // Extract src attribute
+                                      const srcMatch =
+                                        match.match(/src="([^"]*)"/);
 
-                                // If no src attribute, remove the image
-                                if (!srcMatch) return "";
+                                      // If no src attribute, remove the image
+                                      if (!srcMatch) return "";
 
-                                const src = srcMatch[1];
+                                      const src = srcMatch[1];
 
-                                // Remove if src is empty, undefined, null, or invalid
-                                if (
-                                  !src ||
-                                  src === "" ||
-                                  src === "undefined" ||
-                                  src === "null" ||
-                                  src.length < 10 ||
-                                  !src.startsWith("http")
-                                ) {
-                                  return "";
-                                }
+                                      // Remove if src is empty, undefined, null, or invalid
+                                      if (
+                                        !src ||
+                                        src === "" ||
+                                        src === "undefined" ||
+                                        src === "null" ||
+                                        src.length < 10 ||
+                                        !src.startsWith("http")
+                                      ) {
+                                        return "";
+                                      }
 
-                                // Check if this image comes after "Information Architecture Redesign" heading
-                                const contentBeforeImage =
-                                  processedContent.substring(0, offset);
-                                const infoArchHeadingIndex =
-                                  contentBeforeImage.lastIndexOf(
-                                    "Information Architecture Redesign",
+                                      // Check if we've passed the Information Architecture Redesign heading
+                                      if (!inInfoArchSection) {
+                                        const textBeforeImage =
+                                          processedContent.substring(
+                                            0,
+                                            processedContent.indexOf(match),
+                                          );
+                                        if (
+                                          textBeforeImage.includes(
+                                            "Information Architecture Redesign",
+                                          )
+                                        ) {
+                                          inInfoArchSection = true;
+                                          imageCount = 0; // Reset counter when we enter the section
+                                        }
+                                      }
+
+                                      // If we're in the section, resize first two images
+                                      if (inInfoArchSection && imageCount < 2) {
+                                        imageCount++;
+                                        return `<img src="${src}" style="width: 20%; height: auto; margin: 32px 0; max-width: 200px; cursor: pointer;" onclick="window.openLightbox && window.openLightbox('${src}')" alt="">`;
+                                      }
+
+                                      // Keep other images with normal styling
+                                      return `<img src="${src}" style="width: 100%; height: auto; margin: 32px 0; max-width: 1000px; cursor: pointer;" onclick="window.openLightbox && window.openLightbox('${src}')" alt="">`;
+                                    },
                                   );
-
-                                if (infoArchHeadingIndex !== -1) {
-                                  // Count how many images come after the Information Architecture Redesign heading
-                                  const contentAfterHeading =
-                                    contentBeforeImage.substring(
-                                      infoArchHeadingIndex,
-                                    );
-                                  const imageCountAfterHeading = (
-                                    contentAfterHeading.match(/<img[^>]*>/g) ||
-                                    []
-                                  ).length;
-
-                                  // Resize first two images to 20% size
-                                  if (imageCountAfterHeading < 2) {
-                                    return `<img src="${src}" style="width: 20%; height: auto; margin: 32px 0; max-width: 200px; cursor: pointer;" onclick="window.openLightbox && window.openLightbox('${src}')" alt="">`;
-                                  }
-                                }
-
-                                // Keep other images with normal styling
-                                return `<img src="${src}" style="width: 100%; height: auto; margin: 32px 0; max-width: 1000px; cursor: pointer;" onclick="window.openLightbox && window.openLightbox('${src}')" alt="">`;
-                              })
+                                },
+                              )()
 
                               // Remove any remaining empty figure tags that might contain broken images
                               .replace(/<figure[^>]*>\s*<\/figure>/g, "")
