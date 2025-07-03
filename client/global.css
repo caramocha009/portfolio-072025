@@ -188,11 +188,22 @@
   .medium-article-content {
     background-color: transparent !important;
     padding: 0 !important;
-    max-width: 782px !important;
     margin: 0 auto !important;
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale !important;
     text-rendering: optimizeLegibility !important;
+
+    /* CSS Grid Layout for Medium-style article display */
+    display: grid !important;
+    grid-template-columns: 1fr min(680px, calc(100% - 64px)) 1fr !important;
+    grid-column-gap: 32px !important;
+    width: 100% !important;
+    max-width: 1192px !important;
+  }
+
+  /* All direct children go to the center column by default */
+  .medium-article-content > * {
+    grid-column: 2 !important;
   }
 
   .medium-article-content h1 {
