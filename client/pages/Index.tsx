@@ -70,6 +70,29 @@ function MediumArticleEmbed({
             `Savvo article not found. Available articles: ${data.items.map((item: any) => item.title).join(", ")}`,
           );
         }
+      } else if (articleType === "hyvee-aisles") {
+        // Import Hy-Vee Medium article using RSS2JSON approach
+        // Following: https://javascript.plainenglish.io/how-i-successfully-added-medium-blogs-to-my-website-abafd76c4182
+
+        // Find the specific Hy-Vee article in the RSS feed
+        targetArticle = data.items.find(
+          (item: any) =>
+            item.title.includes("Cards, Tags, and Ads – Oh my!") ||
+            item.title.toLowerCase().includes("cards, tags, and ads") ||
+            item.link.includes("10b577148105") ||
+            item.link.includes(
+              "cards-tags-and-ads-ux-for-online-shopping-experience",
+            ),
+        );
+
+        if (targetArticle) {
+          console.log("Found Hy-Vee article via RSS:", targetArticle.title);
+          setArticleContent(targetArticle);
+        } else {
+          throw new Error(
+            `Hy-Vee article not found in RSS feed. Available articles: ${data.items.map((item: any) => item.title).join(", ")}`,
+          );
+        }
       }
     } catch (err) {
       setError(err instanceof Error ? err.message : "Unknown error");
