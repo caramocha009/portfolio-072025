@@ -54,6 +54,12 @@ function MediumArticleEmbed({
 
       const data = await response.json();
 
+      // Debug: Log all available article titles
+      console.log(
+        "Available articles:",
+        data.items.map((item: any) => item.title),
+      );
+
       // Find the specific article based on articleType
       let targetArticle;
       if (articleType === "savvo-sommelier") {
