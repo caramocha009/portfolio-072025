@@ -71,13 +71,21 @@ function MediumArticleEmbed({
           );
         }
       } else if (articleType === "hyvee-aisles") {
+        // Debug: Log all articles to see what's available
+        console.log(
+          "All available articles:",
+          data.items.map((item: any) => item.title),
+        );
+
         // For Hy-Vee article, try to find it in the feed (exact same approach as Savvo)
         targetArticle = data.items.find(
           (item: any) =>
+            item.title.toLowerCase().includes("cards, tags, and ads") ||
+            item.title.toLowerCase().includes("oh my") ||
             item.title.toLowerCase().includes("hy-vee") ||
             item.title.toLowerCase().includes("hyvee") ||
-            item.title.toLowerCase().includes("cards") ||
-            item.title.toLowerCase().includes("oh my"),
+            item.link.includes("10b577148105") ||
+            item.link.includes("cards-tags-and-ads"),
         );
 
         if (targetArticle) {
