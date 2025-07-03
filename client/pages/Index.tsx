@@ -1477,7 +1477,10 @@ export default function Index() {
 
                 {/* View Prototype Section */}
                 <div className="mt-8">
-                  <h2 className="text-2xl font-bold text-black mb-4 text-center">
+                  <h2
+                    id="view-prototype"
+                    className="text-2xl font-bold text-black mb-4 text-center"
+                  >
                     View Prototype
                   </h2>
                   <div className="bg-gray-50 w-full flex justify-center">
