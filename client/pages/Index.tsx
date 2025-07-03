@@ -1503,19 +1503,18 @@ export default function Index() {
             ) : currentCaseStudy === "boa-merchant-checkout" ? (
               /* Bank of America Merchant Partner Checkout case study */
               <div className="max-w-4xl mx-auto">
-                <div className="mb-8">
-                  <h1 className="text-3xl font-bold text-black mb-4">
-                    Bank of America Merchant Partner Checkout
-                  </h1>
-                  <p className="text-gray-600 text-lg mb-6">
-                    Streamlined checkout experience for merchant partners and
-                    customers
-                  </p>
-                </div>
-
                 {/* Case study content */}
                 <div className="bg-gray-50 p-8">
                   <div className="max-w-3xl mx-auto">
+                    <div className="mb-8">
+                      <h1 className="text-3xl font-bold text-black mb-4">
+                        Bank of America Merchant Partner Checkout
+                      </h1>
+                      <p className="text-gray-600 text-lg mb-6">
+                        Streamlined checkout experience for merchant partners
+                        and customers
+                      </p>
+                    </div>
                     <h2 className="text-2xl font-bold text-black mb-6">
                       Simplifying SMB Equipment Purchasing Through Strategic
                       Progressive Disclosure
