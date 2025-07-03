@@ -298,7 +298,7 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
       // Check if we're in the Hy-Vee case study
       const hyveeTitle = document.querySelector("h1")?.textContent;
       if (hyveeTitle && hyveeTitle.includes("Hy-Vee Aisles Online")) {
-        // For Hy-Vee case study, find headings and add IDs based on text content
+        // For Hy-Vee case study, create static navigation and find/add IDs to headings
         const headingMap = [
           {
             searchText: "Hy-Vee's Online Shopping Experience",
@@ -362,23 +362,29 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
           },
         ];
 
-        // Find and add IDs to headings
-        const allHeadings = document.querySelectorAll(
-          ".medium-article-content h2, .medium-article-content h3, .medium-article-content h4",
-        );
-
+        // Always show all navigation items
         headingMap.forEach((mapping) => {
-          allHeadings.forEach((heading) => {
-            const headingText = heading.textContent?.trim() || "";
-            if (
-              headingText.includes(mapping.searchText) ||
-              mapping.searchText.includes(headingText)
-            ) {
-              heading.setAttribute("id", mapping.id);
-              sectionList.push({ id: mapping.id, title: mapping.title });
-            }
-          });
+          sectionList.push({ id: mapping.id, title: mapping.title });
         });
+
+        // Try to find and add IDs to actual headings in the background
+        setTimeout(() => {
+          const allHeadings = document.querySelectorAll(
+            ".medium-article-content h2, .medium-article-content h3, .medium-article-content h4",
+          );
+
+          headingMap.forEach((mapping) => {
+            allHeadings.forEach((heading) => {
+              const headingText = heading.textContent?.trim() || "";
+              if (
+                headingText.includes(mapping.searchText) ||
+                mapping.searchText.includes(headingText)
+              ) {
+                heading.setAttribute("id", mapping.id);
+              }
+            });
+          });
+        }, 1000);
 
         setSections(sectionList);
         return;
