@@ -678,8 +678,8 @@ export default function Index() {
 
   return (
     <>
-      {/* Fullscreen Works Window */}
-      {isWorksFullscreenOpen && (
+      {/* Fullscreen Projects Window */}
+      {isProjectsFullscreenOpen && (
         <div className="fixed inset-0 bg-white z-[9999] flex flex-col">
           {/* Window Header - Full Width */}
           <div className="h-8 bg-white border-b-2 border-black relative">
