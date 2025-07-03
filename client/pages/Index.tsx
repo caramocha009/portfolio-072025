@@ -102,7 +102,7 @@ function MediumArticleEmbed({
           data.items.map((item: any) => item.title),
         );
 
-        // For Hy-Vee, try even broader search
+        // For Hy-Vee, try even broader search or use any article as fallback
         if (articleType === "hyvee-aisles") {
           targetArticle = data.items.find(
             (item: any) =>
@@ -110,12 +110,23 @@ function MediumArticleEmbed({
               (item.title.toLowerCase().includes("shop") ||
                 item.title.toLowerCase().includes("retail")),
           );
+
+          // Temporary fallback: use the second article in the feed if first didn't match Savvo
+          if (!targetArticle && data.items.length > 1) {
+            targetArticle = data.items.find(
+              (item: any) =>
+                !item.title.toLowerCase().includes("savvo") &&
+                !item.title.toLowerCase().includes("digital sommelier"),
+            );
+          }
         }
 
         if (targetArticle) {
           setArticleContent(targetArticle);
         } else {
-          throw new Error(`Article not found for ${articleType}`);
+          throw new Error(
+            `Article not found for ${articleType}. Available articles: ${data.items.map((item: any) => item.title).join(", ")}`,
+          );
         }
       }
     } catch (err) {
