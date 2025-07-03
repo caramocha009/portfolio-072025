@@ -102,24 +102,39 @@ function MediumArticleEmbed({
     };
   }, [onImageClick]);
 
-  // Load Twilik script for Medium embed (following https://medium.com/twilik/how-to-embed-medium-on-your-website-the-easy-way-41ac0a13231e)
+  // Load vue-rss-blog retainable script for Medium embed (following https://github.com/chrisj74/vue-rss-blog)
   useEffect(() => {
     if (currentCaseStudy === "hyvee-aisles") {
+      // Check if CSS is already loaded
+      if (!document.querySelector('link[href*="retainable.css"]')) {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href =
+          "https://cdn.jsdelivr.net/gh/chrisj74/vue-rss-blog@main/retainable.css";
+        document.head.appendChild(link);
+      }
+
       // Check if script is already loaded
-      if (!document.querySelector('script[src*="retainable-rss-embed"]')) {
+      if (!document.querySelector('script[src*="retainable.js"]')) {
         const script = document.createElement("script");
         script.src =
-          "https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js";
+          "https://cdn.jsdelivr.net/gh/chrisj74/vue-rss-blog@main/retainable.js";
         script.async = true;
         document.body.appendChild(script);
 
         return () => {
           // Cleanup script if component unmounts
           const scriptElement = document.querySelector(
-            'script[src*="retainable-rss-embed"]',
+            'script[src*="retainable.js"]',
           );
           if (scriptElement) {
             scriptElement.remove();
+          }
+          const linkElement = document.querySelector(
+            'link[href*="retainable.css"]',
+          );
+          if (linkElement) {
+            linkElement.remove();
           }
         };
       }
