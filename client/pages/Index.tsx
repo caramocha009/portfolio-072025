@@ -299,7 +299,6 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
       const hyveeTitle = document.querySelector("h1")?.textContent;
       if (hyveeTitle && hyveeTitle.includes("Hy-Vee Aisles Online")) {
         // For Hy-Vee case study, use predefined sections with proper organization
-        sectionList.push({ id: "online-shopping", title: "Online Shopping" });
         sectionList.push({
           id: "hyvee-online-shopping-experience",
           title: "Intro",
