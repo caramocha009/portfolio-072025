@@ -572,26 +572,49 @@ export default function Index() {
     }
   }, [currentCaseStudy]);
 
-  // Load Medium article embed for Hy-Vee case study
+  // State for Medium article content
+  const [mediumArticle, setMediumArticle] = useState(null);
+  const [isLoadingArticle, setIsLoadingArticle] = useState(false);
+  const [articleError, setArticleError] = useState(null);
+
+  // Fetch full Medium article content for Hy-Vee case study
   useEffect(() => {
     if (currentCaseStudy === "hyvee-aisles") {
-      // Load Medium's embed script
-      if (!document.querySelector('script[src*="medium.com"]')) {
-        const script = document.createElement("script");
-        script.src = "https://medium.com/media/embed";
-        script.async = true;
-        document.head.appendChild(script);
+      setIsLoadingArticle(true);
+      setArticleError(null);
 
-        return () => {
-          // Cleanup script if component unmounts
-          const scriptElement = document.querySelector(
-            'script[src*="medium.com"]',
-          );
-          if (scriptElement) {
-            scriptElement.remove();
+      // Use RSS2JSON to fetch the specific Medium article
+      const rssUrl = "https://medium.com/feed/@caramocha";
+      const api = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
+
+      fetch(api)
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.status === "ok") {
+            // Find the specific article by ID or title
+            const targetArticle = data.items.find(
+              (item) =>
+                item.link.includes("10b577148105") ||
+                item.title.toLowerCase().includes("cards, tags, and ads") ||
+                item.title.toLowerCase().includes("cards tags and ads"),
+            );
+
+            if (targetArticle) {
+              setMediumArticle(targetArticle);
+            } else {
+              setArticleError("Article not found");
+            }
+          } else {
+            setArticleError("Failed to fetch articles");
           }
-        };
-      }
+        })
+        .catch((error) => {
+          console.error("Error fetching Medium article:", error);
+          setArticleError("Failed to load article");
+        })
+        .finally(() => {
+          setIsLoadingArticle(false);
+        });
     }
   }, [currentCaseStudy]);
 
