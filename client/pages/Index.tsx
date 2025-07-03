@@ -983,8 +983,12 @@ export default function Index() {
                 </div>
               ) : hoveredProject === "hyvee-aisles" ? (
                 <div className="max-w-lg w-full p-8">
-                  <div className="w-full h-48 bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg shadow-lg mb-6 flex items-center justify-center">
-                    <span className="text-6xl">🛒</span>
+                  <div className="w-full h-48 rounded-lg shadow-lg mb-6 overflow-hidden">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F65c03ad389854e54a14de79609038d71?format=webp&width=800"
+                      alt="Hy-Vee Aisles Online Preview"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <h2 className="text-2xl font-bold text-black mb-2">
                     Hy-Vee Aisles Online
