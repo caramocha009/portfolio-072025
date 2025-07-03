@@ -895,11 +895,11 @@ export default function Index() {
               <button
                 onClick={() => {
                   setCurrentCaseStudy(null);
-                  setIsWorksFullscreenOpen(true);
+                  setIsProjectsFullscreenOpen(true);
                 }}
                 className="inline-flex items-center px-4 py-2 bg-gray-300 text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-gray-200 transition-colors font-mono text-sm"
               >
-                ← Back to Works
+                ← Back to Projects
               </button>
 
               <a
