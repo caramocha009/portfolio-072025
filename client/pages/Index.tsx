@@ -869,8 +869,9 @@ export default function Index() {
                         Ascent Global Logistics
                       </h3>
                       <p className="text-sm text-gray-600 mb-2">
-                        Streamlining supply chain operations and enhancing
-                        logistics efficiency
+                        Streamlining digital supply chain operations through
+                        simplifying complex business logistics into functional
+                        UI
                       </p>
                       <div className="flex items-center gap-2 text-xs">
                         <span className="px-2 py-1 bg-green-100 text-green-700 rounded">
