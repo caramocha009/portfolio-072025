@@ -1034,49 +1034,31 @@ export default function Index() {
                   </p>
                 </div>
 
-                {/* Medium Article Preview */}
-                <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
-                  <div className="p-8">
-                    <div className="flex items-center gap-3 mb-6">
-                      <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center text-white font-mono text-lg">
-                        M
-                      </div>
-                      <div>
-                        <p className="font-semibold text-gray-900">Cara Liu</p>
-                        <p className="text-sm text-gray-500">
-                          Published on Medium
-                        </p>
+                {/* Full Medium Article Content */}
+                <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                  {isLoadingArticle ? (
+                    <div className="p-8">
+                      <div className="animate-pulse">
+                        <div className="flex items-center gap-3 mb-6">
+                          <div className="w-12 h-12 bg-gray-200 rounded-full"></div>
+                          <div>
+                            <div className="h-4 bg-gray-200 rounded w-24 mb-2"></div>
+                            <div className="h-3 bg-gray-200 rounded w-32"></div>
+                          </div>
+                        </div>
+                        <div className="h-8 bg-gray-200 rounded mb-4"></div>
+                        <div className="space-y-3">
+                          <div className="h-4 bg-gray-200 rounded"></div>
+                          <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+                          <div className="h-4 bg-gray-200 rounded w-4/6"></div>
+                        </div>
                       </div>
                     </div>
-
-                    <h2 className="text-2xl font-bold text-gray-900 mb-4 leading-tight">
-                      Cards, Tags, and Ads – Oh my!
-                    </h2>
-
-                    <p className="text-gray-600 mb-6 leading-relaxed">
-                      UX for online shopping experience. A deep dive into the
-                      design decisions and user experience considerations for
-                      Hy-Vee's online shopping platform, exploring how cards,
-                      tags, and advertisements work together to create an
-                      intuitive shopping experience.
-                    </p>
-
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-4 text-sm text-gray-500">
-                        <span>8 min read</span>
-                        <span>•</span>
-                        <span>UX Design</span>
-                      </div>
-
-                      <a
-                        href="https://medium.com/@caramocha/cards-tags-and-ads-ux-for-online-shopping-experience-10b577148105"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors font-mono text-sm group"
-                      >
-                        Read Full Article
+                  ) : articleError ? (
+                    <div className="p-8 text-center">
+                      <div className="text-red-500 mb-4">
                         <svg
-                          className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"
+                          className="w-12 h-12 mx-auto mb-4"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -1085,12 +1067,126 @@ export default function Index() {
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth={2}
-                            d="M17 8l4 4m0 0l-4 4m4-4H3"
+                            d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                           />
                         </svg>
+                        <p className="font-semibold">Error loading article</p>
+                        <p className="text-sm text-gray-500 mt-1">
+                          {articleError}
+                        </p>
+                      </div>
+                      <a
+                        href="https://medium.com/@caramocha/cards-tags-and-ads-ux-for-online-shopping-experience-10b577148105"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors font-mono text-sm"
+                      >
+                        Read on Medium →
                       </a>
                     </div>
-                  </div>
+                  ) : mediumArticle ? (
+                    <div className="p-8">
+                      {/* Article Header */}
+                      <div className="flex items-center gap-3 mb-6">
+                        <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center text-white font-mono text-lg">
+                          C
+                        </div>
+                        <div>
+                          <p className="font-semibold text-gray-900">
+                            {mediumArticle.author}
+                          </p>
+                          <p className="text-sm text-gray-500">
+                            {new Date(mediumArticle.pubDate).toLocaleDateString(
+                              "en-US",
+                              {
+                                year: "numeric",
+                                month: "long",
+                                day: "numeric",
+                              },
+                            )}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Article Title */}
+                      <h1 className="text-3xl font-bold text-gray-900 mb-6 leading-tight">
+                        {mediumArticle.title}
+                      </h1>
+
+                      {/* Article Content */}
+                      <div
+                        className="prose prose-lg max-w-none mb-8"
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            mediumArticle.content || mediumArticle.description,
+                        }}
+                        style={{
+                          lineHeight: "1.7",
+                          fontSize: "18px",
+                          color: "#374151",
+                        }}
+                      />
+
+                      {/* Article Footer */}
+                      <div className="pt-6 border-t border-gray-200">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-4">
+                            {mediumArticle.categories &&
+                              mediumArticle.categories.length > 0 && (
+                                <div className="flex gap-2">
+                                  {mediumArticle.categories
+                                    .slice(0, 3)
+                                    .map((category, index) => (
+                                      <span
+                                        key={index}
+                                        className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
+                                      >
+                                        {category}
+                                      </span>
+                                    ))}
+                                </div>
+                              )}
+                          </div>
+                          <a
+                            href={mediumArticle.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors font-mono text-sm group"
+                          >
+                            Read on Medium
+                            <svg
+                              className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="p-8 text-center">
+                      <div className="text-gray-500 mb-4">
+                        <div className="text-6xl mb-4">📝</div>
+                        <p className="font-semibold">No article found</p>
+                      </div>
+                      <a
+                        href="https://medium.com/@caramocha/cards-tags-and-ads-ux-for-online-shopping-experience-10b577148105"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors font-mono text-sm"
+                      >
+                        Read on Medium →
+                      </a>
+                    </div>
+                  )}
                 </div>
 
                 {/* Back to Projects Button */}
