@@ -405,7 +405,7 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
       if (!container) return;
 
       const allSections = document.querySelectorAll(
-        '#project-brief, [id^="section-"], #interactive-case-study, #view-prototype, #online-shopping, #hyvee-online-shopping-experience, #the-scope-revelation, #understanding-current-state, #brand-color-constraint, #information-architecture-redesign, #technical-implementation-storybook, #user-testing-product-tags, #ads-strategy, #advertising-strategy-challenge, #large-scale-user-testing, #project-reflections, #project-outcomes',
+        '#project-brief, [id^="section-"], #interactive-case-study, #view-prototype, #hyvee-online-shopping-experience, #the-scope-revelation, #understanding-current-state, #brand-color-constraint, #information-architecture-redesign, #technical-implementation-storybook, #user-testing-product-tags, #ads-strategy, #advertising-strategy-challenge, #large-scale-user-testing, #project-reflections, #project-outcomes',
       );
       let current = "";
       const containerRect = container.getBoundingClientRect();
