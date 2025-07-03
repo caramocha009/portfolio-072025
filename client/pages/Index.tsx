@@ -55,22 +55,8 @@ function MediumArticleEmbed({
       const data = await response.json();
 
       let targetArticle;
-      if (articleType === "hyvee-aisles") {
-        // For Hy-Vee article, find it in the feed (same pattern as Savvo)
-        targetArticle = data.items.find(
-          (item: any) =>
-            item.title.toLowerCase().includes("cards") &&
-            item.title.toLowerCase().includes("tags") &&
-            item.title.toLowerCase().includes("ads"),
-        );
-
-        if (targetArticle) {
-          setArticleContent(targetArticle);
-        } else {
-          throw new Error("Hy-Vee article not found");
-        }
-      } else if (articleType === "savvo-sommelier") {
-        // For Savvo article, find it in the feed (same pattern as Hy-Vee)
+      if (articleType === "savvo-sommelier") {
+        // For Savvo article, try to find it in the feed
         targetArticle = data.items.find(
           (item: any) =>
             item.title.toLowerCase().includes("savvo") ||
@@ -80,7 +66,26 @@ function MediumArticleEmbed({
         if (targetArticle) {
           setArticleContent(targetArticle);
         } else {
-          throw new Error("Savvo article not found");
+          throw new Error(
+            `Savvo article not found. Available articles: ${data.items.map((item: any) => item.title).join(", ")}`,
+          );
+        }
+      } else if (articleType === "hyvee-aisles") {
+        // For Hy-Vee article, try to find it in the feed (exact same approach as Savvo)
+        targetArticle = data.items.find(
+          (item: any) =>
+            item.title.toLowerCase().includes("hy-vee") ||
+            item.title.toLowerCase().includes("hyvee") ||
+            item.title.toLowerCase().includes("cards") ||
+            item.title.toLowerCase().includes("oh my"),
+        );
+
+        if (targetArticle) {
+          setArticleContent(targetArticle);
+        } else {
+          throw new Error(
+            `Hy-Vee article not found. Available articles: ${data.items.map((item: any) => item.title).join(", ")}`,
+          );
         }
       }
     } catch (err) {
