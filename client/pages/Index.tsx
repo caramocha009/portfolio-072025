@@ -54,10 +54,13 @@ function MediumArticleEmbed({
 
       const data = await response.json();
 
-      // Debug: Log all available article titles
+      // Debug: Log all available article titles and links
       console.log(
         "Available articles:",
-        data.items.map((item: any) => item.title),
+        data.items.map((item: any) => ({
+          title: item.title,
+          link: item.link,
+        })),
       );
 
       // Find the specific article based on articleType
