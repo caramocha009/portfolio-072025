@@ -777,6 +777,7 @@ export default function Index() {
             src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F004bc9981e154e2e9b9ede829f9f12cc?format=webp&width=800"
             alt="Inspirational quote about freedom and living in the moment"
             className="max-w-full max-h-full object-contain"
+            style={{ transform: "scale(1.75)" }}
           />
         </div>
       ),
