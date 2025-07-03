@@ -162,7 +162,13 @@ function MediumArticleEmbed({
         {/* First Image */}
         {firstImage && (
           <div
-            style={{ maxWidth: "782px", margin: "0 auto 48px auto" }}
+            style={{
+              width: "100%",
+              maxWidth: "1000px",
+              margin: "0 auto 48px auto",
+              display: "flex",
+              justifyContent: "center",
+            }}
             dangerouslySetInnerHTML={{ __html: firstImage }}
           />
         )}
