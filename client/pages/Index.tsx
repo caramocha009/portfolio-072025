@@ -1115,15 +1115,69 @@ export default function Index() {
 
                       {/* Article Content */}
                       <div
-                        className="prose prose-lg max-w-none mb-8"
-                        dangerouslySetInnerHTML={{
-                          __html:
-                            mediumArticle.content || mediumArticle.description,
-                        }}
+                        className="medium-article-content"
                         style={{
-                          lineHeight: "1.7",
-                          fontSize: "18px",
-                          color: "#374151",
+                          fontFamily:
+                            'Georgia, Charter, "Times New Roman", serif',
+                          fontSize: "21px",
+                          lineHeight: "1.58",
+                          color: "#292929",
+                        }}
+                        dangerouslySetInnerHTML={{
+                          __html: (() => {
+                            if (
+                              !mediumArticle.content &&
+                              !mediumArticle.description
+                            )
+                              return "";
+
+                            let processedContent =
+                              mediumArticle.content ||
+                              mediumArticle.description;
+
+                            // Remove the original title if it exists in content
+                            processedContent = processedContent
+                              .replace(/<h1[^>]*>.*?<\/h1>/gi, "")
+                              .replace(/Cards, Tags, and Ads.*?Oh my!/gi, "")
+
+                              // Apply consistent heading styles like Savvo
+                              .replace(
+                                /<h2([^>]*)>/gi,
+                                '<h2$1 style="font-size: 36px; font-weight: 700; line-height: 1.3; margin: 48px 0 16px 0; color: #242424; font-family: sohne, Helvetica Neue, Helvetica, Arial, sans-serif;">',
+                              )
+                              .replace(
+                                /<h3([^>]*)>/gi,
+                                '<h3$1 style="font-size: 28px; font-weight: 700; line-height: 1.3; margin: 40px 0 16px 0; color: #242424; font-family: sohne, Helvetica Neue, Helvetica, Arial, sans-serif;">',
+                              )
+                              .replace(
+                                /<h4([^>]*)>/gi,
+                                '<h4$1 style="font-size: 24px; font-weight: 700; line-height: 1.3; margin: 32px 0 16px 0; color: #242424; font-family: sohne, Helvetica Neue, Helvetica, Arial, sans-serif;">',
+                              )
+
+                              // Style paragraphs to match Savvo
+                              .replace(
+                                /<p([^>]*)>/gi,
+                                '<p$1 style="font-family: charter, Georgia, Cambria, Times New Roman, Times, serif; font-size: 21px; line-height: 1.58; color: #242424; margin: 24px 0;">',
+                              )
+
+                              // Style blockquotes
+                              .replace(
+                                /<blockquote([^>]*)>/gi,
+                                '<blockquote$1 style="border-left: 3px solid #242424; padding-left: 24px; margin: 32px 0; font-style: italic; font-size: 24px; color: #6B6B6B; font-family: charter, Georgia, Cambria, Times New Roman, Times, serif;">',
+                              )
+
+                              // Style images to match Savvo layout
+                              .replace(
+                                /<img([^>]*?)src="([^"]*)"([^>]*?)>/g,
+                                '<img$1src="$2"$3 style="width: 100%; height: auto; margin: 32px 0; max-width: 1000px; cursor: pointer;" onclick="window.openLightbox && window.openLightbox(\'$2\')">',
+                              )
+
+                              // Clean up any extra whitespace
+                              .replace(/\s*<\/p>\s*$/, "</p>")
+                              .replace(/(<\/[^>]+>)\s*(<\/[^>]+>)/g, "$1$2");
+
+                            return processedContent;
+                          })(),
                         }}
                       />
 
