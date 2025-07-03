@@ -1012,26 +1012,30 @@ export default function Index() {
                   </p>
                 </div>
 
-                {/* Medium Article Embed using Twilik method */}
+                {/* Medium Article Embed using vue-rss-blog approach */}
                 <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
                   <div
                     id="retainable-rss-embed"
-                    data-rss="https://medium.com/feed/@caramocha"
+                    data-rss="https://medium.com/feed/@caramocha|5"
                     data-maxcols="1"
                     data-layout="grid"
-                    data-poststyle="modal"
-                    data-readmore="Read full article"
-                    data-buttonclass="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors"
+                    data-poststyle="inline"
+                    data-readmore="Read the full article"
+                    data-buttonclass="inline-flex items-center px-4 py-2 bg-black text-white rounded hover:bg-gray-800 transition-colors font-mono text-sm"
                     data-offset="-100"
-                    data-filter="cards-tags-and-ads"
                   >
                     {/* Loading fallback */}
                     <div className="text-center py-8">
                       <div className="animate-pulse">
                         <div className="text-6xl mb-4">🛒</div>
                         <p className="text-gray-500">
-                          Loading Medium article...
+                          Loading Medium articles...
                         </p>
+                        <div className="mt-4 space-y-3">
+                          <div className="h-4 bg-gray-200 rounded animate-pulse"></div>
+                          <div className="h-4 bg-gray-200 rounded animate-pulse w-3/4 mx-auto"></div>
+                          <div className="h-4 bg-gray-200 rounded animate-pulse w-1/2 mx-auto"></div>
+                        </div>
                       </div>
                     </div>
                   </div>
