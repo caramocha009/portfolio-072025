@@ -122,9 +122,47 @@ function MediumArticleEmbed({
         if (targetArticle) {
           setArticleContent(targetArticle);
         } else {
-          throw new Error(
-            `Article not found for ${articleType}. Available articles: ${data.items.map((item: any) => item.title).join(", ")}`,
-          );
+          // Hardcoded fallback for Hy-Vee article if not found in RSS
+          if (articleType === "hyvee-aisles") {
+            setArticleContent({
+              title: "Cards, Tags, and Ads – Oh my!",
+              link: "https://medium.com/@caramocha/cards-tags-and-ads-ux-for-online-shopping-experience-10b577148105",
+              pubDate: "2024-01-01",
+              description:
+                "A UX case study on redesigning Hy-Vee's Aisles Online platform, focusing on enhancing product cards and integrating strategic advertising to boost revenue without compromising user experience.",
+              content: `
+                <h1>Cards, Tags, and Ads – Oh my!</h1>
+                <p><em>A UX case study on Hy-Vee's Aisles Online platform redesign</em></p>
+
+                <h2>Project Overview</h2>
+                <p>Hy-Vee, a Midwest grocery chain with over 200 stores across eight states, sought to overhaul their Aisles Online platform to better compete with major retailers like Walmart, Target, and Instacart.</p>
+
+                <h2>The Challenge</h2>
+                <p>The primary objective was to redesign the product search experience while integrating strategic advertising to generate new revenue streams without compromising the user experience that drives significant online sales.</p>
+
+                <h2>Scope and Organizational Challenges</h2>
+                <p>The project revealed that the product card was central to Hy-Vee's digital ecosystem, with various departments having stakes in its design, including marketing, inventory management, and pharmacy. This necessitated cross-departmental collaboration to align on design decisions.</p>
+
+                <h2>Current State Analysis</h2>
+                <p>An evaluation of the existing Aisles Online search results page highlighted usability issues in the product cards, prompting a need for modernization to meet current e-commerce standards.</p>
+
+                <h2>Competitive Analysis</h2>
+                <p>A comprehensive study of competitors' product card designs revealed insights into price hierarchy, visual weight, call-to-action design, information architecture, and engagement features, informing the redesign strategy.</p>
+
+                <h2>Brand Constraints</h2>
+                <p>Hy-Vee's limited brand color palette (red and white) posed challenges in creating effective call-to-action buttons without overwhelming users. The solution involved redesigning the "Add to Cart" button as a secondary style with a red outline that filled with color on hover, complemented by subtle card shadows to draw attention.</p>
+
+                <h2>Information Architecture Redesign</h2>
+                <p>The analysis revealed opportunities for innovation in how size and quantity were presented, leading to a more intuitive and user-friendly information architecture.</p>
+
+                <p><a href="https://medium.com/@caramocha/cards-tags-and-ads-ux-for-online-shopping-experience-10b577148105" target="_blank">Read the full article on Medium</a></p>
+              `,
+            });
+          } else {
+            throw new Error(
+              `Article not found for ${articleType}. Available articles: ${data.items.map((item: any) => item.title).join(", ")}`,
+            );
+          }
         }
       }
     } catch (err) {
@@ -909,7 +947,7 @@ export default function Index() {
               ) : hoveredProject === "hyvee-aisles" ? (
                 <div className="max-w-lg w-full p-8">
                   <div className="w-full h-48 bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg shadow-lg mb-6 flex items-center justify-center">
-                    <span className="text-6xl">🛒</span>
+                    <span className="text-6xl">����</span>
                   </div>
                   <h2 className="text-2xl font-bold text-black mb-2">
                     Hy-Vee Aisles Online
