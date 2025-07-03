@@ -847,6 +847,35 @@ export default function Index() {
                     </div>
                   </div>
                 </div>
+
+                {/* Ascent Global Logistics */}
+                <div
+                  className="border-2 border-green-200 rounded-lg p-4 hover:border-green-400 cursor-pointer transition-colors"
+                  onMouseEnter={() => setHoveredProject("ascent-logistics")}
+                  onMouseLeave={() => setHoveredProject(null)}
+                  onClick={() => setCurrentCaseStudy("ascent-logistics")}
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold text-lg">🚚</span>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-lg font-medium text-black mb-1">
+                        Ascent Global Logistics
+                      </h3>
+                      <p className="text-sm text-gray-600 mb-2">
+                        Streamlining supply chain operations and enhancing
+                        logistics efficiency
+                      </p>
+                      <div className="flex items-center gap-2 text-xs">
+                        <span className="px-2 py-1 bg-green-100 text-green-700 rounded">
+                          Logistics
+                        </span>
+                        <span className="text-gray-500">2024</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
