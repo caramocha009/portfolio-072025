@@ -107,23 +107,16 @@ function MediumArticleEmbed({
           data.items.map((item: any) => item.title),
         );
 
-        // For Hy-Vee, try even broader search or use any article as fallback
+        // For Hy-Vee, don't use broad fallbacks that might pick wrong articles
         if (articleType === "hyvee-aisles") {
+          // Only try one final specific search for the correct article
           targetArticle = data.items.find(
             (item: any) =>
-              item.title.toLowerCase().includes("ux") &&
-              (item.title.toLowerCase().includes("shop") ||
-                item.title.toLowerCase().includes("retail")),
+              item.link.includes("10b577148105") ||
+              item.link.includes(
+                "cards-tags-and-ads-ux-for-online-shopping-experience",
+              ),
           );
-
-          // Temporary fallback: use the second article in the feed if first didn't match Savvo
-          if (!targetArticle && data.items.length > 1) {
-            targetArticle = data.items.find(
-              (item: any) =>
-                !item.title.toLowerCase().includes("savvo") &&
-                !item.title.toLowerCase().includes("digital sommelier"),
-            );
-          }
         }
 
         if (targetArticle) {
