@@ -1006,8 +1006,8 @@ export default function Index() {
           >
             <DesktopIcon
               icon={<WorksIcon />}
-              label="Works"
-              onClick={() => openNewWindow("Works")}
+              label="Projects"
+              onClick={() => openNewWindow("Projects")}
               className="scale-75 md:scale-90"
             />
           </div>
