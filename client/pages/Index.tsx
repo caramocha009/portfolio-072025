@@ -1160,7 +1160,7 @@ export default function Index() {
                               )
                               .replace(
                                 /<h3([^>]*)>/gi,
-                                '<h3$1 style="font-size: 28px; font-weight: 700; line-height: 1.3; margin: 40px 0 16px 0; color: #242424; font-family: sohne, Helvetica Neue, Helvetica, Arial, sans-serif;">',
+                                '<h3$1 style="font-size: 28px; font-weight: 700; line-height: 1.3; margin: 0 0 16px 0; color: #242424; font-family: sohne, Helvetica Neue, Helvetica, Arial, sans-serif;">',
                               )
                               .replace(
                                 /<h4([^>]*)>/gi,
