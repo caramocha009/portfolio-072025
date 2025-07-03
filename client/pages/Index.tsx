@@ -1179,11 +1179,29 @@ export default function Index() {
                                 '<blockquote$1 style="border-left: 3px solid #242424; padding-left: 24px; margin: 32px 0; font-style: italic; font-size: 24px; color: #6B6B6B; font-family: charter, Georgia, Cambria, Times New Roman, Times, serif;">',
                               )
 
-                              // Style images to match Savvo layout
-                              .replace(
-                                /<img([^>]*?)src="([^"]*)"([^>]*?)>/g,
-                                '<img$1src="$2"$3 style="width: 100%; height: auto; margin: 32px 0; max-width: 1000px; cursor: pointer;" onclick="window.openLightbox && window.openLightbox(\'$2\')">',
-                              )
+                              // Remove broken/empty images and style valid images to match Savvo layout
+                              .replace(/<img[^>]*src=""[^>]*>/g, "") // Remove images with empty src
+                              .replace(/<img[^>]*src="undefined"[^>]*>/g, "") // Remove images with undefined src
+                              .replace(/<img[^>]*>/g, (match) => {
+                                // Only keep images with valid src attributes
+                                const srcMatch = match.match(/src="([^"]+)"/);
+                                if (
+                                  srcMatch &&
+                                  srcMatch[1] &&
+                                  srcMatch[1] !== "" &&
+                                  srcMatch[1] !== "undefined"
+                                ) {
+                                  return match
+                                    .replace(/style="[^"]*"/g, "")
+                                    .replace(
+                                      /<img/,
+                                      '<img style="width: 100%; height: auto; margin: 32px 0; max-width: 1000px; cursor: pointer;" onclick="window.openLightbox && window.openLightbox(\'' +
+                                        srcMatch[1] +
+                                        "')\"",
+                                    );
+                                }
+                                return ""; // Remove invalid images
+                              })
 
                               // Clean up any extra whitespace
                               .replace(/\s*<\/p>\s*$/, "</p>")
