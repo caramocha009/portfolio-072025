@@ -1452,8 +1452,12 @@ export default function Index() {
                   </p>
                 </div>
 
-                {/* Case study content */}
-                <div className="bg-gray-50 w-full flex justify-center">
+                {/* Interactive Case Study Section */}
+                <div className="mt-8">
+                  <h2 className="text-2xl font-bold text-black mb-4 text-center">
+                    Interactive Case Study
+                  </h2>
+                  <div className="bg-gray-50 w-full flex justify-center">
                   <iframe
                     style={{
                       border: "1px solid rgba(0, 0, 0, 0.1)",
