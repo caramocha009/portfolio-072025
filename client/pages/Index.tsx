@@ -844,7 +844,9 @@ export default function Index() {
                         <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded">
                           E-commerce
                         </span>
-                        <span className="text-gray-500">2024</span>
+                        <span className="text-gray-500">
+                          Visual Hierarchy, User Testing
+                        </span>
                       </div>
                     </div>
                   </div>
