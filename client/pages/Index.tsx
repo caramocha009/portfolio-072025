@@ -977,16 +977,53 @@ export default function Index() {
             style={{ marginTop: "48px", paddingBottom: "144px" }}
           >
             {currentCaseStudy === "hyvee-aisles" ? (
-              /* Empty content for Hy-Vee - only navigation shows */
-              <div className="flex items-center justify-center min-h-[400px]">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">🛒</div>
-                  <h2 className="text-2xl font-bold text-black mb-2">
+              /* Hy-Vee case study with Twilik Medium embed */
+              <div className="max-w-4xl mx-auto">
+                <div className="mb-8">
+                  <h1 className="text-3xl font-bold text-black mb-4">
                     Hy-Vee Aisles Online
-                  </h2>
-                  <p className="text-gray-600">
-                    Case study content coming soon...
+                  </h1>
+                  <p className="text-gray-600 text-lg mb-6">
+                    Cards, tags, and ads: UX for online shopping experience
                   </p>
+                </div>
+
+                {/* Medium Article Embed using Twilik method */}
+                <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                  <div
+                    id="retainable-rss-embed"
+                    data-rss="https://medium.com/feed/@caramocha"
+                    data-maxcols="1"
+                    data-layout="grid"
+                    data-poststyle="modal"
+                    data-readmore="Read full article"
+                    data-buttonclass="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors"
+                    data-offset="-100"
+                    data-filter="cards-tags-and-ads"
+                  >
+                    {/* Loading fallback */}
+                    <div className="text-center py-8">
+                      <div className="animate-pulse">
+                        <div className="text-6xl mb-4">🛒</div>
+                        <p className="text-gray-500">
+                          Loading Medium article...
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Back to Projects Button */}
+                <div className="mt-8 flex justify-center">
+                  <button
+                    onClick={() => {
+                      setCurrentCaseStudy(null);
+                      setIsProjectsFullscreenOpen(true);
+                    }}
+                    className="inline-flex items-center px-6 py-3 bg-gray-300 text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-gray-200 transition-colors font-mono text-sm"
+                  >
+                    ← Back to Projects
+                  </button>
                 </div>
               </div>
             ) : (
