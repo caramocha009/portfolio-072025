@@ -295,6 +295,37 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
         return;
       }
 
+      // Check if we're in the Hy-Vee case study
+      const hyveeTitle = document.querySelector("h1")?.textContent;
+      if (hyveeTitle && hyveeTitle.includes("Hy-Vee Aisles Online")) {
+        // For Hy-Vee case study, use predefined sections
+        sectionList.push({ id: "intro", title: "Intro" });
+        sectionList.push({ id: "the-scope", title: "The Scope" });
+        sectionList.push({ id: "current-state", title: "Current State" });
+        sectionList.push({
+          id: "cards-visual-hierarchy",
+          title: "Cards Visual Heirarchy",
+        });
+        sectionList.push({
+          id: "technical-implementation",
+          title: "Technical Implementation",
+        });
+        sectionList.push({
+          id: "product-tags-testing",
+          title: "Product Tags Testing",
+        });
+        sectionList.push({
+          id: "ads-placement-testing",
+          title: "Ads Placement Testing",
+        });
+        sectionList.push({
+          id: "strategic-recommendations",
+          title: "Strategic Recommendations",
+        });
+        setSections(sectionList);
+        return;
+      }
+
       // Find and mark Project Brief section based on actual content
       const findProjectBriefLocation = () => {
         // Look for text containing "project brief" or similar patterns
