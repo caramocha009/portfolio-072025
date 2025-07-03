@@ -1021,8 +1021,13 @@ export default function Index() {
           >
             <DesktopIcon
               icon={<ArticlesIcon />}
-              label="Read"
-              onClick={() => openNewWindow("Articles")}
+              label="Resume"
+              onClick={() =>
+                window.open(
+                  "https://docs.google.com/document/d/1c_bOHD4StknDKFZIFizj7UNT3BPDAtbq/edit?usp=sharing&ouid=105779629323639375141&rtpof=true&sd=true",
+                  "_blank",
+                )
+              }
               className="scale-75 md:scale-90"
             />
           </div>
