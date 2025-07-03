@@ -949,7 +949,9 @@ export default function Index() {
                 <span className="text-black font-mono text-sm">
                   {currentCaseStudy === "savvo-sommelier"
                     ? "Savvo Digital Sommelier"
-                    : "Case Study"}
+                    : currentCaseStudy === "hyvee-aisles"
+                      ? "Hy-Vee Aisles Online"
+                      : "Case Study"}
                 </span>
               </div>
 
