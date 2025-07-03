@@ -13,10 +13,12 @@ export function DesktopIcon({
   label,
   onClick,
   className = "",
+  title,
 }: DesktopIconProps) {
   return (
     <button
       onClick={onClick}
+      title={title}
       className={`flex flex-col items-center gap-2 p-2 hover:opacity-80 transition-opacity ${className}`}
     >
       <div className="w-24 h-24 flex items-center justify-center">{icon}</div>
