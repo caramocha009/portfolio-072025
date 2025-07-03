@@ -2134,16 +2134,23 @@ export default function Index() {
 
           {/* Recycling Icon - Bottom right, aligned with Listen column */}
           <div
-            className="absolute z-20"
+            className="absolute z-20 relative"
             style={{ bottom: "calc(24px + 1vw)", right: "calc(24px + 1vw)" }}
-            title="I'm just a humble trash can..."
+            onMouseEnter={() => setShowRecyclingTooltip(true)}
+            onMouseLeave={() => setShowRecyclingTooltip(false)}
           >
             <DesktopIcon
               icon={<RecyclingIcon />}
               label="Recycling Bin"
-              onClick={() => alert("I'm just a humble trash can...")}
+              onClick={() => setShowRecyclingTooltip(!showRecyclingTooltip)}
               className="scale-75 md:scale-90"
             />
+            {showRecyclingTooltip && (
+              <div className="absolute bottom-full right-0 mb-2 px-3 py-2 bg-black text-white text-sm rounded shadow-lg whitespace-nowrap z-30">
+                I'm just a humble trash can...
+                <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black"></div>
+              </div>
+            )}
           </div>
 
           {/* Draggable Windows */}
