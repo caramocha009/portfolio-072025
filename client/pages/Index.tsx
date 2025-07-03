@@ -1109,7 +1109,20 @@ export default function Index() {
                       </div>
 
                       {/* Article Title */}
-                      <h1 className="text-3xl font-bold text-gray-900 mb-6 leading-tight">
+                      <h1
+                        style={{
+                          fontFamily:
+                            'sohne, "Helvetica Neue", Helvetica, Arial, sans-serif',
+                          fontSize: "42px",
+                          fontWeight: "800",
+                          lineHeight: "1.15",
+                          letterSpacing: "-0.02em",
+                          color: "#242424",
+                          maxWidth: "782px",
+                          margin: "0 auto 24px auto",
+                          textAlign: "left",
+                        }}
+                      >
                         {mediumArticle.title}
                       </h1>
 
