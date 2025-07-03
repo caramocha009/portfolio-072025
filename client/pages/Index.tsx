@@ -1041,7 +1041,7 @@ export default function Index() {
           : type === "About"
             ? 500
             : type === "Contact"
-              ? 450
+              ? 550
               : 300,
       zIndex: nextZIndex,
       content: windowContent,
