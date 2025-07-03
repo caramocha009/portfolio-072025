@@ -569,8 +569,8 @@ export default function Index() {
   };
 
   const openNewWindow = (type: string) => {
-    if (type === "Works") {
-      setIsWorksFullscreenOpen(true);
+    if (type === "Projects") {
+      setIsProjectsFullscreenOpen(true);
       return;
     }
 
