@@ -776,7 +776,7 @@ export default function Index() {
                 >
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-lg">���</span>
+                      <span className="text-white font-bold text-lg">🍷</span>
                     </div>
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-medium text-black mb-1">
@@ -1011,32 +1011,33 @@ export default function Index() {
                   </p>
                 </div>
 
-                {/* Medium Article Embed using vue-rss-blog approach */}
-                <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                  <div
-                    id="retainable-rss-embed"
-                    data-rss="https://medium.com/feed/@caramocha|5"
-                    data-maxcols="1"
-                    data-layout="grid"
-                    data-poststyle="inline"
-                    data-readmore="Read the full article"
-                    data-buttonclass="inline-flex items-center px-4 py-2 bg-black text-white rounded hover:bg-gray-800 transition-colors font-mono text-sm"
-                    data-offset="-100"
-                  >
-                    {/* Loading fallback */}
-                    <div className="text-center py-8">
-                      <div className="animate-pulse">
-                        <div className="text-6xl mb-4">🛒</div>
-                        <p className="text-gray-500">
-                          Loading Medium articles...
-                        </p>
-                        <div className="mt-4 space-y-3">
-                          <div className="h-4 bg-gray-200 rounded animate-pulse"></div>
-                          <div className="h-4 bg-gray-200 rounded animate-pulse w-3/4 mx-auto"></div>
-                          <div className="h-4 bg-gray-200 rounded animate-pulse w-1/2 mx-auto"></div>
-                        </div>
-                      </div>
-                    </div>
+                {/* Medium Article Embed */}
+                <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                  <iframe
+                    src="https://medium.com/media/10b577148105?postId=10b577148105"
+                    width="100%"
+                    height="800"
+                    frameBorder="0"
+                    scrolling="yes"
+                    className="w-full"
+                    title="Cards, Tags, and Ads – Oh my! - Medium Article"
+                    onError={() => {
+                      // Fallback to direct link if iframe fails
+                      window.open(
+                        "https://medium.com/@caramocha/cards-tags-and-ads-ux-for-online-shopping-experience-10b577148105",
+                        "_blank",
+                      );
+                    }}
+                  />
+                  <div className="p-6 border-t border-gray-200">
+                    <a
+                      href="https://medium.com/@caramocha/cards-tags-and-ads-ux-for-online-shopping-experience-10b577148105"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-4 py-2 bg-black text-white rounded hover:bg-gray-800 transition-colors font-mono text-sm"
+                    >
+                      Read on Medium →
+                    </a>
                   </div>
                 </div>
 
