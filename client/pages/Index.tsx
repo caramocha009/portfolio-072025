@@ -1292,17 +1292,22 @@ export default function Index() {
                     href="https://medium.com/@caramocha/ux-case-study-savvo-digital-sommelier-c2da6957105d"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center bg-black text-white py-2 px-3 transition-opacity hover:opacity-80"
-                    style={{
-                      fontFamily: '"JetBrains Mono", monospace',
-                      fontSize: "16px",
-                      fontWeight: "400",
-                    }}
+                    className="inline-flex items-center px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors font-mono text-sm group"
                   >
-                    <div className="w-3 h-3 bg-white rounded-full flex items-center justify-center mr-2">
-                      <div className="w-1.5 h-1.5 bg-black rounded-full"></div>
-                    </div>
-                    This article was originally published on Medium.
+                    Read on Medium
+                    <svg
+                      className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
                   </a>
                 </div>
               </>
