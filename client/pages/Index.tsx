@@ -102,6 +102,30 @@ function MediumArticleEmbed({
     };
   }, [onImageClick]);
 
+  // Load Twilik script for Medium embed (following https://medium.com/twilik/how-to-embed-medium-on-your-website-the-easy-way-41ac0a13231e)
+  useEffect(() => {
+    if (currentCaseStudy === "hyvee-aisles") {
+      // Check if script is already loaded
+      if (!document.querySelector('script[src*="retainable-rss-embed"]')) {
+        const script = document.createElement("script");
+        script.src =
+          "https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js";
+        script.async = true;
+        document.body.appendChild(script);
+
+        return () => {
+          // Cleanup script if component unmounts
+          const scriptElement = document.querySelector(
+            'script[src*="retainable-rss-embed"]',
+          );
+          if (scriptElement) {
+            scriptElement.remove();
+          }
+        };
+      }
+    }
+  }, [currentCaseStudy]);
+
   if (loading) {
     return (
       <div className="text-center py-8">
