@@ -307,6 +307,10 @@
     font-family:
       charter, Georgia, Cambria, "Times New Roman", Times, serif !important;
     letter-spacing: -0.003em !important;
+    /* Blockquotes can extend slightly beyond text width */
+    grid-column: 1 / -1 !important;
+    max-width: 780px !important;
+    justify-self: center !important;
   }
 
   /* Images span wider than text content like on Medium */
