@@ -774,16 +774,11 @@ export default function Index() {
       content: (
         <div className="space-y-5">
           <div>
-            <p className="text-black text-base leading-6">
-              <em>
-                "A dice roll is more than chance—it's possibility crystallizing
-                into reality. Every number that comes up was always going to
-                come up, from the moment you decided to roll."
-              </em>
-              <br />
-              <br />
-              <strong>Philosophy through probability.</strong>
-            </p>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F004bc9981e154e2e9b9ede829f9f12cc?format=webp&width=800"
+              alt="Inspirational quote about freedom and living in the moment"
+              className="w-full h-auto object-contain"
+            />
           </div>
         </div>
       ),
