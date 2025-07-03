@@ -1448,65 +1448,12 @@ export default function Index() {
                                 /<blockquote([^>]*)>/gi,
                                 '<blockquote$1 style="border-left: 3px solid #242424; padding-left: 24px; margin: 32px 0; font-style: italic; font-size: 24px; color: #6B6B6B; font-family: charter, Georgia, Cambria, Times New Roman, Times, serif;">',
                               )
-                              (
-                                // First, identify where Information Architecture Redesign section starts
-                                () => {
-                                  let imageCount = 0;
-                                  let inInfoArchSection = false;
 
-                                  return processedContent.replace(
-                                    /<img[^>]*>/g,
-                                    (match) => {
-                                      // Extract src attribute
-                                      const srcMatch =
-                                        match.match(/src="([^"]*)"/);
-
-                                      // If no src attribute, remove the image
-                                      if (!srcMatch) return "";
-
-                                      const src = srcMatch[1];
-
-                                      // Remove if src is empty, undefined, null, or invalid
-                                      if (
-                                        !src ||
-                                        src === "" ||
-                                        src === "undefined" ||
-                                        src === "null" ||
-                                        src.length < 10 ||
-                                        !src.startsWith("http")
-                                      ) {
-                                        return "";
-                                      }
-
-                                      // Check if we've passed the Information Architecture Redesign heading
-                                      if (!inInfoArchSection) {
-                                        const textBeforeImage =
-                                          processedContent.substring(
-                                            0,
-                                            processedContent.indexOf(match),
-                                          );
-                                        if (
-                                          textBeforeImage.includes(
-                                            "Information Architecture Redesign",
-                                          )
-                                        ) {
-                                          inInfoArchSection = true;
-                                          imageCount = 0; // Reset counter when we enter the section
-                                        }
-                                      }
-
-                                      // If we're in the section, resize first two images
-                                      if (inInfoArchSection && imageCount < 2) {
-                                        imageCount++;
-                                        return `<img src="${src}" style="width: 20%; height: auto; margin: 32px 0; max-width: 200px; cursor: pointer;" onclick="window.openLightbox && window.openLightbox('${src}')" alt="">`;
-                                      }
-
-                                      // Keep other images with normal styling
-                                      return `<img src="${src}" style="width: 100%; height: auto; margin: 32px 0; max-width: 1000px; cursor: pointer;" onclick="window.openLightbox && window.openLightbox('${src}')" alt="">`;
-                                    },
-                                  );
-                                },
-                              )()
+                              // Style images to match Savvo layout
+                              .replace(
+                                /<img([^>]*?)src="([^"]*)"([^>]*?)>/g,
+                                '<img$1src="$2"$3 style="width: 100%; height: auto; margin: 32px 0; max-width: 1000px; cursor: pointer;" onclick="window.openLightbox && window.openLightbox(\'$2\')">',
+                              )
 
                               // Remove any remaining empty figure tags that might contain broken images
                               .replace(/<figure[^>]*>\s*<\/figure>/g, "")
