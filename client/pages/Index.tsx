@@ -971,52 +971,61 @@ export default function Index() {
           {/* Case Study Navigation */}
           <CaseStudyNavigation isVisible={showNavigation} />
 
-          {/* Case Study Content - Simplified */}
+          {/* Case Study Content */}
           <div
             className="w-full px-4 py-2"
             style={{ marginTop: "48px", paddingBottom: "144px" }}
           >
-            <MediumArticleEmbed
-              onImageClick={(src) => setLightboxImage(src)}
-              articleType={currentCaseStudy || "savvo-sommelier"}
-            />
-
-            {/* Buttons */}
-            <div
-              style={{ marginTop: "32px" }}
-              className="flex items-center justify-between gap-8"
-            >
-              <button
-                onClick={() => {
-                  setCurrentCaseStudy(null);
-                  setIsProjectsFullscreenOpen(true);
-                }}
-                className="inline-flex items-center px-4 py-2 bg-gray-300 text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-gray-200 transition-colors font-mono text-sm"
-              >
-                ← Back to Projects
-              </button>
-
-              <a
-                href={
-                  currentCaseStudy === "hyvee-aisles"
-                    ? "https://medium.com/@caramocha/cards-tags-and-ads-ux-for-online-shopping-experience-10b577148105"
-                    : "https://medium.com/@caramocha/ux-case-study-savvo-digital-sommelier-c2da6957105d"
-                }
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center bg-black text-white py-2 px-3 transition-opacity hover:opacity-80"
-                style={{
-                  fontFamily: '"JetBrains Mono", monospace',
-                  fontSize: "16px",
-                  fontWeight: "400",
-                }}
-              >
-                <div className="w-3 h-3 bg-white rounded-full flex items-center justify-center mr-2">
-                  <div className="w-1.5 h-1.5 bg-black rounded-full"></div>
+            {currentCaseStudy === "hyvee-aisles" ? (
+              {/* Empty content for Hy-Vee - only navigation shows */}
+              <div className="flex items-center justify-center min-h-[400px]">
+                <div className="text-center">
+                  <div className="text-6xl mb-4">🛒</div>
+                  <h2 className="text-2xl font-bold text-black mb-2">Hy-Vee Aisles Online</h2>
+                  <p className="text-gray-600">Case study content coming soon...</p>
                 </div>
-                This article was originally published on Medium.
-              </a>
-            </div>
+              </div>
+            ) : (
+              <>
+                <MediumArticleEmbed
+                  onImageClick={(src) => setLightboxImage(src)}
+                  articleType={currentCaseStudy || "savvo-sommelier"}
+                />
+
+                {/* Buttons */}
+                <div
+                  style={{ marginTop: "32px" }}
+                  className="flex items-center justify-between gap-8"
+                >
+                  <button
+                    onClick={() => {
+                      setCurrentCaseStudy(null);
+                      setIsProjectsFullscreenOpen(true);
+                    }}
+                    className="inline-flex items-center px-4 py-2 bg-gray-300 text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-gray-200 transition-colors font-mono text-sm"
+                  >
+                    ← Back to Projects
+                  </button>
+
+                  <a
+                    href="https://medium.com/@caramocha/ux-case-study-savvo-digital-sommelier-c2da6957105d"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center bg-black text-white py-2 px-3 transition-opacity hover:opacity-80"
+                    style={{
+                      fontFamily: '"JetBrains Mono", monospace',
+                      fontSize: "16px",
+                      fontWeight: "400",
+                    }}
+                  >
+                    <div className="w-3 h-3 bg-white rounded-full flex items-center justify-center mr-2">
+                      <div className="w-1.5 h-1.5 bg-black rounded-full"></div>
+                    </div>
+                    This article was originally published on Medium.
+                  </a>
+                </div>
+              </>
+            )}
           </div>
         </div>
       )}
