@@ -152,11 +152,7 @@ function ContactForm() {
       </form>
 
       <div className="mt-4 text-xs text-gray-500">
-        <p>Or email me directly at: cara@yourdomian.com</p>
-        <p className="mt-2">
-          Note: You'll need to configure EmailJS in the code with your service
-          details.
-        </p>
+        <p>Or email me directly at carayuliu@gmail.com</p>
       </div>
     </div>
   );
