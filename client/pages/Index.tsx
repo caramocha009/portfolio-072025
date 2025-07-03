@@ -57,7 +57,7 @@ function ContactForm() {
     try {
       // EmailJS configuration - you'll need to set these up in your EmailJS account
       const serviceId = "service_0r519yh"; // Your EmailJS service ID
-      const templateId = "YOUR_TEMPLATE_ID"; // Replace with your EmailJS template ID
+      const templateId = "template_w4074xf"; // Your EmailJS template ID
       const publicKey = "YOUR_PUBLIC_KEY"; // Replace with your EmailJS public key
 
       const templateParams = {
