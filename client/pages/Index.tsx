@@ -755,6 +755,34 @@ export default function Index() {
                     </div>
                   </div>
                 </div>
+
+                {/* Hy-Vee Aisles Online */}
+                <div
+                  className="border-2 border-blue-200 rounded-lg p-4 hover:border-blue-400 cursor-pointer transition-colors"
+                  onMouseEnter={() => setHoveredProject("hyvee-aisles")}
+                  onMouseLeave={() => setHoveredProject(null)}
+                  onClick={() => setCurrentCaseStudy("hyvee-aisles")}
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold text-lg">🛒</span>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-lg font-medium text-black mb-1">
+                        Hy-Vee Aisles Online
+                      </h3>
+                      <p className="text-sm text-gray-600 mb-2">
+                        Cards, tags, and ads: UX for online shopping experience
+                      </p>
+                      <div className="flex items-center gap-2 text-xs">
+                        <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded">
+                          E-commerce
+                        </span>
+                        <span className="text-gray-500">2024</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
