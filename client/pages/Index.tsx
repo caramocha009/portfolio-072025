@@ -872,10 +872,7 @@ export default function Index() {
     } else if (type === "Contact") {
       bgColor = "#FFFFFF";
       headerColor = "#FFFFFF";
-      windowContent = (
-        <ContactForm />
-      );
-      );
+      windowContent = <ContactForm />;
     } else {
       bgColor = "#FFFFFF";
       headerColor = "#FFFFFF";
