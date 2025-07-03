@@ -525,7 +525,8 @@ export default function Index() {
   ]);
 
   const [nextZIndex, setNextZIndex] = useState(20);
-  const [isWorksFullscreenOpen, setIsWorksFullscreenOpen] = useState(false);
+  const [isProjectsFullscreenOpen, setIsProjectsFullscreenOpen] =
+    useState(false);
   const [currentCaseStudy, setCurrentCaseStudy] = useState<string | null>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
