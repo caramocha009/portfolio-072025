@@ -43,51 +43,27 @@ function MediumArticleEmbed({
     setLoading(true);
     setError(null);
     try {
-      // Direct content loading for Hy-Vee article
-      if (articleType === "hyvee-aisles") {
-        setArticleContent({
-          title: "Cards, Tags, and Ads – Oh my!",
-          link: "https://medium.com/@caramocha/cards-tags-and-ads-ux-for-online-shopping-experience-10b577148105",
-          pubDate: "Dec 15, 2023",
-          description:
-            "A UX case study on redesigning Hy-Vee's Aisles Online platform, focusing on enhancing product cards and integrating strategic advertising to boost revenue without compromising user experience.",
-          content: `
-            <div class="medium-article">
-              <h1 style="font-size: 2.5rem; font-weight: bold; margin: 30px 0 20px 0; line-height: 1.2; color: #1a1a1a;">Cards, Tags, and Ads – Oh my!</h1>
+      // Use RSS2JSON to fetch articles (exact same approach as Savvo)
+      const response = await fetch(
+        "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@caramocha",
+      );
 
-              <p style="font-size: 1.2rem; font-style: italic; color: #666; margin-bottom: 30px;">A UX case study on Hy-Vee's Aisles Online platform redesign</p>
-
-              <h2 style="font-size: 1.8rem; font-weight: 600; margin: 40px 0 20px 0; color: #333;">Project Overview</h2>
-              <p style="margin-bottom: 20px; line-height: 1.6; color: #333;">Hy-Vee, a Midwest grocery chain with over 200 stores across eight states, sought to overhaul their Aisles Online platform to better compete with major retailers like Walmart, Target, and Instacart. The primary objective was to redesign the product search experience while integrating strategic advertising to generate new revenue streams without compromising the user experience that drives significant online sales.</p>
-
-              <h2 style="font-size: 1.8rem; font-weight: 600; margin: 40px 0 20px 0; color: #333;">The Challenge</h2>
-              <p style="margin-bottom: 20px; line-height: 1.6; color: #333;">The core challenge was designing a system that could serve multiple stakeholders while maintaining user-centricity. We needed to:</p>
-              <ul style="margin-bottom: 20px; padding-left: 20px; color: #333;">
-                <li style="margin-bottom: 10px;">Modernize the outdated product card design</li>
-                <li style="margin-bottom: 10px;">Integrate advertising opportunities without disrupting the shopping experience</li>
-                <li style="margin-bottom: 10px;">Improve information architecture for better user comprehension</li>
-                <li style="margin-bottom: 10px;">Balance brand constraints with usability best practices</li>
-              </ul>
-
-              <h2 style="font-size: 1.8rem; font-weight: 600; margin: 40px 0 20px 0; color: #333;">Results and Impact</h2>
-              <p style="margin-bottom: 20px; line-height: 1.6; color: #333;">The redesigned product cards delivered significant improvements:</p>
-              <ul style="margin-bottom: 20px; padding-left: 20px; color: #333;">
-                <li style="margin-bottom: 10px;"><strong>User Engagement:</strong> 34% increase in product card click-through rates</li>
-                <li style="margin-bottom: 10px;"><strong>Conversion:</strong> 28% improvement in add-to-cart actions from search results</li>
-                <li style="margin-bottom: 10px;"><strong>Revenue:</strong> New advertising integration generated 15% additional revenue stream</li>
-                <li style="margin-bottom: 10px;"><strong>User Satisfaction:</strong> Post-launch surveys showed 89% user satisfaction with the new design</li>
-              </ul>
-
-              <p style="margin-bottom: 30px; line-height: 1.6; font-style: italic; border-left: 4px solid #ddd; padding-left: 20px; color: #666;">This case study demonstrates how thoughtful UX design can balance business objectives with user needs, creating solutions that drive both engagement and revenue while maintaining the trust and satisfaction of users.</p>
-            </div>
-          `,
-        });
-        setLoading(false);
-        return;
+      if (!response.ok) {
+        throw new Error("Failed to fetch article");
       }
 
-      // For other articles, use RSS2JSON
-      if (articleType === "savvo-sommelier") {
+      const data = await response.json();
+
+      let targetArticle;
+      if (articleType === "hyvee-aisles") {
+        // For Hy-Vee article, find it in the feed (same pattern as Savvo)
+        targetArticle = data.items.find(
+          (item: any) =>
+            item.title.toLowerCase().includes("cards") &&
+            item.title.toLowerCase().includes("tags") &&
+            item.title.toLowerCase().includes("ads"),
+        );
+      } else if (articleType === "savvo-sommelier") {
         // For Savvo article, try to find it in the feed
         const response = await fetch(
           "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@caramocha",
