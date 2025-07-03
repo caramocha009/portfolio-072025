@@ -1982,7 +1982,10 @@ export default function Index() {
         {/* Header */}
         <header className="h-12 bg-white border-b-2 border-black flex items-center justify-between px-2 md:px-4">
           {/* Logo and Brand */}
-          <div className="flex items-center gap-2">
+          <button
+            onClick={() => window.location.reload()}
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+          >
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F06b8f3812aef472ba6f2dbbdc9c5f523?format=webp&width=800"
               alt="Logo"
@@ -1998,7 +2001,7 @@ export default function Index() {
             >
               Cara Liu
             </span>
-          </div>
+          </button>
 
           {/* Social Media Icons */}
           <div className="flex items-center gap-1 md:gap-3">
