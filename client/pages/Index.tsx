@@ -70,7 +70,7 @@ function MediumArticleEmbed({
             `Savvo article not found. Available articles: ${data.items.map((item: any) => item.title).join(", ")}`,
           );
         }
-
+      }
     } catch (err) {
       setError(err instanceof Error ? err.message : "Unknown error");
     } finally {
