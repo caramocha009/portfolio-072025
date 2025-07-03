@@ -48,281 +48,69 @@ function MediumArticleEmbed({
       const mediumArticles = MediumArticles();
       const username = "caramocha";
 
-      if (!response.ok) {
-        throw new Error("Failed to fetch article");
-      }
+      // Use medium-article-api to fetch and parse articles
+      if (articleType === "hyvee-aisles") {
+        // For Hy-Vee, get the specific article by URL
+        const articleUrl = await mediumArticles.getLatestArticleUrl(username);
+        const articleData = await mediumArticles.getLatestArticle(username);
 
-      const data = await response.json();
-
-      // Debug: Log all available article titles and links
-      console.log(
-        "Available articles:",
-        data.items.map((item: any) => ({
-          title: item.title,
-          link: item.link,
-        })),
-      );
-
-      // Find the specific article based on articleType
-      let targetArticle;
-      if (articleType === "savvo-sommelier") {
-        targetArticle = data.items.find(
-          (item: any) =>
-            item.title.toLowerCase().includes("savvo") ||
-            item.title.toLowerCase().includes("digital sommelier"),
-        );
-      } else if (articleType === "hyvee-aisles") {
-        // Find the specific Hy-Vee article by exact URL match first
-        targetArticle = data.items.find((item: any) =>
-          item.link.includes("10b577148105"),
-        );
-
-        // If not found by URL, try by URL slug
-        if (!targetArticle) {
-          targetArticle = data.items.find((item: any) =>
-            item.link.includes(
-              "cards-tags-and-ads-ux-for-online-shopping-experience",
-            ),
+        // Check if we got the right article by checking the URL
+        if (articleUrl && articleUrl.includes("10b577148105")) {
+          setArticleContent({
+            title: articleData.title || "Cards, Tags, and Ads – Oh my!",
+            link: articleUrl,
+            pubDate: articleData.pubDate || "2023-12-15",
+            description:
+              articleData.description ||
+              "A UX case study on redesigning Hy-Vee's Aisles Online platform",
+            content: articleData.content || articleData.description || "",
+          });
+        } else {
+          // If the latest article isn't the Hy-Vee one, use RSS fallback
+          const response = await fetch(
+            "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@caramocha",
           );
-        }
 
-        // Only if the specific article isn't found, try title matching
-        if (!targetArticle) {
-          targetArticle = data.items.find(
-            (item: any) =>
-              (item.title.toLowerCase().includes("cards") &&
-                item.title.toLowerCase().includes("tags") &&
-                item.title.toLowerCase().includes("ads")) ||
-              item.title.toLowerCase().includes("oh my"),
-          );
-        }
-      }
+          if (!response.ok) {
+            throw new Error("Failed to fetch article");
+          }
 
-      if (targetArticle) {
-        setArticleContent(targetArticle);
-      } else {
-        // Fallback: if not found, try broader search or use first article as backup
-        console.log(
-          `Specific article not found for ${articleType}, available titles:`,
-          data.items.map((item: any) => item.title),
-        );
-
-        // For Hy-Vee, don't use broad fallbacks that might pick wrong articles
-        if (articleType === "hyvee-aisles") {
-          // Only try one final specific search for the correct article
-          targetArticle = data.items.find(
+          const data = await response.json();
+          const targetArticle = data.items.find(
             (item: any) =>
               item.link.includes("10b577148105") ||
               item.link.includes(
                 "cards-tags-and-ads-ux-for-online-shopping-experience",
               ),
           );
+
+          if (targetArticle) {
+            setArticleContent(targetArticle);
+          } else {
+            throw new Error("Hy-Vee article not found");
+          }
         }
+      } else if (articleType === "savvo-sommelier") {
+        // For Savvo article, try to find it in the feed
+        const response = await fetch(
+          "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@caramocha",
+        );
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch article");
+        }
+
+        const data = await response.json();
+        const targetArticle = data.items.find(
+          (item: any) =>
+            item.title.toLowerCase().includes("savvo") ||
+            item.title.toLowerCase().includes("digital sommelier"),
+        );
 
         if (targetArticle) {
           setArticleContent(targetArticle);
         } else {
-          // Complete Hy-Vee article content with images imported directly
-          if (articleType === "hyvee-aisles") {
-            setArticleContent({
-              title: "Cards, Tags, and Ads – Oh my!",
-              link: "https://medium.com/@caramocha/cards-tags-and-ads-ux-for-online-shopping-experience-10b577148105",
-              pubDate: "Dec 15, 2023",
-              description:
-                "A UX case study on redesigning Hy-Vee's Aisles Online platform, focusing on enhancing product cards and integrating strategic advertising to boost revenue without compromising user experience.",
-              content: `
-                <div class="medium-article">
-                  <figure style="margin: 20px 0;">
-                    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*4QkXm8JqO2H4xOKyDqBKCA.png" alt="Hy-Vee Aisles Online product cards redesign showing before and after comparison" onclick="window.openLightbox('https://miro.medium.com/v2/resize:fit:1400/format:webp/1*4QkXm8JqO2H4xOKyDqBKCA.png')" style="cursor: pointer; width: 100%; height: auto; border-radius: 8px;" />
-                    <figcaption style="text-align: center; font-style: italic; color: #666; margin-top: 10px; font-size: 0.9rem;">Product card redesign comparison: Before (left) and After (right)</figcaption>
-                  </figure>
-
-                  <h1 style="font-size: 2.5rem; font-weight: bold; margin: 30px 0 20px 0; line-height: 1.2; color: #1a1a1a;">Cards, Tags, and Ads – Oh my!</h1>
-
-                  <p style="font-size: 1.2rem; font-style: italic; color: #666; margin-bottom: 30px;">A UX case study on Hy-Vee's Aisles Online platform redesign</p>
-
-                  <h2 style="font-size: 1.8rem; font-weight: 600; margin: 40px 0 20px 0; color: #333;">Project Overview</h2>
-                  <p style="margin-bottom: 20px; line-height: 1.6; color: #333;">Hy-Vee, a Midwest grocery chain with over 200 stores across eight states, sought to overhaul their Aisles Online platform to better compete with major retailers like Walmart, Target, and Instacart. The primary objective was to redesign the product search experience while integrating strategic advertising to generate new revenue streams without compromising the user experience that drives significant online sales.</p>
-
-                  <figure style="margin: 30px 0;">
-                    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*XJ9YTMRx_6vNbKqU3FgC_Q.png" alt="Hy-Vee stores map showing 200+ locations across 8 Midwest states" onclick="window.openLightbox('https://miro.medium.com/v2/resize:fit:1400/format:webp/1*XJ9YTMRx_6vNbKqU3FgC_Q.png')" style="cursor: pointer; width: 100%; height: auto; border-radius: 8px;" />
-                    <figcaption style="text-align: center; font-style: italic; color: #666; margin-top: 10px; font-size: 0.9rem;">Hy-Vee's extensive Midwest presence across 8 states</figcaption>
-                  </figure>
-
-                  <h2 style="font-size: 1.8rem; font-weight: 600; margin: 40px 0 20px 0; color: #333;">The Challenge</h2>
-                  <p style="margin-bottom: 20px; line-height: 1.6; color: #333;">The core challenge was designing a system that could serve multiple stakeholders while maintaining user-centricity. We needed to:</p>
-                  <ul style="margin-bottom: 20px; padding-left: 20px; color: #333;">
-                    <li style="margin-bottom: 10px;">Modernize the outdated product card design</li>
-                    <li style="margin-bottom: 10px;">Integrate advertising opportunities without disrupting the shopping experience</li>
-                    <li style="margin-bottom: 10px;">Improve information architecture for better user comprehension</li>
-                    <li style="margin-bottom: 10px;">Balance brand constraints with usability best practices</li>
-                  </ul>
-
-                  <h2 style="font-size: 1.8rem; font-weight: 600; margin: 40px 0 20px 0; color: #333;">Scope and Organizational Challenges</h2>
-                  <p style="margin-bottom: 20px; line-height: 1.6; color: #333;">The project revealed that the product card was central to Hy-Vee's digital ecosystem, with various departments having stakes in its design:</p>
-
-                  <figure style="margin: 30px 0;">
-                    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*R7sKl9mP8QvY5tNcGhWEBA.png" alt="Stakeholder map showing Marketing, Inventory, Pharmacy, and Revenue teams" onclick="window.openLightbox('https://miro.medium.com/v2/resize:fit:1400/format:webp/1*R7sKl9mP8QvY5tNcGhWEBA.png')" style="cursor: pointer; width: 100%; height: auto; border-radius: 8px;" />
-                    <figcaption style="text-align: center; font-style: italic; color: #666; margin-top: 10px; font-size: 0.9rem;">Stakeholder requirements and priorities</figcaption>
-                  </figure>
-
-                  <ul style="margin-bottom: 20px; padding-left: 20px; color: #333;">
-                    <li style="margin-bottom: 10px;"><strong>Marketing:</strong> Wanted prominent promotional tags and pricing</li>
-                    <li style="margin-bottom: 10px;"><strong>Inventory Management:</strong> Required clear stock status indicators</li>
-                    <li style="margin-bottom: 10px;"><strong>Pharmacy:</strong> Needed prescription-related call-outs</li>
-                    <li style="margin-bottom: 10px;"><strong>Revenue Team:</strong> Sought strategic ad placement opportunities</li>
-                  </ul>
-                  <p style="margin-bottom: 20px; line-height: 1.6; color: #333;">This necessitated extensive cross-departmental collaboration to align on design decisions and prioritize features that would benefit both users and business objectives.</p>
-
-                  <h2 style="font-size: 1.8rem; font-weight: 600; margin: 40px 0 20px 0; color: #333;">Current State Analysis</h2>
-                  <p style="margin-bottom: 20px; line-height: 1.6; color: #333;">Our evaluation of the existing Aisles Online search results page revealed several critical usability issues:</p>
-
-                  <figure style="margin: 30px 0;">
-                    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*9vBw2L5xKsF7qP1mH8YyVw.png" alt="Current state analysis showing usability issues with existing product cards" onclick="window.openLightbox('https://miro.medium.com/v2/resize:fit:1400/format:webp/1*9vBw2L5xKsF7qP1mH8YyVw.png')" style="cursor: pointer; width: 100%; height: auto; border-radius: 8px;" />
-                    <figcaption style="text-align: center; font-style: italic; color: #666; margin-top: 10px; font-size: 0.9rem;">Current state issues identified in the existing design</figcaption>
-                  </figure>
-
-                  <ul style="margin-bottom: 20px; padding-left: 20px; color: #333;">
-                    <li style="margin-bottom: 10px;">Inconsistent visual hierarchy made price comparison difficult</li>
-                    <li style="margin-bottom: 10px;">Product images lacked sufficient visual weight</li>
-                    <li style="margin-bottom: 10px;">Call-to-action buttons were poorly differentiated</li>
-                    <li style="margin-bottom: 10px;">Size and quantity information was confusing and inconsistent</li>
-                    <li style="margin-bottom: 10px;">Overall design felt dated compared to modern e-commerce standards</li>
-                  </ul>
-
-                  <h2 style="font-size: 1.8rem; font-weight: 600; margin: 40px 0 20px 0; color: #333;">Competitive Analysis</h2>
-                  <p style="margin-bottom: 20px; line-height: 1.6; color: #333;">We conducted a comprehensive study of major competitors including Walmart, Target, Instacart, and Amazon Fresh. Key insights included:</p>
-
-                  <figure style="margin: 30px 0;">
-                    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*Mw7xPvNj2K1rL5qOgH9Rsg.png" alt="Competitive analysis grid showing product cards from Walmart, Target, Instacart, and Amazon Fresh" onclick="window.openLightbox('https://miro.medium.com/v2/resize:fit:1400/format:webp/1*Mw7xPvNj2K1rL5qOgH9Rsg.png')" style="cursor: pointer; width: 100%; height: auto; border-radius: 8px;" />
-                    <figcaption style="text-align: center; font-style: italic; color: #666; margin-top: 10px; font-size: 0.9rem;">Competitive analysis of major grocery and retail platforms</figcaption>
-                  </figure>
-
-                  <h3 style="font-size: 1.4rem; font-weight: 600; margin: 30px 0 15px 0; color: #444;">Price Hierarchy</h3>
-                  <p style="margin-bottom: 20px; line-height: 1.6; color: #333;">Most successful competitors used clear visual hierarchy for pricing, with sale prices prominently displayed and original prices struck through when applicable.</p>
-
-                  <h3 style="font-size: 1.4rem; font-weight: 600; margin: 30px 0 15px 0; color: #444;">Visual Weight Distribution</h3>
-                  <p style="margin-bottom: 20px; line-height: 1.6; color: #333;">Product images were given significant visual real estate (typically 40-50% of card space) to enable quick product recognition.</p>
-
-                  <h3 style="font-size: 1.4rem; font-weight: 600; margin: 30px 0 15px 0; color: #444;">Call-to-Action Design</h3>
-                  <p style="margin-bottom: 20px; line-height: 1.6; color: #333;">Successful CTAs used high contrast colors and clear, action-oriented language like "Add to Cart" rather than generic terms.</p>
-
-                  <h3 style="font-size: 1.4rem; font-weight: 600; margin: 30px 0 15px 0; color: #444;">Information Architecture</h3>
-                  <p style="margin-bottom: 20px; line-height: 1.6; color: #333;">Leading competitors had solved the size/quantity problem through innovative UI patterns like dropdown selectors and clear unit pricing.</p>
-
-                  <h2 style="font-size: 1.8rem; font-weight: 600; margin: 40px 0 20px 0; color: #333;">Brand Constraints and Solutions</h2>
-                  <p style="margin-bottom: 20px; line-height: 1.6; color: #333;">Hy-Vee's limited brand color palette (red and white) posed significant challenges in creating effective call-to-action buttons without overwhelming users. Traditional red buttons would have been too aggressive and could create visual fatigue across a page full of products.</p>
-
-                  <figure style="margin: 30px 0;">
-                    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*TfV8qN2xL9mK6rP1sG4Qcw.png" alt="Brand color palette constraints and button design solutions" onclick="window.openLightbox('https://miro.medium.com/v2/resize:fit:1400/format:webp/1*TfV8qN2xL9mK6rP1sG4Qcw.png')" style="cursor: pointer; width: 100%; height: auto; border-radius: 8px;" />
-                    <figcaption style="text-align: center; font-style: italic; color: #666; margin-top: 10px; font-size: 0.9rem;">Brand constraint solutions: Secondary button styling approach</figcaption>
-                  </figure>
-
-                  <h3 style="font-size: 1.4rem; font-weight: 600; margin: 30px 0 15px 0; color: #444;">The Solution</h3>
-                  <p style="margin-bottom: 20px; line-height: 1.6; color: #333;">We redesigned the "Add to Cart" button as a secondary style with:</p>
-                  <ul style="margin-bottom: 20px; padding-left: 20px; color: #333;">
-                    <li style="margin-bottom: 10px;">Red outline (maintaining brand consistency)</li>
-                    <li style="margin-bottom: 10px;">White background for subtlety</li>
-                    <li style="margin-bottom: 10px;">Red fill on hover for clear interaction feedback</li>
-                    <li style="margin-bottom: 10px;">Subtle card shadows to draw attention without color overload</li>
-                  </ul>
-
-                  <h2 style="font-size: 1.8rem; font-weight: 600; margin: 40px 0 20px 0; color: #333;">Information Architecture Redesign</h2>
-                  <p style="margin-bottom: 20px; line-height: 1.6; color: #333;">The original design had confusing size and quantity treatment. Our analysis revealed opportunities for innovation:</p>
-
-                  <figure style="margin: 30px 0;">
-                    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*8NqK5wL2mT9vR6yS1HgPxA.png" alt="Information architecture flow showing progressive disclosure pattern for size and quantity selection" onclick="window.openLightbox('https://miro.medium.com/v2/resize:fit:1400/format:webp/1*8NqK5wL2mT9vR6yS1HgPxA.png')" style="cursor: pointer; width: 100%; height: auto; border-radius: 8px;" />
-                    <figcaption style="text-align: center; font-style: italic; color: #666; margin-top: 10px; font-size: 0.9rem;">Progressive disclosure pattern for size and quantity selection</figcaption>
-                  </figure>
-
-                  <h3 style="font-size: 1.4rem; font-weight: 600; margin: 30px 0 15px 0; color: #444;">Size/Quantity Challenges</h3>
-                  <ul style="margin-bottom: 20px; padding-left: 20px; color: #333;">
-                    <li style="margin-bottom: 10px;">Multiple size options created decision paralysis</li>
-                    <li style="margin-bottom: 10px;">Unit pricing was buried and hard to compare</li>
-                    <li style="margin-bottom: 10px;">Quantity selectors were inconsistent across product types</li>
-                  </ul>
-
-                  <h3 style="font-size: 1.4rem; font-weight: 600; margin: 30px 0 15px 0; color: #444;">Our Approach</h3>
-                  <p style="margin-bottom: 20px; line-height: 1.6; color: #333;">We implemented a progressive disclosure pattern:</p>
-                  <ol style="margin-bottom: 20px; padding-left: 20px; color: #333;">
-                    <li style="margin-bottom: 10px;"><strong>Default View:</strong> Show most popular size/quantity combination</li>
-                    <li style="margin-bottom: 10px;"><strong>Expansion:</strong> Click to reveal all available options</li>
-                    <li style="margin-bottom: 10px;"><strong>Comparison:</strong> Clear unit pricing display for easy comparison</li>
-                    <li style="margin-bottom: 10px;"><strong>Selection:</strong> Immediate visual feedback on option selection</li>
-                  </ol>
-
-                  <h2 style="font-size: 1.8rem; font-weight: 600; margin: 40px 0 20px 0; color: #333;">Advertising Integration</h2>
-                  <p style="margin-bottom: 20px; line-height: 1.6; color: #333;">Rather than disruptive banner ads, we developed a native advertising system:</p>
-
-                  <figure style="margin: 30px 0;">
-                    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*Y3vN8kQ1pL5jR7mW9Hs6Fg.png" alt="Native advertising integration examples showing sponsored badges and promotional tags" onclick="window.openLightbox('https://miro.medium.com/v2/resize:fit:1400/format:webp/1*Y3vN8kQ1pL5jR7mW9Hs6Fg.png')" style="cursor: pointer; width: 100%; height: auto; border-radius: 8px;" />
-                    <figcaption style="text-align: center; font-style: italic; color: #666; margin-top: 10px; font-size: 0.9rem;">Native advertising integration without disrupting user experience</figcaption>
-                  </figure>
-
-                  <ul style="margin-bottom: 20px; padding-left: 20px; color: #333;">
-                    <li style="margin-bottom: 10px;"><strong>Sponsored Product Badges:</strong> Subtle indicators that don't interfere with product information</li>
-                    <li style="margin-bottom: 10px;"><strong>Promoted Placement:</strong> Sponsored products appear naturally within search results</li>
-                    <li style="margin-bottom: 10px;"><strong>Brand Partnerships:</strong> Co-branded promotional tags for manufacturer deals</li>
-                    <li style="margin-bottom: 10px;"><strong>Contextual Recommendations:</strong> Algorithm-driven suggestions that feel helpful rather than pushy</li>
-                  </ul>
-
-                  <h2 style="font-size: 1.8rem; font-weight: 600; margin: 40px 0 20px 0; color: #333;">Final Design and Implementation</h2>
-
-                  <figure style="margin: 30px 0;">
-                    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*Z2xB9gT5vN8mK1qL7rP6Hw.png" alt="Final product card design showing all integrated features and improvements" onclick="window.openLightbox('https://miro.medium.com/v2/resize:fit:1400/format:webp/1*Z2xB9gT5vN8mK1qL7rP6Hw.png')" style="cursor: pointer; width: 100%; height: auto; border-radius: 8px;" />
-                    <figcaption style="text-align: center; font-style: italic; color: #666; margin-top: 10px; font-size: 0.9rem;">Final product card design with all integrated features</figcaption>
-                  </figure>
-
-                  <p style="margin-bottom: 20px; line-height: 1.6; color: #333;">The final design successfully integrated all stakeholder requirements while maintaining a clean, user-friendly interface. Key features include:</p>
-                  <ul style="margin-bottom: 20px; padding-left: 20px; color: #333;">
-                    <li style="margin-bottom: 10px;">Prominent product imagery with 45% visual weight</li>
-                    <li style="margin-bottom: 10px;">Clear price hierarchy with sale indicators</li>
-                    <li style="margin-bottom: 10px;">Intuitive size/quantity selection</li>
-                    <li style="margin-bottom: 10px;">Seamless advertising integration</li>
-                    <li style="margin-bottom: 10px;">Accessible design meeting WCAG standards</li>
-                  </ul>
-
-                  <h2 style="font-size: 1.8rem; font-weight: 600; margin: 40px 0 20px 0; color: #333;">Results and Impact</h2>
-                  <p style="margin-bottom: 20px; line-height: 1.6; color: #333;">The redesigned product cards delivered significant improvements:</p>
-
-                  <figure style="margin: 30px 0;">
-                    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*A1bC3dE5fG7hI9jK0lM2nO.png" alt="Results metrics showing 34% increase in CTR, 28% improvement in conversions, and 15% additional revenue" onclick="window.openLightbox('https://miro.medium.com/v2/resize:fit:1400/format:webp/1*A1bC3dE5fG7hI9jK0lM2nO.png')" style="cursor: pointer; width: 100%; height: auto; border-radius: 8px;" />
-                    <figcaption style="text-align: center; font-style: italic; color: #666; margin-top: 10px; font-size: 0.9rem;">Quantified results and business impact</figcaption>
-                  </figure>
-
-                  <ul style="margin-bottom: 20px; padding-left: 20px; color: #333;">
-                    <li style="margin-bottom: 10px;"><strong>User Engagement:</strong> 34% increase in product card click-through rates</li>
-                    <li style="margin-bottom: 10px;"><strong>Conversion:</strong> 28% improvement in add-to-cart actions from search results</li>
-                    <li style="margin-bottom: 10px;"><strong>Revenue:</strong> New advertising integration generated 15% additional revenue stream</li>
-                    <li style="margin-bottom: 10px;"><strong>User Satisfaction:</strong> Post-launch surveys showed 89% user satisfaction with the new design</li>
-                  </ul>
-
-                  <h2 style="font-size: 1.8rem; font-weight: 600; margin: 40px 0 20px 0; color: #333;">Key Learnings</h2>
-                  <p style="margin-bottom: 20px; line-height: 1.6; color: #333;">This project reinforced several important UX principles:</p>
-                  <ul style="margin-bottom: 20px; padding-left: 20px; color: #333;">
-                    <li style="margin-bottom: 10px;"><strong>Stakeholder Alignment is Critical:</strong> Early and frequent cross-departmental collaboration prevents late-stage conflicts</li>
-                    <li style="margin-bottom: 10px;"><strong>Brand Constraints Drive Innovation:</strong> Limitations can lead to more creative and effective solutions</li>
-                    <li style="margin-bottom: 10px;"><strong>Progressive Disclosure Works:</strong> Users appreciate having access to detailed information without being overwhelmed</li>
-                    <li style="margin-bottom: 10px;"><strong>Native Advertising Performs Better:</strong> Integrated ads feel more trustworthy than disruptive banner placements</li>
-                  </ul>
-
-                  <h2 style="font-size: 1.8rem; font-weight: 600; margin: 40px 0 20px 0; color: #333;">Next Steps</h2>
-                  <p style="margin-bottom: 20px; line-height: 1.6; color: #333;">Following the success of the product card redesign, Hy-Vee is expanding these design patterns across their entire digital ecosystem, including the mobile app and checkout experience. The modular card design system we created is now being adapted for other product categories and promotional contexts.</p>
-
-                  <figure style="margin: 30px 0;">
-                    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*P3qR5sT7uV9wX1yZ2aBcDe.png" alt="Future roadmap showing expansion to mobile app and checkout experience" onclick="window.openLightbox('https://miro.medium.com/v2/resize:fit:1400/format:webp/1*P3qR5sT7uV9wX1yZ2aBcDe.png')" style="cursor: pointer; width: 100%; height: auto; border-radius: 8px;" />
-                    <figcaption style="text-align: center; font-style: italic; color: #666; margin-top: 10px; font-size: 0.9rem;">Future expansion roadmap for the design system</figcaption>
-                  </figure>
-
-                  <p style="margin-bottom: 30px; line-height: 1.6; font-style: italic; border-left: 4px solid #ddd; padding-left: 20px; color: #666;">This case study demonstrates how thoughtful UX design can balance business objectives with user needs, creating solutions that drive both engagement and revenue while maintaining the trust and satisfaction of users.</p>
-                </div>
-              `,
-            });
-          } else {
-            throw new Error(
-              `Article not found for ${articleType}. Available articles: ${data.items.map((item: any) => item.title).join(", ")}`,
-            );
-          }
+          throw new Error("Savvo article not found");
         }
       }
     } catch (err) {
