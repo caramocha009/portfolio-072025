@@ -693,7 +693,7 @@ export default function Index() {
             {/* Window Title */}
             <div className="absolute inset-0 flex items-center justify-center px-8">
               <div className="text-black text-sm font-bold chicago-font-sm text-center px-2 rounded-sm bg-white">
-                Works
+                Projects
               </div>
             </div>
 
