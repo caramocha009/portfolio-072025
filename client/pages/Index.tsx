@@ -1152,8 +1152,14 @@ export default function Index() {
                 {/* Hy-Vee Aisles Online */}
                 <div
                   className="border-2 border-blue-200 rounded-lg p-4 hover:border-blue-400 cursor-pointer transition-colors"
-                  onMouseEnter={() => setHoveredProject("hyvee-aisles")}
-                  onMouseLeave={() => setHoveredProject(null)}
+                  onMouseEnter={
+                    isDesktop
+                      ? () => setHoveredProject("hyvee-aisles")
+                      : undefined
+                  }
+                  onMouseLeave={
+                    isDesktop ? () => setHoveredProject(null) : undefined
+                  }
                   onClick={() => setCurrentCaseStudy("hyvee-aisles")}
                 >
                   <div className="flex items-start gap-4">
