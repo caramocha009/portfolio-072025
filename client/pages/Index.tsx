@@ -1098,7 +1098,7 @@ export default function Index() {
           {/* Content Area - Split Layout */}
           <div className="flex-1 flex">
             {/* Left Panel - Projects List */}
-            <div className="w-1/2 bg-white border-r-2 border-gray-200 overflow-y-auto">
+            <div className="w-full lg:w-1/2 bg-white lg:border-r-2 border-gray-200 overflow-y-auto">
               {/* Projects List */}
               <div className="p-6 space-y-4">
                 {/* Savvo Digital Sommelier */}
