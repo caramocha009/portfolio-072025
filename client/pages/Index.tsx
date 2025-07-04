@@ -1231,8 +1231,8 @@ export default function Index() {
               </div>
             </div>
 
-            {/* Right Panel - Preview */}
-            <div className="w-1/2 bg-gray-50 flex items-center justify-center">
+            {/* Right Panel - Preview - Hidden on mobile/tablet */}
+            <div className="hidden lg:flex w-1/2 bg-gray-50 items-center justify-center">
               {hoveredProject === "savvo-sommelier" ? (
                 <div className="max-w-lg w-full p-8">
                   <div className="w-full h-48 rounded-lg shadow-lg mb-6 overflow-hidden">
