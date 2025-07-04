@@ -755,7 +755,7 @@ export default function Index() {
               <em> Plot twist: I also make videos. </em>
               <br />
               <br />
-              What's design problem are you working on?
+              What's design problems are you working on?
             </p>
           </div>
         </div>
