@@ -1189,8 +1189,14 @@ export default function Index() {
                 {/* Ascent Global Logistics */}
                 <div
                   className="border-2 border-green-200 rounded-lg p-4 hover:border-green-400 cursor-pointer transition-colors"
-                  onMouseEnter={() => setHoveredProject("ascent-logistics")}
-                  onMouseLeave={() => setHoveredProject(null)}
+                  onMouseEnter={
+                    isDesktop
+                      ? () => setHoveredProject("ascent-logistics")
+                      : undefined
+                  }
+                  onMouseLeave={
+                    isDesktop ? () => setHoveredProject(null) : undefined
+                  }
                   onClick={() => setCurrentCaseStudy("ascent-logistics")}
                 >
                   <div className="flex items-start gap-4">
