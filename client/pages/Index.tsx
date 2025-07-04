@@ -1115,8 +1115,14 @@ export default function Index() {
                 {/* Savvo Digital Sommelier */}
                 <div
                   className="border-2 border-orange-200 rounded-lg p-4 hover:border-orange-400 cursor-pointer transition-colors"
-                  onMouseEnter={() => setHoveredProject("savvo-sommelier")}
-                  onMouseLeave={() => setHoveredProject(null)}
+                  onMouseEnter={
+                    isDesktop
+                      ? () => setHoveredProject("savvo-sommelier")
+                      : undefined
+                  }
+                  onMouseLeave={
+                    isDesktop ? () => setHoveredProject(null) : undefined
+                  }
                   onClick={() => setCurrentCaseStudy("savvo-sommelier")}
                 >
                   <div className="flex items-start gap-4">
