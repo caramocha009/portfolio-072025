@@ -1486,8 +1486,10 @@ export default function Index() {
             </div>
           </div>
 
-          {/* Case Study Navigation */}
-          <CaseStudyNavigation isVisible={showNavigation} />
+          {/* Case Study Navigation - Hidden on mobile/tablet */}
+          <div className="hidden lg:block">
+            <CaseStudyNavigation isVisible={showNavigation} />
+          </div>
 
           {/* Case Study Content */}
           <div
