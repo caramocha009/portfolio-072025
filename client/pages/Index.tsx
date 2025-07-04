@@ -1228,10 +1228,14 @@ export default function Index() {
                 {/* Bank of America Merchant Partner Checkout */}
                 <div
                   className="border-2 border-purple-200 rounded-lg p-4 hover:border-purple-400 cursor-pointer transition-colors"
-                  onMouseEnter={() =>
-                    setHoveredProject("boa-merchant-checkout")
+                  onMouseEnter={
+                    isDesktop
+                      ? () => setHoveredProject("boa-merchant-checkout")
+                      : undefined
                   }
-                  onMouseLeave={() => setHoveredProject(null)}
+                  onMouseLeave={
+                    isDesktop ? () => setHoveredProject(null) : undefined
+                  }
                   onClick={() => setCurrentCaseStudy("boa-merchant-checkout")}
                 >
                   <div className="flex items-start gap-4">
