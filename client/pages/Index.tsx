@@ -2052,104 +2052,201 @@ export default function Index() {
         </header>
 
         <main className="relative h-[calc(100vh-48px)]">
-          {/* First Column - Left Side */}
-          {/* Works Icon - Top of first column */}
-          <div
-            className="absolute z-20"
-            style={{ top: "calc(24px + 1vw)", left: "calc(24px + 1vw)" }}
-          >
-            <DesktopIcon
-              icon={<WorksIcon />}
-              label="Projects"
-              onClick={() => openNewWindow("Projects")}
-              className="scale-75 md:scale-90"
-            />
+          {/* Desktop Layout - Desktop Only */}
+          <div className="hidden lg:block">
+            {/* First Column - Left Side */}
+            {/* Works Icon - Top of first column */}
+            <div
+              className="absolute z-20"
+              style={{ top: "calc(24px + 1vw)", left: "calc(24px + 1vw)" }}
+            >
+              <DesktopIcon
+                icon={<WorksIcon />}
+                label="Projects"
+                onClick={() => openNewWindow("Projects")}
+                className="scale-75 md:scale-90"
+              />
+            </div>
+
+            {/* Read Icon - Second in first column */}
+            <div
+              className="absolute z-20"
+              style={{
+                top: "calc(24px + 1vw + 142px)",
+                left: "calc(24px + 1vw)",
+              }}
+            >
+              <DesktopIcon
+                icon={<ArticlesIcon />}
+                label="Resume"
+                onClick={() =>
+                  window.open(
+                    "https://docs.google.com/document/d/1c_bOHD4StknDKFZIFizj7UNT3BPDAtbq/edit?usp=sharing&ouid=105779629323639375141&rtpof=true&sd=true",
+                    "_blank",
+                  )
+                }
+                className="scale-75 md:scale-90"
+              />
+            </div>
+
+            {/* About Icon - Third in first column */}
+            <div
+              className="absolute z-20"
+              style={{
+                top: "calc(24px + 1vw + 284px)",
+                left: "calc(24px + 1vw)",
+              }}
+            >
+              <DesktopIcon
+                icon={<AboutIcon />}
+                label="About"
+                onClick={() => openNewWindow("About")}
+                className="scale-75 md:scale-90"
+              />
+            </div>
+
+            {/* Contact Me Icon - Fourth in first column */}
+            <div
+              className="absolute z-20"
+              style={{
+                top: "calc(24px + 1vw + 426px)",
+                left: "calc(24px + 1vw)",
+              }}
+            >
+              <DesktopIcon
+                icon={<ContactIcon />}
+                label="Contact Me"
+                onClick={() => openNewWindow("Contact")}
+                className="scale-75 md:scale-90"
+              />
+            </div>
+
+            {/* Listen Icon - Top right */}
+            <div
+              className="absolute z-20 hidden"
+              style={{ top: "calc(24px + 1vw)", right: "calc(24px + 1vw)" }}
+            >
+              <DesktopIcon
+                icon={<PlaylistIcon />}
+                label="Listen"
+                onClick={() => openNewWindow("Playlist")}
+                className="scale-75 md:scale-90"
+              />
+            </div>
+
+            {/* Recycling Icon - Bottom right, aligned with Listen column */}
+            <div
+              className="absolute z-20"
+              style={{ bottom: "calc(24px + 1vw)", right: "calc(24px + 1vw)" }}
+            >
+              <DesktopIcon
+                icon={<RecyclingIcon />}
+                label="Recycling Bin"
+                title="I'm just a humble trash can..."
+                onClick={() => setShowRecyclingTooltip(!showRecyclingTooltip)}
+                className="scale-75 md:scale-90"
+              />
+              {showRecyclingTooltip && (
+                <div className="absolute bottom-full right-0 mb-2 px-3 py-2 bg-black text-white text-sm rounded shadow-lg whitespace-nowrap z-30">
+                  I'm just a humble trash can...
+                  <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black"></div>
+                </div>
+              )}
+            </div>
           </div>
 
-          {/* Read Icon - Second in first column */}
-          <div
-            className="absolute z-20"
-            style={{
-              top: "calc(24px + 1vw + 142px)",
-              left: "calc(24px + 1vw)",
-            }}
-          >
-            <DesktopIcon
-              icon={<ArticlesIcon />}
-              label="Resume"
-              onClick={() =>
-                window.open(
-                  "https://docs.google.com/document/d/1c_bOHD4StknDKFZIFizj7UNT3BPDAtbq/edit?usp=sharing&ouid=105779629323639375141&rtpof=true&sd=true",
-                  "_blank",
-                )
-              }
-              className="scale-75 md:scale-90"
-            />
-          </div>
-
-          {/* About Icon - Third in first column */}
-          <div
-            className="absolute z-20"
-            style={{
-              top: "calc(24px + 1vw + 284px)",
-              left: "calc(24px + 1vw)",
-            }}
-          >
-            <DesktopIcon
-              icon={<AboutIcon />}
-              label="About"
-              onClick={() => openNewWindow("About")}
-              className="scale-75 md:scale-90"
-            />
-          </div>
-
-          {/* Contact Me Icon - Fourth in first column */}
-          <div
-            className="absolute z-20"
-            style={{
-              top: "calc(24px + 1vw + 426px)",
-              left: "calc(24px + 1vw)",
-            }}
-          >
-            <DesktopIcon
-              icon={<ContactIcon />}
-              label="Contact Me"
-              onClick={() => openNewWindow("Contact")}
-              className="scale-75 md:scale-90"
-            />
-          </div>
-
-          {/* Listen Icon - Top right */}
-          <div
-            className="absolute z-20 hidden"
-            style={{ top: "calc(24px + 1vw)", right: "calc(24px + 1vw)" }}
-          >
-            <DesktopIcon
-              icon={<PlaylistIcon />}
-              label="Listen"
-              onClick={() => openNewWindow("Playlist")}
-              className="scale-75 md:scale-90"
-            />
-          </div>
-
-          {/* Recycling Icon - Bottom right, aligned with Listen column */}
-          <div
-            className="absolute z-20"
-            style={{ bottom: "calc(24px + 1vw)", right: "calc(24px + 1vw)" }}
-          >
-            <DesktopIcon
-              icon={<RecyclingIcon />}
-              label="Recycling Bin"
-              title="I'm just a humble trash can..."
-              onClick={() => setShowRecyclingTooltip(!showRecyclingTooltip)}
-              className="scale-75 md:scale-90"
-            />
-            {showRecyclingTooltip && (
-              <div className="absolute bottom-full right-0 mb-2 px-3 py-2 bg-black text-white text-sm rounded shadow-lg whitespace-nowrap z-30">
-                I'm just a humble trash can...
-                <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black"></div>
+          {/* Mobile/Tablet Layout - Grid Layout */}
+          <div className="lg:hidden p-4">
+            {/* Icons Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-6">
+              <div className="flex justify-center">
+                <DesktopIcon
+                  icon={<WorksIcon />}
+                  label="Projects"
+                  onClick={() => openNewWindow("Projects")}
+                  className="scale-90"
+                />
               </div>
-            )}
+              <div className="flex justify-center">
+                <DesktopIcon
+                  icon={<ArticlesIcon />}
+                  label="Resume"
+                  onClick={() =>
+                    window.open(
+                      "https://docs.google.com/document/d/1c_bOHD4StknDKFZIFizj7UNT3BPDAtbq/edit?usp=sharing&ouid=105779629323639375141&rtpof=true&sd=true",
+                      "_blank",
+                    )
+                  }
+                  className="scale-90"
+                />
+              </div>
+              <div className="flex justify-center">
+                <DesktopIcon
+                  icon={<AboutIcon />}
+                  label="About"
+                  onClick={() => openNewWindow("About")}
+                  className="scale-90"
+                />
+              </div>
+              <div className="flex justify-center">
+                <DesktopIcon
+                  icon={<ContactIcon />}
+                  label="Contact Me"
+                  onClick={() => openNewWindow("Contact")}
+                  className="scale-90"
+                />
+              </div>
+              <div className="flex justify-center">
+                <DesktopIcon
+                  icon={<RecyclingIcon />}
+                  label="Recycling Bin"
+                  title="I'm just a humble trash can..."
+                  onClick={() => setShowRecyclingTooltip(!showRecyclingTooltip)}
+                  className="scale-90"
+                />
+              </div>
+            </div>
+
+            {/* Sticky Notes - Horizontal Scroll on Mobile */}
+            <div className="overflow-x-auto">
+              <div className="flex gap-4 pb-4" style={{ width: "max-content" }}>
+                {/* Sticky Note 1 */}
+                <div
+                  className="flex-shrink-0 w-72 h-64 p-4 border-2 border-black shadow-lg"
+                  style={{ backgroundColor: "#F2B973", borderColor: "#E68C4F" }}
+                >
+                  <div className="space-y-5">
+                    <div>
+                      <p className="text-black text-base leading-6">
+                        Hey! I'm <strong>Cara</strong>, your friendly
+                        neighborhood product designer. Spent{" "}
+                        <strong>8+ years</strong>
+                        &nbsp;turning chaos into "ooh, that actually works".
+                        <em> Plot twist: I also make videos. </em>
+                        <br />
+                        <br />
+                        What's design problems are you working on?
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Sticky Note 2 */}
+                <div
+                  className="flex-shrink-0 w-72 h-64 p-4 border-2 border-black shadow-lg"
+                  style={{ backgroundColor: "#F0A7CC", borderColor: "#E68AA8" }}
+                >
+                  <div className="flex items-center justify-center h-full">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F004bc9981e154e2e9b9ede829f9f12cc?format=webp&width=800"
+                      alt="Inspirational quote about freedom and living in the moment"
+                      className="max-w-full max-h-full object-contain"
+                      style={{ transform: "scale(1.75) translateY(4px)" }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Draggable Windows */}
