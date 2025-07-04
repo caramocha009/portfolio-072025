@@ -1040,20 +1040,36 @@ export default function Index() {
       initialY: Math.random() * 200 + 100,
       width:
         type === "Articles"
-          ? 500
+          ? window.innerWidth < 1024
+            ? Math.min(window.innerWidth - 40, 500)
+            : 500
           : type === "About"
-            ? Math.floor(window.innerWidth * 0.5)
+            ? window.innerWidth < 1024
+              ? Math.min(window.innerWidth - 40, 600)
+              : Math.floor(window.innerWidth * 0.5)
             : type === "Contact"
-              ? 600
-              : 300,
+              ? window.innerWidth < 1024
+                ? Math.min(window.innerWidth - 40, 600)
+                : 600
+              : window.innerWidth < 1024
+                ? Math.min(window.innerWidth - 40, 300)
+                : 300,
       height:
         type === "Articles"
-          ? 400
+          ? window.innerWidth < 1024
+            ? Math.min(window.innerHeight - 80, 400)
+            : 400
           : type === "About"
-            ? 500
+            ? window.innerWidth < 1024
+              ? Math.min(window.innerHeight - 80, 500)
+              : 500
             : type === "Contact"
-              ? 550
-              : 300,
+              ? window.innerWidth < 1024
+                ? Math.min(window.innerHeight - 80, 550)
+                : 550
+              : window.innerWidth < 1024
+                ? Math.min(window.innerHeight - 80, 300)
+                : 300,
       zIndex: nextZIndex,
       content: windowContent,
     };
