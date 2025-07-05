@@ -1021,8 +1021,8 @@ export default function Index() {
       bgColor = "#FFFFFF";
       headerColor = "#FFFFFF";
       windowContent = (
-        <div className="text-black p-6 overflow-y-auto">
-          <div className="flex gap-6 items-start mb-6">
+        <div className="text-black px-6 py-6 overflow-y-auto">
+          <div className="flex gap-6 items-start">
             <div className="flex-shrink-0">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fda52f87e0d074ad1b1f0d2323587ad30?format=webp&width=800"
