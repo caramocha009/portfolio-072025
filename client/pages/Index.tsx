@@ -1032,35 +1032,43 @@ export default function Index() {
               />
             </div>
             <div className="flex-1 text-sm sm:text-base leading-relaxed space-y-4">
+              <h4 className="text-lg font-semibold mb-4">
+                Meet Cara Liu – a Designer Who Gets It
+              </h4>
               <p>
-                Cara Liu is a Senior Product Designer with 8+ years of
-                experience creating thoughtful, user-centered solutions for
-                complex financial and B2B products. She has a proven track
-                record of transforming challenging workflows into intuitive
-                experiences that drive real business results—like reducing
-                Pacific Life's underwriting process from weeks to real-time and
-                improving AWS tool efficiency by 20%.
+                I'm the kind of product designer who thrives in the beautiful
+                chaos where user needs meet business reality. You know those
+                projects that start as "just update the homepage" and somehow
+                evolve into reimagining the entire user journey? That's my
+                specialty.
               </p>
               <p>
-                Cara specializes in bridging the gap between intricate business
-                requirements and user needs, with particular expertise in user
-                research, prototyping, and scalable design systems. She's worked
-                across highly regulated industries, consistently delivering
-                accessible, compliant solutions that enhance both user
-                satisfaction and operational efficiency.
+                With a research-driven approach and a healthy dose of skepticism
+                about what stakeholders think they want, I've spent my career
+                proving that great design isn't just about making things
+                pretty—it's about making them work. Whether I'm untangling
+                complex enterprise workflows, optimizing mobile experiences that
+                actually convert, or figuring out how to make B2B software feel
+                human, I bring data and empathy in equal measure.
               </p>
               <p>
-                Known for her collaborative approach and strategic thinking,
-                Cara excels at leading cross-functional teams through complex
-                design challenges while mentoring other designers. She brings a
-                methodical yet creative approach to every project, always
-                grounding her design decisions in solid research and measurable
-                outcomes.
+                I specialize in projects where "it's complicated" is the
+                starting point, not the excuse. My superpower? Translating the
+                gap between what users say they want and what they actually
+                do—because the best insights often come from watching people
+                completely contradict their own survey responses.
               </p>
               <p>
-                Based in Des Moines, Cara is passionate about creating digital
-                experiences that make complicated processes feel more human and
-                accessible.
+                From e-commerce platforms to SaaS dashboards, consumer apps to
+                internal tools, I've learned that every product has its own
+                personality and problems. My job is to listen, research, test,
+                and iterate until we find solutions that work for real people in
+                real situations.
+              </p>
+              <p>
+                Currently helping companies navigate the messy, fascinating
+                intersection of user experience and business strategy, one
+                well-researched design decision at a time.
               </p>
             </div>
           </div>
