@@ -283,7 +283,7 @@ function MediumArticleEmbed({
           rel="noopener noreferrer"
           className="inline-block px-6 py-3 bg-orange-400 text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all font-mono text-base font-bold"
         >
-          📖 Read on Medium →
+          ��� Read on Medium →
         </a>
       </div>
     );
@@ -470,7 +470,7 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
           {
             searchText: "Current State",
             id: "understanding-current-state",
-            title: "Understanding the Current State",
+            title: "Current State",
           },
           {
             searchText: "The Brand Color Constraint",
