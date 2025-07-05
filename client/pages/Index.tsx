@@ -210,6 +210,23 @@ function MediumArticleEmbed({
             `Savvo article not found. Available articles: ${data.items.map((item: any) => item.title).join(", ")}`,
           );
         }
+      } else if (articleType === "hyvee-aisles") {
+        // For Hy-Vee article, try to find it in the feed
+        targetArticle = data.items.find(
+          (item: any) =>
+            item.title.toLowerCase().includes("hy-vee") ||
+            item.title.toLowerCase().includes("hyvee") ||
+            item.title.toLowerCase().includes("aisles") ||
+            item.title.toLowerCase().includes("cards, tags, and ads"),
+        );
+
+        if (targetArticle) {
+          setArticleContent(targetArticle);
+        } else {
+          throw new Error(
+            `Hy-Vee article not found. Available articles: ${data.items.map((item: any) => item.title).join(", ")}`,
+          );
+        }
       }
     } catch (err) {
       setError(err instanceof Error ? err.message : "Unknown error");
