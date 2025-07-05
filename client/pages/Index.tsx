@@ -2363,7 +2363,9 @@ export default function Index() {
                     ? "Articles"
                     : window.id.startsWith("Projects")
                       ? "Projects"
-                      : undefined
+                      : window.id.startsWith("About")
+                        ? "About"
+                        : undefined
                 }
                 resizable={!window.id.startsWith("sticky")}
                 onClose={() => closeWindow(window.id)}
