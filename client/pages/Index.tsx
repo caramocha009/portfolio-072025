@@ -468,7 +468,7 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
             title: "The Scope",
           },
           {
-            searchText: "Understanding the Current State",
+            searchText: "Current State",
             id: "understanding-current-state",
             title: "Current State",
           },
