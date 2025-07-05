@@ -1031,7 +1031,12 @@ export default function Index() {
               />
             </div>
             <div className="flex-1 text-sm sm:text-base leading-relaxed space-y-4">
-              <h4 className="text-lg font-semibold mb-4">
+              <h4
+                className="text-lg font-semibold mb-4"
+                style={{
+                  fontFamily: '"JetBrains Mono", monospace',
+                }}
+              >
                 Meet Cara Liu – a Designer Who Gets It
               </h4>
               <p>
