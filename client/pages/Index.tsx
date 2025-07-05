@@ -1022,7 +1022,6 @@ export default function Index() {
       headerColor = "#FFFFFF";
       windowContent = (
         <div className="text-black p-6 overflow-y-auto">
-          <h3 className="font-bold text-lg sm:text-xl mb-6 truncate">{type}</h3>
           <div className="flex gap-6 items-start mb-6">
             <div className="flex-shrink-0">
               <img
