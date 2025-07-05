@@ -2257,47 +2257,6 @@ export default function Index() {
                 />
               </div>
             </div>
-
-            {/* Sticky Notes - Horizontal Scroll on Mobile */}
-            <div className="overflow-x-auto">
-              <div className="flex gap-4 pb-4" style={{ width: "max-content" }}>
-                {/* Sticky Note 1 */}
-                <div
-                  className="flex-shrink-0 w-72 h-64 p-4 border-2 border-black shadow-lg"
-                  style={{ backgroundColor: "#F2B973", borderColor: "#E68C4F" }}
-                >
-                  <div className="space-y-5">
-                    <div>
-                      <p className="text-black text-base leading-6">
-                        Hey! I'm <strong>Cara</strong>, your friendly
-                        neighborhood product designer. Spent{" "}
-                        <strong>8+ years</strong>
-                        &nbsp;turning chaos into "ooh, that actually works".
-                        <em> Plot twist: I also make videos. </em>
-                        <br />
-                        <br />
-                        What's design problems are you working on?
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Sticky Note 2 */}
-                <div
-                  className="flex-shrink-0 w-72 h-64 p-4 border-2 border-black shadow-lg"
-                  style={{ backgroundColor: "#F0A7CC", borderColor: "#E68AA8" }}
-                >
-                  <div className="flex items-center justify-center h-full">
-                    <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F004bc9981e154e2e9b9ede829f9f12cc?format=webp&width=800"
-                      alt="Inspirational quote about freedom and living in the moment"
-                      className="max-w-full max-h-full object-contain"
-                      style={{ transform: "scale(1.75) translateY(4px)" }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Draggable Windows */}
