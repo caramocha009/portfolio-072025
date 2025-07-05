@@ -1742,13 +1742,13 @@ export default function Index() {
                               // Reduce first specific image by 75% and center
                               .replace(
                                 /<img([^>]*?)src="([^"]*0\*_0x2AA-s2LJzlysW\.png[^"]*)"([^>]*?)>/g,
-                                '<div style="text-align: center; margin: 32px 0;"><img$1src="$2"$3 style="width: 25%; height: auto; max-width: 250px; cursor: pointer;" onclick="window.openLightbox && window.openLightbox(\'$2\')"></div>',
+                                '<div style="display: flex !important; justify-content: center !important; align-items: center !important; margin: 32px 0 !important; width: 100% !important;"><img$1src="$2"$3 style="width: 25% !important; height: auto !important; max-width: 250px !important; cursor: pointer !important;" onclick="window.openLightbox && window.openLightbox(\'$2\')"></div>',
                               )
 
                               // Reduce second specific image by 75% and center
                               .replace(
                                 /<img([^>]*?)src="([^"]*0\*eTh2iT-zL0OlU-lR\.png[^"]*)"([^>]*?)>/g,
-                                '<div style="text-align: center; margin: 32px 0;"><img$1src="$2"$3 style="width: 25%; height: auto; max-width: 250px; cursor: pointer;" onclick="window.openLightbox && window.openLightbox(\'$2\')"></div>',
+                                '<div style="display: flex !important; justify-content: center !important; align-items: center !important; margin: 32px 0 !important; width: 100% !important;"><img$1src="$2"$3 style="width: 25% !important; height: auto !important; max-width: 250px !important; cursor: pointer !important;" onclick="window.openLightbox && window.openLightbox(\'$2\')"></div>',
                               )
 
                               // Style images to match Savvo layout
