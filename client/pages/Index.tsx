@@ -852,6 +852,11 @@ export default function Index() {
   // Fetch full Medium article content for Hy-Vee case study
   useEffect(() => {
     if (currentCaseStudy === "hyvee-aisles") {
+      // Set up global lightbox handler for Hy-Vee case study
+      (window as any).openLightbox = (src: string) => {
+        setLightboxImage(src);
+      };
+
       setIsLoadingArticle(true);
       setArticleError(null);
 
