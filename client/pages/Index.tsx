@@ -2045,7 +2045,7 @@ export default function Index() {
               className="w-6 h-6 md:w-8 md:h-8 object-contain"
             />
             <span
-              className="hidden sm:block text-black font-normal leading-6"
+              className="text-black font-normal leading-6"
               style={{
                 fontFamily: '"JetBrains Mono", monospace',
                 fontSize: "18px",
