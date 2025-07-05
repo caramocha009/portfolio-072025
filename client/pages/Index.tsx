@@ -1112,7 +1112,7 @@ export default function Index() {
               : Math.floor(window.innerWidth * 0.5)
             : type === "Contact"
               ? window.innerWidth < 1024
-                ? Math.min(window.innerWidth - 40, 600)
+                ? window.innerWidth
                 : 600
               : window.innerWidth < 1024
                 ? Math.min(window.innerWidth - 40, 300)
@@ -1128,8 +1128,8 @@ export default function Index() {
               : 500
             : type === "Contact"
               ? window.innerWidth < 1024
-                ? Math.min(window.innerHeight - 80, 600)
-                : 600
+                ? window.innerHeight
+                : 632
               : window.innerWidth < 1024
                 ? Math.min(window.innerHeight - 80, 300)
                 : 300,
