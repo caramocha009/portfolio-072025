@@ -1027,10 +1027,10 @@ export default function Index() {
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fda52f87e0d074ad1b1f0d2323587ad30?format=webp&width=800"
                 alt="Cara Liu"
-                className="w-32 h-32 object-cover rounded-lg"
+                className="w-40 h-40 object-cover rounded-lg"
               />
             </div>
-            <div className="flex-1 text-sm sm:text-base leading-relaxed space-y-4">
+            <div className="flex-1 text-sm sm:text-base leading-relaxed space-y-4 max-w-md">
               <h4
                 className="text-lg font-semibold mb-4"
                 style={{
