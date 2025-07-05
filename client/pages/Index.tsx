@@ -2259,31 +2259,79 @@ export default function Index() {
             </div>
           </div>
 
-          {/* Draggable Windows */}
-          {openWindows.map((window) => (
-            <DraggableWindow
-              key={window.id}
-              backgroundColor={window.backgroundColor}
-              headerColor={window.headerColor}
-              initialX={window.initialX}
-              initialY={window.initialY}
-              width={window.width}
-              height={window.height}
-              zIndex={window.zIndex}
-              title={
-                window.id.startsWith("Articles")
-                  ? "Articles"
-                  : window.id.startsWith("Projects")
-                    ? "Projects"
-                    : undefined
-              }
-              resizable={!window.id.startsWith("sticky")}
-              onClose={() => closeWindow(window.id)}
-              onBringToFront={() => bringToFront(window.id)}
-            >
-              {window.content}
-            </DraggableWindow>
-          ))}
+          {/* Draggable Windows - Non-sticky windows only */}
+          {openWindows
+            .filter((window) => !window.id.startsWith("sticky"))
+            .map((window) => (
+              <DraggableWindow
+                key={window.id}
+                backgroundColor={window.backgroundColor}
+                headerColor={window.headerColor}
+                initialX={window.initialX}
+                initialY={window.initialY}
+                width={window.width}
+                height={window.height}
+                zIndex={window.zIndex}
+                title={
+                  window.id.startsWith("Articles")
+                    ? "Articles"
+                    : window.id.startsWith("Projects")
+                      ? "Projects"
+                      : undefined
+                }
+                resizable={!window.id.startsWith("sticky")}
+                onClose={() => closeWindow(window.id)}
+                onBringToFront={() => bringToFront(window.id)}
+              >
+                {window.content}
+              </DraggableWindow>
+            ))}
+
+          {/* Sticky Notes - Responsive Layout */}
+          {/* Desktop: Centered draggable windows */}
+          <div className="hidden lg:block">
+            {openWindows
+              .filter((window) => window.id.startsWith("sticky"))
+              .map((window) => (
+                <DraggableWindow
+                  key={window.id}
+                  backgroundColor={window.backgroundColor}
+                  headerColor={window.headerColor}
+                  initialX={window.initialX}
+                  initialY={window.initialY}
+                  width={window.width}
+                  height={window.height}
+                  zIndex={window.zIndex}
+                  resizable={false}
+                  onClose={() => closeWindow(window.id)}
+                  onBringToFront={() => bringToFront(window.id)}
+                >
+                  {window.content}
+                </DraggableWindow>
+              ))}
+          </div>
+
+          {/* Mobile/Tablet: Horizontal scrolling sticky notes */}
+          <div className="lg:hidden fixed bottom-4 left-0 right-0 z-20">
+            <div className="overflow-x-auto px-4">
+              <div className="flex gap-4 pb-4" style={{ width: "max-content" }}>
+                {openWindows
+                  .filter((window) => window.id.startsWith("sticky"))
+                  .map((window) => (
+                    <div
+                      key={window.id}
+                      className="flex-shrink-0 w-72 h-64 p-4 border-2 border-black shadow-lg"
+                      style={{
+                        backgroundColor: window.backgroundColor,
+                        borderColor: window.headerColor,
+                      }}
+                    >
+                      {window.content}
+                    </div>
+                  ))}
+              </div>
+            </div>
+          </div>
         </main>
       </div>
 
