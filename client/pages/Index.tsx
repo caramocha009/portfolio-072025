@@ -488,7 +488,7 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
             title: "Technical Implementation",
           },
           {
-            searchText: "Product Tags",
+            searchText: "User Testing for Product Tags",
             id: "user-testing-product-tags",
             title: "Product Tags Testing",
           },
