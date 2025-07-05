@@ -1487,8 +1487,8 @@ export default function Index() {
           {/* Header with Breadcrumbs - Retro Style */}
           <div className="border-b-2 border-black bg-white sticky top-2 z-[10000] shadow-[0_4px_0px_0px_rgba(0,0,0,1)]">
             <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
-              {/* Breadcrumbs */}
-              <div className="flex items-center gap-2">
+              {/* Desktop Breadcrumbs */}
+              <div className="hidden lg:flex items-center gap-2">
                 <button
                   onClick={() => {
                     setCurrentCaseStudy(null);
@@ -1510,6 +1510,21 @@ export default function Index() {
                 </button>
                 <span className="text-black font-mono text-sm">→</span>
                 <span className="text-black font-mono text-sm">
+                  {currentCaseStudy === "savvo-sommelier"
+                    ? "Savvo Digital Sommelier"
+                    : currentCaseStudy === "hyvee-aisles"
+                      ? "Hy-Vee Aisles Online"
+                      : currentCaseStudy === "ascent-logistics"
+                        ? "Ascent Global Logistics"
+                        : currentCaseStudy === "boa-merchant-checkout"
+                          ? "Bank of America Merchant Partner Checkout"
+                          : "Case Study"}
+                </span>
+              </div>
+
+              {/* Mobile Breadcrumb - Just Case Study Name */}
+              <div className="lg:hidden">
+                <span className="text-black font-mono text-sm font-bold">
                   {currentCaseStudy === "savvo-sommelier"
                     ? "Savvo Digital Sommelier"
                     : currentCaseStudy === "hyvee-aisles"
