@@ -1128,8 +1128,8 @@ export default function Index() {
               : 500
             : type === "Contact"
               ? window.innerWidth < 1024
-                ? Math.min(window.innerHeight - 80, 550)
-                : 550
+                ? Math.min(window.innerHeight - 80, 600)
+                : 600
               : window.innerWidth < 1024
                 ? Math.min(window.innerHeight - 80, 300)
                 : 300,
