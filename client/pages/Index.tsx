@@ -470,7 +470,7 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
           {
             searchText: "Current State",
             id: "understanding-current-state",
-            title: "Current State",
+            title: "Understanding the Current State",
           },
           {
             searchText: "The Brand Color Constraint",
