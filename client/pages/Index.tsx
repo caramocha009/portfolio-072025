@@ -1739,6 +1739,12 @@ export default function Index() {
                                 '<blockquote$1 style="border-left: 3px solid #242424; padding-left: 24px; margin: 32px 0; font-style: italic; font-size: 24px; color: #6B6B6B; font-family: charter, Georgia, Cambria, Times New Roman, Times, serif;">',
                               )
 
+                              // Reduce specific image by 75%
+                              .replace(
+                                /<img([^>]*?)src="([^"]*0\*_0x2AA-s2LJzlysW\.png[^"]*)"([^>]*?)>/g,
+                                '<img$1src="$2"$3 style="width: 25%; height: auto; margin: 32px 0; max-width: 250px; cursor: pointer;" onclick="window.openLightbox && window.openLightbox(\'$2\')">',
+                              )
+
                               // Style images to match Savvo layout
                               .replace(
                                 /<img([^>]*?)src="([^"]*)"([^>]*?)>/g,
