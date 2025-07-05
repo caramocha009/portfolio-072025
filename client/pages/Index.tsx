@@ -532,12 +532,19 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
 
           headingMap.forEach((mapping) => {
             allHeadings.forEach((heading) => {
-              const headingText = heading.textContent?.trim() || "";
+              const headingText =
+                heading.textContent?.trim().toLowerCase() || "";
+              const searchText = mapping.searchText.toLowerCase();
               if (
-                headingText.includes(mapping.searchText) ||
-                mapping.searchText.includes(headingText)
+                headingText.includes(searchText) ||
+                searchText.includes(headingText) ||
+                (headingText.includes("understanding") &&
+                  searchText.includes("current state"))
               ) {
                 heading.setAttribute("id", mapping.id);
+                console.log(
+                  `Added ID "${mapping.id}" to heading: "${heading.textContent}"`,
+                );
               }
             });
           });
