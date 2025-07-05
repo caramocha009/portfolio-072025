@@ -535,11 +535,25 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
               const headingText =
                 heading.textContent?.trim().toLowerCase() || "";
               const searchText = mapping.searchText.toLowerCase();
+
+              // Split search text into words for more flexible matching
+              const searchWords = searchText
+                .split(" ")
+                .filter((word) => word.length > 2);
+              const matchingWords = searchWords.filter((word) =>
+                headingText.includes(word),
+              );
+              const isPartialMatch =
+                matchingWords.length >= Math.ceil(searchWords.length * 0.6);
+
               if (
                 headingText.includes(searchText) ||
                 searchText.includes(headingText) ||
+                isPartialMatch ||
                 (headingText.includes("understanding") &&
-                  searchText.includes("current state"))
+                  searchText.includes("current state")) ||
+                (headingText.includes("user testing") &&
+                  searchText.includes("product tags"))
               ) {
                 heading.setAttribute("id", mapping.id);
                 console.log(
