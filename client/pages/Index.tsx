@@ -549,11 +549,19 @@ function CaseStudyNavigation({ isVisible }: { isVisible: boolean }) {
               if (
                 headingText.includes(searchText) ||
                 searchText.includes(headingText) ||
-                isPartialMatch ||
                 (headingText.includes("understanding") &&
+                  headingText.includes("current state") &&
                   searchText.includes("current state")) ||
                 (headingText.includes("user testing") &&
-                  searchText.includes("product tags"))
+                  headingText.includes("product tags") &&
+                  searchText.includes("user testing") &&
+                  searchText.includes("product tags") &&
+                  !searchText.includes("large-scale") &&
+                  !headingText.includes("large-scale")) ||
+                (headingText.includes("large-scale") &&
+                  headingText.includes("user testing") &&
+                  searchText.includes("large-scale") &&
+                  searchText.includes("user testing"))
               ) {
                 heading.setAttribute("id", mapping.id);
                 console.log(
