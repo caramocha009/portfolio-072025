@@ -938,6 +938,16 @@ export default function Index() {
   };
 
   const openNewWindow = (type: string) => {
+    // Check if a window of this type already exists
+    const existingWindow = openWindows.find((window) =>
+      window.id.startsWith(type),
+    );
+    if (existingWindow) {
+      // Bring existing window to front instead of creating duplicate
+      bringToFront(existingWindow.id);
+      return;
+    }
+
     if (type === "Projects") {
       setIsProjectsFullscreenOpen(true);
       return;
