@@ -2437,10 +2437,11 @@ export default function Index() {
 
           {/* Footer Tag */}
           <div
-            className="fixed bottom-4 left-4 z-10 text-gray-600"
+            className="fixed bottom-4 left-4 z-10"
             style={{
               fontFamily: '"JetBrains Mono", monospace',
               fontSize: "12px",
+              color: "rgb(120, 184, 241)",
             }}
           >
             Built with ❤️ by Builder.io, Claude, and Figma Make. Copyright{" "}
