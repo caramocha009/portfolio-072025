@@ -1241,7 +1241,7 @@ export default function Index() {
                 >
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-lg">��</span>
+                      <span className="text-white font-bold text-lg">🍷</span>
                     </div>
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-medium text-black mb-1">
@@ -2310,6 +2310,8 @@ export default function Index() {
             <div
               className="absolute z-20"
               style={{ top: "calc(24px + 1vw)", left: "calc(24px + 1vw)" }}
+              onMouseEnter={() => setAsciiArtColor("#a855f7")}
+              onMouseLeave={() => setAsciiArtColor("#ffffff")}
             >
               <DesktopIcon
                 icon={<WorksIcon />}
