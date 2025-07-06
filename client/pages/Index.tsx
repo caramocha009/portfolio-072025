@@ -2253,7 +2253,20 @@ export default function Index() {
 
 
 
-                                                                                                                                                   `}
+                                                                                                                                                   `
+              .split("")
+              .map((char, index) => (
+                <span
+                  key={index}
+                  className="ascii-char inline-block transition-all duration-100 hover:text-purple-500 hover:scale-125 hover:shadow-lg"
+                  style={{
+                    color: "#ffffff",
+                    cursor: "default",
+                  }}
+                >
+                  {char}
+                </span>
+              ))}
           </div>
         </div>
         {/* Header */}
