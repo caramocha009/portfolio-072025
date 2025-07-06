@@ -1086,7 +1086,7 @@ export default function Index() {
                 proving that great design isn't just about making things
                 pretty—it's about making them work. Whether I'm untangling
                 complex enterprise workflows, optimizing mobile experiences that
-                actually convert, or figuring out how to make B2B software feel
+                actually convert, or figuring out how to make software feel
                 human, I bring data and empathy in equal measure.
               </p>
               <p>
