@@ -2369,6 +2369,8 @@ export default function Index() {
                 top: "calc(24px + 1vw + 426px)",
                 left: "calc(24px + 1vw)",
               }}
+              onMouseEnter={() => setAsciiArtColor("#ec4899")}
+              onMouseLeave={() => setAsciiArtColor("#ffffff")}
             >
               <DesktopIcon
                 icon={<ContactIcon />}
