@@ -1056,11 +1056,11 @@ export default function Index() {
                   />
                 </h5>
                 <p className="text-xs leading-relaxed text-gray-700">
-                  I used to feel embarrassed by my slower pace, but discovered
-                  it's my superpower. Like a turtle, I move
-                  deliberately—thinking deeply, seeing what others miss, and
-                  speaking with honesty, truth, and kindness because my words
-                  affect others. Thoughtfulness isn't a flaw; it's wisdom.
+                  I once viewed my deliberate pace as a limitation, but it's
+                  become my design strength. Like a turtle, I move
+                  methodically—diving deep into problems, uncovering insights
+                  others overlook, and communicating with clarity and purpose.
+                  My thoughtful approach isn't slow; it's strategic.
                 </p>
               </div>
             </div>
