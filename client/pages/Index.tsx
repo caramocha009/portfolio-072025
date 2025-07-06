@@ -2127,20 +2127,53 @@ export default function Index() {
       <div className="min-h-screen bg-gradient-to-bl from-purple-500 via-desktop-blue to-blue-800 overflow-hidden relative">
         {/* ASCII Art Background */}
         <div
-          className="absolute inset-0 pointer-events-none z-0 opacity-20 hover:opacity-40 transition-opacity duration-500"
+          className="absolute inset-0 pointer-events-auto z-0 opacity-20 transition-opacity duration-500"
           style={{
             fontFamily: '"JetBrains Mono", monospace',
-            fontSize: "4px",
-            lineHeight: "4px",
+            fontSize: "12px",
+            lineHeight: "12px",
             color: "#ffffff",
             whiteSpace: "pre",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            transform: "scale(0.8)",
+            transform: "scale(2.4)",
           }}
         >
-          <div className="hover:text-purple-200 transition-colors duration-300">
+          <div
+            className="select-none"
+            style={{
+              background:
+                "linear-gradient(45deg, transparent 49%, #a855f7 50%, transparent 51%)",
+              backgroundSize: "1ch 1ch",
+              backgroundClip: "text",
+              WebkitBackgroundClip: "text",
+              transition: "all 0.1s ease",
+            }}
+            onMouseMove={(e) => {
+              const chars = e.currentTarget.querySelectorAll(".ascii-char");
+              const rect = e.currentTarget.getBoundingClientRect();
+              const x = e.clientX - rect.left;
+              const y = e.clientY - rect.top;
+
+              chars.forEach((char, index) => {
+                const charRect = char.getBoundingClientRect();
+                const charX = charRect.left - rect.left + charRect.width / 2;
+                const charY = charRect.top - rect.top + charRect.height / 2;
+                const distance = Math.sqrt((x - charX) ** 2 + (y - charY) ** 2);
+
+                if (distance < 50) {
+                  char.style.color = "#a855f7";
+                  char.style.textShadow = "0 0 10px #a855f7";
+                  char.style.transform = "scale(1.2)";
+                } else {
+                  char.style.color = "#ffffff";
+                  char.style.textShadow = "none";
+                  char.style.transform = "scale(1)";
+                }
+              });
+            }}
+          >
             {`
 
 
