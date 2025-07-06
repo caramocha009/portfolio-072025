@@ -2131,7 +2131,7 @@ export default function Index() {
         </div>
       )}
 
-      <div className="min-h-screen bg-gradient-to-br from-desktop-blue to-blue-800 overflow-hidden relative">
+      <div className="min-h-screen bg-gradient-to-br from-purple-500 via-desktop-blue to-blue-800 overflow-hidden relative">
         {/* Header */}
         <header className="h-12 bg-white border-b-2 border-black flex items-center justify-between px-2 md:px-4">
           {/* Logo and Brand */}
