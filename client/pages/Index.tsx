@@ -2137,7 +2137,7 @@ export default function Index() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            transform: "scale(2.4)",
+            transform: "scale(0.8)",
           }}
         >
           <div
