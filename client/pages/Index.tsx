@@ -2434,6 +2434,18 @@ export default function Index() {
               </div>
             </div>
           </div>
+
+          {/* Footer Tag */}
+          <div
+            className="fixed bottom-4 left-4 z-10 text-gray-600"
+            style={{
+              fontFamily: '"JetBrains Mono", monospace',
+              fontSize: "12px",
+            }}
+          >
+            Built with ❤️ by Builder.io, Claude, and Figma Make. Copyright{" "}
+            {new Date().getFullYear()} Cara Liu
+          </div>
         </main>
       </div>
 
