@@ -2135,7 +2135,7 @@ export default function Index() {
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F06b8f3812aef472ba6f2dbbdc9c5f523?format=webp&width=800"
               alt="Logo"
-              className="w-6 h-6 md:w-8 md:h-8 object-contain"
+              className="w-15 h-15 md:w-20 md:h-20 object-contain"
             />
             <span
               className="text-black font-normal leading-6"
