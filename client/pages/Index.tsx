@@ -2140,38 +2140,12 @@ export default function Index() {
             transform: "scale(0.8)",
           }}
         >
-          <div
-            className="select-none"
+          <pre
+            className="select-none hover:text-purple-400 transition-colors duration-300 cursor-default"
             style={{
-              background:
-                "linear-gradient(45deg, transparent 49%, #a855f7 50%, transparent 51%)",
-              backgroundSize: "1ch 1ch",
-              backgroundClip: "text",
-              WebkitBackgroundClip: "text",
-              transition: "all 0.1s ease",
-            }}
-            onMouseMove={(e) => {
-              const chars = e.currentTarget.querySelectorAll(".ascii-char");
-              const rect = e.currentTarget.getBoundingClientRect();
-              const x = e.clientX - rect.left;
-              const y = e.clientY - rect.top;
-
-              chars.forEach((char, index) => {
-                const charRect = char.getBoundingClientRect();
-                const charX = charRect.left - rect.left + charRect.width / 2;
-                const charY = charRect.top - rect.top + charRect.height / 2;
-                const distance = Math.sqrt((x - charX) ** 2 + (y - charY) ** 2);
-
-                if (distance < 50) {
-                  char.style.color = "#a855f7";
-                  char.style.textShadow = "0 0 10px #a855f7";
-                  char.style.transform = "scale(1.2)";
-                } else {
-                  char.style.color = "#ffffff";
-                  char.style.textShadow = "none";
-                  char.style.transform = "scale(1)";
-                }
-              });
+              margin: 0,
+              padding: 0,
+              background: 'transparent',
             }}
           >
             {`
