@@ -1640,9 +1640,6 @@ export default function Index() {
                   <h1 className="text-3xl font-bold text-black mb-4">
                     Hy-Vee Aisles Online
                   </h1>
-                  <p className="text-gray-600 text-lg mb-6">
-                    Cards, tags, and ads: UX for online shopping experience
-                  </p>
                 </div>
 
                 {/* Full Medium Article Content */}
