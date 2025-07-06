@@ -1241,7 +1241,7 @@ export default function Index() {
                 >
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-lg">🍷</span>
+                      <span className="text-white font-bold text-lg">��</span>
                     </div>
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-medium text-black mb-1">
@@ -2142,11 +2142,12 @@ export default function Index() {
           }}
         >
           <pre
-            className="select-none hover:text-purple-400 transition-colors duration-300 cursor-default"
+            className="select-none transition-colors duration-300 cursor-default"
             style={{
               margin: 0,
               padding: 0,
               background: "transparent",
+              color: asciiArtColor,
             }}
           >
             {`
