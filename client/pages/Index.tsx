@@ -1031,7 +1031,7 @@ export default function Index() {
       bgColor = "#FFFFFF";
       headerColor = "#FFFFFF";
       windowContent = (
-        <div className="text-black px-6 py-6 overflow-y-auto">
+        <div className="text-black px-6 pt-6 pb-6 overflow-y-auto">
           <div className="flex gap-6 items-start justify-center">
             <div className="flex-shrink-0 space-y-4">
               <img
