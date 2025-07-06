@@ -1636,12 +1636,6 @@ export default function Index() {
             {currentCaseStudy === "hyvee-aisles" ? (
               /* Hy-Vee case study with Twilik Medium embed */
               <div className="max-w-4xl mx-auto">
-                <div className="mb-8">
-                  <h1 className="text-3xl font-bold text-black mb-4">
-                    Hy-Vee Aisles Online
-                  </h1>
-                </div>
-
                 {/* Full Medium Article Content */}
                 <div className="bg-gray-50">
                   {isLoadingArticle ? (
