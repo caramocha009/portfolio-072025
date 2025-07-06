@@ -2351,6 +2351,8 @@ export default function Index() {
                 top: "calc(24px + 1vw + 284px)",
                 left: "calc(24px + 1vw)",
               }}
+              onMouseEnter={() => setAsciiArtColor("#1e40af")}
+              onMouseLeave={() => setAsciiArtColor("#ffffff")}
             >
               <DesktopIcon
                 icon={<AboutIcon />}
