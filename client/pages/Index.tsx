@@ -1086,6 +1086,30 @@ export default function Index() {
               </p>
             </div>
           </div>
+
+          {/* Turtle Story Container */}
+          <div className="mt-6 p-4 border-2 border-gray-300 rounded-lg bg-gray-50">
+            <h5
+              className="text-sm font-semibold mb-3 flex items-center gap-2"
+              style={{
+                fontFamily: '"JetBrains Mono", monospace',
+              }}
+            >
+              What's with the turtle?
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F06b8f3812aef472ba6f2dbbdc9c5f523?format=webp&width=800"
+                alt="Logo"
+                className="w-4 h-4 object-contain"
+              />
+            </h5>
+            <p className="text-sm leading-relaxed text-gray-700">
+              I used to feel embarrassed by my slower pace, but discovered it's
+              my superpower. Like a turtle, I move deliberately—thinking deeply,
+              seeing what others miss, and speaking with honesty, truth, and
+              kindness because my words affect others. Thoughtfulness isn't a
+              flaw; it's wisdom.
+            </p>
+          </div>
         </div>
       );
     } else if (type === "Contact") {
