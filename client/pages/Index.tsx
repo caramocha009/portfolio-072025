@@ -2310,7 +2310,7 @@ export default function Index() {
             <div
               className="absolute z-20"
               style={{ top: "calc(24px + 1vw)", left: "calc(24px + 1vw)" }}
-              onMouseEnter={() => setAsciiArtColor("#a855f7")}
+              onMouseEnter={() => setAsciiArtColor("#c084fc")}
               onMouseLeave={() => setAsciiArtColor("#ffffff")}
             >
               <DesktopIcon
@@ -2328,7 +2328,7 @@ export default function Index() {
                 top: "calc(24px + 1vw + 142px)",
                 left: "calc(24px + 1vw)",
               }}
-              onMouseEnter={() => setAsciiArtColor("#5656e9")}
+              onMouseEnter={() => setAsciiArtColor("#60a5fa")}
               onMouseLeave={() => setAsciiArtColor("#ffffff")}
             >
               <DesktopIcon
@@ -2351,7 +2351,7 @@ export default function Index() {
                 top: "calc(24px + 1vw + 284px)",
                 left: "calc(24px + 1vw)",
               }}
-              onMouseEnter={() => setAsciiArtColor("#1e40af")}
+              onMouseEnter={() => setAsciiArtColor("#3b82f6")}
               onMouseLeave={() => setAsciiArtColor("#ffffff")}
             >
               <DesktopIcon
@@ -2369,7 +2369,7 @@ export default function Index() {
                 top: "calc(24px + 1vw + 426px)",
                 left: "calc(24px + 1vw)",
               }}
-              onMouseEnter={() => setAsciiArtColor("#ec4899")}
+              onMouseEnter={() => setAsciiArtColor("#f472b6")}
               onMouseLeave={() => setAsciiArtColor("#ffffff")}
             >
               <DesktopIcon
