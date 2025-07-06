@@ -1694,28 +1694,6 @@ export default function Index() {
                     </div>
                   ) : mediumArticle ? (
                     <div className="p-8">
-                      {/* Article Header */}
-                      <div className="flex items-center gap-3 mb-6">
-                        <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center text-white font-mono text-lg">
-                          C
-                        </div>
-                        <div>
-                          <p className="font-semibold text-gray-900">
-                            {mediumArticle.author}
-                          </p>
-                          <p className="text-sm text-gray-500">
-                            {new Date(mediumArticle.pubDate).toLocaleDateString(
-                              "en-US",
-                              {
-                                year: "numeric",
-                                month: "long",
-                                day: "numeric",
-                              },
-                            )}
-                          </p>
-                        </div>
-                      </div>
-
                       {/* Article Title */}
                       <h1
                         style={{
