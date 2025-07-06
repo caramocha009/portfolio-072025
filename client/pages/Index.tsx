@@ -780,6 +780,7 @@ function Lightbox({
 export default function Index() {
   const [showRecyclingTooltip, setShowRecyclingTooltip] = useState(false);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
+  const [asciiArtColor, setAsciiArtColor] = useState("#ffffff");
 
   useEffect(() => {
     const handleResize = () => {
