@@ -1687,7 +1687,7 @@ export default function Index() {
                       </a>
                     </div>
                   ) : mediumArticle ? (
-                    <div className="p-8">
+                    <div className="px-8 pt-2 pb-8">
                       {/* Article Title */}
                       <h1
                         style={{
