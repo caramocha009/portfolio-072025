@@ -2440,12 +2440,12 @@ export default function Index() {
             className="fixed bottom-4 z-10"
             style={{
               fontFamily: '"JetBrains Mono", monospace',
-              fontSize: "12px",
+              fontSize: "10px",
               color: "rgb(120, 184, 241)",
               left: "calc(24px + 1vw)",
             }}
           >
-            Built with ❤️ by Builder.io, Claude, and Figma Make. Copyright{" "}
+            Built with ❤️ by Builder.io, Claude, and Figma Make. Copyright ©{" "}
             {new Date().getFullYear()} Cara Liu
           </div>
         </main>
