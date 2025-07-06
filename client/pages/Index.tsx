@@ -1032,7 +1032,7 @@ export default function Index() {
       headerColor = "#FFFFFF";
       windowContent = (
         <div className="text-black px-6 pt-6 pb-6 overflow-y-auto">
-          <div className="flex gap-6 items-start justify-center">
+          <div className="flex gap-6 items-center justify-center min-h-full">
             <div className="flex-shrink-0 space-y-4">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fda52f87e0d074ad1b1f0d2323587ad30?format=webp&width=800"
