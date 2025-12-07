@@ -1334,7 +1334,7 @@ export default function Index() {
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fedeb3d0e747d4650960899471ebbe203?format=webp&width=800"
                         alt="Bali Women's Retreat"
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                       />
 
                       {/* Play Button Overlay */}
