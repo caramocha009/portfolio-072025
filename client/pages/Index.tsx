@@ -2169,16 +2169,16 @@ export default function Index() {
                 </div>
               </div>
             ) : currentCaseStudy === "youtube-josiah-schneider" ? (
-              /* YouTube Shorts - Josiah Schneider Edit */
+              /* YouTube Shorts - Target Guy */
               <div className="max-w-4xl mx-auto">
                 <div className="bg-gray-50 p-8">
                   <div className="max-w-3xl mx-auto">
                     <div className="mb-8">
                       <h1 className="text-3xl font-bold text-black mb-4">
-                        Josiah Schneider Edit
+                        Target Guy
                       </h1>
                       <p className="text-gray-600 text-lg mb-6">
-                        A shorts edit for actor/comedian Josiah Schneider
+                        Shorts
                       </p>
                     </div>
 
