@@ -1297,11 +1297,19 @@ export default function Index() {
                         className="border-2 border-green-200 rounded-lg p-4 hover:border-green-400 cursor-pointer transition-colors"
                         onMouseEnter={
                           isDesktop
-                            ? () => setHoveredProject("bali-retreat")
+                            ? () => {
+                                setHoveredProject("bali-retreat");
+                                setPersistentHoveredProject("bali-retreat");
+                              }
                             : undefined
                         }
                         onMouseLeave={
-                          isDesktop ? () => setHoveredProject(null) : undefined
+                          isDesktop
+                            ? () => {
+                                // Keep persistent hover, don't clear
+                                setHoveredProject(null);
+                              }
+                            : undefined
                         }
                         onClick={() => setCurrentCaseStudy("bali-retreat")}
                       >
