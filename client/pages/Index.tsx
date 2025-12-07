@@ -1631,7 +1631,9 @@ export default function Index() {
                           ? "Bank of America Merchant Partner Checkout"
                           : currentCaseStudy === "bali-retreat"
                             ? "Bali Women's Retreat"
-                            : "Case Study"}
+                            : currentCaseStudy === "youtube-josiah-schneider"
+                              ? "Josiah Schneider Edit"
+                              : "Case Study"}
                 </span>
               </div>
 
@@ -1648,7 +1650,9 @@ export default function Index() {
                           ? "Bank of America Merchant Partner Checkout"
                           : currentCaseStudy === "bali-retreat"
                             ? "Bali Women's Retreat"
-                            : "Case Study"}
+                            : currentCaseStudy === "youtube-josiah-schneider"
+                              ? "Josiah Schneider Edit"
+                              : "Case Study"}
                 </span>
               </div>
 
