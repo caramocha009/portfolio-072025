@@ -2198,11 +2198,11 @@ export default function Index() {
                 </div>
 
                 {/* Embedded YouTube Video */}
-                <div className="flex justify-center items-center py-12">
-                  <div className="w-full max-w-2xl">
+                <div className="flex justify-center items-center py-8">
+                  <div className="w-full max-w-2xl h-screen flex items-center justify-center">
                     <div
-                      className="relative overflow-hidden rounded-lg shadow-lg"
-                      style={{ aspectRatio: "9 / 16", height: "60vh" }}
+                      className="relative overflow-hidden rounded-lg shadow-lg w-full"
+                      style={{ height: "90vh" }}
                     >
                       <iframe
                         width="100%"
