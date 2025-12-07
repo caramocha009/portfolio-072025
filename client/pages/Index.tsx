@@ -1640,7 +1640,7 @@ export default function Index() {
                           : currentCaseStudy === "bali-retreat"
                             ? "Bali Women's Retreat"
                             : currentCaseStudy === "youtube-josiah-schneider"
-                              ? "Josiah Schneider Edit"
+                              ? "Target Guy"
                               : "Case Study"}
                 </span>
               </div>
@@ -1659,7 +1659,7 @@ export default function Index() {
                           : currentCaseStudy === "bali-retreat"
                             ? "Bali Women's Retreat"
                             : currentCaseStudy === "youtube-josiah-schneider"
-                              ? "Josiah Schneider Edit"
+                              ? "Target Guy"
                               : "Case Study"}
                 </span>
               </div>
