@@ -1514,9 +1514,8 @@ export default function Index() {
             </div>
 
             {/* Right Panel - Preview - Hidden on mobile/tablet */}
-            <div className="hidden lg:flex w-1/2 bg-gray-50 items-center justify-center overflow-y-auto">
-              {persistentHoveredProject === "bali-retreat" ||
-              hoveredProject === "bali-retreat" ? (
+            <div className="hidden lg:flex w-1/2 bg-gray-50 items-center justify-center overflow-y-auto p-8">
+              {hoveredProject === "bali-retreat" ? (
                 <div className="w-full h-full flex items-center justify-center p-8">
                   <div style={{ maxWidth: "540px", width: "100%" }}>
                     <blockquote
