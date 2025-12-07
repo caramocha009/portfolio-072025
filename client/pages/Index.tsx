@@ -919,7 +919,11 @@ export default function Index() {
 
   // Reset scroll position when returning to projects view
   useEffect(() => {
-    if (!currentCaseStudy && isProjectsFullscreenOpen && projectsListRef.current) {
+    if (
+      !currentCaseStudy &&
+      isProjectsFullscreenOpen &&
+      projectsListRef.current
+    ) {
       // Reset scroll to top
       projectsListRef.current.scrollTop = 0;
     }
