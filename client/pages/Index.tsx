@@ -1302,10 +1302,10 @@ export default function Index() {
                   <h2 className="text-2xl font-bold text-black mb-6">
                     Content Creation & Video Editing
                   </h2>
-                  <div className="grid grid-cols-3 gap-6 justify-items-center">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center max-w-full">
                     {/* Bali Women's Retreat */}
                     <div
-                      className="w-full aspect-video bg-gray-200 rounded-lg overflow-hidden cursor-pointer group relative"
+                      className="w-full max-w-sm aspect-video bg-gray-200 rounded-lg overflow-hidden cursor-pointer group relative"
                       onMouseEnter={
                         isDesktop
                           ? () => {
