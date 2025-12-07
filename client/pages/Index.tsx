@@ -1395,10 +1395,12 @@ export default function Index() {
                       }
                       onClick={() => setCurrentCaseStudy("savvo-sommelier")}
                     >
-                      {/* Placeholder Image */}
-                      <div className="w-full h-full bg-gradient-to-br from-orange-100 to-red-100 flex items-center justify-center">
-                        <span className="text-5xl">🍷</span>
-                      </div>
+                      {/* Project Image */}
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F25b4f8410215451ba744a09577b540b7?format=webp&width=800"
+                        alt="Savvo Digital Sommelier"
+                        className="w-full h-full object-cover"
+                      />
 
                       {/* Hover Overlay */}
                       <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
