@@ -1472,7 +1472,7 @@ export default function Index() {
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F6ad6a790f608497086bac5dc426eeddb?format=webp&width=800"
                         alt="Ascent Global Logistics"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                       />
 
                       {/* Hover Overlay */}
