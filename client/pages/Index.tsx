@@ -1501,7 +1501,10 @@ export default function Index() {
                         className="border-2 border-purple-200 rounded-lg p-4 hover:border-purple-400 cursor-pointer transition-colors"
                         onMouseEnter={
                           isDesktop
-                            ? () => setHoveredProject("boa-merchant-checkout")
+                            ? () => {
+                                setHoveredProject("boa-merchant-checkout");
+                                setPersistentHoveredProject(null);
+                              }
                             : undefined
                         }
                         onMouseLeave={
