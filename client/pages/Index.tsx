@@ -1312,7 +1312,7 @@ export default function Index() {
                     {/* Bali Women's Retreat */}
                     <div
                       className="w-full max-w-[192px] rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
-                      style={{ aspectRatio: "9 / 16" }}
+                      style={{ aspectRatio: "1 / 1" }}
                       onMouseEnter={
                         isDesktop
                           ? () => {
