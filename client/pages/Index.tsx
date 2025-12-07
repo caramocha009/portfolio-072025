@@ -1311,7 +1311,7 @@ export default function Index() {
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center max-w-full">
                     {/* Bali Women's Retreat */}
                     <div
-                      className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
+                      className="w-full max-w-[192px] rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
                       style={{ aspectRatio: "9 / 16" }}
                       onMouseEnter={
                         isDesktop
