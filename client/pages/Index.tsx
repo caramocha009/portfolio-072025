@@ -1856,8 +1856,7 @@ export default function Index() {
               <div className="hidden lg:flex items-center gap-2">
                 <button
                   onClick={() => {
-                    setCurrentCaseStudy(null);
-                    setIsProjectsFullscreenOpen(false);
+                    window.history.back();
                   }}
                   className="text-black font-mono text-sm hover:opacity-70 transition-opacity cursor-pointer"
                 >
