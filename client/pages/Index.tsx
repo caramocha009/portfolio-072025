@@ -855,8 +855,44 @@ export default function Index() {
   const [currentCaseStudy, setCurrentCaseStudy] = useState<string | null>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
+  const [persistentHoveredProject, setPersistentHoveredProject] = useState<string | null>(null);
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
   const [showNavigation, setShowNavigation] = useState(false);
+
+  // Handle URL-based case study navigation
+  useEffect(() => {
+    const handlePopState = () => {
+      const caseStudyId = window.location.hash.replace("#/projects/", "");
+      if (caseStudyId && caseStudyId !== window.location.hash) {
+        setCurrentCaseStudy(caseStudyId);
+      } else if (window.location.hash === "" || window.location.hash === "#/") {
+        setCurrentCaseStudy(null);
+      }
+    };
+
+    window.addEventListener("popstate", handlePopState);
+
+    // Check initial URL on mount
+    const initialCaseStudyId = window.location.hash.replace("#/projects/", "");
+    if (initialCaseStudyId && initialCaseStudyId !== window.location.hash && initialCaseStudyId !== "") {
+      setCurrentCaseStudy(initialCaseStudyId);
+    }
+
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
+
+  // Update URL when case study changes
+  useEffect(() => {
+    if (currentCaseStudy) {
+      window.history.pushState(
+        { caseStudy: currentCaseStudy },
+        `${currentCaseStudy}`,
+        `#/projects/${currentCaseStudy}`
+      );
+    } else {
+      window.history.pushState({}, "Projects", "#/");
+    }
+  }, [currentCaseStudy]);
 
   useEffect(() => {
     if (currentCaseStudy) {
