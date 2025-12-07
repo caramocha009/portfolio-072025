@@ -1434,10 +1434,12 @@ export default function Index() {
                       }
                       onClick={() => setCurrentCaseStudy("hyvee-aisles")}
                     >
-                      {/* Placeholder Image */}
-                      <div className="w-full h-full bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
-                        <span className="text-5xl">🛒</span>
-                      </div>
+                      {/* Project Image */}
+                      <img
+                        src="https://cdn-images-1.medium.com/max/1024/1*b_l9Ra5rwirDPE4cD_sxvg.jpeg"
+                        alt="Hy-Vee Aisles Online"
+                        className="w-full h-full object-cover"
+                      />
 
                       {/* Hover Overlay */}
                       <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
