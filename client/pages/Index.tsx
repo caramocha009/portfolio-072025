@@ -2086,48 +2086,23 @@ export default function Index() {
                   </div>
                 </div>
 
-                {/* Video Card */}
+                {/* Embedded Instagram Reel */}
                 <div className="flex justify-center items-center py-12">
                   <div className="w-full max-w-lg">
                     <div className="relative overflow-hidden rounded-lg shadow-lg" style={{ aspectRatio: "9 / 16" }}>
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fedeb3d0e747d4650960899471ebbe203?format=webp&width=800"
-                        alt="Bali Women's Retreat"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all duration-200 flex items-center justify-center">
-                        <a
-                          href="https://www.instagram.com/reel/DFZongxuHWj/?utm_source=ig_embed&ig_rid=b5139f13-e0a4-44c8-af81-89cf92fd716f"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full p-4 transition-all duration-200 shadow-lg inline-flex items-center justify-center"
-                        >
-                          <svg
-                            className="w-10 h-10 text-black ml-0.5"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M8 5v14l11-7z" />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                    <div className="mt-6 text-center">
-                      <a
-                        href="https://www.instagram.com/reel/DFZongxuHWj/?utm_source=ig_embed&ig_rid=b5139f13-e0a4-44c8-af81-89cf92fd716f"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:shadow-lg transition-shadow"
-                      >
-                        <svg
-                          className="w-5 h-5"
-                          fill="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M12 2.163c3.204 0 3.584.011 4.85.07 3.252.148 4.771 1.691 4.919 4.919.059 1.266.07 1.646.07 4.85s-.011 3.584-.07 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.059-1.644.07-4.85.07-3.204 0-3.584-.011-4.85-.07-3.251-.149-4.771-1.699-4.919-4.92-.059-1.266-.07-1.645-.07-4.85s.011-3.584.07-4.85c.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z" />
-                        </svg>
-                        Watch on Instagram
-                      </a>
+                      <iframe
+                        src="https://www.instagram.com/reel/DFZongxuHWj/embed/captioned/"
+                        width="100%"
+                        height="100%"
+                        frameBorder="0"
+                        scrolling="no"
+                        allowTransparency={true}
+                        style={{
+                          border: "none",
+                          overflow: "hidden",
+                          minHeight: "600px",
+                        }}
+                      ></iframe>
                     </div>
                   </div>
                 </div>
