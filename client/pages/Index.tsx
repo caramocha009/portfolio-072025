@@ -1305,7 +1305,7 @@ export default function Index() {
               <div className="max-w-7xl mx-auto p-6">
                 {/* Content Creation & Video Editing Section */}
                 <div className="mb-12">
-                  <h2 className="text-2xl font-bold text-black mb-6">
+                  <h2 className="text-2xl font-bold text-black mb-6" style={{ fontFamily: '"JetBrains Mono", monospace' }}>
                     Content Creation & Video Editing
                   </h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center max-w-full">
@@ -1412,7 +1412,7 @@ export default function Index() {
 
                 {/* UX/Product Design Section */}
                 <div>
-                  <h2 className="text-2xl font-bold text-black mb-6">
+                  <h2 className="text-2xl font-bold text-black mb-6" style={{ fontFamily: '"JetBrains Mono", monospace' }}>
                     UX/Product Design
                   </h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center max-w-full">
