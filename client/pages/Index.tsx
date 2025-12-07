@@ -1237,8 +1237,45 @@ export default function Index() {
                   <AccordionTrigger className="text-black text-base font-semibold">
                     Content Creation & Video Editing
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-600">
-                    No projects in this category yet.
+                  <AccordionContent>
+                    <div className="space-y-4">
+                      {/* Bali Women's Retreat */}
+                      <div
+                        className="border-2 border-green-200 rounded-lg p-4 hover:border-green-400 cursor-pointer transition-colors"
+                        onMouseEnter={
+                          isDesktop
+                            ? () => setHoveredProject("bali-retreat")
+                            : undefined
+                        }
+                        onMouseLeave={
+                          isDesktop ? () => setHoveredProject(null) : undefined
+                        }
+                        onClick={() => setCurrentCaseStudy("bali-retreat")}
+                      >
+                        <div className="flex items-start gap-4">
+                          <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span className="text-white font-bold text-lg">🌴</span>
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <h3 className="text-lg font-medium text-black mb-1">
+                              Bali Women's Retreat
+                            </h3>
+                            <p className="text-sm text-gray-600 mb-2">
+                              Short reel I shot and edited from my experience in
+                              an all-women's retreat in Bali
+                            </p>
+                            <div className="flex items-center gap-2 text-xs">
+                              <span className="px-2 py-1 bg-green-100 text-green-700 rounded">
+                                Shorts
+                              </span>
+                              <span className="text-gray-500">
+                                Instagram, Wellness, Travel
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
 
