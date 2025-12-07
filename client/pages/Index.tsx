@@ -2177,9 +2177,7 @@ export default function Index() {
                       <h1 className="text-3xl font-bold text-black mb-4">
                         Target Guy
                       </h1>
-                      <p className="text-gray-600 text-lg mb-6">
-                        Shorts
-                      </p>
+                      <p className="text-gray-600 text-lg mb-6">Shorts</p>
                     </div>
 
                     <div className="space-y-8">
