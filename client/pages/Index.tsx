@@ -855,7 +855,9 @@ export default function Index() {
   const [currentCaseStudy, setCurrentCaseStudy] = useState<string | null>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
-  const [persistentHoveredProject, setPersistentHoveredProject] = useState<string | null>(null);
+  const [persistentHoveredProject, setPersistentHoveredProject] = useState<
+    string | null
+  >(null);
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
   const [showNavigation, setShowNavigation] = useState(false);
 
@@ -874,7 +876,11 @@ export default function Index() {
 
     // Check initial URL on mount
     const initialCaseStudyId = window.location.hash.replace("#/projects/", "");
-    if (initialCaseStudyId && initialCaseStudyId !== window.location.hash && initialCaseStudyId !== "") {
+    if (
+      initialCaseStudyId &&
+      initialCaseStudyId !== window.location.hash &&
+      initialCaseStudyId !== ""
+    ) {
       setCurrentCaseStudy(initialCaseStudyId);
     }
 
@@ -887,7 +893,7 @@ export default function Index() {
       window.history.pushState(
         { caseStudy: currentCaseStudy },
         `${currentCaseStudy}`,
-        `#/projects/${currentCaseStudy}`
+        `#/projects/${currentCaseStudy}`,
       );
     } else {
       window.history.pushState({}, "Projects", "#/");
@@ -1315,7 +1321,9 @@ export default function Index() {
                       >
                         <div className="flex items-start gap-4">
                           <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <span className="text-white font-bold text-lg">🌴</span>
+                            <span className="text-white font-bold text-lg">
+                              🌴
+                            </span>
                           </div>
                           <div className="flex-1 min-w-0">
                             <h3 className="text-lg font-medium text-black mb-1">
@@ -1362,15 +1370,18 @@ export default function Index() {
                       >
                         <div className="flex items-start gap-4">
                           <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <span className="text-white font-bold text-lg">🍷</span>
+                            <span className="text-white font-bold text-lg">
+                              🍷
+                            </span>
                           </div>
                           <div className="flex-1 min-w-0">
                             <h3 className="text-lg font-medium text-black mb-1">
                               Savvo Digital Sommelier
                             </h3>
                             <p className="text-sm text-gray-600 mb-2">
-                              A study in user research and contextual inquiry around
-                              kiosk, restaurant, and membership experience of wines
+                              A study in user research and contextual inquiry
+                              around kiosk, restaurant, and membership
+                              experience of wines
                             </p>
                             <div className="flex items-center gap-2 text-xs">
                               <span className="px-2 py-1 bg-orange-100 text-orange-700 rounded">
@@ -1399,15 +1410,17 @@ export default function Index() {
                       >
                         <div className="flex items-start gap-4">
                           <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <span className="text-white font-bold text-lg">🛒</span>
+                            <span className="text-white font-bold text-lg">
+                              🛒
+                            </span>
                           </div>
                           <div className="flex-1 min-w-0">
                             <h3 className="text-lg font-medium text-black mb-1">
                               Hy-Vee Aisles Online
                             </h3>
                             <p className="text-sm text-gray-600 mb-2">
-                              Cards, tags, and ads: UX for online grocery shopping
-                              experience
+                              Cards, tags, and ads: UX for online grocery
+                              shopping experience
                             </p>
                             <div className="flex items-center gap-2 text-xs">
                               <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded">
@@ -1436,16 +1449,18 @@ export default function Index() {
                       >
                         <div className="flex items-start gap-4">
                           <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <span className="text-white font-bold text-lg">🚚</span>
+                            <span className="text-white font-bold text-lg">
+                              🚚
+                            </span>
                           </div>
                           <div className="flex-1 min-w-0">
                             <h3 className="text-lg font-medium text-black mb-1">
                               Ascent Global Logistics
                             </h3>
                             <p className="text-sm text-gray-600 mb-2">
-                              Streamlining digital supply chain operations through
-                              simplifying complex business logistics into functional
-                              UI
+                              Streamlining digital supply chain operations
+                              through simplifying complex business logistics
+                              into functional UI
                             </p>
                             <div className="flex items-center gap-2 text-xs">
                               <span className="px-2 py-1 bg-green-100 text-green-700 rounded">
@@ -1471,19 +1486,23 @@ export default function Index() {
                         onMouseLeave={
                           isDesktop ? () => setHoveredProject(null) : undefined
                         }
-                        onClick={() => setCurrentCaseStudy("boa-merchant-checkout")}
+                        onClick={() =>
+                          setCurrentCaseStudy("boa-merchant-checkout")
+                        }
                       >
                         <div className="flex items-start gap-4">
                           <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <span className="text-white font-bold text-lg">💳</span>
+                            <span className="text-white font-bold text-lg">
+                              💳
+                            </span>
                           </div>
                           <div className="flex-1 min-w-0">
                             <h3 className="text-lg font-medium text-black mb-1">
                               Bank of America Merchant Partner Checkout
                             </h3>
                             <p className="text-sm text-gray-600 mb-2">
-                              Streamlined checkout experience for merchant partners
-                              and customers
+                              Streamlined checkout experience for merchant
+                              partners and customers
                             </p>
                             <div className="flex items-center gap-2 text-xs">
                               <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded">
@@ -1504,7 +1523,8 @@ export default function Index() {
 
             {/* Right Panel - Preview - Hidden on mobile/tablet */}
             <div className="hidden lg:flex w-1/2 bg-gray-50 items-center justify-center overflow-y-auto">
-              {persistentHoveredProject === "bali-retreat" || hoveredProject === "bali-retreat" ? (
+              {persistentHoveredProject === "bali-retreat" ||
+              hoveredProject === "bali-retreat" ? (
                 <div className="w-full h-full flex items-center justify-center p-8">
                   <div style={{ maxWidth: "540px", width: "100%" }}>
                     <blockquote
@@ -2414,7 +2434,13 @@ export default function Index() {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <div style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
+                          <div
+                            style={{
+                              display: "flex",
+                              flexDirection: "row",
+                              alignItems: "center",
+                            }}
+                          >
                             <div
                               style={{
                                 backgroundColor: "#F4F4F4",
