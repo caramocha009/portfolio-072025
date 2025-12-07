@@ -1435,7 +1435,7 @@ export default function Index() {
 
                     {/* Ascent Global Logistics */}
                     <div
-                      className="w-full aspect-video bg-gray-200 rounded-lg overflow-hidden cursor-pointer group relative"
+                      className="w-full max-w-sm aspect-video bg-gray-200 rounded-lg overflow-hidden cursor-pointer group relative"
                       onMouseEnter={
                         isDesktop
                           ? () => {
