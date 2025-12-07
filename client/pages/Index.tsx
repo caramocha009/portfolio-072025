@@ -2082,7 +2082,10 @@ export default function Index() {
                 {/* Embedded Instagram Reel */}
                 <div className="flex justify-center items-center py-12">
                   <div className="w-full max-w-lg">
-                    <div className="relative overflow-hidden rounded-lg shadow-lg" style={{ aspectRatio: "9 / 16" }}>
+                    <div
+                      className="relative overflow-hidden rounded-lg shadow-lg"
+                      style={{ aspectRatio: "9 / 16" }}
+                    >
                       <iframe
                         src="https://www.instagram.com/reel/DFZongxuHWj/embed/captioned/"
                         width="100%"
