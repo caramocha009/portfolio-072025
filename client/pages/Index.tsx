@@ -1433,7 +1433,7 @@ export default function Index() {
                       <img
                         src="https://cdn-images-1.medium.com/max/1024/1*b_l9Ra5rwirDPE4cD_sxvg.jpeg"
                         alt="Hy-Vee Aisles Online"
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                       />
 
                       {/* Hover Overlay */}
