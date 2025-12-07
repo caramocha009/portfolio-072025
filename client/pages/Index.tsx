@@ -2198,8 +2198,8 @@ export default function Index() {
                 </div>
 
                 {/* Embedded YouTube Video */}
-                <div className="flex justify-center items-center py-8">
-                  <div className="w-full max-w-2xl h-screen flex items-center justify-center">
+                <div className="flex justify-center items-center py-8 w-full">
+                  <div className="w-full h-screen flex items-center justify-center">
                     <div
                       className="relative overflow-hidden rounded-lg shadow-lg w-full"
                       style={{ height: "90vh" }}
