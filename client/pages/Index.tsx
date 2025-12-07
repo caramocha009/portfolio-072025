@@ -1503,8 +1503,124 @@ export default function Index() {
             </div>
 
             {/* Right Panel - Preview - Hidden on mobile/tablet */}
-            <div className="hidden lg:flex w-1/2 bg-gray-50 items-center justify-center">
-              {hoveredProject === "savvo-sommelier" ? (
+            <div className="hidden lg:flex w-1/2 bg-gray-50 items-center justify-center overflow-y-auto">
+              {persistentHoveredProject === "bali-retreat" || hoveredProject === "bali-retreat" ? (
+                <div className="w-full h-full flex items-center justify-center p-8">
+                  <div style={{ maxWidth: "540px", width: "100%" }}>
+                    <blockquote
+                      className="instagram-media"
+                      data-instgrm-permalink="https://www.instagram.com/reel/DFZongxuHWj/?utm_source=ig_embed&ig_rid=b5139f13-e0a4-44c8-af81-89cf92fd716f"
+                      data-instgrm-version="14"
+                      style={{
+                        background: "#FFF",
+                        border: "0",
+                        borderRadius: "3px",
+                        boxShadow:
+                          "0 0 1px 0 rgba(0,0,0,0.5), 0 1px 10px 0 rgba(0,0,0,0.15)",
+                        margin: "1px",
+                        maxWidth: "540px",
+                        minWidth: "326px",
+                        padding: "0",
+                        width: "99.375%",
+                      }}
+                    >
+                      <div style={{ padding: "16px" }}>
+                        <a
+                          href="https://www.instagram.com/reel/DFZongxuHWj/?utm_source=ig_embed&ig_rid=b5139f13-e0a4-44c8-af81-89cf92fd716f"
+                          style={{
+                            background: "#FFFFFF",
+                            lineHeight: "0",
+                            padding: "0 0",
+                            textAlign: "center",
+                            textDecoration: "none",
+                            width: "100%",
+                          }}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <div
+                            style={{
+                              display: "flex",
+                              flexDirection: "row",
+                              alignItems: "center",
+                            }}
+                          >
+                            <div
+                              style={{
+                                backgroundColor: "#F4F4F4",
+                                borderRadius: "50%",
+                                flex: "0 0 auto",
+                                height: "40px",
+                                marginRight: "14px",
+                                width: "40px",
+                              }}
+                            ></div>
+                            <div
+                              style={{
+                                display: "flex",
+                                flex: "1 0 0",
+                                flexDirection: "column",
+                              }}
+                            >
+                              <div
+                                style={{
+                                  backgroundColor: "#F4F4F4",
+                                  borderRadius: "4px",
+                                  flex: "1 0 0",
+                                  height: "10px",
+                                  marginBottom: "6px",
+                                  width: "100%",
+                                }}
+                              ></div>
+                              <div
+                                style={{
+                                  backgroundColor: "#F4F4F4",
+                                  borderRadius: "4px",
+                                  flex: "0 0 auto",
+                                  height: "10px",
+                                  width: "60%",
+                                }}
+                              ></div>
+                            </div>
+                          </div>
+                        </a>
+                        <p
+                          style={{
+                            color: "#1D1D1D",
+                            fontFamily:
+                              "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif",
+                            fontSize: "14px",
+                            lineHeight: "17px",
+                            marginBottom: "0",
+                            marginTop: "8px",
+                            overflow: "hidden",
+                            padding: "8px 0 7px",
+                            textOverflow: "ellipsis",
+                            whiteSpace: "nowrap",
+                          }}
+                        >
+                          <a
+                            href="https://www.instagram.com/reel/DFZongxuHWj/?utm_source=ig_embed&ig_rid=b5139f13-e0a4-44c8-af81-89cf92fd716f"
+                            style={{
+                              color: "#1D1D1D",
+                              fontFamily:
+                                "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif",
+                              fontSize: "14px",
+                              fontWeight: "600",
+                              lineHeight: "17px",
+                              textDecoration: "none",
+                            }}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            View on Instagram
+                          </a>
+                        </p>
+                      </div>
+                    </blockquote>
+                  </div>
+                </div>
+              ) : hoveredProject === "savvo-sommelier" ? (
                 <div className="max-w-lg w-full p-8">
                   <div className="w-full h-48 rounded-lg shadow-lg mb-6 overflow-hidden">
                     <img
