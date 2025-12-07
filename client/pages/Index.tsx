@@ -1230,158 +1230,178 @@ export default function Index() {
           <div className="flex-1 flex">
             {/* Left Panel - Projects List */}
             <div className="w-full lg:w-1/2 bg-white lg:border-r-2 border-gray-200 overflow-y-auto">
-              {/* Projects List */}
-              <div className="p-6 space-y-4">
-                {/* Savvo Digital Sommelier */}
-                <div
-                  className="border-2 border-orange-200 rounded-lg p-4 hover:border-orange-400 cursor-pointer transition-colors"
-                  onMouseEnter={
-                    isDesktop
-                      ? () => setHoveredProject("savvo-sommelier")
-                      : undefined
-                  }
-                  onMouseLeave={
-                    isDesktop ? () => setHoveredProject(null) : undefined
-                  }
-                  onClick={() => setCurrentCaseStudy("savvo-sommelier")}
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-lg">🍷</span>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-lg font-medium text-black mb-1">
-                        Savvo Digital Sommelier
-                      </h3>
-                      <p className="text-sm text-gray-600 mb-2">
-                        A study in user research and contextual inquiry around
-                        kiosk, restaurant, and membership experience of wines
-                      </p>
-                      <div className="flex items-center gap-2 text-xs">
-                        <span className="px-2 py-1 bg-orange-100 text-orange-700 rounded">
-                          Retail
-                        </span>
-                        <span className="text-gray-500">
-                          UX, UI, Field Study, Persona, Wireframes
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              {/* Projects List with Accordions */}
+              <Accordion type="single" collapsible className="w-full p-6">
+                {/* Content Creation & Video Editing Accordion */}
+                <AccordionItem value="content-creation">
+                  <AccordionTrigger className="text-black text-base font-semibold">
+                    Content Creation & Video Editing
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-600">
+                    No projects in this category yet.
+                  </AccordionContent>
+                </AccordionItem>
 
-                {/* Hy-Vee Aisles Online */}
-                <div
-                  className="border-2 border-blue-200 rounded-lg p-4 hover:border-blue-400 cursor-pointer transition-colors"
-                  onMouseEnter={
-                    isDesktop
-                      ? () => setHoveredProject("hyvee-aisles")
-                      : undefined
-                  }
-                  onMouseLeave={
-                    isDesktop ? () => setHoveredProject(null) : undefined
-                  }
-                  onClick={() => setCurrentCaseStudy("hyvee-aisles")}
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-lg">🛒</span>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-lg font-medium text-black mb-1">
-                        Hy-Vee Aisles Online
-                      </h3>
-                      <p className="text-sm text-gray-600 mb-2">
-                        Cards, tags, and ads: UX for online grocery shopping
-                        experience
-                      </p>
-                      <div className="flex items-center gap-2 text-xs">
-                        <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded">
-                          E-commerce
-                        </span>
-                        <span className="text-gray-500">
-                          Visual Hierarchy, User Testing
-                        </span>
+                {/* UX/Product Design Accordion */}
+                <AccordionItem value="ux-design">
+                  <AccordionTrigger className="text-black text-base font-semibold">
+                    UX/Product Design
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div className="space-y-4">
+                      {/* Savvo Digital Sommelier */}
+                      <div
+                        className="border-2 border-orange-200 rounded-lg p-4 hover:border-orange-400 cursor-pointer transition-colors"
+                        onMouseEnter={
+                          isDesktop
+                            ? () => setHoveredProject("savvo-sommelier")
+                            : undefined
+                        }
+                        onMouseLeave={
+                          isDesktop ? () => setHoveredProject(null) : undefined
+                        }
+                        onClick={() => setCurrentCaseStudy("savvo-sommelier")}
+                      >
+                        <div className="flex items-start gap-4">
+                          <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span className="text-white font-bold text-lg">🍷</span>
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <h3 className="text-lg font-medium text-black mb-1">
+                              Savvo Digital Sommelier
+                            </h3>
+                            <p className="text-sm text-gray-600 mb-2">
+                              A study in user research and contextual inquiry around
+                              kiosk, restaurant, and membership experience of wines
+                            </p>
+                            <div className="flex items-center gap-2 text-xs">
+                              <span className="px-2 py-1 bg-orange-100 text-orange-700 rounded">
+                                Retail
+                              </span>
+                              <span className="text-gray-500">
+                                UX, UI, Field Study, Persona, Wireframes
+                              </span>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
 
-                {/* Ascent Global Logistics */}
-                <div
-                  className="border-2 border-green-200 rounded-lg p-4 hover:border-green-400 cursor-pointer transition-colors"
-                  onMouseEnter={
-                    isDesktop
-                      ? () => setHoveredProject("ascent-logistics")
-                      : undefined
-                  }
-                  onMouseLeave={
-                    isDesktop ? () => setHoveredProject(null) : undefined
-                  }
-                  onClick={() => setCurrentCaseStudy("ascent-logistics")}
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-lg">🚚</span>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-lg font-medium text-black mb-1">
-                        Ascent Global Logistics
-                      </h3>
-                      <p className="text-sm text-gray-600 mb-2">
-                        Streamlining digital supply chain operations through
-                        simplifying complex business logistics into functional
-                        UI
-                      </p>
-                      <div className="flex items-center gap-2 text-xs">
-                        <span className="px-2 py-1 bg-green-100 text-green-700 rounded">
-                          Logistics
-                        </span>
-                        <span className="text-gray-500">
-                          User Interviews, Cross-Functional Collab, Hi-Fi
-                          Prototype
-                        </span>
+                      {/* Hy-Vee Aisles Online */}
+                      <div
+                        className="border-2 border-blue-200 rounded-lg p-4 hover:border-blue-400 cursor-pointer transition-colors"
+                        onMouseEnter={
+                          isDesktop
+                            ? () => setHoveredProject("hyvee-aisles")
+                            : undefined
+                        }
+                        onMouseLeave={
+                          isDesktop ? () => setHoveredProject(null) : undefined
+                        }
+                        onClick={() => setCurrentCaseStudy("hyvee-aisles")}
+                      >
+                        <div className="flex items-start gap-4">
+                          <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span className="text-white font-bold text-lg">🛒</span>
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <h3 className="text-lg font-medium text-black mb-1">
+                              Hy-Vee Aisles Online
+                            </h3>
+                            <p className="text-sm text-gray-600 mb-2">
+                              Cards, tags, and ads: UX for online grocery shopping
+                              experience
+                            </p>
+                            <div className="flex items-center gap-2 text-xs">
+                              <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded">
+                                E-commerce
+                              </span>
+                              <span className="text-gray-500">
+                                Visual Hierarchy, User Testing
+                              </span>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
 
-                {/* Bank of America Merchant Partner Checkout */}
-                <div
-                  className="border-2 border-purple-200 rounded-lg p-4 hover:border-purple-400 cursor-pointer transition-colors"
-                  onMouseEnter={
-                    isDesktop
-                      ? () => setHoveredProject("boa-merchant-checkout")
-                      : undefined
-                  }
-                  onMouseLeave={
-                    isDesktop ? () => setHoveredProject(null) : undefined
-                  }
-                  onClick={() => setCurrentCaseStudy("boa-merchant-checkout")}
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-lg">💳</span>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-lg font-medium text-black mb-1">
-                        Bank of America Merchant Partner Checkout
-                      </h3>
-                      <p className="text-sm text-gray-600 mb-2">
-                        Streamlined checkout experience for merchant partners
-                        and customers
-                      </p>
-                      <div className="flex items-center gap-2 text-xs">
-                        <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded">
-                          Fintech
-                        </span>
-                        <span className="text-gray-500">
-                          Checkout Flow, Payment UX, Security
-                        </span>
+                      {/* Ascent Global Logistics */}
+                      <div
+                        className="border-2 border-green-200 rounded-lg p-4 hover:border-green-400 cursor-pointer transition-colors"
+                        onMouseEnter={
+                          isDesktop
+                            ? () => setHoveredProject("ascent-logistics")
+                            : undefined
+                        }
+                        onMouseLeave={
+                          isDesktop ? () => setHoveredProject(null) : undefined
+                        }
+                        onClick={() => setCurrentCaseStudy("ascent-logistics")}
+                      >
+                        <div className="flex items-start gap-4">
+                          <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span className="text-white font-bold text-lg">🚚</span>
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <h3 className="text-lg font-medium text-black mb-1">
+                              Ascent Global Logistics
+                            </h3>
+                            <p className="text-sm text-gray-600 mb-2">
+                              Streamlining digital supply chain operations through
+                              simplifying complex business logistics into functional
+                              UI
+                            </p>
+                            <div className="flex items-center gap-2 text-xs">
+                              <span className="px-2 py-1 bg-green-100 text-green-700 rounded">
+                                Logistics
+                              </span>
+                              <span className="text-gray-500">
+                                User Interviews, Cross-Functional Collab, Hi-Fi
+                                Prototype
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Bank of America Merchant Partner Checkout */}
+                      <div
+                        className="border-2 border-purple-200 rounded-lg p-4 hover:border-purple-400 cursor-pointer transition-colors"
+                        onMouseEnter={
+                          isDesktop
+                            ? () => setHoveredProject("boa-merchant-checkout")
+                            : undefined
+                        }
+                        onMouseLeave={
+                          isDesktop ? () => setHoveredProject(null) : undefined
+                        }
+                        onClick={() => setCurrentCaseStudy("boa-merchant-checkout")}
+                      >
+                        <div className="flex items-start gap-4">
+                          <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span className="text-white font-bold text-lg">💳</span>
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <h3 className="text-lg font-medium text-black mb-1">
+                              Bank of America Merchant Partner Checkout
+                            </h3>
+                            <p className="text-sm text-gray-600 mb-2">
+                              Streamlined checkout experience for merchant partners
+                              and customers
+                            </p>
+                            <div className="flex items-center gap-2 text-xs">
+                              <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded">
+                                Fintech
+                              </span>
+                              <span className="text-gray-500">
+                                Checkout Flow, Payment UX, Security
+                              </span>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
 
             {/* Right Panel - Preview - Hidden on mobile/tablet */}
