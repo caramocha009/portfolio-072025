@@ -2202,7 +2202,7 @@ export default function Index() {
                   <div className="flex items-center justify-center">
                     <div
                       className="relative overflow-hidden rounded-lg shadow-lg"
-                      style={{ height: "90vh", aspectRatio: "16 / 9" }}
+                      style={{ height: "90vh", aspectRatio: "9 / 16" }}
                     >
                       <iframe
                         width="100%"
