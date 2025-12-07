@@ -1353,13 +1353,6 @@ export default function Index() {
                       {/* Hover Overlay */}
                       <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
                         <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
-                          <svg
-                            className="w-12 h-12 text-white"
-                            fill="white"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M8 5v14l11-7z" />
-                          </svg>
                           <h3 className="text-lg font-bold text-center">
                             Bali Women's Retreat
                           </h3>
