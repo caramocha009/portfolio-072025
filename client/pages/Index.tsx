@@ -2086,126 +2086,49 @@ export default function Index() {
                   </div>
                 </div>
 
-                {/* Instagram Embed */}
+                {/* Video Card */}
                 <div className="flex justify-center items-center py-12">
-                  <div
-                    style={{
-                      maxWidth: "540px",
-                      width: "100%",
-                    }}
-                  >
-                    <blockquote
-                      className="instagram-media"
-                      data-instgrm-permalink="https://www.instagram.com/reel/DFZongxuHWj/?utm_source=ig_embed&ig_rid=b5139f13-e0a4-44c8-af81-89cf92fd716f"
-                      data-instgrm-version="14"
-                      style={{
-                        background: "#FFF",
-                        border: "0",
-                        borderRadius: "3px",
-                        boxShadow:
-                          "0 0 1px 0 rgba(0,0,0,0.5), 0 1px 10px 0 rgba(0,0,0,0.15)",
-                        margin: "1px",
-                        maxWidth: "540px",
-                        minWidth: "326px",
-                        padding: "0",
-                        width: "99.375%",
-                        display: "block",
-                      }}
-                    >
-                      <div style={{ padding: "16px" }}>
+                  <div className="w-full max-w-lg">
+                    <div className="relative overflow-hidden rounded-lg shadow-lg" style={{ aspectRatio: "9 / 16" }}>
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fedeb3d0e747d4650960899471ebbe203?format=webp&width=800"
+                        alt="Bali Women's Retreat"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all duration-200 flex items-center justify-center">
                         <a
                           href="https://www.instagram.com/reel/DFZongxuHWj/?utm_source=ig_embed&ig_rid=b5139f13-e0a4-44c8-af81-89cf92fd716f"
-                          style={{
-                            background: "#FFFFFF",
-                            lineHeight: "0",
-                            padding: "0 0",
-                            textAlign: "center",
-                            textDecoration: "none",
-                            width: "100%",
-                          }}
                           target="_blank"
                           rel="noopener noreferrer"
+                          className="bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full p-4 transition-all duration-200 shadow-lg inline-flex items-center justify-center"
                         >
-                          <div
-                            style={{
-                              display: "flex",
-                              flexDirection: "row",
-                              alignItems: "center",
-                            }}
+                          <svg
+                            className="w-10 h-10 text-black ml-0.5"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
                           >
-                            <div
-                              style={{
-                                backgroundColor: "#F4F4F4",
-                                borderRadius: "50%",
-                                flex: "0 0 auto",
-                                height: "40px",
-                                marginRight: "14px",
-                                width: "40px",
-                              }}
-                            ></div>
-                            <div
-                              style={{
-                                display: "flex",
-                                flex: "1 0 0",
-                                flexDirection: "column",
-                              }}
-                            >
-                              <div
-                                style={{
-                                  backgroundColor: "#F4F4F4",
-                                  borderRadius: "4px",
-                                  flex: "1 0 0",
-                                  height: "10px",
-                                  marginBottom: "6px",
-                                  width: "100%",
-                                }}
-                              ></div>
-                              <div
-                                style={{
-                                  backgroundColor: "#F4F4F4",
-                                  borderRadius: "4px",
-                                  flex: "0 0 auto",
-                                  height: "10px",
-                                  width: "60%",
-                                }}
-                              ></div>
-                            </div>
-                          </div>
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
                         </a>
-                        <p
-                          style={{
-                            color: "#1D1D1D",
-                            fontFamily:
-                              "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif",
-                            fontSize: "14px",
-                            lineHeight: "17px",
-                            marginBottom: "0",
-                            marginTop: "8px",
-                            overflow: "hidden",
-                            padding: "8px 0 7px",
-                            textOverflow: "ellipsis",
-                            whiteSpace: "nowrap",
-                          }}
-                        >
-                          <a
-                            href="https://www.instagram.com/reel/DFZongxuHWj/?utm_source=ig_embed&ig_rid=b5139f13-e0a4-44c8-af81-89cf92fd716f"
-                            style={{
-                              color: "#1D1D1D",
-                              fontFamily:
-                                "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif",
-                              fontSize: "14px",
-                              fontWeight: "600",
-                              lineHeight: "17px",
-                              textDecoration: "none",
-                            }}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            View on Instagram
-                          </a>
-                        </p>
                       </div>
-                    </blockquote>
+                    </div>
+                    <div className="mt-6 text-center">
+                      <a
+                        href="https://www.instagram.com/reel/DFZongxuHWj/?utm_source=ig_embed&ig_rid=b5139f13-e0a4-44c8-af81-89cf92fd716f"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:shadow-lg transition-shadow"
+                      >
+                        <svg
+                          className="w-5 h-5"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M12 2.163c3.204 0 3.584.011 4.85.07 3.252.148 4.771 1.691 4.919 4.919.059 1.266.07 1.646.07 4.85s-.011 3.584-.07 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.059-1.644.07-4.85.07-3.204 0-3.584-.011-4.85-.07-3.251-.149-4.771-1.699-4.919-4.92-.059-1.266-.07-1.645-.07-4.85s.011-3.584.07-4.85c.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z" />
+                        </svg>
+                        Watch on Instagram
+                      </a>
+                    </div>
                   </div>
                 </div>
 
