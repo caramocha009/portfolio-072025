@@ -10,12 +10,6 @@ import {
   PlaylistIcon,
   RecyclingIcon,
 } from "@/components/ui/folder-icons";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-  AccordionContent,
-} from "@/components/ui/accordion";
 
 interface MediumArticle {
   title: string;
