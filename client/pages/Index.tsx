@@ -1309,7 +1309,8 @@ export default function Index() {
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center max-w-full">
                     {/* Bali Women's Retreat */}
                     <div
-                      className="w-full max-w-sm aspect-video bg-gray-200 rounded-lg overflow-hidden cursor-pointer group relative"
+                      className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative"
+                      style={{ aspectRatio: "9 / 16" }}
                       onMouseEnter={
                         isDesktop
                           ? () => {
@@ -1327,9 +1328,24 @@ export default function Index() {
                       }
                       onClick={() => setCurrentCaseStudy("bali-retreat")}
                     >
-                      {/* Placeholder Image */}
-                      <div className="w-full h-full bg-gradient-to-br from-green-100 to-emerald-100 flex items-center justify-center">
-                        <span className="text-5xl">🌴</span>
+                      {/* Instagram Embed */}
+                      <div className="w-full h-full">
+                        <blockquote
+                          className="instagram-media"
+                          data-instgrm-permalink="https://www.instagram.com/reel/DFZongxuHWj/?utm_source=ig_embed&ig_rid=b5139f13-e0a4-44c8-af81-89cf92fd716f"
+                          data-instgrm-version="14"
+                          style={{
+                            background: "#FFF",
+                            border: "0",
+                            borderRadius: "3px",
+                            boxShadow:
+                              "0 0 1px 0 rgba(0,0,0,0.5), 0 1px 10px 0 rgba(0,0,0,0.15)",
+                            margin: "0",
+                            padding: "0",
+                            width: "100%",
+                            height: "100%",
+                          }}
+                        ></blockquote>
                       </div>
 
                       {/* Hover Overlay */}
