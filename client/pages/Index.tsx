@@ -1372,7 +1372,10 @@ export default function Index() {
                         className="border-2 border-orange-200 rounded-lg p-4 hover:border-orange-400 cursor-pointer transition-colors"
                         onMouseEnter={
                           isDesktop
-                            ? () => setHoveredProject("savvo-sommelier")
+                            ? () => {
+                                setHoveredProject("savvo-sommelier");
+                                setPersistentHoveredProject(null);
+                              }
                             : undefined
                         }
                         onMouseLeave={
