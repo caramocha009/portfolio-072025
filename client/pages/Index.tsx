@@ -1365,6 +1365,48 @@ export default function Index() {
                         </div>
                       </div>
                     </div>
+
+                    {/* YouTube Shorts Video */}
+                    <div
+                      className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
+                      style={{ aspectRatio: "1 / 1" }}
+                      onClick={() => window.open("https://youtube.com/shorts/jMIY3JhZibU?si=v2Y7RTQMv2blBQm2", "_blank")}
+                    >
+                      {/* Video Thumbnail Image */}
+                      <img
+                        src="https://img.youtube.com/vi/jMIY3JhZibU/maxresdefault.jpg"
+                        alt="YouTube Video"
+                        className="w-full h-full object-cover"
+                      />
+
+                      {/* Play Button Overlay */}
+                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-200 flex items-center justify-center">
+                        <div className="bg-white bg-opacity-90 group-hover:bg-opacity-100 rounded-full p-3 transition-all duration-200 shadow-lg">
+                          <svg
+                            className="w-8 h-8 text-black ml-0.5"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        </div>
+                      </div>
+
+                      {/* Hover Overlay */}
+                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
+                        <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
+                          <h3 className="text-lg font-bold text-center">
+                            YouTube Short
+                          </h3>
+                          <p className="text-sm text-center text-gray-200">
+                            Shorts
+                          </p>
+                          <p className="text-xs text-center text-gray-300">
+                            Video
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
