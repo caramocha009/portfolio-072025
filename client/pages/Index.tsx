@@ -2202,7 +2202,7 @@ export default function Index() {
                   <div className="w-full max-w-2xl">
                     <div
                       className="relative overflow-hidden rounded-lg shadow-lg"
-                      style={{ aspectRatio: "9 / 16" }}
+                      style={{ aspectRatio: "9 / 16", height: "60vh" }}
                     >
                       <iframe
                         width="100%"
