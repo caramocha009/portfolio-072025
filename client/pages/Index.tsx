@@ -1415,7 +1415,10 @@ export default function Index() {
                         className="border-2 border-blue-200 rounded-lg p-4 hover:border-blue-400 cursor-pointer transition-colors"
                         onMouseEnter={
                           isDesktop
-                            ? () => setHoveredProject("hyvee-aisles")
+                            ? () => {
+                                setHoveredProject("hyvee-aisles");
+                                setPersistentHoveredProject(null);
+                              }
                             : undefined
                         }
                         onMouseLeave={
