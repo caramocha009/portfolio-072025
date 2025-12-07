@@ -1443,7 +1443,7 @@ export default function Index() {
                       <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
                         <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
                           <h3 className="text-lg font-bold text-center">
-                            Demo Reel
+                            Vidoe Editing Demo Reel
                           </h3>
                           <p className="text-sm text-center text-gray-200">
                             Video
@@ -1684,7 +1684,7 @@ export default function Index() {
                             : currentCaseStudy === "youtube-josiah-schneider"
                               ? "Target Guy"
                               : currentCaseStudy === "youtube-demo-reel"
-                                ? "Demo Reel"
+                                ? "Vidoe Editing Demo Reel"
                                 : "Case Study"}
                 </span>
               </div>
@@ -1705,7 +1705,7 @@ export default function Index() {
                             : currentCaseStudy === "youtube-josiah-schneider"
                               ? "Target Guy"
                               : currentCaseStudy === "youtube-demo-reel"
-                                ? "Demo Reel"
+                                ? "Vidoe Editing Demo Reel"
                               : "Case Study"}
                 </span>
               </div>
@@ -2285,7 +2285,7 @@ export default function Index() {
                   <div className="max-w-3xl mx-auto">
                     <div className="mb-8">
                       <h1 className="text-3xl font-bold text-black mb-4">
-                        Demo Reel
+                        Vidoe Editing Demo Reel
                       </h1>
                       <p className="text-gray-600 text-lg mb-6">Video</p>
                     </div>
@@ -2314,7 +2314,7 @@ export default function Index() {
                         width="100%"
                         height="100%"
                         src="https://www.youtube.com/embed/phxDaMSYldc"
-                        title="Demo Reel"
+                        title="Vidoe Editing Demo Reel"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowFullScreen
