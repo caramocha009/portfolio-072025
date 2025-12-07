@@ -1289,11 +1289,11 @@ export default function Index() {
           </div>
 
           {/* Content Area */}
-          <div className="flex-1 flex">
+          <div className="flex-1 flex overflow-hidden">
             {/* Projects List - Full Width */}
             <div
               ref={projectsListRef}
-              className="w-full bg-white overflow-y-auto"
+              className="w-full bg-white overflow-y-auto overflow-x-hidden"
             >
               {/* Projects Grid Layout */}
               <div className="max-w-7xl mx-auto p-6">
