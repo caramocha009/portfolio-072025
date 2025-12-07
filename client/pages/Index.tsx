@@ -1295,248 +1295,222 @@ export default function Index() {
               ref={projectsListRef}
               className="w-full lg:w-1/2 bg-white lg:border-r-2 border-gray-200 overflow-y-auto"
             >
-              {/* Projects List with Accordions */}
-              <Accordion type="single" collapsible className="w-full p-6">
-                {/* Content Creation & Video Editing Accordion */}
-                <AccordionItem value="content-creation">
-                  <AccordionTrigger className="text-black text-base font-semibold">
+              {/* Projects Grid Layout */}
+              <div className="max-w-6xl mx-auto p-6">
+                {/* Content Creation & Video Editing Section */}
+                <div className="mb-12">
+                  <h2 className="text-2xl font-bold text-black mb-6">
                     Content Creation & Video Editing
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <div className="space-y-4">
-                      {/* Bali Women's Retreat */}
-                      <div
-                        className="border-2 border-green-200 rounded-lg p-4 hover:border-green-400 cursor-pointer transition-colors"
-                        onMouseEnter={
-                          isDesktop
-                            ? () => {
-                                setHoveredProject("bali-retreat");
-                                setPersistentHoveredProject("bali-retreat");
-                              }
-                            : undefined
-                        }
-                        onMouseLeave={
-                          isDesktop
-                            ? () => {
-                                // Keep persistent hover, don't clear
-                                setHoveredProject(null);
-                              }
-                            : undefined
-                        }
-                        onClick={() => setCurrentCaseStudy("bali-retreat")}
-                      >
-                        <div className="flex items-start gap-4">
-                          <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <span className="text-white font-bold text-lg">
-                              🌴
-                            </span>
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <h3 className="text-lg font-medium text-black mb-1">
-                              Bali Women's Retreat
-                            </h3>
-                            <p className="text-sm text-gray-600 mb-2">
-                              Short reel I shot and edited from my experience in
-                              an all-women's retreat in Bali
-                            </p>
-                            <div className="flex items-center gap-2 text-xs">
-                              <span className="px-2 py-1 bg-green-100 text-green-700 rounded">
-                                Shorts
-                              </span>
-                              <span className="text-gray-500">
-                                Instagram, Wellness, Travel
-                              </span>
-                            </div>
-                          </div>
+                  </h2>
+                  <div className="grid grid-cols-3 gap-6 justify-items-center">
+                    {/* Bali Women's Retreat */}
+                    <div
+                      className="w-full aspect-video bg-gray-200 rounded-lg overflow-hidden cursor-pointer group relative"
+                      onMouseEnter={
+                        isDesktop
+                          ? () => {
+                              setHoveredProject("bali-retreat");
+                              setPersistentHoveredProject("bali-retreat");
+                            }
+                          : undefined
+                      }
+                      onMouseLeave={
+                        isDesktop
+                          ? () => {
+                              setHoveredProject(null);
+                            }
+                          : undefined
+                      }
+                      onClick={() => setCurrentCaseStudy("bali-retreat")}
+                    >
+                      {/* Placeholder Image */}
+                      <div className="w-full h-full bg-gradient-to-br from-green-100 to-emerald-100 flex items-center justify-center">
+                        <span className="text-5xl">🌴</span>
+                      </div>
+
+                      {/* Hover Overlay */}
+                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
+                        <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
+                          <svg
+                            className="w-12 h-12"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                          <h3 className="text-lg font-bold text-center">
+                            Bali Women's Retreat
+                          </h3>
+                          <p className="text-sm text-center text-gray-200">
+                            Shorts
+                          </p>
+                          <p className="text-xs text-center text-gray-300">
+                            Instagram, Wellness, Travel
+                          </p>
                         </div>
                       </div>
                     </div>
-                  </AccordionContent>
-                </AccordionItem>
+                  </div>
+                </div>
 
-                {/* UX/Product Design Accordion */}
-                <AccordionItem value="ux-design">
-                  <AccordionTrigger className="text-black text-base font-semibold">
+                {/* UX/Product Design Section */}
+                <div>
+                  <h2 className="text-2xl font-bold text-black mb-6">
                     UX/Product Design
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <div className="space-y-4">
-                      {/* Savvo Digital Sommelier */}
-                      <div
-                        className="border-2 border-orange-200 rounded-lg p-4 hover:border-orange-400 cursor-pointer transition-colors"
-                        onMouseEnter={
-                          isDesktop
-                            ? () => {
-                                setHoveredProject("savvo-sommelier");
-                                setPersistentHoveredProject(null);
-                              }
-                            : undefined
-                        }
-                        onMouseLeave={
-                          isDesktop ? () => setHoveredProject(null) : undefined
-                        }
-                        onClick={() => setCurrentCaseStudy("savvo-sommelier")}
-                      >
-                        <div className="flex items-start gap-4">
-                          <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <span className="text-white font-bold text-lg">
-                              🍷
-                            </span>
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <h3 className="text-lg font-medium text-black mb-1">
-                              Savvo Digital Sommelier
-                            </h3>
-                            <p className="text-sm text-gray-600 mb-2">
-                              A study in user research and contextual inquiry
-                              around kiosk, restaurant, and membership
-                              experience of wines
-                            </p>
-                            <div className="flex items-center gap-2 text-xs">
-                              <span className="px-2 py-1 bg-orange-100 text-orange-700 rounded">
-                                Retail
-                              </span>
-                              <span className="text-gray-500">
-                                UX, UI, Field Study, Persona, Wireframes
-                              </span>
-                            </div>
-                          </div>
-                        </div>
+                  </h2>
+                  <div className="grid grid-cols-3 gap-6 justify-items-center">
+                    {/* Savvo Digital Sommelier */}
+                    <div
+                      className="w-full aspect-video bg-gray-200 rounded-lg overflow-hidden cursor-pointer group relative"
+                      onMouseEnter={
+                        isDesktop
+                          ? () => {
+                              setHoveredProject("savvo-sommelier");
+                              setPersistentHoveredProject(null);
+                            }
+                          : undefined
+                      }
+                      onMouseLeave={
+                        isDesktop ? () => setHoveredProject(null) : undefined
+                      }
+                      onClick={() => setCurrentCaseStudy("savvo-sommelier")}
+                    >
+                      {/* Placeholder Image */}
+                      <div className="w-full h-full bg-gradient-to-br from-orange-100 to-red-100 flex items-center justify-center">
+                        <span className="text-5xl">🍷</span>
                       </div>
 
-                      {/* Hy-Vee Aisles Online */}
-                      <div
-                        className="border-2 border-blue-200 rounded-lg p-4 hover:border-blue-400 cursor-pointer transition-colors"
-                        onMouseEnter={
-                          isDesktop
-                            ? () => {
-                                setHoveredProject("hyvee-aisles");
-                                setPersistentHoveredProject(null);
-                              }
-                            : undefined
-                        }
-                        onMouseLeave={
-                          isDesktop ? () => setHoveredProject(null) : undefined
-                        }
-                        onClick={() => setCurrentCaseStudy("hyvee-aisles")}
-                      >
-                        <div className="flex items-start gap-4">
-                          <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <span className="text-white font-bold text-lg">
-                              🛒
-                            </span>
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <h3 className="text-lg font-medium text-black mb-1">
-                              Hy-Vee Aisles Online
-                            </h3>
-                            <p className="text-sm text-gray-600 mb-2">
-                              Cards, tags, and ads: UX for online grocery
-                              shopping experience
-                            </p>
-                            <div className="flex items-center gap-2 text-xs">
-                              <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded">
-                                E-commerce
-                              </span>
-                              <span className="text-gray-500">
-                                Visual Hierarchy, User Testing
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Ascent Global Logistics */}
-                      <div
-                        className="border-2 border-green-200 rounded-lg p-4 hover:border-green-400 cursor-pointer transition-colors"
-                        onMouseEnter={
-                          isDesktop
-                            ? () => {
-                                setHoveredProject("ascent-logistics");
-                                setPersistentHoveredProject(null);
-                              }
-                            : undefined
-                        }
-                        onMouseLeave={
-                          isDesktop ? () => setHoveredProject(null) : undefined
-                        }
-                        onClick={() => setCurrentCaseStudy("ascent-logistics")}
-                      >
-                        <div className="flex items-start gap-4">
-                          <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <span className="text-white font-bold text-lg">
-                              🚚
-                            </span>
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <h3 className="text-lg font-medium text-black mb-1">
-                              Ascent Global Logistics
-                            </h3>
-                            <p className="text-sm text-gray-600 mb-2">
-                              Streamlining digital supply chain operations
-                              through simplifying complex business logistics
-                              into functional UI
-                            </p>
-                            <div className="flex items-center gap-2 text-xs">
-                              <span className="px-2 py-1 bg-green-100 text-green-700 rounded">
-                                Logistics
-                              </span>
-                              <span className="text-gray-500">
-                                User Interviews, Cross-Functional Collab, Hi-Fi
-                                Prototype
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Bank of America Merchant Partner Checkout */}
-                      <div
-                        className="border-2 border-purple-200 rounded-lg p-4 hover:border-purple-400 cursor-pointer transition-colors"
-                        onMouseEnter={
-                          isDesktop
-                            ? () => {
-                                setHoveredProject("boa-merchant-checkout");
-                                setPersistentHoveredProject(null);
-                              }
-                            : undefined
-                        }
-                        onMouseLeave={
-                          isDesktop ? () => setHoveredProject(null) : undefined
-                        }
-                        onClick={() =>
-                          setCurrentCaseStudy("boa-merchant-checkout")
-                        }
-                      >
-                        <div className="flex items-start gap-4">
-                          <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <span className="text-white font-bold text-lg">
-                              💳
-                            </span>
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <h3 className="text-lg font-medium text-black mb-1">
-                              Bank of America Merchant Partner Checkout
-                            </h3>
-                            <p className="text-sm text-gray-600 mb-2">
-                              Streamlined checkout experience for merchant
-                              partners and customers
-                            </p>
-                            <div className="flex items-center gap-2 text-xs">
-                              <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded">
-                                Fintech
-                              </span>
-                              <span className="text-gray-500">
-                                Checkout Flow, Payment UX, Security
-                              </span>
-                            </div>
-                          </div>
+                      {/* Hover Overlay */}
+                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
+                        <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
+                          <h3 className="text-lg font-bold text-center">
+                            Savvo Digital Sommelier
+                          </h3>
+                          <p className="text-sm text-center text-gray-200">
+                            Retail
+                          </p>
+                          <p className="text-xs text-center text-gray-300">
+                            UX, UI, Field Study, Persona, Wireframes
+                          </p>
                         </div>
                       </div>
                     </div>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
+
+                    {/* Hy-Vee Aisles Online */}
+                    <div
+                      className="w-full aspect-video bg-gray-200 rounded-lg overflow-hidden cursor-pointer group relative"
+                      onMouseEnter={
+                        isDesktop
+                          ? () => {
+                              setHoveredProject("hyvee-aisles");
+                              setPersistentHoveredProject(null);
+                            }
+                          : undefined
+                      }
+                      onMouseLeave={
+                        isDesktop ? () => setHoveredProject(null) : undefined
+                      }
+                      onClick={() => setCurrentCaseStudy("hyvee-aisles")}
+                    >
+                      {/* Placeholder Image */}
+                      <div className="w-full h-full bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
+                        <span className="text-5xl">🛒</span>
+                      </div>
+
+                      {/* Hover Overlay */}
+                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
+                        <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
+                          <h3 className="text-lg font-bold text-center">
+                            Hy-Vee Aisles Online
+                          </h3>
+                          <p className="text-sm text-center text-gray-200">
+                            E-commerce
+                          </p>
+                          <p className="text-xs text-center text-gray-300">
+                            Visual Hierarchy, User Testing
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Ascent Global Logistics */}
+                    <div
+                      className="w-full aspect-video bg-gray-200 rounded-lg overflow-hidden cursor-pointer group relative"
+                      onMouseEnter={
+                        isDesktop
+                          ? () => {
+                              setHoveredProject("ascent-logistics");
+                              setPersistentHoveredProject(null);
+                            }
+                          : undefined
+                      }
+                      onMouseLeave={
+                        isDesktop ? () => setHoveredProject(null) : undefined
+                      }
+                      onClick={() => setCurrentCaseStudy("ascent-logistics")}
+                    >
+                      {/* Placeholder Image */}
+                      <div className="w-full h-full bg-gradient-to-br from-green-100 to-teal-100 flex items-center justify-center">
+                        <span className="text-5xl">🚚</span>
+                      </div>
+
+                      {/* Hover Overlay */}
+                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
+                        <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
+                          <h3 className="text-lg font-bold text-center">
+                            Ascent Global Logistics
+                          </h3>
+                          <p className="text-sm text-center text-gray-200">
+                            Logistics
+                          </p>
+                          <p className="text-xs text-center text-gray-300">
+                            User Interviews, Cross-Functional Collab, Hi-Fi
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Bank of America Merchant Partner Checkout */}
+                    <div
+                      className="w-full aspect-video bg-gray-200 rounded-lg overflow-hidden cursor-pointer group relative"
+                      onMouseEnter={
+                        isDesktop
+                          ? () => {
+                              setHoveredProject("boa-merchant-checkout");
+                              setPersistentHoveredProject(null);
+                            }
+                          : undefined
+                      }
+                      onMouseLeave={
+                        isDesktop ? () => setHoveredProject(null) : undefined
+                      }
+                      onClick={() =>
+                        setCurrentCaseStudy("boa-merchant-checkout")
+                      }
+                    >
+                      {/* Placeholder Image */}
+                      <div className="w-full h-full bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
+                        <span className="text-5xl">💳</span>
+                      </div>
+
+                      {/* Hover Overlay */}
+                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
+                        <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
+                          <h3 className="text-lg font-bold text-center">
+                            Bank of America Merchant Partner Checkout
+                          </h3>
+                          <p className="text-sm text-center text-gray-200">
+                            Fintech
+                          </p>
+                          <p className="text-xs text-center text-gray-300">
+                            Checkout Flow, Payment UX
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Right Panel - Preview - Hidden on mobile/tablet */}
