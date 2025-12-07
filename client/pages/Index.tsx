@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { DraggableWindow } from "@/components/ui/draggable-window";
 import { DesktopIcon } from "@/components/ui/desktop-icon";
