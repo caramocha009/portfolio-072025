@@ -1302,7 +1302,7 @@ export default function Index() {
               className="w-full bg-white overflow-y-auto overflow-x-hidden"
             >
               {/* Projects Grid Layout */}
-              <div className="max-w-7xl mx-auto p-6">
+              <div className="max-w-6xl mx-auto p-6">
                 {/* Content Creation & Video Editing Section */}
                 <div className="mb-12">
                   <h2
