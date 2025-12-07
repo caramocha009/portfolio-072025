@@ -1288,12 +1288,12 @@ export default function Index() {
             </div>
           </div>
 
-          {/* Content Area - Split Layout */}
+          {/* Content Area */}
           <div className="flex-1 flex">
-            {/* Left Panel - Projects List */}
+            {/* Projects List - Full Width */}
             <div
               ref={projectsListRef}
-              className="w-full lg:w-1/2 bg-white lg:border-r-2 border-gray-200 overflow-y-auto"
+              className="w-full bg-white overflow-y-auto"
             >
               {/* Projects Grid Layout */}
               <div className="max-w-6xl mx-auto p-6">
