@@ -860,6 +860,7 @@ export default function Index() {
   >(null);
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
   const [showNavigation, setShowNavigation] = useState(false);
+  const projectsListRef = useRef<HTMLDivElement>(null);
 
   // Handle URL-based case study navigation
   useEffect(() => {
