@@ -1683,7 +1683,9 @@ export default function Index() {
                             ? "Bali Women's Retreat"
                             : currentCaseStudy === "youtube-josiah-schneider"
                               ? "Target Guy"
-                              : "Case Study"}
+                              : currentCaseStudy === "youtube-demo-reel"
+                                ? "Demo Reel"
+                                : "Case Study"}
                 </span>
               </div>
 
@@ -1702,6 +1704,8 @@ export default function Index() {
                             ? "Bali Women's Retreat"
                             : currentCaseStudy === "youtube-josiah-schneider"
                               ? "Target Guy"
+                              : currentCaseStudy === "youtube-demo-reel"
+                                ? "Demo Reel"
                               : "Case Study"}
                 </span>
               </div>
