@@ -1401,13 +1401,13 @@ export default function Index() {
                       <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
                         <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
                           <h3 className="text-lg font-bold text-center">
-                            YouTube Short
+                            Target Guy
                           </h3>
                           <p className="text-sm text-center text-gray-200">
                             Shorts
                           </p>
                           <p className="text-xs text-center text-gray-300">
-                            Video
+                            Skit, Comedy, Client
                           </p>
                         </div>
                       </div>
