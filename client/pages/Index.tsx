@@ -931,6 +931,23 @@ export default function Index() {
     }
   }, [currentCaseStudy]);
 
+  // Load Instagram embed script for video projects
+  useEffect(() => {
+    if (currentCaseStudy === "bali-retreat") {
+      const script = document.createElement("script");
+      script.src = "https://www.instagram.com/embed.js";
+      script.async = true;
+      document.body.appendChild(script);
+
+      return () => {
+        // Clean up: try to process the embed if the script is available
+        if ((window as any).instgrm) {
+          (window as any).instgrm.Embeds.process();
+        }
+      };
+    }
+  }, [currentCaseStudy]);
+
   const bringToFront = (windowId: string) => {
     setOpenWindows((prev) =>
       prev.map((window) =>
