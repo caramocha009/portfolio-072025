@@ -923,6 +923,14 @@ export default function Index() {
     }
   }, [currentCaseStudy]);
 
+  // Reset scroll position when returning to projects view
+  useEffect(() => {
+    if (!currentCaseStudy && isProjectsFullscreenOpen && projectsListRef.current) {
+      // Reset scroll to top
+      projectsListRef.current.scrollTop = 0;
+    }
+  }, [currentCaseStudy, isProjectsFullscreenOpen]);
+
   // State for Medium article content
   const [mediumArticle, setMediumArticle] = useState(null);
   const [isLoadingArticle, setIsLoadingArticle] = useState(false);
