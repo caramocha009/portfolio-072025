@@ -1608,6 +1608,33 @@ export default function Index() {
                     </div>
                   </div>
                 </div>
+              ) : hoveredProject === "bali-retreat" ? (
+                <div className="max-w-lg w-full p-8 flex flex-col items-center">
+                  <div className="w-full h-96 bg-gradient-to-br from-green-100 to-emerald-100 rounded-lg shadow-lg mb-6 flex items-center justify-center">
+                    <span className="text-6xl">🌴</span>
+                  </div>
+                  <h2 className="text-2xl font-bold text-black mb-2">
+                    Bali Women's Retreat
+                  </h2>
+                  <p className="text-gray-600 mb-4 text-center">
+                    Short reel I shot and edited from my experience in an
+                    all-women's retreat in Bali
+                  </p>
+                  <div className="flex gap-2 mb-4">
+                    <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">
+                      Instagram
+                    </span>
+                    <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">
+                      Wellness
+                    </span>
+                    <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">
+                      Travel
+                    </span>
+                  </div>
+                  <p className="text-sm text-gray-500 text-center">
+                    Click the card to view the full reel
+                  </p>
+                </div>
               ) : (
                 <div className="text-center text-gray-500 max-w-sm">
                   <div className="mb-6 flex justify-center">
