@@ -1370,7 +1370,7 @@ export default function Index() {
                     <div
                       className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
                       style={{ aspectRatio: "1 / 1" }}
-                      onClick={() => window.open("https://youtube.com/shorts/jMIY3JhZibU?si=v2Y7RTQMv2blBQm2", "_blank")}
+                      onClick={() => setCurrentCaseStudy("youtube-josiah-schneider")}
                     >
                       {/* Video Thumbnail Image */}
                       <img
