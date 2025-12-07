@@ -1457,7 +1457,10 @@ export default function Index() {
                         className="border-2 border-green-200 rounded-lg p-4 hover:border-green-400 cursor-pointer transition-colors"
                         onMouseEnter={
                           isDesktop
-                            ? () => setHoveredProject("ascent-logistics")
+                            ? () => {
+                                setHoveredProject("ascent-logistics");
+                                setPersistentHoveredProject(null);
+                              }
                             : undefined
                         }
                         onMouseLeave={
