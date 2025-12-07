@@ -1305,7 +1305,10 @@ export default function Index() {
               <div className="max-w-7xl mx-auto p-6">
                 {/* Content Creation & Video Editing Section */}
                 <div className="mb-12">
-                  <h2 className="text-2xl font-bold text-black mb-6" style={{ fontFamily: '"JetBrains Mono", monospace' }}>
+                  <h2
+                    className="text-2xl font-bold text-black mb-6"
+                    style={{ fontFamily: '"JetBrains Mono", monospace' }}
+                  >
                     Content Creation & Video Editing
                   </h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center max-w-full">
@@ -1370,7 +1373,9 @@ export default function Index() {
                     <div
                       className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
                       style={{ aspectRatio: "1 / 1" }}
-                      onClick={() => setCurrentCaseStudy("youtube-josiah-schneider")}
+                      onClick={() =>
+                        setCurrentCaseStudy("youtube-josiah-schneider")
+                      }
                     >
                       {/* Video Thumbnail Image */}
                       <img
@@ -1412,7 +1417,10 @@ export default function Index() {
 
                 {/* UX/Product Design Section */}
                 <div>
-                  <h2 className="text-2xl font-bold text-black mb-6" style={{ fontFamily: '"JetBrains Mono", monospace' }}>
+                  <h2
+                    className="text-2xl font-bold text-black mb-6"
+                    style={{ fontFamily: '"JetBrains Mono", monospace' }}
+                  >
                     UX/Product Design
                   </h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center max-w-full">
@@ -2180,7 +2188,9 @@ export default function Index() {
                           About This Project:
                         </h3>
                         <p className="text-gray-700 leading-relaxed">
-                          An shorts edit for actor/comedian Josiah Schneider. Used a pre-written script for reference, added in sfx, background, and music to heighten the comedy.
+                          An shorts edit for actor/comedian Josiah Schneider.
+                          Used a pre-written script for reference, added in sfx,
+                          background, and music to heighten the comedy.
                         </p>
                       </div>
                     </div>
