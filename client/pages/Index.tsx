@@ -2214,8 +2214,7 @@ export default function Index() {
                 <div className="mt-8 flex justify-center">
                   <button
                     onClick={() => {
-                      setCurrentCaseStudy(null);
-                      setIsProjectsFullscreenOpen(true);
+                      window.history.back();
                     }}
                     className="inline-flex items-center px-6 py-3 bg-gray-300 text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-gray-200 transition-colors font-mono text-sm"
                   >
