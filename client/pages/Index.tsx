@@ -1723,7 +1723,9 @@ export default function Index() {
                         ? "Ascent Global Logistics"
                         : currentCaseStudy === "boa-merchant-checkout"
                           ? "Bank of America Merchant Partner Checkout"
-                          : "Case Study"}
+                          : currentCaseStudy === "bali-retreat"
+                            ? "Bali Women's Retreat"
+                            : "Case Study"}
                 </span>
               </div>
 
