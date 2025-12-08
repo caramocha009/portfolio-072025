@@ -1926,7 +1926,7 @@ export default function Index() {
                             : currentCaseStudy === "youtube-josiah-schneider"
                               ? "Target Guy"
                               : currentCaseStudy === "youtube-demo-reel"
-                                ? "Vidoe Editing Demo Reel"
+                                ? "Video Editing Demo Reel"
                                 : currentCaseStudy === "instagram-holding-court"
                                   ? "Holding Court Method"
                                   : currentCaseStudy ===
@@ -1960,7 +1960,7 @@ export default function Index() {
                             : currentCaseStudy === "youtube-josiah-schneider"
                               ? "Target Guy"
                               : currentCaseStudy === "youtube-demo-reel"
-                                ? "Vidoe Editing Demo Reel"
+                                ? "Video Editing Demo Reel"
                                 : currentCaseStudy === "instagram-holding-court"
                                   ? "Holding Court Method"
                                   : currentCaseStudy ===
