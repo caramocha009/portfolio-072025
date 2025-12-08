@@ -1151,10 +1151,7 @@ export default function Index() {
               </h4>
               <p>
                 I'm a content creator and video editor who loves working in the
-                gentle chaos where meaning, emotion, and creativity overlap. You
-                know those projects that start as "just a quick edit" and
-                somehow turn into rethinking the whole story? That tends to be
-                where I feel most at home.
+                gentle chaos where meaning, emotion, and creativity overlap.&nbsp;
               </p>
               <p>
                 I care less about chasing perfect metrics and more about whether
