@@ -2600,7 +2600,7 @@ export default function Index() {
                 label="Resume"
                 onClick={() =>
                   window.open(
-                    "https://docs.google.com/document/d/1c_bOHD4StknDKFZIFizj7UNT3BPDAtbq/edit?usp=sharing&ouid=105779629323639375141&rtpof=true&sd=true",
+                    "https://drive.google.com/file/d/1cth2ND8UU_BhTicFHnxy-YfiXmTE3UPj/view?usp=sharing",
                     "_blank",
                   )
                 }
@@ -2696,7 +2696,7 @@ export default function Index() {
                   label="Resume"
                   onClick={() =>
                     window.open(
-                      "https://docs.google.com/document/d/1c_bOHD4StknDKFZIFizj7UNT3BPDAtbq/edit?usp=sharing&ouid=105779629323639375141&rtpof=true&sd=true",
+                      "https://drive.google.com/file/d/1cth2ND8UU_BhTicFHnxy-YfiXmTE3UPj/view?usp=sharing",
                       "_blank",
                     )
                   }
