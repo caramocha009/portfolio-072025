@@ -1162,16 +1162,16 @@ export default function Index() {
                 videos, shaping podcast conversations, or creating short-form
                 content for social media, my goal is always the same: make
                 something that feels real, clear, and worth someone's time. I'm
-                especially drawn to stories around spirituality, self-development,
-                Buddhism, and mindful living—but at the end of the day, I just
-                love helping people share what matters to them.
+                especially drawn to stories around spirituality,
+                self-development, Buddhism, and mindful living—but at the end of
+                the day, I just love helping people share what matters to them.
               </p>
               <p>
                 I'm comfortable in the "messy middle" of the creative process.
-                The part where ideas aren't quite formed yet, where the words feel
-                close-but-not-right, where the story needs a little patience to
-                reveal itself. I like listening closely, asking good questions, and
-                shaping things gently until they click.
+                The part where ideas aren't quite formed yet, where the words
+                feel close-but-not-right, where the story needs a little
+                patience to reveal itself. I like listening closely, asking good
+                questions, and shaping things gently until they click.
               </p>
               <p>
                 From personal creators to thoughtful brands, I've learned that
