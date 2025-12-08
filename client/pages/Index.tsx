@@ -1768,7 +1768,9 @@ export default function Index() {
                                 ? "Vidoe Editing Demo Reel"
                                 : currentCaseStudy === "instagram-holding-court"
                                   ? "Holding Court Method"
-                                  : "Case Study"}
+                                  : currentCaseStudy === "youtube-zen-monk-podcast"
+                                    ? "Podcast Episode with Zen Monk Daishin Eric McCabe"
+                                    : "Case Study"}
                 </span>
               </div>
 
