@@ -1454,6 +1454,48 @@ export default function Index() {
                         </div>
                       </div>
                     </div>
+
+                    {/* Holding Court Method IG Reel */}
+                    <div
+                      className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
+                      style={{ aspectRatio: "1 / 1" }}
+                      onClick={() => setCurrentCaseStudy("instagram-holding-court")}
+                    >
+                      {/* Video Thumbnail Image */}
+                      <img
+                        src="https://instagram.com/reel/C9fivuSumye/media/?size=l"
+                        alt="Holding Court Method"
+                        className="w-full h-full object-cover"
+                      />
+
+                      {/* Play Button Overlay */}
+                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-200 flex items-center justify-center">
+                        <div className="bg-white bg-opacity-90 group-hover:bg-opacity-100 rounded-full p-3 transition-all duration-200 shadow-lg">
+                          <svg
+                            className="w-8 h-8 text-black ml-0.5"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        </div>
+                      </div>
+
+                      {/* Hover Overlay */}
+                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
+                        <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
+                          <h3 className="text-lg font-bold text-center">
+                            Holding Court Method
+                          </h3>
+                          <p className="text-sm text-center text-gray-200">
+                            Shorts, IG Reel
+                          </p>
+                          <p className="text-xs text-center text-gray-300">
+                            self-help, CapCut, vfx
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
