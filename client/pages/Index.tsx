@@ -1198,8 +1198,22 @@ export default function Index() {
       id: `${type}-${Date.now()}`,
       backgroundColor: bgColor,
       headerColor: headerColor,
-      initialX: Math.random() * 200 + 100,
-      initialY: type === "About" ? 60 : Math.random() * 200 + 100,
+      initialX:
+        type === "About" || type === "Contact"
+          ? type === "Contact"
+            ? window.innerWidth < 1024
+              ? 0
+              : (window.innerWidth - 600) / 2
+            : window.innerWidth < 1024
+              ? (window.innerWidth - Math.min(window.innerWidth - 40, 720)) / 2
+              : (window.innerWidth - 720) / 2
+          : Math.random() * 200 + 100,
+      initialY:
+        type === "About"
+          ? Math.max(60, (window.innerHeight - (window.innerHeight - 48)) / 2)
+          : type === "Contact"
+            ? Math.max(60, (window.innerHeight - 632) / 2)
+            : Math.random() * 200 + 100,
       width:
         type === "Articles"
           ? window.innerWidth < 1024
