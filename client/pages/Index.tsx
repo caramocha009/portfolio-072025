@@ -1750,7 +1750,9 @@ export default function Index() {
                               ? "Target Guy"
                               : currentCaseStudy === "youtube-demo-reel"
                                 ? "Vidoe Editing Demo Reel"
-                              : "Case Study"}
+                                : currentCaseStudy === "instagram-holding-court"
+                                  ? "Holding Court Method"
+                                  : "Case Study"}
                 </span>
               </div>
 
