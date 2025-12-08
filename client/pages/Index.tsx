@@ -1625,7 +1625,7 @@ export default function Index() {
                     >
                       {/* Video Thumbnail Image */}
                       <img
-                        src="https://instagram.com/reel/DAUKzZZue5_/media/?size=l"
+                        src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F5123f6e2c00a4fa3bfb9c2f1d5dd5b0a?format=webp&width=800"
                         alt="Teaser for Food Taste Test Video"
                         className="w-full h-full object-cover"
                       />
