@@ -2426,7 +2426,6 @@ export default function Index() {
                         height="100%"
                         frameBorder="0"
                         scrolling="no"
-                        allowTransparency
                         style={{
                           border: "none",
                           overflow: "hidden",
