@@ -2553,7 +2553,7 @@ export default function Index() {
                   <div className="max-w-3xl mx-auto">
                     <div className="mb-8">
                       <h1 className="text-3xl font-bold text-black mb-4">
-                        Vidoe Editing Demo Reel
+                        Video Editing Demo Reel
                       </h1>
                       <p className="text-gray-600 text-lg mb-6">Video</p>
                     </div>
