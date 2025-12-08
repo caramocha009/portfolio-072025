@@ -2822,6 +2822,67 @@ export default function Index() {
                   </button>
                 </div>
               </div>
+            ) : currentCaseStudy === "instagram-food-teaser" ? (
+              /* Instagram Reel - Food Taste Test Teaser */
+              <div className="max-w-4xl mx-auto">
+                <div className="bg-gray-50 p-8">
+                  <div className="max-w-3xl mx-auto">
+                    <div className="mb-8">
+                      <h1 className="text-3xl font-bold text-black mb-4">
+                        Teaser for Food Taste Test Video
+                      </h1>
+                      <p className="text-gray-600 text-lg mb-6">
+                        Promo shorts
+                      </p>
+                    </div>
+
+                    <div className="space-y-8">
+                      <div>
+                        <h3 className="text-xl font-semibold text-black mb-4">
+                          About This Project:
+                        </h3>
+                        <p className="text-gray-700 leading-relaxed">
+                          IG Reel Short teaser for a food taste test video on my Youtube channel.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Embedded Instagram Reel */}
+                <div className="py-8">
+                  <div className="max-w-6xl mx-auto px-6">
+                    <div
+                      className="relative overflow-hidden rounded-lg shadow-lg w-full"
+                      style={{ aspectRatio: "9 / 16" }}
+                    >
+                      <iframe
+                        src="https://www.instagram.com/reel/DAUKzZZue5_/embed/captioned/"
+                        width="100%"
+                        height="100%"
+                        frameBorder="0"
+                        scrolling="no"
+                        style={{
+                          border: "none",
+                          overflow: "hidden",
+                        }}
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Back to Projects Button */}
+                <div className="mt-8 flex justify-center">
+                  <button
+                    onClick={() => {
+                      window.history.back();
+                    }}
+                    className="inline-flex items-center px-6 py-3 bg-gray-300 text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-gray-200 transition-colors font-mono text-sm"
+                  >
+                    ← Back to Projects
+                  </button>
+                </div>
+              </div>
             ) : (
               <>
                 <MediumArticleEmbed
