@@ -1156,32 +1156,31 @@ export default function Index() {
                 specialty.
               </p>
               <p>
-                With a research-driven approach and a healthy dose of skepticism
-                about what stakeholders think they want, I've spent my career
-                proving that great design isn't just about making things
-                pretty—it's about making them work. Whether I'm untangling
-                complex enterprise workflows, optimizing mobile experiences that
-                actually convert, or figuring out how to make software feel
-                human, I bring data and empathy in equal measure.
+                Meet Cara Liu — a Storyteller Who Cares
+
+I'm a content creator and video editor who loves working in the gentle chaos where meaning, emotion, and creativity overlap. You know those projects that start as "just a quick edit" and somehow turn into rethinking the whole story? That tends to be where I feel most at home.
               </p>
               <p>
-                I specialize in projects where "it's complicated" is the
-                starting point, not the excuse. My superpower? Translating the
-                gap between what users say they want and what they actually
-                do—because the best insights often come from watching people
-                completely contradict their own survey responses.
+                I care less about chasing perfect metrics and more about whether
+                something actually lands. Whether I'm editing long-form YouTube
+                videos, shaping podcast conversations, or creating short-form
+                content for social media, my goal is always the same: make
+                something that feels real, clear, and worth someone's time. I'm
+                especially drawn to stories around spirituality, self-development,
+                Buddhism, and mindful living—but at the end of the day, I just
+                love helping people share what matters to them.
               </p>
               <p>
-                From e-commerce platforms to SaaS dashboards, consumer apps to
-                internal tools, I've learned that every product has its own
-                personality and problems. My job is to listen, research, test,
-                and iterate until we find solutions that work for real people in
-                real situations.
+                I'm comfortable in the "messy middle" of the creative process.
+                The part where ideas aren't quite formed yet, where the words feel
+                close-but-not-right, where the story needs a little patience to
+                reveal itself. I like listening closely, asking good questions, and
+                shaping things gently until they click.
               </p>
               <p>
-                Currently helping companies navigate the messy, fascinating
-                intersection of user experience and business strategy, one
-                well-researched design decision at a time.
+                From personal creators to thoughtful brands, I've learned that
+                every voice has its own rhythm. My job is to honor that
+                rhythm—without over-polishing the life out of it.
               </p>
             </div>
           </div>
