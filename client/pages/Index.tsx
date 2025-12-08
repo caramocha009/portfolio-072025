@@ -1460,7 +1460,7 @@ export default function Index() {
                     >
                       {/* Video Thumbnail Image */}
                       <img
-                        src="https://instagram.com/reel/C9fivuSumye/media/?size=l"
+                        src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fb2a4ec28b99242d89027eaf43e364ba8?format=webp&width=800"
                         alt="Holding Court Method"
                         className="w-full h-full object-cover"
                       />
