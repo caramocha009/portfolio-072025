@@ -1151,7 +1151,8 @@ export default function Index() {
               </h4>
               <p>
                 I'm a content creator and video editor who loves working in the
-                gentle chaos where meaning, emotion, and creativity overlap.&nbsp;
+                gentle chaos where meaning, emotion, and creativity
+                overlap.&nbsp;
               </p>
               <p>
                 I care less about chasing perfect metrics and more about whether
@@ -1579,7 +1580,9 @@ export default function Index() {
                     <div
                       className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
                       style={{ aspectRatio: "1 / 1" }}
-                      onClick={() => setCurrentCaseStudy("youtube-videoboost-ad")}
+                      onClick={() =>
+                        setCurrentCaseStudy("youtube-videoboost-ad")
+                      }
                     >
                       {/* Video Thumbnail Image */}
                       <img
@@ -1621,7 +1624,9 @@ export default function Index() {
                     <div
                       className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
                       style={{ aspectRatio: "1 / 1" }}
-                      onClick={() => setCurrentCaseStudy("instagram-food-teaser")}
+                      onClick={() =>
+                        setCurrentCaseStudy("instagram-food-teaser")
+                      }
                     >
                       {/* Video Thumbnail Image */}
                       <img
@@ -1896,9 +1901,11 @@ export default function Index() {
                                     ? "Podcast Episode with Zen Monk Daishin Eric McCabe"
                                     : currentCaseStudy === "youtube-pho-short"
                                       ? "Pho"
-                                      : currentCaseStudy === "youtube-videoboost-ad"
+                                      : currentCaseStudy ===
+                                          "youtube-videoboost-ad"
                                         ? "Videoboost Ad"
-                                        : currentCaseStudy === "instagram-food-teaser"
+                                        : currentCaseStudy ===
+                                            "instagram-food-teaser"
                                           ? "Teaser for Food Taste Test Video"
                                           : "Case Study"}
                 </span>
@@ -1928,9 +1935,11 @@ export default function Index() {
                                     ? "Podcast Episode with Zen Monk Daishin Eric McCabe"
                                     : currentCaseStudy === "youtube-pho-short"
                                       ? "Pho"
-                                      : currentCaseStudy === "youtube-videoboost-ad"
+                                      : currentCaseStudy ===
+                                          "youtube-videoboost-ad"
                                         ? "Videoboost Ad"
-                                        : currentCaseStudy === "instagram-food-teaser"
+                                        : currentCaseStudy ===
+                                            "instagram-food-teaser"
                                           ? "Teaser for Food Taste Test Video"
                                           : "Case Study"}
                 </span>
@@ -2768,9 +2777,7 @@ export default function Index() {
                       <h1 className="text-3xl font-bold text-black mb-4">
                         Videoboost Ad
                       </h1>
-                      <p className="text-gray-600 text-lg mb-6">
-                        Ad
-                      </p>
+                      <p className="text-gray-600 text-lg mb-6">Ad</p>
                     </div>
 
                     <div className="space-y-8">
@@ -2779,7 +2786,8 @@ export default function Index() {
                           About This Project:
                         </h3>
                         <p className="text-gray-700 leading-relaxed">
-                          Vertical social ad for Videoboost, a video editing course
+                          Vertical social ad for Videoboost, a video editing
+                          course
                         </p>
                       </div>
                     </div>
@@ -2831,9 +2839,7 @@ export default function Index() {
                       <h1 className="text-3xl font-bold text-black mb-4">
                         Teaser for Food Taste Test Video
                       </h1>
-                      <p className="text-gray-600 text-lg mb-6">
-                        Promo shorts
-                      </p>
+                      <p className="text-gray-600 text-lg mb-6">Promo shorts</p>
                     </div>
 
                     <div className="space-y-8">
@@ -2842,7 +2848,8 @@ export default function Index() {
                           About This Project:
                         </h3>
                         <p className="text-gray-700 leading-relaxed">
-                          IG Reel Short teaser for a food taste test video on my Youtube channel.
+                          IG Reel Short teaser for a food taste test video on my
+                          Youtube channel.
                         </p>
                       </div>
                     </div>
