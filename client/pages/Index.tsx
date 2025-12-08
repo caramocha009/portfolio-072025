@@ -2582,7 +2582,7 @@ export default function Index() {
                         width="100%"
                         height="100%"
                         src="https://www.youtube.com/embed/phxDaMSYldc"
-                        title="Vidoe Editing Demo Reel"
+                        title="Video Editing Demo Reel"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowFullScreen
