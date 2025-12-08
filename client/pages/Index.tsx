@@ -1459,7 +1459,9 @@ export default function Index() {
                     <div
                       className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
                       style={{ aspectRatio: "1 / 1" }}
-                      onClick={() => setCurrentCaseStudy("instagram-holding-court")}
+                      onClick={() =>
+                        setCurrentCaseStudy("instagram-holding-court")
+                      }
                     >
                       {/* Video Thumbnail Image */}
                       <img
@@ -2406,7 +2408,10 @@ export default function Index() {
                           About This Project:
                         </h3>
                         <p className="text-gray-700 leading-relaxed">
-                          Reel I created to illustrate a special visualization technique I call "The Holding Court Method". Produced and selected all the costumes myself! Edited with CapCut special effects and green screen.
+                          Reel I created to illustrate a special visualization
+                          technique I call "The Holding Court Method". Produced
+                          and selected all the costumes myself! Edited with
+                          CapCut special effects and green screen.
                         </p>
                       </div>
                     </div>
