@@ -2609,6 +2609,70 @@ export default function Index() {
                   </button>
                 </div>
               </div>
+            ) : currentCaseStudy === "youtube-pho-short" ? (
+              /* YouTube Video - Pho Short Film */
+              <div className="max-w-4xl mx-auto">
+                <div className="bg-gray-50 p-8">
+                  <div className="max-w-3xl mx-auto">
+                    <div className="mb-8">
+                      <h1 className="text-3xl font-bold text-black mb-4">
+                        Pho
+                      </h1>
+                      <p className="text-gray-600 text-lg mb-6">
+                        Short film, YouTube
+                      </p>
+                    </div>
+
+                    <div className="space-y-8">
+                      <div>
+                        <h3 className="text-xl font-semibold text-black mb-4">
+                          About This Project:
+                        </h3>
+                        <p className="text-gray-700 leading-relaxed">
+                          I planned, shot, and edited this short humorous video around the experience of eating phở. Post-production done in Adobe Premiere Pro.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Embedded YouTube Video */}
+                <div className="flex justify-center items-center py-8">
+                  <div className="flex items-center justify-center">
+                    <div
+                      className="relative overflow-hidden rounded-lg shadow-lg"
+                      style={{ height: "90vh", aspectRatio: "16 / 9" }}
+                    >
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src="https://www.youtube.com/embed/XAog5HHTw3o"
+                        title="Pho"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                        style={{
+                          border: "none",
+                          overflow: "hidden",
+                          minHeight: "600px",
+                        }}
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Back to Projects Button */}
+                <div className="mt-8 flex justify-center">
+                  <button
+                    onClick={() => {
+                      window.history.back();
+                    }}
+                    className="inline-flex items-center px-6 py-3 bg-gray-300 text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-gray-200 transition-colors font-mono text-sm"
+                  >
+                    ← Back to Projects
+                  </button>
+                </div>
+              </div>
             ) : (
               <>
                 <MediumArticleEmbed
