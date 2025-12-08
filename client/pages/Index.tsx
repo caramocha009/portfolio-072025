@@ -1146,19 +1146,14 @@ export default function Index() {
                   fontFamily: '"JetBrains Mono", monospace',
                 }}
               >
-                Meet Cara Liu – a Designer Who Gets It
+                Meet Cara Liu — a Storyteller Who Cares
               </h4>
               <p>
-                I'm the kind of product designer who thrives in the beautiful
-                chaos where user needs meet business reality. You know those
-                projects that start as "just update the homepage" and somehow
-                evolve into reimagining the entire user journey? That's my
-                specialty.
-              </p>
-              <p>
-                Meet Cara Liu — a Storyteller Who Cares
-
-I'm a content creator and video editor who loves working in the gentle chaos where meaning, emotion, and creativity overlap. You know those projects that start as "just a quick edit" and somehow turn into rethinking the whole story? That tends to be where I feel most at home.
+                I'm a content creator and video editor who loves working in the
+                gentle chaos where meaning, emotion, and creativity overlap. You
+                know those projects that start as "just a quick edit" and
+                somehow turn into rethinking the whole story? That tends to be
+                where I feel most at home.
               </p>
               <p>
                 I care less about chasing perfect metrics and more about whether
