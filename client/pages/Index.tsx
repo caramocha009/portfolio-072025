@@ -1170,9 +1170,7 @@ export default function Index() {
                 feel close-but-not-right, where the story needs a little
                 patience to reveal itself.
               </p>
-              <p>
-                Do you have a story you want to tell? Let's connect!
-              </p>
+              <p>Do you have a story you want to tell? Let's connect!</p>
             </div>
           </div>
         </div>
@@ -1201,7 +1199,10 @@ export default function Index() {
       initialX:
         type === "About"
           ? window.innerWidth < 1024
-            ? Math.max(0, (window.innerWidth - Math.min(window.innerWidth - 40, 720)) / 2)
+            ? Math.max(
+                0,
+                (window.innerWidth - Math.min(window.innerWidth - 40, 720)) / 2,
+              )
             : (window.innerWidth - 720) / 2
           : type === "Contact"
             ? window.innerWidth < 1024
