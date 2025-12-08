@@ -1133,9 +1133,10 @@ export default function Index() {
                 <p className="text-xs leading-relaxed text-gray-700 mb-0">
                   I once viewed my deliberate pace as a limitation, but it's
                   become my design strength. Like a turtle, I move
-                  methodically—diving deep into problems, uncovering insights
-                  others overlook, and communicating with clarity and purpose.
-                  My thoughtful approach isn't slow; it's strategic.
+                  methodically—diving deep into the heart of the story,
+                  uncovering meaning others might overlook, and communicating
+                  with clarity and purpose. My thoughtful approach isn't slow;
+                  it's strategic.
                 </p>
               </div>
             </div>
