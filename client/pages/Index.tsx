@@ -1493,6 +1493,48 @@ export default function Index() {
                         </div>
                       </div>
                     </div>
+
+                    {/* Zen Monk Podcast Episode */}
+                    <div
+                      className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
+                      style={{ aspectRatio: "1 / 1" }}
+                      onClick={() => setCurrentCaseStudy("youtube-zen-monk-podcast")}
+                    >
+                      {/* Video Thumbnail Image */}
+                      <img
+                        src="https://img.youtube.com/vi/Pys3JqhSejE/maxresdefault.jpg"
+                        alt="Podcast Episode with Zen Monk Daishin Eric McCabe"
+                        className="w-full h-full object-cover"
+                      />
+
+                      {/* Play Button Overlay */}
+                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-200 flex items-center justify-center">
+                        <div className="bg-white bg-opacity-90 group-hover:bg-opacity-100 rounded-full p-3 transition-all duration-200 shadow-lg">
+                          <svg
+                            className="w-8 h-8 text-black ml-0.5"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        </div>
+                      </div>
+
+                      {/* Hover Overlay */}
+                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
+                        <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
+                          <h3 className="text-lg font-bold text-center">
+                            Podcast Episode with Zen Monk Daishin Eric McCabe
+                          </h3>
+                          <p className="text-sm text-center text-gray-200">
+                            podcast, YouTube
+                          </p>
+                          <p className="text-xs text-center text-gray-300">
+                            spirituality, interview
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
