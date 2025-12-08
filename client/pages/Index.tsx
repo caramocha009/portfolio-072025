@@ -1842,24 +1842,18 @@ export default function Index() {
                       }
                     >
                       {/* Content */}
-                      <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center group-hover:bg-blue-50 transition-colors">
-                        <div className="text-5xl mb-4">📄</div>
-                        <h3 className="text-lg font-bold text-black mb-2">
-                          PDF Portfolio
-                        </h3>
-                        <p className="text-sm text-gray-700">
-                          Looking for more in-depth case studies?
-                        </p>
-                        <p className="text-xs text-gray-600 mt-2">
-                          Click to download
-                        </p>
+                      <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center">
+                        <div className="text-5xl">📄</div>
                       </div>
 
                       {/* Hover Overlay */}
                       <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex items-center justify-center">
-                        <div className="text-center text-white">
+                        <div className="hidden group-hover:flex flex-col items-center justify-center text-center text-white">
                           <div className="text-4xl mb-2">↓</div>
-                          <p className="font-bold">Download PDF</p>
+                          <p className="font-bold mb-3">Download PDF</p>
+                          <p className="text-sm">
+                            Looking for more in-depth case studies?
+                          </p>
                         </div>
                       </div>
                     </div>
