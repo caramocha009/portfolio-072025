@@ -1854,7 +1854,9 @@ export default function Index() {
                                     ? "Podcast Episode with Zen Monk Daishin Eric McCabe"
                                     : currentCaseStudy === "youtube-pho-short"
                                       ? "Pho"
-                                      : "Case Study"}
+                                      : currentCaseStudy === "youtube-videoboost-ad"
+                                        ? "Videoboost Ad"
+                                        : "Case Study"}
                 </span>
               </div>
 
@@ -1882,7 +1884,9 @@ export default function Index() {
                                     ? "Podcast Episode with Zen Monk Daishin Eric McCabe"
                                     : currentCaseStudy === "youtube-pho-short"
                                       ? "Pho"
-                                      : "Case Study"}
+                                      : currentCaseStudy === "youtube-videoboost-ad"
+                                        ? "Videoboost Ad"
+                                        : "Case Study"}
                 </span>
               </div>
 
