@@ -1155,26 +1155,23 @@ export default function Index() {
                 overlap.&nbsp;
               </p>
               <p>
-                I care less about chasing perfect metrics and more about whether
+                I am less about chasing perfect metrics and more about whether
                 something actually lands. Whether I'm editing long-form YouTube
                 videos, shaping podcast conversations, or creating short-form
                 content for social media, my goal is always the same: make
-                something that feels real, clear, and worth someone's time. I'm
+                something that feels real, clear, and makes an impact. I'm
                 especially drawn to stories around spirituality,
-                self-development, Buddhism, and mindful living—but at the end of
-                the day, I just love helping people share what matters to them.
+                self-development, and mindful living—but at the end of the day,
+                I just love helping people share what matters to them 😊
               </p>
               <p>
                 I'm comfortable in the "messy middle" of the creative process.
                 The part where ideas aren't quite formed yet, where the words
                 feel close-but-not-right, where the story needs a little
-                patience to reveal itself. I like listening closely, asking good
-                questions, and shaping things gently until they click.
+                patience to reveal itself.
               </p>
               <p>
-                From personal creators to thoughtful brands, I've learned that
-                every voice has its own rhythm. My job is to honor that
-                rhythm—without over-polishing the life out of it.
+                Do you have a story you want to tell? Let's connect!
               </p>
             </div>
           </div>
@@ -1225,9 +1222,7 @@ export default function Index() {
             ? Math.min(window.innerHeight - 80, 400)
             : 400
           : type === "About"
-            ? window.innerWidth < 1024
-              ? Math.min(window.innerHeight - 80, 600)
-              : 600
+            ? window.innerHeight - 48
             : type === "Contact"
               ? window.innerWidth < 1024
                 ? window.innerHeight
