@@ -1837,7 +1837,7 @@ export default function Index() {
                       onClick={() =>
                         window.open(
                           "https://drive.google.com/file/d/1a0TLRRRWCdia_SzjcJjvOFQd9uVM5iuZ/view?usp=sharing",
-                          "_blank"
+                          "_blank",
                         )
                       }
                     >
