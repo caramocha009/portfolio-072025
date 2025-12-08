@@ -1830,6 +1830,39 @@ export default function Index() {
                         </div>
                       </div>
                     </div>
+
+                    {/* PDF Portfolio Download */}
+                    <div
+                      className="w-full max-w-sm aspect-square bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg overflow-hidden cursor-pointer group relative border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+                      onClick={() =>
+                        window.open(
+                          "https://drive.google.com/file/d/1a0TLRRRWCdia_SzjcJjvOFQd9uVM5iuZ/view?usp=sharing",
+                          "_blank"
+                        )
+                      }
+                    >
+                      {/* Content */}
+                      <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center group-hover:bg-blue-50 transition-colors">
+                        <div className="text-5xl mb-4">📄</div>
+                        <h3 className="text-lg font-bold text-black mb-2">
+                          PDF Portfolio
+                        </h3>
+                        <p className="text-sm text-gray-700">
+                          Looking for more in-depth case studies?
+                        </p>
+                        <p className="text-xs text-gray-600 mt-2">
+                          Click to download
+                        </p>
+                      </div>
+
+                      {/* Hover Overlay */}
+                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex items-center justify-center">
+                        <div className="text-center text-white">
+                          <div className="text-4xl mb-2">↓</div>
+                          <p className="font-bold">Download PDF</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
