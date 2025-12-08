@@ -809,7 +809,7 @@ export default function Index() {
             <p className="text-black text-base leading-6">
               Hey! I'm <strong>Cara</strong>, your friendly neighborhood content
               creator and video editor. Spent <strong>8+ years</strong>
-              &nbsp;turning concepts into "I watched the thing".
+              &nbsp;turning concepts into "Wowzers".
               <em> Plot twist: I also host a podcast. </em>
               <br />
               <br />
