@@ -1199,7 +1199,7 @@ export default function Index() {
       backgroundColor: bgColor,
       headerColor: headerColor,
       initialX: Math.random() * 200 + 100,
-      initialY: Math.random() * 200 + 100,
+      initialY: type === "About" ? 60 : Math.random() * 200 + 100,
       width:
         type === "Articles"
           ? window.innerWidth < 1024
