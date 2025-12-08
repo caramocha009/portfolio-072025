@@ -1898,7 +1898,9 @@ export default function Index() {
                                       ? "Pho"
                                       : currentCaseStudy === "youtube-videoboost-ad"
                                         ? "Videoboost Ad"
-                                        : "Case Study"}
+                                        : currentCaseStudy === "instagram-food-teaser"
+                                          ? "Teaser for Food Taste Test Video"
+                                          : "Case Study"}
                 </span>
               </div>
 
@@ -1928,7 +1930,9 @@ export default function Index() {
                                       ? "Pho"
                                       : currentCaseStudy === "youtube-videoboost-ad"
                                         ? "Videoboost Ad"
-                                        : "Case Study"}
+                                        : currentCaseStudy === "instagram-food-teaser"
+                                          ? "Teaser for Food Taste Test Video"
+                                          : "Case Study"}
                 </span>
               </div>
 
