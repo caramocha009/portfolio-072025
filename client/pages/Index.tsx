@@ -1498,7 +1498,9 @@ export default function Index() {
                     <div
                       className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
                       style={{ aspectRatio: "1 / 1" }}
-                      onClick={() => setCurrentCaseStudy("youtube-zen-monk-podcast")}
+                      onClick={() =>
+                        setCurrentCaseStudy("youtube-zen-monk-podcast")
+                      }
                     >
                       {/* Video Thumbnail Image */}
                       <img
@@ -1768,7 +1770,8 @@ export default function Index() {
                                 ? "Vidoe Editing Demo Reel"
                                 : currentCaseStudy === "instagram-holding-court"
                                   ? "Holding Court Method"
-                                  : currentCaseStudy === "youtube-zen-monk-podcast"
+                                  : currentCaseStudy ===
+                                      "youtube-zen-monk-podcast"
                                     ? "Podcast Episode with Zen Monk Daishin Eric McCabe"
                                     : "Case Study"}
                 </span>
@@ -1793,7 +1796,8 @@ export default function Index() {
                                 ? "Vidoe Editing Demo Reel"
                                 : currentCaseStudy === "instagram-holding-court"
                                   ? "Holding Court Method"
-                                  : currentCaseStudy === "youtube-zen-monk-podcast"
+                                  : currentCaseStudy ===
+                                      "youtube-zen-monk-podcast"
                                     ? "Podcast Episode with Zen Monk Daishin Eric McCabe"
                                     : "Case Study"}
                 </span>
@@ -2513,7 +2517,9 @@ export default function Index() {
                           About This Project:
                         </h3>
                         <p className="text-gray-700 leading-relaxed">
-                          Filmed, produced and edited this podcast episode where I interviewed a Zen monk about the role of Zen Buddhism in modern life.
+                          Filmed, produced and edited this podcast episode where
+                          I interviewed a Zen monk about the role of Zen
+                          Buddhism in modern life.
                         </p>
                       </div>
                     </div>
