@@ -806,12 +806,12 @@ export default function Index() {
       content: (
         <div className="flex items-center h-full">
           <p className="text-black text-base leading-6">
-            Hey! I'm <strong>Cara</strong>—your friendly neighborhood product designer &
-            content creator. For <strong>8+ years</strong>, I've helped people turn early ideas into
+            Hey! I'm <strong>Cara</strong>—your friendly neighborhood <u>product designer</u> &{" "}
+            <u>content creator</u>. For <strong>8+ years</strong>, I've helped people turn early ideas into
             thoughtful products, beautiful visuals, and scroll-stopping stories.
             <br />
             <br />
-            What vision can we bring to life together?
+            <i>What vision can we bring to life together?</i>
           </p>
         </div>
       ),
