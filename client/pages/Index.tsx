@@ -810,7 +810,6 @@ export default function Index() {
               Hey! I'm <strong>Cara</strong>—your friendly neighborhood product designer &
               content creator.
               <br />
-              <br />
               For <strong>8+ years</strong>, I've helped people turn early ideas into
               thoughtful products, beautiful visuals, and scroll-stopping stories.
               <br />
