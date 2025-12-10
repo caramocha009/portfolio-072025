@@ -814,9 +814,6 @@ export default function Index() {
               thoughtful products, beautiful visuals, and scroll-stopping stories.
               <br />
               <br />
-              <em> Plot twist: I also host a podcast. </em>
-              <br />
-              <br />
               What vision can we bring to life together?
             </p>
           </div>
