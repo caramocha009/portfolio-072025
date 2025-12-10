@@ -1132,11 +1132,11 @@ export default function Index() {
                 </h5>
                 <p className="text-xs leading-relaxed text-gray-700 mb-0">
                   I once viewed my deliberate pace as a limitation, but it's
-                  become my design strength. Like a turtle, I move
-                  methodically—diving deep into the heart of the story
-                  or problem, uncovering meaning others might overlook,
-                  and communicating with clarity and purpose. My thoughtful
-                  approach isn't slow; it's strategic.
+                  become my biggest creative strength. Like a turtle, I move
+                  methodically—diving deep into the heart of a story or a
+                  problem, noticing nuances others might overlook, and
+                  communicating with intention and clarity. My approach isn't
+                  slow; it's strategic.
                 </p>
               </div>
             </div>
@@ -1147,30 +1147,45 @@ export default function Index() {
                   fontFamily: '"JetBrains Mono", monospace',
                 }}
               >
-                Meet Cara Liu — a Storyteller Who Cares
+                Meet Cara Liu — a Storyteller & Designer Who Cares
               </h4>
               <p>
-                I'm a designer and content creator who loves working in
-                the gentle chaos where meaning, emotion, and creativity
-                overlap.&nbsp;
+                I'm a product designer and content creator who loves working in
+                the gentle chaos where meaning, emotion, and creativity overlap.
+                Whether I'm designing intuitive user experiences or editing
+                videos that make people feel something, my work always comes back
+                to one core question:
               </p>
               <p>
-                I am less about chasing perfect metrics and more about whether
-                something actually lands. Whether I'm editing long-form YouTube
-                videos, shaping podcast conversations, or creating short-form
-                content for social media, my goal is always the same: make
-                something that feels real, clear, and makes an impact. I'm
-                especially drawn to stories around spirituality,
-                self-development, and mindful living—but at the end of the day,
-                I just love helping people share what matters to them 😊
+                <strong>Does this actually land with the person on the other
+                  side?</strong>
               </p>
               <p>
-                I'm comfortable in the "messy middle" of the creative process.
-                The part where ideas aren't quite formed yet, where the words
-                feel close-but-not-right, where the story needs a little
-                patience to reveal itself.
+                I'm less concerned about chasing perfect metrics and more focused
+                on clarity, resonance, and impact. In design, that means
+                uncovering the real user problem and crafting solutions that feel
+                effortless and human. In content, that means shaping long-form
+                YouTube videos, podcast conversations, or short-form social
+                content in a way that tells a true, emotionally grounded story.
               </p>
-              <p>Do you have a story you want to tell? Let's connect!</p>
+              <p>
+                I'm especially drawn to themes of spirituality, self-development,
+                and mindful living—but at the end of the day, I just love helping
+                people express what matters to them, whether through an interface
+                or a frame on a timeline.
+              </p>
+              <p>
+                I'm comfortable in the "messy middle" of the creative process:
+                The place where ideas are half-formed, where pixels or words are
+                close-but-not-quite, and where patience is required for a
+                story—or a design solution—to reveal itself.
+              </p>
+              <p>
+                <strong>Do you have a story to tell or a product to bring to
+                  life?</strong>
+                <br />
+                Let's connect.
+              </p>
             </div>
           </div>
         </div>
