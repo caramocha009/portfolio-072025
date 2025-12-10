@@ -1133,10 +1133,10 @@ export default function Index() {
                 <p className="text-xs leading-relaxed text-gray-700 mb-0">
                   I once viewed my deliberate pace as a limitation, but it's
                   become my design strength. Like a turtle, I move
-                  methodically—diving deep into the heart of the story,
-                  uncovering meaning others might overlook, and communicating
-                  with clarity and purpose. My thoughtful approach isn't slow;
-                  it's strategic.
+                  methodically—diving deep into the heart of the story
+                  or problem, uncovering meaning others might overlook,
+                  and communicating with clarity and purpose. My thoughtful
+                  approach isn't slow; it's strategic.
                 </p>
               </div>
             </div>
@@ -1150,8 +1150,8 @@ export default function Index() {
                 Meet Cara Liu — a Storyteller Who Cares
               </h4>
               <p>
-                I'm a content creator and video editor who loves working in the
-                gentle chaos where meaning, emotion, and creativity
+                I'm a designer and content creator who loves working in
+                the gentle chaos where meaning, emotion, and creativity
                 overlap.&nbsp;
               </p>
               <p>
