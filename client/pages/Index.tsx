@@ -804,7 +804,7 @@ export default function Index() {
         : 250,
       zIndex: 10,
       content: (
-        <div className="space-y-5">
+        <div className="space-y-5 p-4">
           <div>
             <p className="text-black text-base leading-6">
               Hey! I'm <strong>Cara</strong>—your friendly neighborhood product designer &
