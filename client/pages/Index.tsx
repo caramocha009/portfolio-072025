@@ -807,13 +807,18 @@ export default function Index() {
         <div className="space-y-5">
           <div>
             <p className="text-black text-base leading-6">
-              Hey! I'm <strong>Cara</strong>, your friendly neighborhood product designer &
-              content creator. Spent <strong>8+ years</strong>
-              &nbsp;turning concepts into "Wowzers".
+              Hey! I'm <strong>Cara</strong>—your friendly neighborhood product designer &
+              content creator.
+              <br />
+              <br />
+              For <strong>8+ years</strong>, I've helped people turn early ideas into
+              thoughtful products, beautiful visuals, and scroll-stopping stories.
+              <br />
+              <br />
               <em> Plot twist: I also host a podcast. </em>
               <br />
               <br />
-              What vision can I help make into reality?
+              What vision can we bring to life together?
             </p>
           </div>
         </div>
