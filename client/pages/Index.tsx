@@ -3189,7 +3189,7 @@ export default function Index() {
                 label="Resume"
                 onClick={() =>
                   window.open(
-                    "https://drive.google.com/file/d/1cth2ND8UU_BhTicFHnxy-YfiXmTE3UPj/view?usp=sharing",
+                    "https://drive.google.com/drive/folders/1bxaWL-_3onqLolEN3W-oFauKf1bQOA3T?usp=sharing",
                     "_blank",
                   )
                 }
