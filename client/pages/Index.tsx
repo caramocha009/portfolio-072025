@@ -1225,7 +1225,13 @@ export default function Index() {
               : (window.innerWidth - 600) / 2
             : Math.random() * 200 + 100,
       initialY:
-        type === "About" || type === "Contact" ? 80 : Math.random() * 200 + 100,
+        type === "About"
+          ? (window.innerHeight - (window.innerHeight - 48)) / 2
+          : type === "Contact"
+            ? window.innerWidth < 1024
+              ? 0
+              : (window.innerHeight - 632) / 2
+            : Math.random() * 200 + 100,
       width:
         type === "Articles"
           ? window.innerWidth < 1024
