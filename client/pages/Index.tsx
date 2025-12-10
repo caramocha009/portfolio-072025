@@ -804,8 +804,8 @@ export default function Index() {
         : 250,
       zIndex: 10,
       content: (
-        <div className="flex items-center justify-center h-full">
-          <p className="text-black text-base leading-6 text-center">
+        <div className="flex items-center h-full">
+          <p className="text-black text-base leading-6">
             Hey! I'm <strong>Cara</strong>—your friendly neighborhood product designer &
             content creator. For <strong>8+ years</strong>, I've helped people turn early ideas into
             thoughtful products, beautiful visuals, and scroll-stopping stories.
