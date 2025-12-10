@@ -808,9 +808,7 @@ export default function Index() {
           <div>
             <p className="text-black text-base leading-6">
               Hey! I'm <strong>Cara</strong>—your friendly neighborhood product designer &
-              content creator.
-              <br />
-              For <strong>8+ years</strong>, I've helped people turn early ideas into
+              content creator. For <strong>8+ years</strong>, I've helped people turn early ideas into
               thoughtful products, beautiful visuals, and scroll-stopping stories.
               <br />
               <br />
