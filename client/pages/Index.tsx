@@ -807,8 +807,8 @@ export default function Index() {
         <div className="space-y-5">
           <div>
             <p className="text-black text-base leading-6">
-              Hey! I'm <strong>Cara</strong>, your friendly neighborhood content
-              creator and video editor. Spent <strong>8+ years</strong>
+              Hey! I'm <strong>Cara</strong>, your friendly neighborhood product
+              designer, content creator and video editor. Spent <strong>8+ years</strong>
               &nbsp;turning concepts into "Wowzers".
               <em> Plot twist: I also host a podcast. </em>
               <br />
