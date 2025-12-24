@@ -2012,14 +2012,14 @@ export default function Index() {
               >
                 ← Back to Home
               </button>
+            </div>
 
-              {/* Progress Bar - Under Breadcrumb */}
-              <div className="w-full h-2 bg-black overflow-hidden">
-                <div
-                  className="h-full bg-gradient-to-r from-desktop-blue via-blue-600 to-pink-500 transition-all duration-150"
-                  style={{ width: `${scrollProgress}%` }}
-                />
-              </div>
+            {/* Progress Bar - Under Breadcrumb */}
+            <div className="w-full h-2 bg-black overflow-hidden">
+              <div
+                className="h-full bg-gradient-to-r from-desktop-blue via-blue-600 to-pink-500 transition-all duration-150"
+                style={{ width: `${scrollProgress}%` }}
+              />
             </div>
           </div>
 
