@@ -2039,9 +2039,12 @@ export default function Index() {
               {/* Back to Projects Button */}
               <button
                 onClick={() => {
-                  setCurrentCaseStudy(null);
-                  setIsProjectsFullscreenOpen(false);
-                  setCurrentFullscreenType(null);
+                  if (currentCaseStudy) {
+                    setCurrentCaseStudy(null);
+                  } else {
+                    setIsProjectsFullscreenOpen(false);
+                    setCurrentFullscreenType(null);
+                  }
                 }}
                 className="px-3 py-1 bg-gray-300 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:bg-gray-200 transition-colors font-mono text-xs"
               >
