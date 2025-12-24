@@ -3130,7 +3130,8 @@ export default function Index() {
               href="https://www.linkedin.com/in/cara-liu"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-desktop-blue hover:opacity-80 p-1 cursor-pointer"
+              className="text-desktop-blue hover:opacity-80 p-1"
+              style={{ cursor: "pointer" }}
             >
               <svg
                 width="20"
@@ -3151,7 +3152,8 @@ export default function Index() {
               href="https://www.youtube.com/@sentientbeans"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-desktop-blue hover:opacity-80 p-1 cursor-pointer"
+              className="text-desktop-blue hover:opacity-80 p-1"
+              style={{ cursor: "pointer" }}
             >
               <svg
                 width="20"
