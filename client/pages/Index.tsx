@@ -3311,7 +3311,7 @@ export default function Index() {
           {/* Desktop Layout - Desktop Only */}
           <div className="hidden lg:block">
             {/* First Column - Left Side */}
-            {/* Works Icon - Top of first column */}
+            {/* Product Design Icon - Top of first column */}
             <div
               className="absolute z-20"
               style={{ top: "calc(24px + 1vw)", left: "calc(24px + 1vw)" }}
@@ -3319,14 +3319,14 @@ export default function Index() {
               onMouseLeave={() => setAsciiArtColor("#ffffff")}
             >
               <DesktopIcon
-                icon={<WorksIcon />}
-                label="Projects"
-                onClick={() => openNewWindow("Projects")}
+                icon={<ProductDesignIcon />}
+                label="Product Design"
+                onClick={() => openNewWindow("Product Design")}
                 className="scale-75 md:scale-90"
               />
             </div>
 
-            {/* Read Icon - Second in first column */}
+            {/* Resume Icon - Second in first column */}
             <div
               className="absolute z-20"
               style={{
@@ -3349,7 +3349,7 @@ export default function Index() {
               />
             </div>
 
-            {/* Product Design Icon - Third in first column */}
+            {/* About Icon - Third in first column */}
             <div
               className="absolute z-20"
               style={{
@@ -3360,9 +3360,9 @@ export default function Index() {
               onMouseLeave={() => setAsciiArtColor("#ffffff")}
             >
               <DesktopIcon
-                icon={<ProductDesignIcon />}
-                label="Product Design"
-                onClick={() => openNewWindow("Product Design")}
+                icon={<AboutIcon />}
+                label="About"
+                onClick={() => openNewWindow("About")}
                 className="scale-75 md:scale-90"
               />
             </div>
