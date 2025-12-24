@@ -2017,8 +2017,11 @@ export default function Index() {
             {/* Progress Bar - Under Breadcrumb */}
             <div className="w-full h-2 bg-white border-b-2 border-black">
               <div
-                className="h-full bg-gradient-to-r from-desktop-blue via-blue-600 to-pink-500 transition-all duration-150"
-                style={{ width: `${scrollProgress}%` }}
+                className="h-full transition-all duration-150"
+                style={{
+                  width: `${scrollProgress}%`,
+                  backgroundImage: "repeating-linear-gradient(45deg, #5b3a9e, #5b3a9e 10px, #0066ff 10px, #0066ff 20px)",
+                }}
               />
             </div>
           </div>
