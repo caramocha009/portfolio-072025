@@ -1315,6 +1315,7 @@ export default function Index() {
                 : 300,
       zIndex: nextZIndex,
       content: windowContent,
+      title: type === "Contact" ? "Contact Me" : type === "About" ? "About" : type === "Articles" ? "Articles" : type,
     };
     setOpenWindows((prev) => [...prev, newWindow]);
     setNextZIndex((prev) => prev + 1);
