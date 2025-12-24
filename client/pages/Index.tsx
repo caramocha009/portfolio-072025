@@ -1955,10 +1955,9 @@ export default function Index() {
               <div className="hidden lg:flex items-center gap-2">
                 <button
                   onClick={() => {
-                    if (currentCaseStudy && currentFullscreenType) {
+                    if (currentCaseStudy) {
                       setCurrentCaseStudy(null);
                     } else {
-                      setCurrentCaseStudy(null);
                       setIsProjectsFullscreenOpen(false);
                       setCurrentFullscreenType(null);
                     }
