@@ -1341,14 +1341,26 @@ export default function Index() {
                 {(currentFullscreenType === "Content Creation" ||
                   currentFullscreenType === null) && (
                   <div className="mb-12">
-                    <h2
-                      className="text-2xl font-bold text-black mb-6"
-                      style={{ fontFamily: '"JetBrains Mono", monospace' }}
-                    >
-                      {currentFullscreenType === "Content Creation"
-                        ? "Content Creation"
-                        : "Content Creation & Video Editing"}
-                    </h2>
+                    <div className="flex items-center justify-between mb-6">
+                      <h2
+                        className="text-2xl font-bold text-black"
+                        style={{ fontFamily: '"JetBrains Mono", monospace' }}
+                      >
+                        {currentFullscreenType === "Content Creation"
+                          ? "Content Creation"
+                          : "Content Creation & Video Editing"}
+                      </h2>
+                      {currentFullscreenType === "Content Creation" && (
+                        <a
+                          href="https://drive.google.com/file/d/1B405jnP-szDIfLJAs-ETUbb9Y7HK1Yw1/view?usp=drive_link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white border border-purple-700 rounded font-mono font-bold text-sm transition-colors"
+                        >
+                          📄 View Resume
+                        </a>
+                      )}
+                    </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center max-w-full">
                       {/* Demo Reel Video */}
                       <div
