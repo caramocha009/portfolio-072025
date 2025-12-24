@@ -3224,11 +3224,30 @@ export default function Index() {
               />
             </div>
 
-            {/* Resume Icon - Second in first column */}
+            {/* Content Creation Icon - Second in first column */}
             <div
               className="absolute z-20 flex items-start justify-center"
               style={{
                 top: "calc(24px + 1vw + 142px)",
+                left: "calc(24px + 1vw)",
+                width: "160px",
+              }}
+              onMouseEnter={() => setAsciiArtColor("#f472b6")}
+              onMouseLeave={() => setAsciiArtColor("#ffffff")}
+            >
+              <DesktopIcon
+                icon={<ContentCreationIcon />}
+                label="Content Creation"
+                onClick={() => openNewWindow("Content Creation")}
+                className="scale-75 md:scale-90"
+              />
+            </div>
+
+            {/* Resume Icon - Third in first column */}
+            <div
+              className="absolute z-20 flex items-start justify-center"
+              style={{
+                top: "calc(24px + 1vw + 284px)",
                 left: "calc(24px + 1vw)",
                 width: "160px",
               }}
@@ -3248,11 +3267,11 @@ export default function Index() {
               />
             </div>
 
-            {/* About Icon - Third in first column */}
+            {/* About Icon - Fourth in first column */}
             <div
               className="absolute z-20 flex items-start justify-center"
               style={{
-                top: "calc(24px + 1vw + 284px)",
+                top: "calc(24px + 1vw + 426px)",
                 left: "calc(24px + 1vw)",
                 width: "160px",
               }}
@@ -3263,25 +3282,6 @@ export default function Index() {
                 icon={<AboutIcon />}
                 label="About"
                 onClick={() => openNewWindow("About")}
-                className="scale-75 md:scale-90"
-              />
-            </div>
-
-            {/* Content Creation Icon - Fourth in first column */}
-            <div
-              className="absolute z-20 flex items-start justify-center"
-              style={{
-                top: "calc(24px + 1vw + 426px)",
-                left: "calc(24px + 1vw)",
-                width: "160px",
-              }}
-              onMouseEnter={() => setAsciiArtColor("#f472b6")}
-              onMouseLeave={() => setAsciiArtColor("#ffffff")}
-            >
-              <DesktopIcon
-                icon={<ContentCreationIcon />}
-                label="Content Creation"
-                onClick={() => openNewWindow("Content Creation")}
                 className="scale-75 md:scale-90"
               />
             </div>
