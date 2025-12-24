@@ -1978,28 +1978,26 @@ export default function Index() {
                       ? "Hy-Vee Aisles Online"
                       : currentCaseStudy === "ascent-logistics"
                         ? "Ascent Global Logistics"
-                        : currentCaseStudy === "boa-merchant-checkout"
-                          ? "Bank of America Merchant Partner Checkout"
-                          : currentCaseStudy === "bali-retreat"
-                            ? "Bali Women's Retreat"
-                            : currentCaseStudy === "youtube-josiah-schneider"
-                              ? "Target Guy"
-                              : currentCaseStudy === "youtube-demo-reel"
-                                ? "Video Editing Demo Reel"
-                                : currentCaseStudy === "instagram-holding-court"
-                                  ? "Holding Court Method"
-                                  : currentCaseStudy ===
-                                      "youtube-zen-monk-podcast"
-                                    ? "Podcast Episode with Zen Monk Daishin Eric McCabe"
-                                    : currentCaseStudy === "youtube-pho-short"
-                                      ? "Pho"
+                        : currentCaseStudy === "bali-retreat"
+                          ? "Bali Women's Retreat"
+                          : currentCaseStudy === "youtube-josiah-schneider"
+                            ? "Target Guy"
+                            : currentCaseStudy === "youtube-demo-reel"
+                              ? "Video Editing Demo Reel"
+                              : currentCaseStudy === "instagram-holding-court"
+                                ? "Holding Court Method"
+                                : currentCaseStudy ===
+                                    "youtube-zen-monk-podcast"
+                                  ? "Podcast Episode with Zen Monk Daishin Eric McCabe"
+                                  : currentCaseStudy === "youtube-pho-short"
+                                    ? "Pho"
+                                    : currentCaseStudy ===
+                                        "youtube-videoboost-ad"
+                                      ? "Videoboost Ad"
                                       : currentCaseStudy ===
-                                          "youtube-videoboost-ad"
-                                        ? "Videoboost Ad"
-                                        : currentCaseStudy ===
-                                            "instagram-food-teaser"
-                                          ? "Teaser for Food Taste Test Video"
-                                          : "Case Study"}
+                                          "instagram-food-teaser"
+                                        ? "Teaser for Food Taste Test Video"
+                                        : "Case Study"}
                 </span>
               </div>
 
