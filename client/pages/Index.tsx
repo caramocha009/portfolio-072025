@@ -9,6 +9,8 @@ import {
   AboutIcon,
   PlaylistIcon,
   RecyclingIcon,
+  ProductDesignIcon,
+  ContentCreationIcon,
 } from "@/components/ui/folder-icons";
 
 interface MediumArticle {
