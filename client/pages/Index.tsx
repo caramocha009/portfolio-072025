@@ -1285,6 +1285,48 @@ export default function Index() {
       {/* Fullscreen Projects Window */}
       {isProjectsFullscreenOpen && (
         <div className="fixed inset-0 bg-white z-[9999] flex flex-col">
+          {/* Breadcrumb Header */}
+          <div className="border-b-2 border-black bg-white sticky top-0 z-[10000] shadow-[0_4px_0px_0px_rgba(0,0,0,1)]">
+            <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+              {/* Desktop Breadcrumbs */}
+              <div className="hidden lg:flex items-center gap-2">
+                <button
+                  onClick={() => setIsProjectsFullscreenOpen(false)}
+                  className="text-black font-mono text-sm hover:opacity-70 transition-opacity cursor-pointer"
+                >
+                  🏠 Home
+                </button>
+                <span className="text-black font-mono text-sm">→</span>
+                <span className="text-black font-mono text-sm">
+                  {currentFullscreenType === "Product Design"
+                    ? "📂 Product Design"
+                    : currentFullscreenType === "Content Creation"
+                      ? "📂 Content Creation"
+                      : "📂 Projects"}
+                </span>
+              </div>
+
+              {/* Mobile Breadcrumb */}
+              <div className="lg:hidden">
+                <span className="text-black font-mono text-sm font-bold">
+                  {currentFullscreenType === "Product Design"
+                    ? "Product Design"
+                    : currentFullscreenType === "Content Creation"
+                      ? "Content Creation"
+                      : "Projects"}
+                </span>
+              </div>
+
+              {/* Back Button */}
+              <button
+                onClick={() => setIsProjectsFullscreenOpen(false)}
+                className="px-3 py-1 bg-gray-300 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:bg-gray-200 transition-colors font-mono text-xs"
+              >
+                ← Back
+              </button>
+            </div>
+          </div>
+
           {/* Window Header - Full Width */}
           <div className="h-8 bg-white border-b-2 border-black relative">
             {/* Full-width horizontal lines */}
