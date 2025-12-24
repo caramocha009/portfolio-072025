@@ -18,13 +18,14 @@ export function createServer() {
 
   app.get("/api/demo", handleDemo);
 
-  // Serve static files
-  app.use(express.static(path.join(__dirname, "../dist/spa"), { maxAge: "1h" }));
+  // In production, serve static files and fallback to index.html for SPA routing
+  if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname, "../dist/spa"), { maxAge: "1h" }));
 
-  // Fallback route for SPA - serve index.html for all non-API routes
-  app.get("*", (_req, res) => {
-    res.sendFile(path.join(__dirname, "../dist/spa/index.html"));
-  });
+    app.get("*", (_req, res) => {
+      res.sendFile(path.join(__dirname, "../dist/spa/index.html"));
+    });
+  }
 
   return app;
 }
