@@ -1327,49 +1327,6 @@ export default function Index() {
             </div>
           </div>
 
-          {/* Window Header - Full Width */}
-          <div className="h-8 bg-white border-b-2 border-black relative">
-            {/* Full-width horizontal lines */}
-            <div className="absolute inset-0 flex flex-col justify-center gap-1 px-2">
-              <div className="w-full h-0.5 bg-black" />
-              <div className="w-full h-0.5 bg-black" />
-              <div className="w-full h-0.5 bg-black" />
-            </div>
-
-            {/* Window Title */}
-            <div className="absolute inset-0 flex items-center justify-center px-8">
-              <div className="text-black text-sm font-bold chicago-font-sm text-center px-2 rounded-sm bg-white">
-                {currentFullscreenType === "Product Design"
-                  ? "Product Design"
-                  : currentFullscreenType === "Content Creation"
-                    ? "Content Creation"
-                    : "Projects"}
-              </div>
-            </div>
-
-            {/* Close button */}
-            <div className="absolute right-2 top-1/2 transform -translate-y-1/2">
-              <button
-                onClick={() => setIsProjectsFullscreenOpen(false)}
-                className="w-6 h-6 flex items-center justify-center hover:bg-black hover:bg-opacity-10 rounded-sm bg-white"
-              >
-                <svg width="14" height="20" viewBox="0 0 14 20" fill="none">
-                  <path
-                    d="M0.699951 3.7H13.3V16.3H0.699951V3.7Z"
-                    fill="white"
-                    stroke="black"
-                    strokeWidth="1.4"
-                  />
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M2.38963 4.4H11.6097L6.99966 9.00984L2.38963 4.4ZM1.4 5.39026V14.6093L6.00969 9.99976L1.4 5.39026ZM6.99966 10.9897L2.38916 15.6H11.6101L6.99966 10.9897ZM12.6 14.6099V5.38958L7.98966 9.99976L12.6 14.6099ZM1.4 3H0V4.4V15.6V17H1.4H12.6H14V15.6V4.4V3H12.6H1.4Z"
-                    fill="black"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
 
           {/* Content Area */}
           <div className="flex-1 flex overflow-hidden">
