@@ -893,7 +893,7 @@ export default function Index() {
       setCurrentFullscreenType("Product/UX");
     } else if (pathname === "/projects/content-creation") {
       setIsProjectsFullscreenOpen(true);
-      setCurrentFullscreenType("Video Editing/Content");
+      setCurrentFullscreenType("Video Editing");
     } else if (
       pathname &&
       pathname !== "/" &&
