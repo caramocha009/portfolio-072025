@@ -862,30 +862,51 @@ export default function Index() {
   // Handle URL-based case study navigation
   useEffect(() => {
     const handlePopState = () => {
-      const caseStudyId = window.location.hash.replace("#/projects/", "");
-      if (caseStudyId && caseStudyId !== window.location.hash) {
-        setCurrentCaseStudy(caseStudyId);
-      } else if (window.location.hash === "" || window.location.hash === "#/") {
+      const hash = window.location.hash;
+
+      if (hash === "" || hash === "#/") {
         setCurrentCaseStudy(null);
+        setIsProjectsFullscreenOpen(false);
+        setCurrentFullscreenType(null);
+      } else if (hash === "#/projects/product-design") {
+        setIsProjectsFullscreenOpen(true);
+        setCurrentFullscreenType("Product Design");
+        setCurrentCaseStudy(null);
+      } else if (hash === "#/projects/content-creation") {
+        setIsProjectsFullscreenOpen(true);
+        setCurrentFullscreenType("Content Creation");
+        setCurrentCaseStudy(null);
+      } else {
+        const caseStudyId = hash.replace("#/projects/", "");
+        if (caseStudyId && caseStudyId !== hash) {
+          setCurrentCaseStudy(caseStudyId);
+          setIsProjectsFullscreenOpen(true);
+        }
       }
     };
 
     window.addEventListener("popstate", handlePopState);
 
     // Check initial URL on mount
-    const initialCaseStudyId = window.location.hash.replace("#/projects/", "");
-    if (
-      initialCaseStudyId &&
-      initialCaseStudyId !== window.location.hash &&
-      initialCaseStudyId !== ""
-    ) {
-      setCurrentCaseStudy(initialCaseStudyId);
+    const hash = window.location.hash;
+    if (hash === "#/projects/product-design") {
+      setIsProjectsFullscreenOpen(true);
+      setCurrentFullscreenType("Product Design");
+    } else if (hash === "#/projects/content-creation") {
+      setIsProjectsFullscreenOpen(true);
+      setCurrentFullscreenType("Content Creation");
+    } else if (hash && hash !== "#/" && hash !== "") {
+      const caseStudyId = hash.replace("#/projects/", "");
+      if (caseStudyId && caseStudyId !== hash) {
+        setCurrentCaseStudy(caseStudyId);
+        setIsProjectsFullscreenOpen(true);
+      }
     }
 
     return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
-  // Update URL when case study changes
+  // Update URL when case study or fullscreen type changes
   useEffect(() => {
     if (currentCaseStudy) {
       window.history.pushState(
@@ -893,10 +914,22 @@ export default function Index() {
         `${currentCaseStudy}`,
         `#/projects/${currentCaseStudy}`,
       );
+    } else if (currentFullscreenType === "Product Design") {
+      window.history.pushState(
+        { fullscreenType: "Product Design" },
+        "Product Design",
+        "#/projects/product-design",
+      );
+    } else if (currentFullscreenType === "Content Creation") {
+      window.history.pushState(
+        { fullscreenType: "Content Creation" },
+        "Content Creation",
+        "#/projects/content-creation",
+      );
     } else {
-      window.history.pushState({}, "Projects", "#/");
+      window.history.pushState({}, "Home", "#/");
     }
-  }, [currentCaseStudy]);
+  }, [currentCaseStudy, currentFullscreenType]);
 
   useEffect(() => {
     if (currentCaseStudy) {
