@@ -3371,15 +3371,7 @@ export default function Index() {
                 width={window.width}
                 height={window.height}
                 zIndex={window.zIndex}
-                title={
-                  window.id.startsWith("Articles")
-                    ? "Articles"
-                    : window.id.startsWith("Projects")
-                      ? "Projects"
-                      : window.id.startsWith("About")
-                        ? "About"
-                        : undefined
-                }
+                title={window.title}
                 resizable={!window.id.startsWith("sticky")}
                 onClose={() => closeWindow(window.id)}
                 onBringToFront={() => bringToFront(window.id)}
