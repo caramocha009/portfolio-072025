@@ -299,7 +299,7 @@ export function YourBagIcon() {
 export function ProductDesignIcon() {
   return (
     <img
-      src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F65b5045c8e824b6aa99dd17191c16c89?format=webp&width=800"
+      src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F49762b6e55b14bc7b267b30bc86bb3ee?format=webp&width=800"
       alt="Product Design"
       className="w-24 h-24"
     />
