@@ -2933,7 +2933,7 @@ export default function Index() {
       <div className="min-h-screen bg-gradient-to-bl from-purple-500 via-desktop-blue to-blue-800 overflow-hidden relative">
         {/* ASCII Art Background */}
         <div
-          className="absolute inset-0 pointer-events-none z-0 opacity-20 hover:opacity-40 transition-opacity duration-500"
+          className="absolute inset-0 pointer-events-none z-0 opacity-20 transition-opacity duration-500"
           style={{
             fontFamily: '"JetBrains Mono", monospace',
             fontSize: "8px",
