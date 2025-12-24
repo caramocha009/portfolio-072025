@@ -83,7 +83,6 @@ function ContactForm() {
 
   return (
     <div className="text-black p-6 overflow-y-auto flex flex-col h-full">
-
       {submitStatus === "success" && (
         <div className="mb-4 p-3 bg-green-100 border border-green-400 text-green-700 rounded">
           Thanks for your message! I'll get back to you soon.
@@ -1314,7 +1313,14 @@ export default function Index() {
                 : 300,
       zIndex: nextZIndex,
       content: windowContent,
-      title: type === "Contact" ? "Contact Me" : type === "About" ? "About" : type === "Articles" ? "Articles" : type,
+      title:
+        type === "Contact"
+          ? "Contact Me"
+          : type === "About"
+            ? "About"
+            : type === "Articles"
+              ? "Articles"
+              : type,
     };
     setOpenWindows((prev) => [...prev, newWindow]);
     setNextZIndex((prev) => prev + 1);
@@ -3318,7 +3324,7 @@ export default function Index() {
                 <DesktopIcon
                   icon={<ProductDesignIcon />}
                   label="Product/UX"
-                onClick={() => openNewWindow("Product/UX")}
+                  onClick={() => openNewWindow("Product/UX")}
                   className="scale-90"
                 />
               </div>
@@ -3334,7 +3340,7 @@ export default function Index() {
                 <DesktopIcon
                   icon={<ContentCreationIcon />}
                   label="Video Editing"
-                onClick={() => openNewWindow("Video Editing")}
+                  onClick={() => openNewWindow("Video Editing")}
                   className="scale-90"
                 />
               </div>
