@@ -874,7 +874,7 @@ export default function Index() {
         setCurrentCaseStudy(null);
       } else if (pathname === "/projects/content-creation") {
         setIsProjectsFullscreenOpen(true);
-        setCurrentFullscreenType("Content");
+        setCurrentFullscreenType("Video Editing/Content");
         setCurrentCaseStudy(null);
       } else if (pathname.startsWith("/projects/")) {
         const caseStudyId = pathname.replace("/projects/", "");
@@ -894,7 +894,7 @@ export default function Index() {
       setCurrentFullscreenType("Product/UX");
     } else if (pathname === "/projects/content-creation") {
       setIsProjectsFullscreenOpen(true);
-      setCurrentFullscreenType("Content");
+      setCurrentFullscreenType("Video Editing/Content");
     } else if (
       pathname &&
       pathname !== "/" &&
@@ -924,10 +924,10 @@ export default function Index() {
         "Product/UX",
         "/projects/product-design",
       );
-    } else if (currentFullscreenType === "Content") {
+    } else if (currentFullscreenType === "Video Editing/Content") {
       window.history.pushState(
-        { fullscreenType: "Content" },
-        "Content",
+        { fullscreenType: "Video Editing/Content" },
+        "Video Editing/Content",
         "/projects/content-creation",
       );
     } else {
@@ -1066,7 +1066,7 @@ export default function Index() {
     if (
       type === "Projects" ||
       type === "Product/UX" ||
-      type === "Content"
+      type === "Video Editing/Content"
     ) {
       setIsProjectsFullscreenOpen(true);
       setCurrentFullscreenType(type);
@@ -1340,8 +1340,8 @@ export default function Index() {
                 <span className="text-black font-mono text-sm">
                   {currentFullscreenType === "Product/UX"
                     ? "📂 Product/UX"
-                    : currentFullscreenType === "Content"
-                      ? "📂 Content"
+                    : currentFullscreenType === "Video Editing/Content"
+                      ? "📂 Video Editing/Content"
                       : "📂 Projects"}
                 </span>
               </div>
@@ -1351,8 +1351,8 @@ export default function Index() {
                 <span className="text-black font-mono text-sm font-bold">
                   {currentFullscreenType === "Product/UX"
                     ? "Product/UX"
-                    : currentFullscreenType === "Content"
-                      ? "Content"
+                    : currentFullscreenType === "Video Editing/Content"
+                      ? "Video Editing/Content"
                       : "Projects"}
                 </span>
               </div>
@@ -1376,8 +1376,8 @@ export default function Index() {
             >
               {/* Projects Grid Layout */}
               <div className="max-w-6xl mx-auto p-6">
-                {/* Content & Video Editing Section */}
-                {(currentFullscreenType === "Content" ||
+                {/* Video Editing/Content Section */}
+                {(currentFullscreenType === "Video Editing/Content" ||
                   currentFullscreenType === null) && (
                   <div className="mb-12">
                     <div className="flex items-center justify-between mb-6">
@@ -1385,11 +1385,11 @@ export default function Index() {
                         className="text-2xl font-bold text-black"
                         style={{ fontFamily: '"JetBrains Mono", monospace' }}
                       >
-                        {currentFullscreenType === "Content"
-                          ? "Content"
-                          : "Content & Video Editing"}
+                        {currentFullscreenType === "Video Editing/Content"
+                          ? "Video Editing/Content"
+                          : "Video Editing/Content"}
                       </h2>
-                      {currentFullscreenType === "Content" && (
+                      {currentFullscreenType === "Video Editing/Content" && (
                         <a
                           href="https://drive.google.com/file/d/1B405jnP-szDIfLJAs-ETUbb9Y7HK1Yw1/view?usp=drive_link"
                           target="_blank"
@@ -3232,8 +3232,8 @@ export default function Index() {
             >
               <DesktopIcon
                 icon={<ContentCreationIcon />}
-                label="Content"
-                onClick={() => openNewWindow("Content")}
+                label="Video Editing/Content"
+                onClick={() => openNewWindow("Video Editing/Content")}
                 className="scale-75 md:scale-90"
               />
             </div>
@@ -3333,8 +3333,8 @@ export default function Index() {
               <div className="flex justify-center">
                 <DesktopIcon
                   icon={<ContentCreationIcon />}
-                  label="Content"
-                onClick={() => openNewWindow("Content")}
+                  label="Video Editing/Content"
+                onClick={() => openNewWindow("Video Editing/Content")}
                   className="scale-90"
                 />
               </div>
