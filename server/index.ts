@@ -20,7 +20,9 @@ export function createServer() {
 
   // In production, serve static files and fallback to index.html for SPA routing
   if (process.env.NODE_ENV === "production") {
-    app.use(express.static(path.join(__dirname, "../dist/spa"), { maxAge: "1h" }));
+    app.use(
+      express.static(path.join(__dirname, "../dist/spa"), { maxAge: "1h" }),
+    );
 
     app.get("*", (_req, res) => {
       res.sendFile(path.join(__dirname, "../dist/spa/index.html"));
