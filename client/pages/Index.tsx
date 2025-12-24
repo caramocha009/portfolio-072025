@@ -1023,8 +1023,9 @@ export default function Index() {
       return;
     }
 
-    if (type === "Projects") {
+    if (type === "Projects" || type === "Product Design" || type === "Content Creation") {
       setIsProjectsFullscreenOpen(true);
+      setCurrentFullscreenType(type);
       return;
     }
 
