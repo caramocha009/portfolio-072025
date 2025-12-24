@@ -3124,7 +3124,7 @@ export default function Index() {
           </button>
 
           {/* Social Media Icons */}
-          <div className="flex items-center gap-1 md:gap-3" style={{ cursor: "pointer" }}>
+          <div className="flex items-center gap-1 md:gap-3">
             {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/in/cara-liu"
