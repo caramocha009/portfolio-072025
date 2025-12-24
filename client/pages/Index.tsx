@@ -1213,9 +1213,7 @@ export default function Index() {
       backgroundColor: bgColor,
       headerColor: headerColor,
       initialX:
-        type === "About" ||
-        type === "Product Design" ||
-        type === "Content Creation"
+        type === "About"
           ? window.innerWidth < 1024
             ? Math.max(
                 0,
@@ -1228,9 +1226,7 @@ export default function Index() {
               : (window.innerWidth - 600) / 2
             : Math.random() * 200 + 100,
       initialY:
-        type === "About" ||
-        type === "Product Design" ||
-        type === "Content Creation"
+        type === "About"
           ? (window.innerHeight - (window.innerHeight - 48)) / 2
           : type === "Contact"
             ? window.innerWidth < 1024
@@ -1242,9 +1238,7 @@ export default function Index() {
           ? window.innerWidth < 1024
             ? Math.min(window.innerWidth - 40, 500)
             : 500
-          : type === "About" ||
-              type === "Product Design" ||
-              type === "Content Creation"
+          : type === "About"
             ? window.innerWidth < 1024
               ? Math.min(window.innerWidth - 40, 720)
               : 720
@@ -1260,9 +1254,7 @@ export default function Index() {
           ? window.innerWidth < 1024
             ? Math.min(window.innerHeight - 80, 400)
             : 400
-          : type === "About" ||
-              type === "Product Design" ||
-              type === "Content Creation"
+          : type === "About"
             ? window.innerHeight - 48
             : type === "Contact"
               ? window.innerWidth < 1024
