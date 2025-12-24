@@ -1916,16 +1916,8 @@ export default function Index() {
             backgroundColor: "#fafafa",
           }}
         >
-          {/* Progress Bar */}
-          <div className="fixed top-0 left-0 w-full h-2 bg-white border-b-2 border-black z-[10001]">
-            <div
-              className="h-full bg-gradient-to-r from-desktop-blue via-blue-600 to-pink-500 transition-all duration-150"
-              style={{ width: `${scrollProgress}%` }}
-            />
-          </div>
-
           {/* Header with Breadcrumbs - Retro Style */}
-          <div className="border-b-2 border-black bg-white sticky top-2 z-[10000] shadow-[0_4px_0px_0px_rgba(0,0,0,1)]">
+          <div className="border-b-2 border-black bg-white sticky top-0 z-[10000] shadow-[0_4px_0px_0px_rgba(0,0,0,1)]">
             <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
               {/* Desktop Breadcrumbs */}
               <div className="hidden lg:flex items-center gap-2">
