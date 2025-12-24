@@ -1303,8 +1303,8 @@ export default function Index() {
             : 400
           : type === "About"
             ? window.innerWidth < 1024
-              ? Math.min(window.innerHeight - 80, 500)
-              : 500
+              ? Math.min(window.innerHeight - 80, 600)
+              : 600
             : type === "Contact"
               ? window.innerWidth < 1024
                 ? window.innerHeight
