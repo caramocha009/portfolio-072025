@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import path from "path";
 import { handleDemo } from "./routes/demo";
 
 export function createServer() {
@@ -16,6 +17,14 @@ export function createServer() {
   });
 
   app.get("/api/demo", handleDemo);
+
+  // Serve static files
+  app.use(express.static(path.join(__dirname, "../dist/spa"), { maxAge: "1h" }));
+
+  // Fallback route for SPA - serve index.html for all non-API routes
+  app.get("*", (_req, res) => {
+    res.sendFile(path.join(__dirname, "../dist/spa/index.html"));
+  });
 
   return app;
 }
