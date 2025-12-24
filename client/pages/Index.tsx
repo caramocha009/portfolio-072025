@@ -808,8 +808,9 @@ export default function Index() {
       content: (
         <div className="flex items-center h-full">
           <p className="text-black text-base leading-6">
-            Hey! I'm <strong>Cara</strong>—your friendly neighborhood <u>product designer</u> &{" "}
-            <u>content creator</u>. For <strong>8+ years</strong>, I've helped people turn early ideas into
+            Hey! I'm <strong>Cara</strong>—your friendly neighborhood{" "}
+            <u>product designer</u> & <u>content creator</u>. For{" "}
+            <strong>8+ years</strong>, I've helped people turn early ideas into
             thoughtful products, beautiful visuals, and scroll-stopping stories.
             <br />
             <br />
@@ -845,7 +846,9 @@ export default function Index() {
   const [nextZIndex, setNextZIndex] = useState(20);
   const [isProjectsFullscreenOpen, setIsProjectsFullscreenOpen] =
     useState(false);
-  const [currentFullscreenType, setCurrentFullscreenType] = useState<string | null>(null);
+  const [currentFullscreenType, setCurrentFullscreenType] = useState<
+    string | null
+  >(null);
   const [currentCaseStudy, setCurrentCaseStudy] = useState<string | null>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
@@ -1023,7 +1026,11 @@ export default function Index() {
       return;
     }
 
-    if (type === "Projects" || type === "Product Design" || type === "Content Creation") {
+    if (
+      type === "Projects" ||
+      type === "Product Design" ||
+      type === "Content Creation"
+    ) {
       setIsProjectsFullscreenOpen(true);
       setCurrentFullscreenType(type);
       return;
@@ -1154,26 +1161,28 @@ export default function Index() {
                 I'm a product designer and content creator who loves working in
                 the gentle chaos where meaning, emotion, and creativity overlap.
                 Whether I'm designing intuitive user experiences or editing
-                videos that make people feel something, my work always comes back
-                to one core question:
+                videos that make people feel something, my work always comes
+                back to one core question:
               </p>
               <p>
-                <strong>Does this actually land with the person on the other
-                  side?</strong>
+                <strong>
+                  Does this actually land with the person on the other side?
+                </strong>
               </p>
               <p>
-                I'm less concerned about chasing perfect metrics and more focused
-                on clarity, resonance, and impact. In design, that means
-                uncovering the real user problem and crafting solutions that feel
-                effortless and human. In content, that means shaping long-form
-                YouTube videos, podcast conversations, or short-form social
-                content in a way that tells a true, emotionally grounded story.
+                I'm less concerned about chasing perfect metrics and more
+                focused on clarity, resonance, and impact. In design, that means
+                uncovering the real user problem and crafting solutions that
+                feel effortless and human. In content, that means shaping
+                long-form YouTube videos, podcast conversations, or short-form
+                social content in a way that tells a true, emotionally grounded
+                story.
               </p>
               <p>
-                I'm especially drawn to themes of spirituality, self-development,
-                and mindful living—but at the end of the day, I just love helping
-                people express what matters to them, whether through an interface
-                or a frame on a timeline.
+                I'm especially drawn to themes of spirituality,
+                self-development, and mindful living—but at the end of the day,
+                I just love helping people express what matters to them, whether
+                through an interface or a frame on a timeline.
               </p>
               <p>
                 I'm comfortable in the "messy middle" of the creative process:
@@ -1182,8 +1191,9 @@ export default function Index() {
                 story—or a design solution—to reveal itself.
               </p>
               <p>
-                <strong>Do you have a story to tell or a product to bring to
-                  life?</strong>
+                <strong>
+                  Do you have a story to tell or a product to bring to life?
+                </strong>
                 <br />
                 Let's connect.
               </p>
@@ -1329,577 +1339,583 @@ export default function Index() {
               {/* Projects Grid Layout */}
               <div className="max-w-6xl mx-auto p-6">
                 {/* Content Creation & Video Editing Section */}
-                {(currentFullscreenType === "Content Creation" || currentFullscreenType === null) && (
-                <div className="mb-12">
-                  <h2
-                    className="text-2xl font-bold text-black mb-6"
-                    style={{ fontFamily: '"JetBrains Mono", monospace' }}
-                  >
-                    {currentFullscreenType === "Content Creation" ? "Content Creation" : "Content Creation & Video Editing"}
-                  </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center max-w-full">
-                    {/* Demo Reel Video */}
-                    <div
-                      className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
-                      style={{ aspectRatio: "1 / 1" }}
-                      onClick={() => setCurrentCaseStudy("youtube-demo-reel")}
+                {(currentFullscreenType === "Content Creation" ||
+                  currentFullscreenType === null) && (
+                  <div className="mb-12">
+                    <h2
+                      className="text-2xl font-bold text-black mb-6"
+                      style={{ fontFamily: '"JetBrains Mono", monospace' }}
                     >
-                      {/* Video Thumbnail Image */}
-                      <img
-                        src="https://img.youtube.com/vi/phxDaMSYldc/maxresdefault.jpg"
-                        alt="Demo Reel"
-                        className="w-full h-full object-cover"
-                      />
+                      {currentFullscreenType === "Content Creation"
+                        ? "Content Creation"
+                        : "Content Creation & Video Editing"}
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center max-w-full">
+                      {/* Demo Reel Video */}
+                      <div
+                        className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
+                        style={{ aspectRatio: "1 / 1" }}
+                        onClick={() => setCurrentCaseStudy("youtube-demo-reel")}
+                      >
+                        {/* Video Thumbnail Image */}
+                        <img
+                          src="https://img.youtube.com/vi/phxDaMSYldc/maxresdefault.jpg"
+                          alt="Demo Reel"
+                          className="w-full h-full object-cover"
+                        />
 
-                      {/* Play Button Overlay */}
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-200 flex items-center justify-center">
-                        <div className="bg-white bg-opacity-90 group-hover:bg-opacity-100 rounded-full p-3 transition-all duration-200 shadow-lg">
-                          <svg
-                            className="w-8 h-8 text-black ml-0.5"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M8 5v14l11-7z" />
-                          </svg>
+                        {/* Play Button Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-200 flex items-center justify-center">
+                          <div className="bg-white bg-opacity-90 group-hover:bg-opacity-100 rounded-full p-3 transition-all duration-200 shadow-lg">
+                            <svg
+                              className="w-8 h-8 text-black ml-0.5"
+                              fill="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path d="M8 5v14l11-7z" />
+                            </svg>
+                          </div>
+                        </div>
+
+                        {/* Hover Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
+                          <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
+                            <h3 className="text-lg font-bold text-center">
+                              Video Editing Demo Reel
+                            </h3>
+                            <p className="text-sm text-center text-gray-200">
+                              Video
+                            </p>
+                            <p className="text-xs text-center text-gray-300">
+                              demo reel, videoboost, sfx
+                            </p>
+                          </div>
                         </div>
                       </div>
 
-                      {/* Hover Overlay */}
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
-                        <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
-                          <h3 className="text-lg font-bold text-center">
-                            Video Editing Demo Reel
-                          </h3>
-                          <p className="text-sm text-center text-gray-200">
-                            Video
-                          </p>
-                          <p className="text-xs text-center text-gray-300">
-                            demo reel, videoboost, sfx
-                          </p>
+                      {/* Bali Women's Retreat */}
+                      <div
+                        className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
+                        style={{ aspectRatio: "1 / 1" }}
+                        onMouseEnter={
+                          isDesktop
+                            ? () => {
+                                setHoveredProject("bali-retreat");
+                                setPersistentHoveredProject("bali-retreat");
+                              }
+                            : undefined
+                        }
+                        onMouseLeave={
+                          isDesktop
+                            ? () => {
+                                setHoveredProject(null);
+                              }
+                            : undefined
+                        }
+                        onClick={() => setCurrentCaseStudy("bali-retreat")}
+                      >
+                        {/* Video Thumbnail Image */}
+                        <img
+                          src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fedeb3d0e747d4650960899471ebbe203?format=webp&width=800"
+                          alt="Bali Women's Retreat"
+                          className="w-full h-full object-cover"
+                        />
+
+                        {/* Play Button Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-200 flex items-center justify-center">
+                          <div className="bg-white bg-opacity-90 group-hover:bg-opacity-100 rounded-full p-3 transition-all duration-200 shadow-lg">
+                            <svg
+                              className="w-8 h-8 text-black ml-0.5"
+                              fill="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path d="M8 5v14l11-7z" />
+                            </svg>
+                          </div>
                         </div>
-                      </div>
-                    </div>
 
-                    {/* Bali Women's Retreat */}
-                    <div
-                      className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
-                      style={{ aspectRatio: "1 / 1" }}
-                      onMouseEnter={
-                        isDesktop
-                          ? () => {
-                              setHoveredProject("bali-retreat");
-                              setPersistentHoveredProject("bali-retreat");
-                            }
-                          : undefined
-                      }
-                      onMouseLeave={
-                        isDesktop
-                          ? () => {
-                              setHoveredProject(null);
-                            }
-                          : undefined
-                      }
-                      onClick={() => setCurrentCaseStudy("bali-retreat")}
-                    >
-                      {/* Video Thumbnail Image */}
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fedeb3d0e747d4650960899471ebbe203?format=webp&width=800"
-                        alt="Bali Women's Retreat"
-                        className="w-full h-full object-cover"
-                      />
-
-                      {/* Play Button Overlay */}
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-200 flex items-center justify-center">
-                        <div className="bg-white bg-opacity-90 group-hover:bg-opacity-100 rounded-full p-3 transition-all duration-200 shadow-lg">
-                          <svg
-                            className="w-8 h-8 text-black ml-0.5"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M8 5v14l11-7z" />
-                          </svg>
-                        </div>
-                      </div>
-
-                      {/* Hover Overlay */}
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
-                        <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
-                          <h3 className="text-lg font-bold text-center">
-                            Bali Women's Retreat
-                          </h3>
-                          <p className="text-sm text-center text-gray-200">
-                            Shorts
-                          </p>
-                          <p className="text-xs text-center text-gray-300">
-                            Instagram, Wellness, Travel
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* YouTube Shorts Video */}
-                    <div
-                      className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
-                      style={{ aspectRatio: "1 / 1" }}
-                      onClick={() =>
-                        setCurrentCaseStudy("youtube-josiah-schneider")
-                      }
-                    >
-                      {/* Video Thumbnail Image */}
-                      <img
-                        src="https://img.youtube.com/vi/jMIY3JhZibU/maxresdefault.jpg"
-                        alt="YouTube Video"
-                        className="w-full h-full object-cover"
-                      />
-
-                      {/* Play Button Overlay */}
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-200 flex items-center justify-center">
-                        <div className="bg-white bg-opacity-90 group-hover:bg-opacity-100 rounded-full p-3 transition-all duration-200 shadow-lg">
-                          <svg
-                            className="w-8 h-8 text-black ml-0.5"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M8 5v14l11-7z" />
-                          </svg>
+                        {/* Hover Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
+                          <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
+                            <h3 className="text-lg font-bold text-center">
+                              Bali Women's Retreat
+                            </h3>
+                            <p className="text-sm text-center text-gray-200">
+                              Shorts
+                            </p>
+                            <p className="text-xs text-center text-gray-300">
+                              Instagram, Wellness, Travel
+                            </p>
+                          </div>
                         </div>
                       </div>
 
-                      {/* Hover Overlay */}
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
-                        <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
-                          <h3 className="text-lg font-bold text-center">
-                            Target Guy
-                          </h3>
-                          <p className="text-sm text-center text-gray-200">
-                            Shorts
-                          </p>
-                          <p className="text-xs text-center text-gray-300">
-                            Skit, Comedy, Client
-                          </p>
+                      {/* YouTube Shorts Video */}
+                      <div
+                        className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
+                        style={{ aspectRatio: "1 / 1" }}
+                        onClick={() =>
+                          setCurrentCaseStudy("youtube-josiah-schneider")
+                        }
+                      >
+                        {/* Video Thumbnail Image */}
+                        <img
+                          src="https://img.youtube.com/vi/jMIY3JhZibU/maxresdefault.jpg"
+                          alt="YouTube Video"
+                          className="w-full h-full object-cover"
+                        />
+
+                        {/* Play Button Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-200 flex items-center justify-center">
+                          <div className="bg-white bg-opacity-90 group-hover:bg-opacity-100 rounded-full p-3 transition-all duration-200 shadow-lg">
+                            <svg
+                              className="w-8 h-8 text-black ml-0.5"
+                              fill="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path d="M8 5v14l11-7z" />
+                            </svg>
+                          </div>
                         </div>
-                      </div>
-                    </div>
 
-                    {/* Holding Court Method IG Reel */}
-                    <div
-                      className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
-                      style={{ aspectRatio: "1 / 1" }}
-                      onClick={() =>
-                        setCurrentCaseStudy("instagram-holding-court")
-                      }
-                    >
-                      {/* Video Thumbnail Image */}
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fb2a4ec28b99242d89027eaf43e364ba8?format=webp&width=800"
-                        alt="Holding Court Method"
-                        className="w-full h-full object-cover"
-                      />
-
-                      {/* Play Button Overlay */}
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-200 flex items-center justify-center">
-                        <div className="bg-white bg-opacity-90 group-hover:bg-opacity-100 rounded-full p-3 transition-all duration-200 shadow-lg">
-                          <svg
-                            className="w-8 h-8 text-black ml-0.5"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M8 5v14l11-7z" />
-                          </svg>
-                        </div>
-                      </div>
-
-                      {/* Hover Overlay */}
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
-                        <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
-                          <h3 className="text-lg font-bold text-center">
-                            Holding Court Method
-                          </h3>
-                          <p className="text-sm text-center text-gray-200">
-                            Shorts, IG Reel
-                          </p>
-                          <p className="text-xs text-center text-gray-300">
-                            self-help, CapCut, vfx
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Zen Monk Podcast Episode */}
-                    <div
-                      className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
-                      style={{ aspectRatio: "1 / 1" }}
-                      onClick={() =>
-                        setCurrentCaseStudy("youtube-zen-monk-podcast")
-                      }
-                    >
-                      {/* Video Thumbnail Image */}
-                      <img
-                        src="https://img.youtube.com/vi/Pys3JqhSejE/maxresdefault.jpg"
-                        alt="Podcast Episode with Zen Monk Daishin Eric McCabe"
-                        className="w-full h-full object-cover"
-                      />
-
-                      {/* Play Button Overlay */}
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-200 flex items-center justify-center">
-                        <div className="bg-white bg-opacity-90 group-hover:bg-opacity-100 rounded-full p-3 transition-all duration-200 shadow-lg">
-                          <svg
-                            className="w-8 h-8 text-black ml-0.5"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M8 5v14l11-7z" />
-                          </svg>
+                        {/* Hover Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
+                          <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
+                            <h3 className="text-lg font-bold text-center">
+                              Target Guy
+                            </h3>
+                            <p className="text-sm text-center text-gray-200">
+                              Shorts
+                            </p>
+                            <p className="text-xs text-center text-gray-300">
+                              Skit, Comedy, Client
+                            </p>
+                          </div>
                         </div>
                       </div>
 
-                      {/* Hover Overlay */}
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
-                        <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
-                          <h3 className="text-lg font-bold text-center">
-                            Podcast Episode with Zen Monk Daishin Eric McCabe
-                          </h3>
-                          <p className="text-sm text-center text-gray-200">
-                            podcast, YouTube
-                          </p>
-                          <p className="text-xs text-center text-gray-300">
-                            spirituality, interview
-                          </p>
+                      {/* Holding Court Method IG Reel */}
+                      <div
+                        className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
+                        style={{ aspectRatio: "1 / 1" }}
+                        onClick={() =>
+                          setCurrentCaseStudy("instagram-holding-court")
+                        }
+                      >
+                        {/* Video Thumbnail Image */}
+                        <img
+                          src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fb2a4ec28b99242d89027eaf43e364ba8?format=webp&width=800"
+                          alt="Holding Court Method"
+                          className="w-full h-full object-cover"
+                        />
+
+                        {/* Play Button Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-200 flex items-center justify-center">
+                          <div className="bg-white bg-opacity-90 group-hover:bg-opacity-100 rounded-full p-3 transition-all duration-200 shadow-lg">
+                            <svg
+                              className="w-8 h-8 text-black ml-0.5"
+                              fill="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path d="M8 5v14l11-7z" />
+                            </svg>
+                          </div>
                         </div>
-                      </div>
-                    </div>
 
-                    {/* Pho Short Film */}
-                    <div
-                      className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
-                      style={{ aspectRatio: "1 / 1" }}
-                      onClick={() => setCurrentCaseStudy("youtube-pho-short")}
-                    >
-                      {/* Video Thumbnail Image */}
-                      <img
-                        src="https://img.youtube.com/vi/XAog5HHTw3o/maxresdefault.jpg"
-                        alt="Pho"
-                        className="w-full h-full object-cover"
-                      />
-
-                      {/* Play Button Overlay */}
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-200 flex items-center justify-center">
-                        <div className="bg-white bg-opacity-90 group-hover:bg-opacity-100 rounded-full p-3 transition-all duration-200 shadow-lg">
-                          <svg
-                            className="w-8 h-8 text-black ml-0.5"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M8 5v14l11-7z" />
-                          </svg>
-                        </div>
-                      </div>
-
-                      {/* Hover Overlay */}
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
-                        <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
-                          <h3 className="text-lg font-bold text-center">Pho</h3>
-                          <p className="text-sm text-center text-gray-200">
-                            Short film, YouTube
-                          </p>
-                          <p className="text-xs text-center text-gray-300">
-                            creative short, storytelling
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Videoboost Ad */}
-                    <div
-                      className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
-                      style={{ aspectRatio: "1 / 1" }}
-                      onClick={() =>
-                        setCurrentCaseStudy("youtube-videoboost-ad")
-                      }
-                    >
-                      {/* Video Thumbnail Image */}
-                      <img
-                        src="https://img.youtube.com/vi/Tgxs4sNVqYc/maxresdefault.jpg"
-                        alt="Videoboost Ad"
-                        className="w-full h-full object-cover"
-                      />
-
-                      {/* Play Button Overlay */}
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-200 flex items-center justify-center">
-                        <div className="bg-white bg-opacity-90 group-hover:bg-opacity-100 rounded-full p-3 transition-all duration-200 shadow-lg">
-                          <svg
-                            className="w-8 h-8 text-black ml-0.5"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M8 5v14l11-7z" />
-                          </svg>
+                        {/* Hover Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
+                          <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
+                            <h3 className="text-lg font-bold text-center">
+                              Holding Court Method
+                            </h3>
+                            <p className="text-sm text-center text-gray-200">
+                              Shorts, IG Reel
+                            </p>
+                            <p className="text-xs text-center text-gray-300">
+                              self-help, CapCut, vfx
+                            </p>
+                          </div>
                         </div>
                       </div>
 
-                      {/* Hover Overlay */}
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
-                        <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
-                          <h3 className="text-lg font-bold text-center">
-                            Videoboost Ad
-                          </h3>
-                          <p className="text-sm text-center text-gray-200">
-                            Ad
-                          </p>
-                          <p className="text-xs text-center text-gray-300">
-                            short, ad
-                          </p>
+                      {/* Zen Monk Podcast Episode */}
+                      <div
+                        className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
+                        style={{ aspectRatio: "1 / 1" }}
+                        onClick={() =>
+                          setCurrentCaseStudy("youtube-zen-monk-podcast")
+                        }
+                      >
+                        {/* Video Thumbnail Image */}
+                        <img
+                          src="https://img.youtube.com/vi/Pys3JqhSejE/maxresdefault.jpg"
+                          alt="Podcast Episode with Zen Monk Daishin Eric McCabe"
+                          className="w-full h-full object-cover"
+                        />
+
+                        {/* Play Button Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-200 flex items-center justify-center">
+                          <div className="bg-white bg-opacity-90 group-hover:bg-opacity-100 rounded-full p-3 transition-all duration-200 shadow-lg">
+                            <svg
+                              className="w-8 h-8 text-black ml-0.5"
+                              fill="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path d="M8 5v14l11-7z" />
+                            </svg>
+                          </div>
+                        </div>
+
+                        {/* Hover Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
+                          <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
+                            <h3 className="text-lg font-bold text-center">
+                              Podcast Episode with Zen Monk Daishin Eric McCabe
+                            </h3>
+                            <p className="text-sm text-center text-gray-200">
+                              podcast, YouTube
+                            </p>
+                            <p className="text-xs text-center text-gray-300">
+                              spirituality, interview
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    {/* Food Taste Test Teaser IG Reel */}
-                    <div
-                      className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
-                      style={{ aspectRatio: "1 / 1" }}
-                      onClick={() =>
-                        setCurrentCaseStudy("instagram-food-teaser")
-                      }
-                    >
-                      {/* Video Thumbnail Image */}
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F5123f6e2c00a4fa3bfb9c2f1d5dd5b0a?format=webp&width=800"
-                        alt="Teaser for Food Taste Test Video"
-                        className="w-full h-full object-cover"
-                      />
+                      {/* Pho Short Film */}
+                      <div
+                        className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
+                        style={{ aspectRatio: "1 / 1" }}
+                        onClick={() => setCurrentCaseStudy("youtube-pho-short")}
+                      >
+                        {/* Video Thumbnail Image */}
+                        <img
+                          src="https://img.youtube.com/vi/XAog5HHTw3o/maxresdefault.jpg"
+                          alt="Pho"
+                          className="w-full h-full object-cover"
+                        />
 
-                      {/* Play Button Overlay */}
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-200 flex items-center justify-center">
-                        <div className="bg-white bg-opacity-90 group-hover:bg-opacity-100 rounded-full p-3 transition-all duration-200 shadow-lg">
-                          <svg
-                            className="w-8 h-8 text-black ml-0.5"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M8 5v14l11-7z" />
-                          </svg>
+                        {/* Play Button Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-200 flex items-center justify-center">
+                          <div className="bg-white bg-opacity-90 group-hover:bg-opacity-100 rounded-full p-3 transition-all duration-200 shadow-lg">
+                            <svg
+                              className="w-8 h-8 text-black ml-0.5"
+                              fill="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path d="M8 5v14l11-7z" />
+                            </svg>
+                          </div>
+                        </div>
+
+                        {/* Hover Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
+                          <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
+                            <h3 className="text-lg font-bold text-center">
+                              Pho
+                            </h3>
+                            <p className="text-sm text-center text-gray-200">
+                              Short film, YouTube
+                            </p>
+                            <p className="text-xs text-center text-gray-300">
+                              creative short, storytelling
+                            </p>
+                          </div>
                         </div>
                       </div>
 
-                      {/* Hover Overlay */}
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
-                        <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
-                          <h3 className="text-lg font-bold text-center">
-                            Teaser for Food Taste Test Video
-                          </h3>
-                          <p className="text-sm text-center text-gray-200">
-                            Promo shorts
-                          </p>
-                          <p className="text-xs text-center text-gray-300">
-                            food, vfx
-                          </p>
+                      {/* Videoboost Ad */}
+                      <div
+                        className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
+                        style={{ aspectRatio: "1 / 1" }}
+                        onClick={() =>
+                          setCurrentCaseStudy("youtube-videoboost-ad")
+                        }
+                      >
+                        {/* Video Thumbnail Image */}
+                        <img
+                          src="https://img.youtube.com/vi/Tgxs4sNVqYc/maxresdefault.jpg"
+                          alt="Videoboost Ad"
+                          className="w-full h-full object-cover"
+                        />
+
+                        {/* Play Button Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-200 flex items-center justify-center">
+                          <div className="bg-white bg-opacity-90 group-hover:bg-opacity-100 rounded-full p-3 transition-all duration-200 shadow-lg">
+                            <svg
+                              className="w-8 h-8 text-black ml-0.5"
+                              fill="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path d="M8 5v14l11-7z" />
+                            </svg>
+                          </div>
+                        </div>
+
+                        {/* Hover Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
+                          <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
+                            <h3 className="text-lg font-bold text-center">
+                              Videoboost Ad
+                            </h3>
+                            <p className="text-sm text-center text-gray-200">
+                              Ad
+                            </p>
+                            <p className="text-xs text-center text-gray-300">
+                              short, ad
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Food Taste Test Teaser IG Reel */}
+                      <div
+                        className="w-full max-w-sm rounded-lg overflow-hidden cursor-pointer group relative bg-gray-100"
+                        style={{ aspectRatio: "1 / 1" }}
+                        onClick={() =>
+                          setCurrentCaseStudy("instagram-food-teaser")
+                        }
+                      >
+                        {/* Video Thumbnail Image */}
+                        <img
+                          src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F5123f6e2c00a4fa3bfb9c2f1d5dd5b0a?format=webp&width=800"
+                          alt="Teaser for Food Taste Test Video"
+                          className="w-full h-full object-cover"
+                        />
+
+                        {/* Play Button Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-200 flex items-center justify-center">
+                          <div className="bg-white bg-opacity-90 group-hover:bg-opacity-100 rounded-full p-3 transition-all duration-200 shadow-lg">
+                            <svg
+                              className="w-8 h-8 text-black ml-0.5"
+                              fill="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path d="M8 5v14l11-7z" />
+                            </svg>
+                          </div>
+                        </div>
+
+                        {/* Hover Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
+                          <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
+                            <h3 className="text-lg font-bold text-center">
+                              Teaser for Food Taste Test Video
+                            </h3>
+                            <p className="text-sm text-center text-gray-200">
+                              Promo shorts
+                            </p>
+                            <p className="text-xs text-center text-gray-300">
+                              food, vfx
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
                 )}
 
                 {/* UX/Product Design Section */}
-                {(currentFullscreenType === "Product Design" || currentFullscreenType === null) && (
-                <div>
-                  <h2
-                    className="text-2xl font-bold text-black mb-6"
-                    style={{ fontFamily: '"JetBrains Mono", monospace' }}
-                  >
-                    UX/Product Design
-                  </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center max-w-full">
-                    {/* Savvo Digital Sommelier */}
-                    <div
-                      className="w-full max-w-sm aspect-square bg-gray-200 rounded-lg overflow-hidden cursor-pointer group relative"
-                      onMouseEnter={
-                        isDesktop
-                          ? () => {
-                              setHoveredProject("savvo-sommelier");
-                              setPersistentHoveredProject(null);
-                            }
-                          : undefined
-                      }
-                      onMouseLeave={
-                        isDesktop ? () => setHoveredProject(null) : undefined
-                      }
-                      onClick={() => setCurrentCaseStudy("savvo-sommelier")}
+                {(currentFullscreenType === "Product Design" ||
+                  currentFullscreenType === null) && (
+                  <div>
+                    <h2
+                      className="text-2xl font-bold text-black mb-6"
+                      style={{ fontFamily: '"JetBrains Mono", monospace' }}
                     >
-                      {/* Project Image */}
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F25b4f8410215451ba744a09577b540b7?format=webp&width=800"
-                        alt="Savvo Digital Sommelier"
-                        className="w-full h-full object-cover"
-                      />
+                      UX/Product Design
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center max-w-full">
+                      {/* Savvo Digital Sommelier */}
+                      <div
+                        className="w-full max-w-sm aspect-square bg-gray-200 rounded-lg overflow-hidden cursor-pointer group relative"
+                        onMouseEnter={
+                          isDesktop
+                            ? () => {
+                                setHoveredProject("savvo-sommelier");
+                                setPersistentHoveredProject(null);
+                              }
+                            : undefined
+                        }
+                        onMouseLeave={
+                          isDesktop ? () => setHoveredProject(null) : undefined
+                        }
+                        onClick={() => setCurrentCaseStudy("savvo-sommelier")}
+                      >
+                        {/* Project Image */}
+                        <img
+                          src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F25b4f8410215451ba744a09577b540b7?format=webp&width=800"
+                          alt="Savvo Digital Sommelier"
+                          className="w-full h-full object-cover"
+                        />
 
-                      {/* Hover Overlay */}
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
-                        <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
-                          <h3 className="text-lg font-bold text-center">
-                            Savvo Digital Sommelier
-                          </h3>
-                          <p className="text-sm text-center text-gray-200">
-                            Retail
-                          </p>
-                          <p className="text-xs text-center text-gray-300">
-                            UX, UI, Field Study, Persona, Wireframes
-                          </p>
+                        {/* Hover Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
+                          <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
+                            <h3 className="text-lg font-bold text-center">
+                              Savvo Digital Sommelier
+                            </h3>
+                            <p className="text-sm text-center text-gray-200">
+                              Retail
+                            </p>
+                            <p className="text-xs text-center text-gray-300">
+                              UX, UI, Field Study, Persona, Wireframes
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    {/* Hy-Vee Aisles Online */}
-                    <div
-                      className="w-full max-w-sm aspect-square bg-gray-200 rounded-lg overflow-hidden cursor-pointer group relative"
-                      onMouseEnter={
-                        isDesktop
-                          ? () => {
-                              setHoveredProject("hyvee-aisles");
-                              setPersistentHoveredProject(null);
-                            }
-                          : undefined
-                      }
-                      onMouseLeave={
-                        isDesktop ? () => setHoveredProject(null) : undefined
-                      }
-                      onClick={() => setCurrentCaseStudy("hyvee-aisles")}
-                    >
-                      {/* Project Image */}
-                      <img
-                        src="https://cdn-images-1.medium.com/max/1024/1*b_l9Ra5rwirDPE4cD_sxvg.jpeg"
-                        alt="Hy-Vee Aisles Online"
-                        className="w-full h-full object-cover"
-                      />
+                      {/* Hy-Vee Aisles Online */}
+                      <div
+                        className="w-full max-w-sm aspect-square bg-gray-200 rounded-lg overflow-hidden cursor-pointer group relative"
+                        onMouseEnter={
+                          isDesktop
+                            ? () => {
+                                setHoveredProject("hyvee-aisles");
+                                setPersistentHoveredProject(null);
+                              }
+                            : undefined
+                        }
+                        onMouseLeave={
+                          isDesktop ? () => setHoveredProject(null) : undefined
+                        }
+                        onClick={() => setCurrentCaseStudy("hyvee-aisles")}
+                      >
+                        {/* Project Image */}
+                        <img
+                          src="https://cdn-images-1.medium.com/max/1024/1*b_l9Ra5rwirDPE4cD_sxvg.jpeg"
+                          alt="Hy-Vee Aisles Online"
+                          className="w-full h-full object-cover"
+                        />
 
-                      {/* Hover Overlay */}
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
-                        <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
-                          <h3 className="text-lg font-bold text-center">
-                            Hy-Vee Aisles Online
-                          </h3>
-                          <p className="text-sm text-center text-gray-200">
-                            E-commerce
-                          </p>
-                          <p className="text-xs text-center text-gray-300">
-                            Visual Hierarchy, User Testing
-                          </p>
+                        {/* Hover Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
+                          <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
+                            <h3 className="text-lg font-bold text-center">
+                              Hy-Vee Aisles Online
+                            </h3>
+                            <p className="text-sm text-center text-gray-200">
+                              E-commerce
+                            </p>
+                            <p className="text-xs text-center text-gray-300">
+                              Visual Hierarchy, User Testing
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    {/* Ascent Global Logistics */}
-                    <div
-                      className="w-full max-w-sm aspect-square bg-gray-200 rounded-lg overflow-hidden cursor-pointer group relative"
-                      onMouseEnter={
-                        isDesktop
-                          ? () => {
-                              setHoveredProject("ascent-logistics");
-                              setPersistentHoveredProject(null);
-                            }
-                          : undefined
-                      }
-                      onMouseLeave={
-                        isDesktop ? () => setHoveredProject(null) : undefined
-                      }
-                      onClick={() => setCurrentCaseStudy("ascent-logistics")}
-                    >
-                      {/* Project Image */}
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F6ad6a790f608497086bac5dc426eeddb?format=webp&width=800"
-                        alt="Ascent Global Logistics"
-                        className="w-full h-full object-cover"
-                      />
+                      {/* Ascent Global Logistics */}
+                      <div
+                        className="w-full max-w-sm aspect-square bg-gray-200 rounded-lg overflow-hidden cursor-pointer group relative"
+                        onMouseEnter={
+                          isDesktop
+                            ? () => {
+                                setHoveredProject("ascent-logistics");
+                                setPersistentHoveredProject(null);
+                              }
+                            : undefined
+                        }
+                        onMouseLeave={
+                          isDesktop ? () => setHoveredProject(null) : undefined
+                        }
+                        onClick={() => setCurrentCaseStudy("ascent-logistics")}
+                      >
+                        {/* Project Image */}
+                        <img
+                          src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F6ad6a790f608497086bac5dc426eeddb?format=webp&width=800"
+                          alt="Ascent Global Logistics"
+                          className="w-full h-full object-cover"
+                        />
 
-                      {/* Hover Overlay */}
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
-                        <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
-                          <h3 className="text-lg font-bold text-center">
-                            Ascent Global Logistics
-                          </h3>
-                          <p className="text-sm text-center text-gray-200">
-                            Logistics
-                          </p>
-                          <p className="text-xs text-center text-gray-300">
-                            User Interviews, Cross-Functional Collab, Hi-Fi
-                          </p>
+                        {/* Hover Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
+                          <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
+                            <h3 className="text-lg font-bold text-center">
+                              Ascent Global Logistics
+                            </h3>
+                            <p className="text-sm text-center text-gray-200">
+                              Logistics
+                            </p>
+                            <p className="text-xs text-center text-gray-300">
+                              User Interviews, Cross-Functional Collab, Hi-Fi
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    {/* Bank of America Merchant Partner Checkout */}
-                    <div
-                      className="w-full max-w-sm aspect-square bg-gray-200 rounded-lg overflow-hidden cursor-pointer group relative"
-                      onMouseEnter={
-                        isDesktop
-                          ? () => {
-                              setHoveredProject("boa-merchant-checkout");
-                              setPersistentHoveredProject(null);
-                            }
-                          : undefined
-                      }
-                      onMouseLeave={
-                        isDesktop ? () => setHoveredProject(null) : undefined
-                      }
-                      onClick={() =>
-                        setCurrentCaseStudy("boa-merchant-checkout")
-                      }
-                    >
-                      {/* Placeholder Image */}
-                      <div className="w-full h-full bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
-                        <span className="text-5xl">💳</span>
-                      </div>
+                      {/* Bank of America Merchant Partner Checkout */}
+                      <div
+                        className="w-full max-w-sm aspect-square bg-gray-200 rounded-lg overflow-hidden cursor-pointer group relative"
+                        onMouseEnter={
+                          isDesktop
+                            ? () => {
+                                setHoveredProject("boa-merchant-checkout");
+                                setPersistentHoveredProject(null);
+                              }
+                            : undefined
+                        }
+                        onMouseLeave={
+                          isDesktop ? () => setHoveredProject(null) : undefined
+                        }
+                        onClick={() =>
+                          setCurrentCaseStudy("boa-merchant-checkout")
+                        }
+                      >
+                        {/* Placeholder Image */}
+                        <div className="w-full h-full bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
+                          <span className="text-5xl">💳</span>
+                        </div>
 
-                      {/* Hover Overlay */}
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
-                        <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
-                          <h3 className="text-lg font-bold text-center">
-                            Bank of America Merchant Partner Checkout
-                          </h3>
-                          <p className="text-sm text-center text-gray-200">
-                            Fintech
-                          </p>
-                          <p className="text-xs text-center text-gray-300">
-                            Checkout Flow, Payment UX
-                          </p>
+                        {/* Hover Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
+                          <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
+                            <h3 className="text-lg font-bold text-center">
+                              Bank of America Merchant Partner Checkout
+                            </h3>
+                            <p className="text-sm text-center text-gray-200">
+                              Fintech
+                            </p>
+                            <p className="text-xs text-center text-gray-300">
+                              Checkout Flow, Payment UX
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    {/* PDF Portfolio Download */}
-                    <div
-                      className="w-full max-w-sm aspect-square bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg overflow-hidden cursor-pointer group relative border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
-                      onClick={() =>
-                        window.open(
-                          "https://drive.google.com/file/d/1a0TLRRRWCdia_SzjcJjvOFQd9uVM5iuZ/view?usp=sharing",
-                          "_blank",
-                        )
-                      }
-                    >
-                      {/* Content */}
-                      <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center group-hover:bg-blue-50 transition-colors">
-                        <div className="text-5xl mb-4">📄</div>
-                        <h3 className="text-lg font-bold text-black mb-2">
-                          PDF Portfolio
-                        </h3>
-                        <p className="text-sm text-gray-700">
-                          Looking for more in-depth case studies?
-                        </p>
-                        <p className="text-xs text-gray-600 mt-2">
-                          Click to download
-                        </p>
-                      </div>
+                      {/* PDF Portfolio Download */}
+                      <div
+                        className="w-full max-w-sm aspect-square bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg overflow-hidden cursor-pointer group relative border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+                        onClick={() =>
+                          window.open(
+                            "https://drive.google.com/file/d/1a0TLRRRWCdia_SzjcJjvOFQd9uVM5iuZ/view?usp=sharing",
+                            "_blank",
+                          )
+                        }
+                      >
+                        {/* Content */}
+                        <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center group-hover:bg-blue-50 transition-colors">
+                          <div className="text-5xl mb-4">📄</div>
+                          <h3 className="text-lg font-bold text-black mb-2">
+                            PDF Portfolio
+                          </h3>
+                          <p className="text-sm text-gray-700">
+                            Looking for more in-depth case studies?
+                          </p>
+                          <p className="text-xs text-gray-600 mt-2">
+                            Click to download
+                          </p>
+                        </div>
 
-                      {/* Hover Overlay */}
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex items-center justify-center">
-                        <div className="hidden group-hover:flex flex-col items-center justify-center text-center text-white">
-                          <div className="text-4xl mb-2">↓</div>
-                          <p className="font-bold">Download PDF</p>
+                        {/* Hover Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex items-center justify-center">
+                          <div className="hidden group-hover:flex flex-col items-center justify-center text-center text-white">
+                            <div className="text-4xl mb-2">↓</div>
+                            <p className="font-bold">Download PDF</p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
                 )}
               </div>
             </div>
@@ -3192,7 +3208,11 @@ export default function Index() {
             {/* Product Design Icon - Top of first column */}
             <div
               className="absolute z-20 flex items-start justify-center"
-              style={{ top: "calc(24px + 1vw)", left: "calc(24px + 1vw)", width: "160px" }}
+              style={{
+                top: "calc(24px + 1vw)",
+                left: "calc(24px + 1vw)",
+                width: "160px",
+              }}
               onMouseEnter={() => setAsciiArtColor("#c084fc")}
               onMouseLeave={() => setAsciiArtColor("#ffffff")}
             >
