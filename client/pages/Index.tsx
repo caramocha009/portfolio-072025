@@ -1302,7 +1302,9 @@ export default function Index() {
             ? Math.min(window.innerHeight - 80, 400)
             : 400
           : type === "About"
-            ? window.innerHeight - 48
+            ? window.innerWidth < 1024
+              ? Math.min(window.innerHeight - 80, 500)
+              : 500
             : type === "Contact"
               ? window.innerWidth < 1024
                 ? window.innerHeight
