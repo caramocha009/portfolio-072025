@@ -1857,45 +1857,6 @@ export default function Index() {
                         </div>
                       </div>
 
-                      {/* Bank of America Merchant Partner Checkout */}
-                      <div
-                        className="w-full max-w-sm aspect-square bg-gray-200 rounded-lg overflow-hidden cursor-pointer group relative"
-                        onMouseEnter={
-                          isDesktop
-                            ? () => {
-                                setHoveredProject("boa-merchant-checkout");
-                                setPersistentHoveredProject(null);
-                              }
-                            : undefined
-                        }
-                        onMouseLeave={
-                          isDesktop ? () => setHoveredProject(null) : undefined
-                        }
-                        onClick={() =>
-                          setCurrentCaseStudy("boa-merchant-checkout")
-                        }
-                      >
-                        {/* Placeholder Image */}
-                        <div className="w-full h-full bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
-                          <span className="text-5xl">💳</span>
-                        </div>
-
-                        {/* Hover Overlay */}
-                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
-                          <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
-                            <h3 className="text-lg font-bold text-center">
-                              Bank of America Merchant Partner Checkout
-                            </h3>
-                            <p className="text-sm text-center text-gray-200">
-                              Fintech
-                            </p>
-                            <p className="text-xs text-center text-gray-300">
-                              Checkout Flow, Payment UX
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
                       {/* PDF Portfolio Download */}
                       <div
                         className="w-full max-w-sm aspect-square bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg overflow-hidden cursor-pointer group relative border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
