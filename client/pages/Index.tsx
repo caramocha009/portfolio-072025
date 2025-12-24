@@ -870,11 +870,11 @@ export default function Index() {
         setCurrentFullscreenType(null);
       } else if (pathname === "/projects/product-design") {
         setIsProjectsFullscreenOpen(true);
-        setCurrentFullscreenType("Product Design");
+        setCurrentFullscreenType("Product/UX");
         setCurrentCaseStudy(null);
       } else if (pathname === "/projects/content-creation") {
         setIsProjectsFullscreenOpen(true);
-        setCurrentFullscreenType("Content Creation");
+        setCurrentFullscreenType("Content");
         setCurrentCaseStudy(null);
       } else if (pathname.startsWith("/projects/")) {
         const caseStudyId = pathname.replace("/projects/", "");
@@ -891,10 +891,10 @@ export default function Index() {
     const pathname = window.location.pathname;
     if (pathname === "/projects/product-design") {
       setIsProjectsFullscreenOpen(true);
-      setCurrentFullscreenType("Product Design");
+      setCurrentFullscreenType("Product/UX");
     } else if (pathname === "/projects/content-creation") {
       setIsProjectsFullscreenOpen(true);
-      setCurrentFullscreenType("Content Creation");
+      setCurrentFullscreenType("Content");
     } else if (
       pathname &&
       pathname !== "/" &&
@@ -918,16 +918,16 @@ export default function Index() {
         `${currentCaseStudy}`,
         `/projects/${currentCaseStudy}`,
       );
-    } else if (currentFullscreenType === "Product Design") {
+    } else if (currentFullscreenType === "Product/UX") {
       window.history.pushState(
-        { fullscreenType: "Product Design" },
-        "Product Design",
+        { fullscreenType: "Product/UX" },
+        "Product/UX",
         "/projects/product-design",
       );
-    } else if (currentFullscreenType === "Content Creation") {
+    } else if (currentFullscreenType === "Content") {
       window.history.pushState(
-        { fullscreenType: "Content Creation" },
-        "Content Creation",
+        { fullscreenType: "Content" },
+        "Content",
         "/projects/content-creation",
       );
     } else {
@@ -1065,8 +1065,8 @@ export default function Index() {
 
     if (
       type === "Projects" ||
-      type === "Product Design" ||
-      type === "Content Creation"
+      type === "Product/UX" ||
+      type === "Content"
     ) {
       setIsProjectsFullscreenOpen(true);
       setCurrentFullscreenType(type);
@@ -1338,10 +1338,10 @@ export default function Index() {
                 </button>
                 <span className="text-black font-mono text-sm">→</span>
                 <span className="text-black font-mono text-sm">
-                  {currentFullscreenType === "Product Design"
-                    ? "📂 Product Design"
-                    : currentFullscreenType === "Content Creation"
-                      ? "📂 Content Creation"
+                  {currentFullscreenType === "Product/UX"
+                    ? "📂 Product/UX"
+                    : currentFullscreenType === "Content"
+                      ? "📂 Content"
                       : "📂 Projects"}
                 </span>
               </div>
@@ -1349,10 +1349,10 @@ export default function Index() {
               {/* Mobile Breadcrumb */}
               <div className="lg:hidden">
                 <span className="text-black font-mono text-sm font-bold">
-                  {currentFullscreenType === "Product Design"
-                    ? "Product Design"
-                    : currentFullscreenType === "Content Creation"
-                      ? "Content Creation"
+                  {currentFullscreenType === "Product/UX"
+                    ? "Product/UX"
+                    : currentFullscreenType === "Content"
+                      ? "Content"
                       : "Projects"}
                 </span>
               </div>
@@ -1376,8 +1376,8 @@ export default function Index() {
             >
               {/* Projects Grid Layout */}
               <div className="max-w-6xl mx-auto p-6">
-                {/* Content Creation & Video Editing Section */}
-                {(currentFullscreenType === "Content Creation" ||
+                {/* Content & Video Editing Section */}
+                {(currentFullscreenType === "Content" ||
                   currentFullscreenType === null) && (
                   <div className="mb-12">
                     <div className="flex items-center justify-between mb-6">
@@ -1385,11 +1385,11 @@ export default function Index() {
                         className="text-2xl font-bold text-black"
                         style={{ fontFamily: '"JetBrains Mono", monospace' }}
                       >
-                        {currentFullscreenType === "Content Creation"
-                          ? "Content Creation"
-                          : "Content Creation & Video Editing"}
+                        {currentFullscreenType === "Content"
+                          ? "Content"
+                          : "Content & Video Editing"}
                       </h2>
-                      {currentFullscreenType === "Content Creation" && (
+                      {currentFullscreenType === "Content" && (
                         <a
                           href="https://drive.google.com/file/d/1B405jnP-szDIfLJAs-ETUbb9Y7HK1Yw1/view?usp=drive_link"
                           target="_blank"
@@ -1766,7 +1766,7 @@ export default function Index() {
                 )}
 
                 {/* UX/Product Design Section */}
-                {(currentFullscreenType === "Product Design" ||
+                {(currentFullscreenType === "Product/UX" ||
                   currentFullscreenType === null) && (
                   <div>
                     <div className="flex items-center justify-between mb-6">
@@ -1776,7 +1776,7 @@ export default function Index() {
                       >
                         UX/Product Design
                       </h2>
-                      {currentFullscreenType === "Product Design" && (
+                      {currentFullscreenType === "Product/UX" && (
                         <a
                           href="https://docs.google.com/document/d/1fbx3mZPYre4CYOj608mnWDs98uamXAh0/edit?usp=drive_link&ouid=105779629323639375141&rtpof=true&sd=true"
                           target="_blank"
@@ -3213,8 +3213,8 @@ export default function Index() {
             >
               <DesktopIcon
                 icon={<ProductDesignIcon />}
-                label="Product Design"
-                onClick={() => openNewWindow("Product Design")}
+                label="Product/UX"
+                onClick={() => openNewWindow("Product/UX")}
                 className="scale-75 md:scale-90"
               />
             </div>
@@ -3232,8 +3232,8 @@ export default function Index() {
             >
               <DesktopIcon
                 icon={<ContentCreationIcon />}
-                label="Content Creation"
-                onClick={() => openNewWindow("Content Creation")}
+                label="Content"
+                onClick={() => openNewWindow("Content")}
                 className="scale-75 md:scale-90"
               />
             </div>
@@ -3317,8 +3317,8 @@ export default function Index() {
               <div className="flex justify-center">
                 <DesktopIcon
                   icon={<ProductDesignIcon />}
-                  label="Product Design"
-                  onClick={() => openNewWindow("Product Design")}
+                  label="Product/UX"
+                onClick={() => openNewWindow("Product/UX")}
                   className="scale-90"
                 />
               </div>
@@ -3333,8 +3333,8 @@ export default function Index() {
               <div className="flex justify-center">
                 <DesktopIcon
                   icon={<ContentCreationIcon />}
-                  label="Content Creation"
-                  onClick={() => openNewWindow("Content Creation")}
+                  label="Content"
+                onClick={() => openNewWindow("Content")}
                   className="scale-90"
                 />
               </div>
