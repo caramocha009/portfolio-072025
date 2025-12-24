@@ -3206,10 +3206,11 @@ export default function Index() {
 
             {/* Resume Icon - Second in first column */}
             <div
-              className="absolute z-20 flex items-start"
+              className="absolute z-20 flex items-start justify-center"
               style={{
                 top: "calc(24px + 1vw + 142px)",
                 left: "calc(24px + 1vw)",
+                width: "160px",
               }}
               onMouseEnter={() => setAsciiArtColor("#60a5fa")}
               onMouseLeave={() => setAsciiArtColor("#ffffff")}
@@ -3229,10 +3230,11 @@ export default function Index() {
 
             {/* About Icon - Third in first column */}
             <div
-              className="absolute z-20 flex items-start"
+              className="absolute z-20 flex items-start justify-center"
               style={{
                 top: "calc(24px + 1vw + 284px)",
                 left: "calc(24px + 1vw)",
+                width: "160px",
               }}
               onMouseEnter={() => setAsciiArtColor("#3b82f6")}
               onMouseLeave={() => setAsciiArtColor("#ffffff")}
@@ -3247,10 +3249,11 @@ export default function Index() {
 
             {/* Content Creation Icon - Fourth in first column */}
             <div
-              className="absolute z-20 flex items-start"
+              className="absolute z-20 flex items-start justify-center"
               style={{
                 top: "calc(24px + 1vw + 426px)",
                 left: "calc(24px + 1vw)",
+                width: "160px",
               }}
               onMouseEnter={() => setAsciiArtColor("#f472b6")}
               onMouseLeave={() => setAsciiArtColor("#ffffff")}
@@ -3265,10 +3268,11 @@ export default function Index() {
 
             {/* Contact Me Icon - Fifth in first column */}
             <div
-              className="absolute z-20 flex items-start"
+              className="absolute z-20 flex items-start justify-center"
               style={{
                 top: "calc(24px + 1vw + 568px)",
                 left: "calc(24px + 1vw)",
+                width: "160px",
               }}
               onMouseEnter={() => setAsciiArtColor("#ec4899")}
               onMouseLeave={() => setAsciiArtColor("#ffffff")}
