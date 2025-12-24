@@ -3178,19 +3178,6 @@ export default function Index() {
               </div>
               <div className="flex justify-center">
                 <DesktopIcon
-                  icon={<ArticlesIcon />}
-                  label="Resume"
-                  onClick={() =>
-                    window.open(
-                      "https://drive.google.com/file/d/1cth2ND8UU_BhTicFHnxy-YfiXmTE3UPj/view?usp=sharing",
-                      "_blank",
-                    )
-                  }
-                  className="scale-90"
-                />
-              </div>
-              <div className="flex justify-center">
-                <DesktopIcon
                   icon={<AboutIcon />}
                   label="About"
                   onClick={() => openNewWindow("About")}
