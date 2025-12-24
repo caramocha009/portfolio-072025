@@ -3443,9 +3443,9 @@ export default function Index() {
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-6">
               <div className="flex justify-center">
                 <DesktopIcon
-                  icon={<WorksIcon />}
-                  label="Projects"
-                  onClick={() => openNewWindow("Projects")}
+                  icon={<ProductDesignIcon />}
+                  label="Product Design"
+                  onClick={() => openNewWindow("Product Design")}
                   className="scale-90"
                 />
               </div>
@@ -3464,9 +3464,9 @@ export default function Index() {
               </div>
               <div className="flex justify-center">
                 <DesktopIcon
-                  icon={<ProductDesignIcon />}
-                  label="Product Design"
-                  onClick={() => openNewWindow("Product Design")}
+                  icon={<AboutIcon />}
+                  label="About"
+                  onClick={() => openNewWindow("About")}
                   className="scale-90"
                 />
               </div>
