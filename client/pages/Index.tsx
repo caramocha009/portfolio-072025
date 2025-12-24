@@ -2015,7 +2015,7 @@ export default function Index() {
             </div>
 
             {/* Progress Bar - Under Breadcrumb */}
-            <div className="w-full h-2 bg-black border-b-2 border-black overflow-hidden">
+            <div className="w-full h-2 bg-black overflow-hidden">
               <div
                 className="h-full bg-gradient-to-r from-desktop-blue via-blue-600 to-pink-500 transition-all duration-150"
                 style={{ width: `${scrollProgress}%` }}
