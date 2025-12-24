@@ -3096,7 +3096,7 @@ export default function Index() {
             <div
               className="absolute z-20 flex items-start justify-center"
               style={{
-                top: "calc(24px + 1vw + 426px)",
+                top: "calc(24px + 1vw + 284px)",
                 left: "calc(24px + 1vw)",
                 width: "160px",
               }}
@@ -3111,11 +3111,11 @@ export default function Index() {
               />
             </div>
 
-            {/* Contact Me Icon - Fifth in first column */}
+            {/* Contact Me Icon - Fourth in first column */}
             <div
               className="absolute z-20 flex items-start justify-center"
               style={{
-                top: "calc(24px + 1vw + 568px)",
+                top: "calc(24px + 1vw + 426px)",
                 left: "calc(24px + 1vw)",
                 width: "160px",
               }}
