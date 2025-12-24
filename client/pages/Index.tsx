@@ -3191,8 +3191,8 @@ export default function Index() {
             {/* First Column - Left Side */}
             {/* Product Design Icon - Top of first column */}
             <div
-              className="absolute z-20 flex items-start"
-              style={{ top: "calc(24px + 1vw)", left: "calc(24px + 1vw)" }}
+              className="absolute z-20 flex items-start justify-center"
+              style={{ top: "calc(24px + 1vw)", left: "calc(24px + 1vw)", width: "160px" }}
               onMouseEnter={() => setAsciiArtColor("#c084fc")}
               onMouseLeave={() => setAsciiArtColor("#ffffff")}
             >
