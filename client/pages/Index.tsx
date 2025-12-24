@@ -2031,7 +2031,7 @@ export default function Index() {
           {/* Case Study Content */}
           <div
             className="w-full px-4 py-2 bg-gray-50"
-            style={{ marginTop: "48px", paddingBottom: "144px" }}
+            style={{ paddingBottom: "144px" }}
           >
             {currentCaseStudy === "hyvee-aisles" ? (
               /* Hy-Vee case study with Twilik Medium embed */
