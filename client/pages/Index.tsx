@@ -425,6 +425,7 @@ interface WindowConfig {
   width?: number;
   height?: number;
   zIndex: number;
+  title?: string;
 }
 
 // Case Study Navigation Component
