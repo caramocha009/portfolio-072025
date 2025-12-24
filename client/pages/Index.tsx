@@ -3127,10 +3127,10 @@ export default function Index() {
           <div className="flex items-center gap-1 md:gap-3">
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com/in/cara-liu"
+              href="https://www.linkedin.com/in/cara-liu"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-desktop-blue hover:opacity-80 p-1"
+              className="text-desktop-blue hover:opacity-80 p-1 cursor-pointer"
             >
               <svg
                 width="20"
