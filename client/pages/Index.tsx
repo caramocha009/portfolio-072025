@@ -1917,7 +1917,7 @@ export default function Index() {
           }}
         >
           {/* Header with Breadcrumbs - Retro Style */}
-          <div className="border-b-2 border-black bg-white sticky top-0 z-[10000] shadow-[0_4px_0px_0px_rgba(0,0,0,1)]">
+          <div className="border-b-2 border-black bg-white sticky top-0 z-[10000]">
             <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
               {/* Desktop Breadcrumbs */}
               <div className="hidden lg:flex items-center gap-2">
