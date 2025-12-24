@@ -3191,7 +3191,7 @@ export default function Index() {
             {/* First Column - Left Side */}
             {/* Product Design Icon - Top of first column */}
             <div
-              className="absolute z-20"
+              className="absolute z-20 flex items-start"
               style={{ top: "calc(24px + 1vw)", left: "calc(24px + 1vw)" }}
               onMouseEnter={() => setAsciiArtColor("#c084fc")}
               onMouseLeave={() => setAsciiArtColor("#ffffff")}
@@ -3206,9 +3206,9 @@ export default function Index() {
 
             {/* Resume Icon - Second in first column */}
             <div
-              className="absolute z-20"
+              className="absolute z-20 flex items-start"
               style={{
-                top: "calc(24px + 1vw + 170px)",
+                top: "calc(24px + 1vw + 142px)",
                 left: "calc(24px + 1vw)",
               }}
               onMouseEnter={() => setAsciiArtColor("#60a5fa")}
@@ -3229,9 +3229,9 @@ export default function Index() {
 
             {/* About Icon - Third in first column */}
             <div
-              className="absolute z-20"
+              className="absolute z-20 flex items-start"
               style={{
-                top: "calc(24px + 1vw + 340px)",
+                top: "calc(24px + 1vw + 284px)",
                 left: "calc(24px + 1vw)",
               }}
               onMouseEnter={() => setAsciiArtColor("#3b82f6")}
@@ -3247,9 +3247,9 @@ export default function Index() {
 
             {/* Content Creation Icon - Fourth in first column */}
             <div
-              className="absolute z-20"
+              className="absolute z-20 flex items-start"
               style={{
-                top: "calc(24px + 1vw + 510px)",
+                top: "calc(24px + 1vw + 426px)",
                 left: "calc(24px + 1vw)",
               }}
               onMouseEnter={() => setAsciiArtColor("#f472b6")}
@@ -3265,9 +3265,9 @@ export default function Index() {
 
             {/* Contact Me Icon - Fifth in first column */}
             <div
-              className="absolute z-20"
+              className="absolute z-20 flex items-start"
               style={{
-                top: "calc(24px + 1vw + 680px)",
+                top: "calc(24px + 1vw + 568px)",
                 left: "calc(24px + 1vw)",
               }}
               onMouseEnter={() => setAsciiArtColor("#ec4899")}
