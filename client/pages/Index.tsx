@@ -3464,9 +3464,17 @@ export default function Index() {
               </div>
               <div className="flex justify-center">
                 <DesktopIcon
-                  icon={<AboutIcon />}
-                  label="About"
-                  onClick={() => openNewWindow("About")}
+                  icon={<ProductDesignIcon />}
+                  label="Product Design"
+                  onClick={() => openNewWindow("Product Design")}
+                  className="scale-90"
+                />
+              </div>
+              <div className="flex justify-center">
+                <DesktopIcon
+                  icon={<ContentCreationIcon />}
+                  label="Content Creation"
+                  onClick={() => openNewWindow("Content Creation")}
                   className="scale-90"
                 />
               </div>
