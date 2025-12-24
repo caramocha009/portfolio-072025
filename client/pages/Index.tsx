@@ -3208,7 +3208,7 @@ export default function Index() {
             <div
               className="absolute z-20"
               style={{
-                top: "calc(24px + 1vw + 142px)",
+                top: "calc(24px + 1vw + 170px)",
                 left: "calc(24px + 1vw)",
               }}
               onMouseEnter={() => setAsciiArtColor("#60a5fa")}
@@ -3231,7 +3231,7 @@ export default function Index() {
             <div
               className="absolute z-20"
               style={{
-                top: "calc(24px + 1vw + 284px)",
+                top: "calc(24px + 1vw + 340px)",
                 left: "calc(24px + 1vw)",
               }}
               onMouseEnter={() => setAsciiArtColor("#3b82f6")}
@@ -3249,7 +3249,7 @@ export default function Index() {
             <div
               className="absolute z-20"
               style={{
-                top: "calc(24px + 1vw + 426px)",
+                top: "calc(24px + 1vw + 510px)",
                 left: "calc(24px + 1vw)",
               }}
               onMouseEnter={() => setAsciiArtColor("#f472b6")}
@@ -3267,7 +3267,7 @@ export default function Index() {
             <div
               className="absolute z-20"
               style={{
-                top: "calc(24px + 1vw + 568px)",
+                top: "calc(24px + 1vw + 680px)",
                 left: "calc(24px + 1vw)",
               }}
               onMouseEnter={() => setAsciiArtColor("#ec4899")}
