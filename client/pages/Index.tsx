@@ -895,7 +895,11 @@ export default function Index() {
     } else if (pathname === "/projects/content-creation") {
       setIsProjectsFullscreenOpen(true);
       setCurrentFullscreenType("Content Creation");
-    } else if (pathname && pathname !== "/" && pathname.startsWith("/projects/")) {
+    } else if (
+      pathname &&
+      pathname !== "/" &&
+      pathname.startsWith("/projects/")
+    ) {
       const caseStudyId = pathname.replace("/projects/", "");
       if (caseStudyId) {
         setCurrentCaseStudy(caseStudyId);
