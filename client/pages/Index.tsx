@@ -1915,6 +1915,20 @@ export default function Index() {
                         </div>
                       </div>
                     </div>
+
+                    {/* View Resume Button - Only for Product Design */}
+                    {currentFullscreenType === "Product Design" && (
+                      <div className="mt-12 flex justify-center">
+                        <a
+                          href="https://docs.google.com/document/d/1fbx3mZPYre4CYOj608mnWDs98uamXAh0/edit?usp=drive_link&ouid=105779629323639375141&rtpof=true&sd=true"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white border-2 border-blue-700 rounded font-mono font-bold text-base transition-colors shadow-[2px_2px_0px_0px_rgba(0,0,0,0.1)]"
+                        >
+                          📄 View Resume
+                        </a>
+                      </div>
+                    )}
                   </div>
                 )}
               </div>
