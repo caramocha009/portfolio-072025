@@ -3038,7 +3038,7 @@ export default function Index() {
           </pre>
         </div>
         {/* Header */}
-        <header className="h-12 bg-white border-b-2 border-black flex items-center justify-between px-2 md:px-4">
+        <header className="h-12 bg-white border-b-2 border-black flex items-center justify-between px-2 md:px-4 relative z-10">
           {/* Logo and Brand */}
           <button
             onClick={() => {
