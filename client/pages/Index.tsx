@@ -1719,12 +1719,24 @@ export default function Index() {
                 {(currentFullscreenType === "Product Design" ||
                   currentFullscreenType === null) && (
                   <div>
-                    <h2
-                      className="text-2xl font-bold text-black mb-6"
-                      style={{ fontFamily: '"JetBrains Mono", monospace' }}
-                    >
-                      UX/Product Design
-                    </h2>
+                    <div className="flex items-center justify-between mb-6">
+                      <h2
+                        className="text-2xl font-bold text-black"
+                        style={{ fontFamily: '"JetBrains Mono", monospace' }}
+                      >
+                        UX/Product Design
+                      </h2>
+                      {currentFullscreenType === "Product Design" && (
+                        <a
+                          href="https://docs.google.com/document/d/1fbx3mZPYre4CYOj608mnWDs98uamXAh0/edit?usp=drive_link&ouid=105779629323639375141&rtpof=true&sd=true"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white border border-blue-700 rounded font-mono font-bold text-sm transition-colors"
+                        >
+                          📄 View Resume
+                        </a>
+                      )}
+                    </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center max-w-full">
                       {/* Savvo Digital Sommelier */}
                       <div
