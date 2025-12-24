@@ -1327,7 +1327,6 @@ export default function Index() {
             </div>
           </div>
 
-
           {/* Content Area */}
           <div className="flex-1 flex overflow-hidden">
             {/* Projects List - Full Width */}
