@@ -1730,7 +1730,7 @@ export default function Index() {
                           href="https://docs.google.com/document/d/1fbx3mZPYre4CYOj608mnWDs98uamXAh0/edit?usp=drive_link&ouid=105779629323639375141&rtpof=true&sd=true"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white border border-blue-700 rounded font-mono font-bold text-sm transition-colors"
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white border border-purple-700 rounded font-mono font-bold text-sm transition-colors"
                         >
                           📄 View Resume
                         </a>
