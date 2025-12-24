@@ -862,23 +862,23 @@ export default function Index() {
   // Handle URL-based case study navigation
   useEffect(() => {
     const handlePopState = () => {
-      const hash = window.location.hash;
+      const pathname = window.location.pathname;
 
-      if (hash === "" || hash === "#/") {
+      if (pathname === "" || pathname === "/") {
         setCurrentCaseStudy(null);
         setIsProjectsFullscreenOpen(false);
         setCurrentFullscreenType(null);
-      } else if (hash === "#/projects/product-design") {
+      } else if (pathname === "/projects/product-design") {
         setIsProjectsFullscreenOpen(true);
         setCurrentFullscreenType("Product Design");
         setCurrentCaseStudy(null);
-      } else if (hash === "#/projects/content-creation") {
+      } else if (pathname === "/projects/content-creation") {
         setIsProjectsFullscreenOpen(true);
         setCurrentFullscreenType("Content Creation");
         setCurrentCaseStudy(null);
-      } else {
-        const caseStudyId = hash.replace("#/projects/", "");
-        if (caseStudyId && caseStudyId !== hash) {
+      } else if (pathname.startsWith("/projects/")) {
+        const caseStudyId = pathname.replace("/projects/", "");
+        if (caseStudyId) {
           setCurrentCaseStudy(caseStudyId);
           setIsProjectsFullscreenOpen(true);
         }
@@ -888,16 +888,16 @@ export default function Index() {
     window.addEventListener("popstate", handlePopState);
 
     // Check initial URL on mount
-    const hash = window.location.hash;
-    if (hash === "#/projects/product-design") {
+    const pathname = window.location.pathname;
+    if (pathname === "/projects/product-design") {
       setIsProjectsFullscreenOpen(true);
       setCurrentFullscreenType("Product Design");
-    } else if (hash === "#/projects/content-creation") {
+    } else if (pathname === "/projects/content-creation") {
       setIsProjectsFullscreenOpen(true);
       setCurrentFullscreenType("Content Creation");
-    } else if (hash && hash !== "#/" && hash !== "") {
-      const caseStudyId = hash.replace("#/projects/", "");
-      if (caseStudyId && caseStudyId !== hash) {
+    } else if (pathname && pathname !== "/" && pathname.startsWith("/projects/")) {
+      const caseStudyId = pathname.replace("/projects/", "");
+      if (caseStudyId) {
         setCurrentCaseStudy(caseStudyId);
         setIsProjectsFullscreenOpen(true);
       }
@@ -912,22 +912,22 @@ export default function Index() {
       window.history.pushState(
         { caseStudy: currentCaseStudy },
         `${currentCaseStudy}`,
-        `#/projects/${currentCaseStudy}`,
+        `/projects/${currentCaseStudy}`,
       );
     } else if (currentFullscreenType === "Product Design") {
       window.history.pushState(
         { fullscreenType: "Product Design" },
         "Product Design",
-        "#/projects/product-design",
+        "/projects/product-design",
       );
     } else if (currentFullscreenType === "Content Creation") {
       window.history.pushState(
         { fullscreenType: "Content Creation" },
         "Content Creation",
-        "#/projects/content-creation",
+        "/projects/content-creation",
       );
     } else {
-      window.history.pushState({}, "Home", "#/");
+      window.history.pushState({}, "Home", "/");
     }
   }, [currentCaseStudy, currentFullscreenType]);
 
