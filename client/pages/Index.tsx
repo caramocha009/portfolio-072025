@@ -3182,7 +3182,7 @@ export default function Index() {
                 alt="Instagram"
                 className="w-4 h-4 md:w-4 md:h-4"
                 style={{
-                  filter: "brightness(0) saturate(100%) invert(30%) sepia(70%) saturate(1200%) hue-rotate(245deg)",
+                  filter: "brightness(0) saturate(100%) invert(19%) sepia(69%) saturate(1400%) hue-rotate(247deg)",
                 }}
               />
             </a>
