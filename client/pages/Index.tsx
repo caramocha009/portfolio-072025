@@ -3092,31 +3092,7 @@ export default function Index() {
               />
             </div>
 
-            {/* Resume Icon - Third in first column */}
-            <div
-              className="absolute z-20 flex items-start justify-center"
-              style={{
-                top: "calc(24px + 1vw + 284px)",
-                left: "calc(24px + 1vw)",
-                width: "160px",
-              }}
-              onMouseEnter={() => setAsciiArtColor("#60a5fa")}
-              onMouseLeave={() => setAsciiArtColor("#ffffff")}
-            >
-              <DesktopIcon
-                icon={<ArticlesIcon />}
-                label="Resume"
-                onClick={() =>
-                  window.open(
-                    "https://drive.google.com/drive/folders/1bxaWL-_3onqLolEN3W-oFauKf1bQOA3T?usp=sharing",
-                    "_blank",
-                  )
-                }
-                className="scale-75 md:scale-90"
-              />
-            </div>
-
-            {/* About Icon - Fourth in first column */}
+            {/* About Icon - Third in first column */}
             <div
               className="absolute z-20 flex items-start justify-center"
               style={{
