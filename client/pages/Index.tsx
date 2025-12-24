@@ -3349,7 +3349,7 @@ export default function Index() {
               />
             </div>
 
-            {/* About Icon - Third in first column */}
+            {/* Product Design Icon - Third in first column */}
             <div
               className="absolute z-20"
               style={{
@@ -3360,14 +3360,14 @@ export default function Index() {
               onMouseLeave={() => setAsciiArtColor("#ffffff")}
             >
               <DesktopIcon
-                icon={<AboutIcon />}
-                label="About"
-                onClick={() => openNewWindow("About")}
+                icon={<ProductDesignIcon />}
+                label="Product Design"
+                onClick={() => openNewWindow("Product Design")}
                 className="scale-75 md:scale-90"
               />
             </div>
 
-            {/* Contact Me Icon - Fourth in first column */}
+            {/* Content Creation Icon - Fourth in first column */}
             <div
               className="absolute z-20"
               style={{
@@ -3375,6 +3375,24 @@ export default function Index() {
                 left: "calc(24px + 1vw)",
               }}
               onMouseEnter={() => setAsciiArtColor("#f472b6")}
+              onMouseLeave={() => setAsciiArtColor("#ffffff")}
+            >
+              <DesktopIcon
+                icon={<ContentCreationIcon />}
+                label="Content Creation"
+                onClick={() => openNewWindow("Content Creation")}
+                className="scale-75 md:scale-90"
+              />
+            </div>
+
+            {/* Contact Me Icon - Fifth in first column */}
+            <div
+              className="absolute z-20"
+              style={{
+                top: "calc(24px + 1vw + 568px)",
+                left: "calc(24px + 1vw)",
+              }}
+              onMouseEnter={() => setAsciiArtColor("#ec4899")}
               onMouseLeave={() => setAsciiArtColor("#ffffff")}
             >
               <DesktopIcon
