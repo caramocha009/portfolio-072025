@@ -83,7 +83,6 @@ function ContactForm() {
 
   return (
     <div className="text-black p-6 overflow-y-auto flex flex-col h-full">
-      <h3 className="font-bold text-lg sm:text-xl mb-6">Contact Me</h3>
 
       {submitStatus === "success" && (
         <div className="mb-4 p-3 bg-green-100 border border-green-400 text-green-700 rounded">
