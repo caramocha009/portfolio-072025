@@ -860,8 +860,9 @@ export default function Index() {
 
   // Handle URL-based case study navigation
   useEffect(() => {
-    const handlePopState = () => {
+    const handlePopState = (event: PopStateEvent) => {
       const pathname = window.location.pathname;
+      const state = event.state || {};
 
       if (pathname === "" || pathname === "/") {
         setCurrentCaseStudy(null);
@@ -878,9 +879,19 @@ export default function Index() {
       } else if (pathname.startsWith("/projects/")) {
         const caseStudyId = pathname.replace("/projects/", "");
         if (caseStudyId) {
+          // Use parent category from history state if available
+          const parentCategory = state.parentCategory;
+          if (parentCategory) {
+            setCurrentFullscreenType(parentCategory);
+          }
           setCurrentCaseStudy(caseStudyId);
           setIsProjectsFullscreenOpen(true);
         }
+      } else {
+        // Fallback: navigate home for any unhandled paths
+        setCurrentCaseStudy(null);
+        setIsProjectsFullscreenOpen(false);
+        setCurrentFullscreenType(null);
       }
     };
 
