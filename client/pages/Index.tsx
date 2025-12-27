@@ -2795,10 +2795,10 @@ export default function Index() {
                 </div>
 
                 {/* Embedded YouTube Video */}
-                <div className="py-8">
-                  <div className="max-w-6xl mx-auto px-6">
+                <div className="py-8 flex justify-center">
+                  <div className="w-full max-w-sm">
                     <div
-                      className="relative overflow-hidden rounded-lg shadow-lg w-full"
+                      className="relative overflow-hidden rounded-lg shadow-lg"
                       style={{ height: "80vh", aspectRatio: "9 / 16" }}
                     >
                       <iframe
@@ -2857,10 +2857,10 @@ export default function Index() {
                 </div>
 
                 {/* Embedded Instagram Reel */}
-                <div className="py-8">
-                  <div className="max-w-6xl mx-auto px-6">
+                <div className="py-8 flex justify-center">
+                  <div className="w-full max-w-sm">
                     <div
-                      className="relative overflow-hidden rounded-lg shadow-lg w-full"
+                      className="relative overflow-hidden rounded-lg shadow-lg"
                       style={{ height: "80vh", aspectRatio: "9 / 16" }}
                     >
                       <iframe
