@@ -924,7 +924,7 @@ export default function Index() {
   useEffect(() => {
     if (currentCaseStudy) {
       window.history.pushState(
-        { caseStudy: currentCaseStudy },
+        { caseStudy: currentCaseStudy, parentCategory: currentFullscreenType },
         `${currentCaseStudy}`,
         `/projects/${currentCaseStudy}`,
       );
