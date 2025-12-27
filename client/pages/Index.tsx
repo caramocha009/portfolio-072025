@@ -2419,7 +2419,7 @@ export default function Index() {
                   <div className="w-full max-w-lg">
                     <div
                       className="relative overflow-hidden rounded-lg shadow-lg"
-                      style={{ aspectRatio: "9 / 16" }}
+                      style={{ height: "80vh", aspectRatio: "9 / 16" }}
                     >
                       <iframe
                         src="https://www.instagram.com/reel/DFZongxuHWj/embed/captioned/"
@@ -2481,7 +2481,7 @@ export default function Index() {
                   <div className="flex items-center justify-center">
                     <div
                       className="relative overflow-hidden rounded-lg shadow-lg"
-                      style={{ height: "90vh", aspectRatio: "9 / 16" }}
+                      style={{ height: "80vh", aspectRatio: "9 / 16" }}
                     >
                       <iframe
                         width="100%"
@@ -2609,7 +2609,7 @@ export default function Index() {
                   <div className="flex items-center justify-center">
                     <div
                       className="relative overflow-hidden rounded-lg shadow-lg"
-                      style={{ height: "90vh", aspectRatio: "9 / 16" }}
+                      style={{ height: "80vh", aspectRatio: "9 / 16" }}
                     >
                       <iframe
                         src="https://www.instagram.com/reel/C9fivuSumye/embed/captioned/"
@@ -2799,7 +2799,7 @@ export default function Index() {
                   <div className="max-w-6xl mx-auto px-6">
                     <div
                       className="relative overflow-hidden rounded-lg shadow-lg w-full"
-                      style={{ aspectRatio: "9 / 16" }}
+                      style={{ height: "80vh", aspectRatio: "9 / 16" }}
                     >
                       <iframe
                         width="100%"
@@ -2861,7 +2861,7 @@ export default function Index() {
                   <div className="max-w-6xl mx-auto px-6">
                     <div
                       className="relative overflow-hidden rounded-lg shadow-lg w-full"
-                      style={{ aspectRatio: "9 / 16" }}
+                      style={{ height: "80vh", aspectRatio: "9 / 16" }}
                     >
                       <iframe
                         src="https://www.instagram.com/reel/DAUKzZZue5_/embed/captioned/"
