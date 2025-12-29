@@ -1787,7 +1787,7 @@ export default function Index() {
                   currentFullscreenType === null) && (
                   <div>
                     <div className="mb-6">
-                      <div className="flex items-center justify-between mb-2">
+                      <div className="flex items-center justify-between mb-6">
                         <h2
                           className="text-2xl font-bold text-black"
                           style={{ fontFamily: '"JetBrains Mono", monospace' }}
@@ -1805,12 +1805,6 @@ export default function Index() {
                           </a>
                         )}
                       </div>
-                      <h3
-                        className="text-lg font-semibold text-gray-700"
-                        style={{ fontFamily: '"JetBrains Mono", monospace' }}
-                      >
-                        Graphic Design
-                      </h3>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center max-w-full">
                       {/* Savvo Digital Sommelier */}
