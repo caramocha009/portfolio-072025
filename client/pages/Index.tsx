@@ -872,18 +872,21 @@ export default function Index() {
         setIsProjectsFullscreenOpen(true);
         setCurrentFullscreenType("Product/UX");
         setCurrentCaseStudy(null);
-      } else if (pathname === "/projects/content-creation") {
+      } else if (pathname === "/projects/video-editing") {
         setIsProjectsFullscreenOpen(true);
         setCurrentFullscreenType("Video Editing");
         setCurrentCaseStudy(null);
-      } else if (pathname.startsWith("/projects/")) {
-        const caseStudyId = pathname.replace("/projects/", "");
+      } else if (pathname.startsWith("/projects/design/")) {
+        const caseStudyId = pathname.replace("/projects/design/", "");
         if (caseStudyId) {
-          // Use parent category from history state if available
-          const parentCategory = state.parentCategory;
-          if (parentCategory) {
-            setCurrentFullscreenType(parentCategory);
-          }
+          setCurrentFullscreenType("Product/UX");
+          setCurrentCaseStudy(caseStudyId);
+          setIsProjectsFullscreenOpen(true);
+        }
+      } else if (pathname.startsWith("/projects/video-editing/")) {
+        const caseStudyId = pathname.replace("/projects/video-editing/", "");
+        if (caseStudyId) {
+          setCurrentFullscreenType("Video Editing");
           setCurrentCaseStudy(caseStudyId);
           setIsProjectsFullscreenOpen(true);
         }
@@ -902,18 +905,22 @@ export default function Index() {
     if (pathname === "/projects/design") {
       setIsProjectsFullscreenOpen(true);
       setCurrentFullscreenType("Product/UX");
-    } else if (pathname === "/projects/content-creation") {
+    } else if (pathname === "/projects/video-editing") {
       setIsProjectsFullscreenOpen(true);
       setCurrentFullscreenType("Video Editing");
-    } else if (
-      pathname &&
-      pathname !== "/" &&
-      pathname.startsWith("/projects/")
-    ) {
-      const caseStudyId = pathname.replace("/projects/", "");
+    } else if (pathname.startsWith("/projects/design/")) {
+      const caseStudyId = pathname.replace("/projects/design/", "");
       if (caseStudyId) {
         setCurrentCaseStudy(caseStudyId);
         setIsProjectsFullscreenOpen(true);
+        setCurrentFullscreenType("Product/UX");
+      }
+    } else if (pathname.startsWith("/projects/video-editing/")) {
+      const caseStudyId = pathname.replace("/projects/video-editing/", "");
+      if (caseStudyId) {
+        setCurrentCaseStudy(caseStudyId);
+        setIsProjectsFullscreenOpen(true);
+        setCurrentFullscreenType("Video Editing");
       }
     }
 
@@ -923,10 +930,11 @@ export default function Index() {
   // Update URL when case study or fullscreen type changes
   useEffect(() => {
     if (currentCaseStudy) {
+      const categoryPath = currentFullscreenType === "Product/UX" ? "design" : "video-editing";
       window.history.pushState(
         { caseStudy: currentCaseStudy, parentCategory: currentFullscreenType },
         `${currentCaseStudy}`,
-        `/projects/${currentCaseStudy}`,
+        `/projects/${categoryPath}/${currentCaseStudy}`,
       );
     } else if (currentFullscreenType === "Product/UX") {
       window.history.pushState(
@@ -938,7 +946,7 @@ export default function Index() {
       window.history.pushState(
         { fullscreenType: "Video Editing" },
         "Video Editing",
-        "/projects/content-creation",
+        "/projects/video-editing",
       );
     } else {
       window.history.pushState({}, "Home", "/");
@@ -2017,7 +2025,7 @@ export default function Index() {
                   }}
                   className="text-black font-mono text-sm hover:opacity-70 transition-opacity cursor-pointer"
                 >
-                  📂 Projects
+                  📂 {currentFullscreenType === "Video Editing" ? "Video Editing" : "Design"}
                 </button>
                 <span className="text-black font-mono text-sm">→</span>
                 <span className="text-black font-mono text-sm">
