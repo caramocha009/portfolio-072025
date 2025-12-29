@@ -899,7 +899,7 @@ export default function Index() {
 
     // Check initial URL on mount
     const pathname = window.location.pathname;
-    if (pathname === "/projects/product-design") {
+    if (pathname === "/projects/design") {
       setIsProjectsFullscreenOpen(true);
       setCurrentFullscreenType("Product/UX");
     } else if (pathname === "/projects/content-creation") {
@@ -932,7 +932,7 @@ export default function Index() {
       window.history.pushState(
         { fullscreenType: "Product/UX" },
         "Product/UX",
-        "/projects/product-design",
+        "/projects/design",
       );
     } else if (currentFullscreenType === "Video Editing") {
       window.history.pushState(
