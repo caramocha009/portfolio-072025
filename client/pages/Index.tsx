@@ -1356,7 +1356,7 @@ export default function Index() {
                 <span className="text-black font-mono text-sm">→</span>
                 <span className="text-black font-mono text-sm">
                   {currentFullscreenType === "Product/UX"
-                    ? "📂 Product/UX"
+                    ? "📂 Design"
                     : currentFullscreenType === "Video Editing"
                       ? "📂 Video Editing"
                       : "📂 Projects"}
@@ -1367,7 +1367,7 @@ export default function Index() {
               <div className="lg:hidden">
                 <span className="text-black font-mono text-sm font-bold">
                   {currentFullscreenType === "Product/UX"
-                    ? "Product/UX"
+                    ? "Design"
                     : currentFullscreenType === "Video Editing"
                       ? "Video Editing"
                       : "Projects"}
@@ -1791,8 +1791,14 @@ export default function Index() {
                         className="text-2xl font-bold text-black"
                         style={{ fontFamily: '"JetBrains Mono", monospace' }}
                       >
-                        UX/Product Design
+                        Product Design
                       </h2>
+                      <h3
+                        className="text-lg font-semibold text-gray-700 mt-2"
+                        style={{ fontFamily: '"JetBrains Mono", monospace' }}
+                      >
+                        Graphic Design
+                      </h3>
                       {currentFullscreenType === "Product/UX" && (
                         <a
                           href="https://docs.google.com/document/d/1fbx3mZPYre4CYOj608mnWDs98uamXAh0/edit?usp=drive_link&ouid=105779629323639375141&rtpof=true&sd=true"
