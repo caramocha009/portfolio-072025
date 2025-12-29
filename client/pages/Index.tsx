@@ -868,7 +868,7 @@ export default function Index() {
         setCurrentCaseStudy(null);
         setIsProjectsFullscreenOpen(false);
         setCurrentFullscreenType(null);
-      } else if (pathname === "/projects/product-design") {
+      } else if (pathname === "/projects/design") {
         setIsProjectsFullscreenOpen(true);
         setCurrentFullscreenType("Product/UX");
         setCurrentCaseStudy(null);
