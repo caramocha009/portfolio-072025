@@ -1786,29 +1786,31 @@ export default function Index() {
                 {(currentFullscreenType === "Product/UX" ||
                   currentFullscreenType === null) && (
                   <div>
-                    <div className="flex items-center justify-between mb-6">
-                      <h2
-                        className="text-2xl font-bold text-black"
-                        style={{ fontFamily: '"JetBrains Mono", monospace' }}
-                      >
-                        Product Design
-                      </h2>
+                    <div className="mb-6">
+                      <div className="flex items-center justify-between mb-2">
+                        <h2
+                          className="text-2xl font-bold text-black"
+                          style={{ fontFamily: '"JetBrains Mono", monospace' }}
+                        >
+                          Product Design
+                        </h2>
+                        {currentFullscreenType === "Product/UX" && (
+                          <a
+                            href="https://docs.google.com/document/d/1fbx3mZPYre4CYOj608mnWDs98uamXAh0/edit?usp=drive_link&ouid=105779629323639375141&rtpof=true&sd=true"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white border border-purple-700 rounded font-mono font-bold text-sm transition-colors"
+                          >
+                            📄 View Resume
+                          </a>
+                        )}
+                      </div>
                       <h3
-                        className="text-lg font-semibold text-gray-700 mt-2"
+                        className="text-lg font-semibold text-gray-700"
                         style={{ fontFamily: '"JetBrains Mono", monospace' }}
                       >
                         Graphic Design
                       </h3>
-                      {currentFullscreenType === "Product/UX" && (
-                        <a
-                          href="https://docs.google.com/document/d/1fbx3mZPYre4CYOj608mnWDs98uamXAh0/edit?usp=drive_link&ouid=105779629323639375141&rtpof=true&sd=true"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white border border-purple-700 rounded font-mono font-bold text-sm transition-colors"
-                        >
-                          📄 View Resume
-                        </a>
-                      )}
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center max-w-full">
                       {/* Savvo Digital Sommelier */}
