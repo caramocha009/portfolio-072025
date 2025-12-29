@@ -4,19 +4,28 @@ import path from "path";
 import { handleDemo } from "./routes/demo";
 
 export function createServer() {
-  const app = express();
+  const apiRouter = express.Router();
 
-  // Middleware
+  // API middleware
+  apiRouter.use(cors());
+  apiRouter.use(express.json());
+  apiRouter.use(express.urlencoded({ extended: true }));
+
+  // Example API routes
+  apiRouter.get("/ping", (_req, res) => {
+    res.json({ message: "Hello from Express server v2!" });
+  });
+
+  apiRouter.get("/demo", handleDemo);
+
+  // Create main app
+  const app = express();
   app.use(cors());
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
 
-  // Example API routes
-  app.get("/api/ping", (_req, res) => {
-    res.json({ message: "Hello from Express server v2!" });
-  });
-
-  app.get("/api/demo", handleDemo);
+  // Mount API routes
+  app.use("/api", apiRouter);
 
   // In production, serve static files and fallback to index.html for SPA routing
   if (process.env.NODE_ENV === "production") {
