@@ -5,9 +5,11 @@ import { createServer } from "./server";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  appType: "spa", // Enable SPA fallback for dev server
   server: {
     host: "::",
     port: 8080,
+    middlewareMode: true,
   },
   build: {
     outDir: "dist/spa",
