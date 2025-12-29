@@ -3230,7 +3230,7 @@ export default function Index() {
             >
               <DesktopIcon
                 icon={<ProductDesignIcon />}
-                label="Product/UX"
+                label="Design"
                 onClick={() => openNewWindow("Product/UX")}
                 className="scale-75 md:scale-90"
               />
