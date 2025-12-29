@@ -1963,7 +1963,7 @@ export default function Index() {
                       <div className="mb-6">
                         <div className="flex items-center justify-between mb-6">
                           <h2
-                            className="text-2xl font-bold text-black"
+                            className="text-2xl font-bold text-black py-8"
                             style={{ fontFamily: '"JetBrains Mono", monospace' }}
                           >
                             Graphic Design
