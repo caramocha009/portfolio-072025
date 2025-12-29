@@ -1959,14 +1959,16 @@ export default function Index() {
                     </div>
 
                     {/* Graphic Design Section */}
-                    <div className="mb-6">
-                      <div className="flex items-center justify-between mb-6">
-                        <h2
-                          className="text-2xl font-bold text-black"
-                          style={{ fontFamily: '"JetBrains Mono", monospace' }}
-                        >
-                          Graphic Design
-                        </h2>
+                    <div>
+                      <div className="mb-6">
+                        <div className="flex items-center justify-between mb-6">
+                          <h2
+                            className="text-2xl font-bold text-black"
+                            style={{ fontFamily: '"JetBrains Mono", monospace' }}
+                          >
+                            Graphic Design
+                          </h2>
+                        </div>
                       </div>
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center max-w-full">
                         {/* Graphic Design projects will go here */}
