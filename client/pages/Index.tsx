@@ -2172,7 +2172,7 @@ export default function Index() {
                                         ? "Teaser for Food Taste Test Video"
                                         : currentCaseStudy ===
                                             "corteva-agriscience"
-                                          ? "Corteva AgriScience"
+                                          ? "Corteva/Pioneer"
                                           : "Case Study"}
                 </span>
               </div>
