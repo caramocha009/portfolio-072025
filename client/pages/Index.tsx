@@ -3012,6 +3012,46 @@ export default function Index() {
                   </button>
                 </div>
               </div>
+            ) : currentCaseStudy === "corteva-agriscience" ? (
+              /* Corteva AgriScience case study - Image gallery */
+              <div className="max-w-6xl mx-auto px-4 py-8">
+                <div className="mb-8">
+                  <h1 className="text-3xl font-bold text-black mb-4">
+                    Corteva AgriScience
+                  </h1>
+                  <p className="text-gray-600 text-lg mb-2">Agriculture</p>
+                  <p className="text-gray-700">User Research, Wireframe, UI Design</p>
+                </div>
+
+                {/* Image Gallery */}
+                <div className="flex justify-center">
+                  <div className="w-full" style={{ maxWidth: "1080px" }}>
+                    <div className="space-y-0">
+                      {cortevaImages.slice(0, 5).map((image, index) => (
+                        <img
+                          key={index}
+                          src={image}
+                          alt={`Corteva AgriScience - Page ${index + 1}`}
+                          className="w-full h-auto"
+                          loading="lazy"
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Back to Projects Button */}
+                <div className="mt-8 flex justify-center">
+                  <button
+                    onClick={() => {
+                      setCurrentCaseStudy(null);
+                    }}
+                    className="inline-flex items-center px-6 py-3 bg-gray-300 text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-gray-200 transition-colors font-mono text-sm"
+                  >
+                    ← Back to Projects
+                  </button>
+                </div>
+              </div>
             ) : (
               <>
                 <MediumArticleEmbed
