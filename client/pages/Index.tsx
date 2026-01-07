@@ -2175,7 +2175,10 @@ export default function Index() {
                                         : currentCaseStudy ===
                                             "corteva-agriscience"
                                           ? "Corteva/Pioneer"
-                                          : "Case Study"}
+                                          : currentCaseStudy ===
+                                              "monolids-collective"
+                                            ? "Monolids Collective"
+                                            : "Case Study"}
                 </span>
               </div>
 
@@ -2210,7 +2213,10 @@ export default function Index() {
                                         : currentCaseStudy ===
                                             "corteva-agriscience"
                                           ? "Corteva/Pioneer"
-                                          : "Case Study"}
+                                          : currentCaseStudy ===
+                                              "monolids-collective"
+                                            ? "Monolids Collective"
+                                            : "Case Study"}
                 </span>
               </div>
 
