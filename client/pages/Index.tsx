@@ -64,6 +64,23 @@ const cortevaImages = [
   "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F5030aac4751f4166b8908073f50e9f22?format=webp&width=1600",
   "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F29997198eae34a23aa5f526fbf65a114?format=webp&width=1600",
   "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fe61b6c64e69640e2b1f57aee471445dd?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fec8b5bf0cf114cb4bd05e0268cfe992f?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fde9932bcbb674f00b138ccbf2d6e6d28?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fe1745adb059f4e8ab3529e902914fef6?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fcd65724761c2471589c466d903928fc7?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fbe973c75b77e4a59aa606cb1378f06e7?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F5ab58279ed40438d979475d8d92e2731?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F5f426ed3a0ed42f3beb29b09f0e3e192?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F07917fc576da458a852b665657e2898a?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fdcd44d1058cb4b838a79f4a2b8a27350?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F5a86365d4c80453a91208aabf4906cd0?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F115b75b4a2b349018ebc3001af3335d2?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fe7e00a2b00574a028a16c41f676adef6?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fbec792d638384dd79ef7b2ac5b1dda42?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F7fea6585c5724ae29f031831fd334bef?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F70b951d33ef9412c9f337b83e1b2aec3?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F4822bb19df754df5af70dd2b93571c40?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fa5f0623f7f8f4ae98156e52fcf99b8b1?format=webp&width=1600",
 ];
 
 // Contact Form Component with EmailJS
