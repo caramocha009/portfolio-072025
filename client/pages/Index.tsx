@@ -3032,7 +3032,7 @@ export default function Index() {
                 <div className="flex justify-center">
                   <div className="w-full" style={{ maxWidth: "1080px" }}>
                     <div className="space-y-0">
-                      {cortevaImages.slice(0, 5).map((image, index) => (
+                      {cortevaImages.slice(0, 10).map((image, index) => (
                         <img
                           key={index}
                           src={image}
