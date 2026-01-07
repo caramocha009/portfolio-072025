@@ -1973,7 +1973,7 @@ export default function Index() {
                         onMouseEnter={
                           isDesktop
                             ? () => {
-                                setHoveredProject("corteve-agriscience");
+                                setHoveredProject("corteva-agriscience");
                                 setPersistentHoveredProject(null);
                               }
                             : undefined
