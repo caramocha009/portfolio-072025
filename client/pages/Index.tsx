@@ -3265,7 +3265,7 @@ export default function Index() {
                   className="scale-75 md:scale-90"
                 />
                 <button
-                  className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full z-40 cursor-default"
+                  className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full z-40 cursor-pointer"
                   onMouseEnter={() => setShowDesignTooltip(true)}
                   onMouseLeave={() => setShowDesignTooltip(false)}
                   onClick={() => openNewWindow("Product/UX")}
@@ -3298,7 +3298,7 @@ export default function Index() {
                   className="scale-75 md:scale-90"
                 />
                 <button
-                  className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full z-40 cursor-default"
+                  className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full z-40 cursor-pointer"
                   onMouseEnter={() => setShowVideoEditingTooltip(true)}
                   onMouseLeave={() => setShowVideoEditingTooltip(false)}
                   onClick={() => openNewWindow("Video Editing")}
