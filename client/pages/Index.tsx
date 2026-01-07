@@ -59,6 +59,11 @@ const cortevaImages = [
   "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F6b7dea78f4c8428dbffd68914c9f45b6?format=webp&width=800",
   "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fb27f8a5f3d504aab84634cb8ce680b56?format=webp&width=800",
   "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F6b7dc27da04e475c8bf91c45b102f7e3?format=webp&width=800",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F556729dbd13b449ab174051526dbef80?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F290ff5bd020540f68e7a98ecaf1e6093?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F5030aac4751f4166b8908073f50e9f22?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F29997198eae34a23aa5f526fbf65a114?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fe61b6c64e69640e2b1f57aee471445dd?format=webp&width=1600",
 ];
 
 // Contact Form Component with EmailJS
