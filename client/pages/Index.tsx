@@ -3123,14 +3123,19 @@ export default function Index() {
                   </p>
                 </div>
 
-                {/* Placeholder Content */}
+                {/* Image Gallery */}
                 <div className="flex justify-center">
-                  <div className="w-full max-w-2xl">
-                    <img
-                      src="https://via.placeholder.com/800x600?text=Monolids+Collective+Case+Study"
-                      alt="Monolids Collective"
-                      className="w-full h-auto rounded-lg"
-                    />
+                  <div className="w-full" style={{ maxWidth: "100%" }}>
+                    <div className="space-y-0">
+                      {monoLidsImages.map((image, index) => (
+                        <img
+                          key={index}
+                          src={image}
+                          alt={`Monolids Collective - Page ${index + 1}`}
+                          className="w-full h-auto"
+                        />
+                      ))}
+                    </div>
                   </div>
                 </div>
 
