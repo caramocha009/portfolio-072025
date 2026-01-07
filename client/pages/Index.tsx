@@ -3020,7 +3020,7 @@ export default function Index() {
               <div className="max-w-6xl mx-auto px-4 py-8">
                 <div className="mb-8">
                   <h1 className="text-3xl font-bold text-black mb-4">
-                    Corteva AgriScience
+                    Corteva/Pioneer
                   </h1>
                   <p className="text-gray-600 text-lg mb-2">Agriculture</p>
                   <p className="text-gray-700">
