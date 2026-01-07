@@ -2057,7 +2057,44 @@ export default function Index() {
                         </div>
                       </div>
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center max-w-full">
-                        {/* Graphic Design projects will go here */}
+                        {/* Monolids Collective */}
+                        <div
+                          className="w-full max-w-sm aspect-square bg-gray-200 rounded-lg overflow-hidden cursor-pointer group relative"
+                          onMouseEnter={
+                            isDesktop
+                              ? () => {
+                                  setHoveredProject("monolids-collective");
+                                  setPersistentHoveredProject(null);
+                                }
+                              : undefined
+                          }
+                          onMouseLeave={
+                            isDesktop ? () => setHoveredProject(null) : undefined
+                          }
+                          onClick={() => setCurrentCaseStudy("monolids-collective")}
+                        >
+                          {/* Project Image */}
+                          <img
+                            src="https://via.placeholder.com/600x600?text=Monolids+Collective"
+                            alt="Monolids Collective"
+                            className="w-full h-full object-cover"
+                          />
+
+                          {/* Hover Overlay */}
+                          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
+                            <div className="hidden group-hover:flex flex-col items-center gap-3 text-white">
+                              <h3 className="text-lg font-bold text-center">
+                                Monolids Collective
+                              </h3>
+                              <p className="text-sm text-center text-gray-200">
+                                E-commerce
+                              </p>
+                              <p className="text-xs text-center text-gray-300">
+                                Presentation, Pitch Desk
+                              </p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
