@@ -1868,7 +1868,7 @@ export default function Index() {
                       >
                         {/* Project Image */}
                         <img
-                          src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fc75e8c94d1b2496187d23e68d3b66d1f?format=webp&width=3200"
+                          src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F13aa5f587a3946bfb27db2e43e580125?format=webp&width=3200"
                           alt="Savvo Digital Sommelier"
                           className="w-full h-full object-cover"
                         />
