@@ -49,16 +49,16 @@ const cortevaImages = [
   "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F292412dfcf4e43838999c222e2f84c33?format=webp&width=1600",
   "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fbffcc6db7eb84349b5d232558533035e?format=webp&width=1600",
   "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F4e14dd3388ff4f5cb728370fd5426176?format=webp&width=1600",
-  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F2ba654d9ec1344428eee312f3d63f7be?format=webp&width=800",
-  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Feefe7f34d7084a8a82b0b0a86ce769f0?format=webp&width=800",
-  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F253dfa31502a4a1db5c78eb1279505b7?format=webp&width=800",
-  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F61aeededc57747bcb318d89fff639503?format=webp&width=800",
-  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fa0fff7594ea944b8a27363f81d43e850?format=webp&width=800",
-  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F8d23700fafca4b1db5758ea33a40e58f?format=webp&width=800",
-  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F089371f6f4cd483c96a912aeaff3541c?format=webp&width=800",
-  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F6b7dea78f4c8428dbffd68914c9f45b6?format=webp&width=800",
-  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fb27f8a5f3d504aab84634cb8ce680b56?format=webp&width=800",
-  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F6b7dc27da04e475c8bf91c45b102f7e3?format=webp&width=800",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F2ba654d9ec1344428eee312f3d63f7be?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Feefe7f34d7084a8a82b0b0a86ce769f0?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F253dfa31502a4a1db5c78eb1279505b7?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F61aeededc57747bcb318d89fff639503?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fa0fff7594ea944b8a27363f81d43e850?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F8d23700fafca4b1db5758ea33a40e58f?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F089371f6f4cd483c96a912aeaff3541c?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F6b7dea78f4c8428dbffd68914c9f45b6?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fb27f8a5f3d504aab84634cb8ce680b56?format=webp&width=1600",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F6b7dc27da04e475c8bf91c45b102f7e3?format=webp&width=1600",
   "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F556729dbd13b449ab174051526dbef80?format=webp&width=1600",
   "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F290ff5bd020540f68e7a98ecaf1e6093?format=webp&width=1600",
   "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F5030aac4751f4166b8908073f50e9f22?format=webp&width=1600",
@@ -3047,9 +3047,9 @@ export default function Index() {
 
                 {/* Image Gallery */}
                 <div className="flex justify-center">
-                  <div className="w-full" style={{ maxWidth: "1080px" }}>
+                  <div className="w-full" style={{ maxWidth: "100%" }}>
                     <div className="space-y-0">
-                      {cortevaImages.slice(0, 27).map((image, index) => (
+                      {cortevaImages.map((image, index) => (
                         <img
                           key={index}
                           src={image}
