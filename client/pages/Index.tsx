@@ -1907,7 +1907,7 @@ export default function Index() {
                       >
                         {/* Project Image */}
                         <img
-                          src="https://cdn-images-1.medium.com/max/1024/1*b_l9Ra5rwirDPE4cD_sxvg.jpeg"
+                          src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F49782a40b050462fa9459025d0b5397c?format=webp&width=3200"
                           alt="Hy-Vee Aisles Online"
                           className="w-full h-full object-cover"
                         />
