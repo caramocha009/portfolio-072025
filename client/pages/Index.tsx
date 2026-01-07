@@ -1992,13 +1992,17 @@ export default function Index() {
                         onMouseLeave={
                           isDesktop ? () => setHoveredProject(null) : undefined
                         }
-                        onClick={() => setCurrentCaseStudy("corteva-agriscience")}
+                        onClick={() =>
+                          setCurrentCaseStudy("corteva-agriscience")
+                        }
                       >
                         {/* Project Image - Placeholder */}
                         <div className="w-full h-full bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
                           <div className="text-center">
                             <div className="text-5xl mb-2">🌾</div>
-                            <p className="text-sm font-semibold text-gray-700">Corteva AgriScience</p>
+                            <p className="text-sm font-semibold text-gray-700">
+                              Corteva AgriScience
+                            </p>
                           </div>
                         </div>
 
@@ -2145,7 +2149,8 @@ export default function Index() {
                                       : currentCaseStudy ===
                                           "instagram-food-teaser"
                                         ? "Teaser for Food Taste Test Video"
-                                        : currentCaseStudy === "corteva-agriscience"
+                                        : currentCaseStudy ===
+                                            "corteva-agriscience"
                                           ? "Corteva AgriScience"
                                           : "Case Study"}
                 </span>
@@ -2179,7 +2184,8 @@ export default function Index() {
                                       : currentCaseStudy ===
                                           "instagram-food-teaser"
                                         ? "Teaser for Food Taste Test Video"
-                                        : currentCaseStudy === "corteva-agriscience"
+                                        : currentCaseStudy ===
+                                            "corteva-agriscience"
                                           ? "Corteva AgriScience"
                                           : "Case Study"}
                 </span>
@@ -3031,7 +3037,9 @@ export default function Index() {
                     Corteva AgriScience
                   </h1>
                   <p className="text-gray-600 text-lg mb-2">Agriculture</p>
-                  <p className="text-gray-700">User Research, Wireframe, UI Design</p>
+                  <p className="text-gray-700">
+                    User Research, Wireframe, UI Design
+                  </p>
                 </div>
 
                 {/* Image Gallery */}
