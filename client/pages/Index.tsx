@@ -932,7 +932,8 @@ export default function Index() {
   // Update URL when case study or fullscreen type changes
   useEffect(() => {
     if (currentCaseStudy) {
-      const categoryPath = currentFullscreenType === "Product/UX" ? "design" : "video-editing";
+      const categoryPath =
+        currentFullscreenType === "Product/UX" ? "design" : "video-editing";
       window.history.pushState(
         { caseStudy: currentCaseStudy, parentCategory: currentFullscreenType },
         `${currentCaseStudy}`,
@@ -1974,7 +1975,9 @@ export default function Index() {
                         <div className="flex items-center justify-between mb-6">
                           <h2
                             className="text-2xl font-bold text-black py-8"
-                            style={{ fontFamily: '"JetBrains Mono", monospace' }}
+                            style={{
+                              fontFamily: '"JetBrains Mono", monospace',
+                            }}
                           >
                             Graphic Design
                           </h2>
@@ -2027,7 +2030,10 @@ export default function Index() {
                   }}
                   className="text-black font-mono text-sm hover:opacity-70 transition-opacity cursor-pointer"
                 >
-                  📂 {currentFullscreenType === "Video Editing" ? "Video Editing" : "Design"}
+                  📂{" "}
+                  {currentFullscreenType === "Video Editing"
+                    ? "Video Editing"
+                    : "Design"}
                 </button>
                 <span className="text-black font-mono text-sm">→</span>
                 <span className="text-black font-mono text-sm">
@@ -3271,8 +3277,13 @@ export default function Index() {
                   onClick={() => openNewWindow("Product/UX")}
                 />
                 {showDesignTooltip && (
-                  <div className="absolute left-full top-1/2 -translate-y-1/2 ml-2 px-2 py-2 bg-black text-white rounded shadow-lg z-50" style={{ width: '12rem', fontSize: '10pt' }}>
-                    <div className="break-words text-center">UX, Product Design, Web & App, Graphic Design, Branding</div>
+                  <div
+                    className="absolute left-full top-1/2 -translate-y-1/2 ml-2 px-2 py-2 bg-black text-white rounded shadow-lg z-50"
+                    style={{ width: "12rem", fontSize: "10pt" }}
+                  >
+                    <div className="break-words text-center">
+                      UX, Product Design, Web & App, Graphic Design, Branding
+                    </div>
                     <div className="absolute right-full top-1/2 -translate-y-1/2 w-0 h-0 border-t-4 border-b-4 border-r-4 border-transparent border-r-black"></div>
                   </div>
                 )}
@@ -3304,8 +3315,13 @@ export default function Index() {
                   onClick={() => openNewWindow("Video Editing")}
                 />
                 {showVideoEditingTooltip && (
-                  <div className="absolute left-full top-1/2 -translate-y-1/2 ml-2 px-2 py-2 bg-black text-white rounded shadow-lg z-50" style={{ width: '12rem', fontSize: '10pt' }}>
-                    <div className="break-words text-center">Content Creation, Social Media, Motion Design, VFX</div>
+                  <div
+                    className="absolute left-full top-1/2 -translate-y-1/2 ml-2 px-2 py-2 bg-black text-white rounded shadow-lg z-50"
+                    style={{ width: "12rem", fontSize: "10pt" }}
+                  >
+                    <div className="break-words text-center">
+                      Content Creation, Social Media, Motion Design, VFX
+                    </div>
                     <div className="absolute right-full top-1/2 -translate-y-1/2 w-0 h-0 border-t-4 border-b-4 border-r-4 border-transparent border-r-black"></div>
                   </div>
                 )}
