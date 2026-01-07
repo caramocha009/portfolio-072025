@@ -1985,15 +1985,12 @@ export default function Index() {
                           setCurrentCaseStudy("corteva-agriscience")
                         }
                       >
-                        {/* Project Image - Placeholder */}
-                        <div className="w-full h-full bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
-                          <div className="text-center">
-                            <div className="text-5xl mb-2">🌾</div>
-                            <p className="text-sm font-semibold text-gray-700">
-                              Corteva AgriScience
-                            </p>
-                          </div>
-                        </div>
+                        {/* Project Image */}
+                        <img
+                          src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F9d1d445b5a794520a78f3b1d48ecbc6e?format=webp&width=3200"
+                          alt="Corteva AgriScience"
+                          className="w-full h-full object-cover"
+                        />
 
                         {/* Hover Overlay */}
                         <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-200 flex flex-col items-center justify-center p-4 rounded-lg">
