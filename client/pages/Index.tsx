@@ -2168,7 +2168,9 @@ export default function Index() {
                                       : currentCaseStudy ===
                                           "instagram-food-teaser"
                                         ? "Teaser for Food Taste Test Video"
-                                        : "Case Study"}
+                                        : currentCaseStudy === "corteva-agriscience"
+                                          ? "Corteva AgriScience"
+                                          : "Case Study"}
                 </span>
               </div>
 
