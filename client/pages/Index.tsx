@@ -1990,6 +1990,7 @@ export default function Index() {
                           src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F0d8c0784504c4e2e969dac000ab330f4?format=webp&width=3200"
                           alt="Corteva AgriScience"
                           className="w-full h-full object-cover"
+                          style={{ objectPosition: "calc(50% - 100px) 50%" }}
                         />
 
                         {/* Hover Overlay */}
