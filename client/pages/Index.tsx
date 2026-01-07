@@ -1987,7 +1987,7 @@ export default function Index() {
                         <div className="w-full h-full bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
                           <div className="text-center">
                             <div className="text-5xl mb-2">🌾</div>
-                            <p className="text-sm font-semibold text-gray-700">Corteve AgriScience</p>
+                            <p className="text-sm font-semibold text-gray-700">Corteva AgriScience</p>
                           </div>
                         </div>
 
