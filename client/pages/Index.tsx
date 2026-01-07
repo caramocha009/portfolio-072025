@@ -3271,9 +3271,9 @@ export default function Index() {
                   onClick={() => openNewWindow("Product/UX")}
                 />
                 {showDesignTooltip && (
-                  <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-black text-white text-sm rounded shadow-lg whitespace-nowrap z-50">
-                    UX, Product Design, Web & App, Graphic Design, Branding
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black"></div>
+                  <div className="absolute left-full top-1/2 -translate-y-1/2 ml-2 px-2 py-2 bg-black text-white rounded shadow-lg z-50" style={{ width: '3em', fontSize: '14pt' }}>
+                    <div className="break-words text-center">UX, Product Design, Web & App, Graphic Design, Branding</div>
+                    <div className="absolute right-full top-1/2 -translate-y-1/2 w-0 h-0 border-t-4 border-b-4 border-r-4 border-transparent border-r-black"></div>
                   </div>
                 )}
               </div>
@@ -3304,9 +3304,9 @@ export default function Index() {
                   onClick={() => openNewWindow("Video Editing")}
                 />
                 {showVideoEditingTooltip && (
-                  <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-black text-white text-sm rounded shadow-lg whitespace-nowrap z-50">
-                    Content Creation, Social Media, Motion Design, VFX
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black"></div>
+                  <div className="absolute left-full top-1/2 -translate-y-1/2 ml-2 px-2 py-2 bg-black text-white rounded shadow-lg z-50" style={{ width: '3em', fontSize: '14pt' }}>
+                    <div className="break-words text-center">Content Creation, Social Media, Motion Design, VFX</div>
+                    <div className="absolute right-full top-1/2 -translate-y-1/2 w-0 h-0 border-t-4 border-b-4 border-r-4 border-transparent border-r-black"></div>
                   </div>
                 )}
               </div>
