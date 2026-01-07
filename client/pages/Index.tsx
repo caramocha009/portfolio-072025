@@ -780,6 +780,8 @@ function Lightbox({
 
 export default function Index() {
   const [showRecyclingTooltip, setShowRecyclingTooltip] = useState(false);
+  const [showDesignTooltip, setShowDesignTooltip] = useState(false);
+  const [showVideoEditingTooltip, setShowVideoEditingTooltip] = useState(false);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
   const [asciiArtColor, setAsciiArtColor] = useState("#ffffff");
 
@@ -3255,12 +3257,26 @@ export default function Index() {
               onMouseEnter={() => setAsciiArtColor("#c084fc")}
               onMouseLeave={() => setAsciiArtColor("#ffffff")}
             >
-              <DesktopIcon
-                icon={<ProductDesignIcon />}
-                label="Design"
-                onClick={() => openNewWindow("Product/UX")}
-                className="scale-75 md:scale-90"
-              />
+              <div className="relative">
+                <DesktopIcon
+                  icon={<ProductDesignIcon />}
+                  label="Design"
+                  onClick={() => openNewWindow("Product/UX")}
+                  className="scale-75 md:scale-90"
+                />
+                <button
+                  className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full z-40 cursor-default"
+                  onMouseEnter={() => setShowDesignTooltip(true)}
+                  onMouseLeave={() => setShowDesignTooltip(false)}
+                  onClick={() => openNewWindow("Product/UX")}
+                />
+                {showDesignTooltip && (
+                  <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-black text-white text-sm rounded shadow-lg whitespace-nowrap z-50">
+                    UX, Product Design, Web & App, Graphic Design, Branding
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black"></div>
+                  </div>
+                )}
+              </div>
             </div>
 
             {/* Content Creation Icon - Second in first column */}
@@ -3274,12 +3290,26 @@ export default function Index() {
               onMouseEnter={() => setAsciiArtColor("#f472b6")}
               onMouseLeave={() => setAsciiArtColor("#ffffff")}
             >
-              <DesktopIcon
-                icon={<ContentCreationIcon />}
-                label="Video Editing"
-                onClick={() => openNewWindow("Video Editing")}
-                className="scale-75 md:scale-90"
-              />
+              <div className="relative">
+                <DesktopIcon
+                  icon={<ContentCreationIcon />}
+                  label="Video Editing"
+                  onClick={() => openNewWindow("Video Editing")}
+                  className="scale-75 md:scale-90"
+                />
+                <button
+                  className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full z-40 cursor-default"
+                  onMouseEnter={() => setShowVideoEditingTooltip(true)}
+                  onMouseLeave={() => setShowVideoEditingTooltip(false)}
+                  onClick={() => openNewWindow("Video Editing")}
+                />
+                {showVideoEditingTooltip && (
+                  <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-black text-white text-sm rounded shadow-lg whitespace-nowrap z-50">
+                    Content Creation, Social Media, Motion Design, VFX
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black"></div>
+                  </div>
+                )}
+              </div>
             </div>
 
             {/* About Icon - Third in first column */}
