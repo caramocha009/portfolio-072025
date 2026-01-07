@@ -3257,7 +3257,7 @@ export default function Index() {
               onMouseEnter={() => setAsciiArtColor("#c084fc")}
               onMouseLeave={() => setAsciiArtColor("#ffffff")}
             >
-              <div className="relative">
+              <div className="relative group hover:opacity-80 transition-opacity">
                 <DesktopIcon
                   icon={<ProductDesignIcon />}
                   label="Design"
@@ -3290,7 +3290,7 @@ export default function Index() {
               onMouseEnter={() => setAsciiArtColor("#f472b6")}
               onMouseLeave={() => setAsciiArtColor("#ffffff")}
             >
-              <div className="relative">
+              <div className="relative group hover:opacity-80 transition-opacity">
                 <DesktopIcon
                   icon={<ContentCreationIcon />}
                   label="Video Editing"
