@@ -1981,7 +1981,7 @@ export default function Index() {
                         onMouseLeave={
                           isDesktop ? () => setHoveredProject(null) : undefined
                         }
-                        onClick={() => setCurrentCaseStudy("corteve-agriscience")}
+                        onClick={() => setCurrentCaseStudy("corteva-agriscience")}
                       >
                         {/* Project Image - Placeholder */}
                         <div className="w-full h-full bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
