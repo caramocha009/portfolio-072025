@@ -1967,7 +1967,7 @@ export default function Index() {
                         </div>
                       </div>
 
-                      {/* Corteve AgriScience */}
+                      {/* Corteva AgriScience */}
                       <div
                         className="w-full max-w-sm aspect-square bg-gray-200 rounded-lg overflow-hidden cursor-pointer group relative"
                         onMouseEnter={
