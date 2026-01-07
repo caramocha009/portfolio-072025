@@ -1987,7 +1987,7 @@ export default function Index() {
                       >
                         {/* Project Image */}
                         <img
-                          src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F9d1d445b5a794520a78f3b1d48ecbc6e?format=webp&width=3200"
+                          src="https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F0d8c0784504c4e2e969dac000ab330f4?format=webp&width=3200"
                           alt="Corteva AgriScience"
                           className="w-full h-full object-cover"
                         />
