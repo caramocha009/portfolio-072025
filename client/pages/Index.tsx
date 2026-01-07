@@ -61,6 +61,16 @@ const cortevaImages = [
   "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fc55923bc050d47809cf5bd45dfda6153?format=webp&width=3200",
 ];
 
+// Monolids Collective Portfolio Images
+const monoLidsImages = [
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F3553b0b8be824d73b4790630868e50fd?format=webp&width=3200",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Ffdec497dae0d4861837254491f2a9527?format=webp&width=3200",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fa797a06827754cc7b7c0d9e8e77fe61c?format=webp&width=3200",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F0e7deb9fc2804c3b9bcfccae73e30776?format=webp&width=3200",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Fa210c225579b44c7b082954b475a0d19?format=webp&width=3200",
+  "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F7996919ddcb34b82b325803eb901cacd?format=webp&width=3200",
+];
+
 // Contact Form Component with EmailJS
 function ContactForm() {
   const [formData, setFormData] = useState({
