@@ -29,8 +29,8 @@ interface RSSResponse {
   items: MediumArticle[];
 }
 
-// Corteve AgriScience Portfolio Images
-const corteveImages = [
+// Corteva AgriScience Portfolio Images
+const cortevaImages = [
   "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F9af9b45f96aa4869a2e8e875d061deaa?format=webp&width=800",
   "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2F95fba40e31424a45a75611ec393a6514?format=webp&width=800",
   "https://cdn.builder.io/api/v1/image/assets%2F856fd2123e2d4729ba1bfb1e222ef2c1%2Faf3c0de0dfca4715aa3c54f6702a265e?format=webp&width=800",
